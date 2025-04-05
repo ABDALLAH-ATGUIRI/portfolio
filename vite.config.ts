@@ -1,21 +1,21 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'Porftolio',
+  base: "/Portfolio/", // Replace with your GitHub Pages repo name
   plugins: [react()],
   optimizeDeps: {
-    exclude: ['lucide-react'],
-    include: ['@react-pdf/rendeurer'],
+    exclude: ["lucide-react"],
+    include: ["@react-pdf/rendeurer"],
   },
   build: {
-    chunkSizeWarningLimit: 600, // Slightly increased from default 500 kB
+    chunkSizeWarningLimit: 600, // Already set, but we'll optimize further
     rollupOptions: {
       output: {
         manualChunks: {
-          'vendor': ['react'],
-          'icons': ['lucide-react'],
+          vendor: ["react"],
+          icons: ["lucide-react"],
         },
       },
     },

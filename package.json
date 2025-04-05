@@ -1,8 +1,10 @@
 {
   "name": "resume",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "A simple resume template using React and Tailwind CSS.",
+  "main": "main.tsx",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
