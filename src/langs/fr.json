@@ -1,0 +1,136 @@
+{
+  "setting" :{
+    "role" :"rôle",
+    "developer" :"développeur"
+  },
+  "developer": {
+    "name": "Abdallah ATGUIRI",
+    "role": "Développeur Full-Stack",
+    "location" : "Maroc"
+  },
+  "about_me": {
+    "title": "À propos de moi",
+    "description": "Je suis un développeur web full-stack avec de l'expérience dans la création d'applications web utilisant des technologies comme React, Node.js, Express et MongoDB. J'ai une expertise en conception UI/UX ainsi qu'en développement d'API et gestion de bases de données. Je travaille bien en équipe et j'aime résoudre des problèmes complexes."
+  },
+  "experience": {
+    "title": "Expérience Professionnelle",
+    "companies": {
+      "cod_network": {
+        "title": "Cod Network, Agadir, Maroc",
+        "position": "Développeur Full-Stack Junior",
+        "date": "Juin 2023 - Présent",
+        "description": "Je me spécialise en Laravel et en frameworks frontend JavaScript, notamment Vue.js et React. Mon expertise comprend l’optimisation du backend, le développement d’API et l’authentification avec Laravel Passport. Côté frontend, je crée des expériences utilisateur dynamiques avec Tailwind CSS, Material-UI et Redux. J’ai une expérience pratique dans le développement de plateformes e-commerce et d’applications web dédiées à la VR, en veillant à la performance, à l’évolutivité et à une expérience utilisateur fluide."
+      },
+      "agriwise": {
+        "title": "Agriwise, Agadir, Maroc",
+        "position": "Stagiaire Développeur Full-Stack (Laravel/Vue.js)",
+        "date": "Janvier 2023 - Février 2023",
+        "description": "Lors de mon stage chez Agriwise, je me suis concentré sur le développement frontend en utilisant Vue.js, Tailwind CSS et Element Plus pour créer des interfaces utilisateur dynamiques et réactives. J’ai travaillé sur un projet de plateforme de gestion agricole, acquérant une expérience pratique dans la gestion des fermes. J’ai également utilisé Laravel pour des tâches backend, renforçant mes compétences en intégration d’API et gestion des données. Cette expérience m’a permis de travailler dans un environnement Agile, en suivant les méthodologies Scrum pour améliorer la collaboration et l'efficacité des projets."
+      },
+      "digital_elite": {
+        "title": "Digital Elite, Agadir, Maroc",
+        "position": "Stagiaire Développeur Web Full-Stack",
+        "date": "Mars 2023 - Mai 2023",
+        "description": "Lors de mon premier stage chez Digital Elite, j'ai acquis une expérience pratique en développement web en utilisant React et Node.js, contribuant à des projets réels. Cette expérience m'a permis de développer une solide compréhension des méthodologies Agile, du travail en équipe et de la communication efficace au sein de l'entreprise. J'ai également appris les meilleures pratiques du développement logiciel, ce qui m'a aidé à écrire un code propre et maintenable tout en collaborant efficacement dans un environnement professionnel."
+      }
+    }
+  },
+  "hobbies": {
+    "title": "Loisirs",
+    "coding": {
+      "title": "Codage",
+      "description": "Je aime coder et j'aime travailler sur des projets personnels dans mon temps libre. Je suis toujours en recherche de nouvelles technologies et de nouvelles possibilités."
+    },
+    "reading": {
+      "title": "Lecture",
+      "description": "Je aime lire des livres, surtout dans les genres de science-fiction et de technologie. Je crois que la lecture m'aide à expandre mon savoir et mes possibilités."
+    },
+    "gaming": {
+      "title": "Jeux-vide",
+      "description": "Je aime jouer aux jeux-videos en mon temps libre. Cela m'aide à me relaxer et à me relaxer apres une longue journee de codage."
+    },
+    "exploring": {
+      "title": "Exploration",
+      "description": "Je aime explorer de nouveaux lieux et cultures. Le voyage m'aide à obtenir de nouvelles perspectives et d'autres idees que je peux appliquer dans mon travail."
+    },
+    "personal_projects": {
+      "title": "Projets personnels",
+      "description": "Je aime travailler sur des projets personnels qui me permettent d'expérimenter de nouvelles technologies et idées. Je crois que les projets personnels sont un excellent moyen d'apprendre et de grandir en tant que développeur."
+    },
+    "music": {
+      "title": "Musique",
+      "description": "J'aime écouter de la musique pendant que je code. Cela m'aide à me concentrer et à rester motivé."
+    },
+    "learning": {
+      "title": "Apprentissage",
+      "description": "Je suis toujours à la recherche d'apprendre de nouvelles technologies et d'améliorer mes compétences. J'aime apprendre de nouveaux langages de programmation, frameworks et outils."
+    },
+    "basketball": {
+      "title": "Basketball",
+      "description": "Je aime jouer au basketball et regarder des matchs de basketball. Cela m'aide à rester en forme et en bonne santé."
+    },
+    "problem_solving": {
+      "title": "Résolution de problèmes",
+      "description": "Participer à des activités qui stimulent ma réflexion logique et ma créativité, m'aidant à développer des solutions efficaces pour des problèmes complexes."
+    }
+  },
+  "technical_skills": {
+    "title": "Competences Technologiques",
+    "frontend": {
+      "title": "Developpement Front-End",
+      "description": "Je suis expert en developpement front-end utilisant des technologies comme HTML, CSS et JavaScript. J'ai une expertise en frameworks comme React et Vue.js."
+    },
+    "backend": {
+      "title": "Developpement Back-End",
+      "description": "Je suis expert en developpement back-end utilisant des technologies comme Node.js, Express et MongoDB. J'ai une expertise en conception et en gestion de bases de données."
+    },
+    "database": {
+      "title": "Gestion de Bases de Donnees",
+      "description": "Je suis expert en gestion de bases de données utilisant des technologies comme MongoDB et MySQL. J'ai une expertise en conception et en optimisation de bases de données."
+    },
+    "version_control": {
+      "title": "Controle de Version",
+      "description": "Je suis expert en controle de version utilisant Git et GitHub. J'ai une experience en collaboration avec des equipes utilisant des systemes de controle de version."
+    },
+    "others": {
+      "title": "Autres Competences",
+      "description": "Je suis expert en autres technologies et outils comme Docker, Kubernetes et AWS. Je suis toujours en recherche de nouvelles competences et d'ameliorations."
+    }
+  },
+  "education": {
+    "title": "Éducation",
+    "diploma": {
+      "high_school": {
+        "title": "Diplôme d'études secondaires",
+        "school": "École Hassan II, Safi, Maroc",
+        "date": "Août 2019",
+        "description": "J'ai obtenu mon diplôme d'études secondaires avec une spécialisation en sciences et physique."
+      },
+      "youcode": {
+        "title": "Diplôme en développement Full-Stack",
+        "school": "YouCode, Safi, Maroc",
+        "date": "Septembre 2023",
+        "description": "J'ai complété un programme complet en développement full-stack, couvrant à la fois les technologies front-end et back-end."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "project_1": {
+      "title": "Application de gestion de tâches",
+      "description": "Une application de gestion de tâches permettant aux utilisateurs de créer, de gerer et de prioriser leurs tâches."
+    },
+    "project_2": {
+      "title": "Plateforme commerciale en ligne",
+      "description": "Une plateforme commerciale en ligne utilisant Laravel pour le backend, React.js pour le frontend et MySQL pour la gestion des données."
+    },
+    "project_3": {
+      "title": "Application de reservation de restaurants en ligne",
+      "description": "L'application de reservation de restaurants en ligne vise a aider les clients a trouver et a reserver des restaurants de leur choix."
+    },
+    "project_4": {
+      "title": "Virtual Gear Hub",
+      "description": "Virtual Gear Hub est une plateforme de commerce en ligne concue pour fournir aux joueurs de jeux virtuels une grande variete d'accessoires de qualite pour la virtualite"
+    }
+  }
+}
