@@ -213,9 +213,9 @@ export const PDFDocument: React.FC<PDFDocumentProps> = ({ t }) => {
           </View>
           <Text style={styles.text}>
             Hobbies:{" "}
-            {...hobbies.map(
+            {/* {...hobbies.map(
               ({ name }: Hobby) => t(`hobbies.${name}.title`) + ", "
-            )}
+            )} */}
           </Text>
         </Section>
       </Page>

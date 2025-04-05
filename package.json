@@ -1,15 +1,16 @@
 {
-  "name": "resume",
-  "private": true,
+  "name": "portfolio",
   "version": "1.0.0",
   "type": "module",
-  "description": "A simple resume template using React and Tailwind CSS.",
+  "description": "Simple portfolio template with React and Tailwind CSS",
   "main": "main.tsx",
+  "private": true,
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vite build && vite gh-pages"
   },
   "dependencies": {
     "@react-pdf/renderer": "^3.4.0",
@@ -18,6 +19,8 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/plugin-transform-react-jsx": "^7.25.9",
     "@eslint/js": "^9.9.1",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
