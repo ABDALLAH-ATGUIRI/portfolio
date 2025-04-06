@@ -2,21 +2,22 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/Portfolio/",
+  base: "/Portfolio/", // Matches your repo name for GitHub Pages
   plugins: [react()],
   optimizeDeps: {
-    include: ["react", "@react-pdf/renderer"], // Pre-bundle React explicitly
+    include: ["react", "react-dom", "@react-pdf/renderer"],
     exclude: ["lucide-react"],
   },
   build: {
     outDir: "dist",
     minify: "esbuild",
-    sourcemap: false, // Set to true temporarily to debug
+    sourcemap: false,
+    modulePreload: { polyfill: false },
     chunkSizeWarningLimit: 600,
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ["react"],
+          vendor: ["react", "react-dom"],
           icons: ["lucide-react"],
           pdf: ["@react-pdf/renderer"],
         },
