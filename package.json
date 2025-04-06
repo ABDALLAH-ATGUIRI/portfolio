@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Simple portfolio template with React and Tailwind CSS",
-  "main": "main.tsx",
   "private": true,
   "scripts": {
     "dev": "vite --host",
