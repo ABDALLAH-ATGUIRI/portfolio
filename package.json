@@ -4,6 +4,8 @@
   "type": "module",
   "description": "Simple portfolio template with React and Tailwind CSS",
   "private": true,
+  "license": "MIT",
+  "main": "index.tsx",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
