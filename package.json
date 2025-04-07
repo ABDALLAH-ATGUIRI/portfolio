@@ -15,7 +15,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "start": "react-scripts start",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-pdf/renderer": "^3.4.0",
