@@ -1,4 +1,3 @@
-// App.tsx
 import { Suspense, useState, useEffect } from "react";
 import { Hero } from "./components/Hero";
 import { Summary } from "./components/Summary";

@@ -1,4 +1,3 @@
-// Projects.tsx
 import React, { useRef, useState, useEffect } from "react";
 import projects from "../data/projects";
 import { SectionLayout } from "./layouts/SectionLayout";

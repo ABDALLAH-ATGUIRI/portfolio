@@ -1,4 +1,3 @@
-// LoadingLayout.tsx
 import React from "react";
 import { Terminal } from "lucide-react";
 

@@ -1,4 +1,3 @@
-// PDFWrapper.tsx
 import React from "react";
 import { PDFDocument } from "./PDFDocument";
 import useTranslation from "../../hooks/useTranslation";
