@@ -9,11 +9,13 @@
   "homepage": "https://github.com/ABDALLAH-ATGUIRI/Portfolio",
   "scripts": {
     "dev": "vite --host",
+    "eject": "vite eject",
     "build": "vite build",
-    "lint": "eslint .",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "start": "react-scripts start",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@react-pdf/renderer": "^3.4.0",

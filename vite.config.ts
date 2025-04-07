@@ -13,7 +13,6 @@ export default defineConfig({
     minify: "esbuild",
     sourcemap: false,
     modulePreload: { polyfill: false },
-    chunkSizeWarningLimit: 600,
     rollupOptions: {
       output: {
         manualChunks: {
