@@ -2,7 +2,7 @@ import React from "react";
 import Experiences from "../data/experience";
 import ExperienceCard from "./global/cards/ExperienceCard";
 import { SectionLayout } from "./layouts/SectionLayout";
-import { useTranslation } from "../context/TranslationContext";
+import useTranslation from "../hooks/useTranslation";
 
 export const Experience: React.FC = () => {
   const { t } = useTranslation();

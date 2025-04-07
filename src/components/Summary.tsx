@@ -1,6 +1,6 @@
 import React from "react";
 import { SectionLayout } from "./layouts/SectionLayout";
-import { useTranslation } from "../context/TranslationContext";
+import useTranslation from "../hooks/useTranslation";
 
 export const Summary: React.FC = () => {
   const { t } = useTranslation();

@@ -1,7 +1,7 @@
 import React from "react";
 import { Hobby } from "../types/personalInfo";
 import { SectionLayout } from "./layouts/SectionLayout";
-import { useTranslation } from "../context/TranslationContext";
+import useTranslation from "../hooks/useTranslation";
 import { hobbies } from "../data/personalInfo";
 import Chip from "./global/Chip";
 

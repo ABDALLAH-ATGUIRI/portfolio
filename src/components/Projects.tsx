@@ -2,7 +2,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import projects from "../data/projects";
 import { SectionLayout } from "./layouts/SectionLayout";
-import { useTranslation } from "../context/TranslationContext";
+import useTranslation from "../hooks/useTranslation";
 import ProjectCard from "./global/cards/ProjectCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
