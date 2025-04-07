@@ -1,8 +1,8 @@
 // PDFWrapper.tsx
 import React from "react";
 import { PDFDocument } from "./PDFDocument";
-import { useTranslation } from "../../context/TranslationContext";
 import { TranslationProvider } from "../../context/TranslationContext"; // Assuming this exists
+import useTranslation from "../../hooks/useTranslation";
 
 // Wrapper component to provide translations
 const PDFWrapper: React.FC = () => {

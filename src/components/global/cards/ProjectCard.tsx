@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
 import { Project } from "../../../types/project";
 import Chip from "../Chip";
-import { useTranslation } from "../../../context/TranslationContext";
+import useTranslation from "../../../hooks/useTranslation";
 
 interface ProjectCardProps {
   project: Project;

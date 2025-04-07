@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import Experience from "../../../types/experience";
-import { useTranslation } from "../../../context/TranslationContext";
 import Chip from "../Chip";
+import useTranslation from "../../../hooks/useTranslation";
 
 // Define props interface
 interface ExperienceCardProps {
