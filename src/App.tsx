@@ -20,38 +20,40 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-100 dark:bg-gray-900 transition-colors duration-200 relative overflow-hidden">
-      {/* Loading Overlay */}
-      <div
-        className={`fixed inset-0 z-50 transition-opacity duration-500 ${
-          isReady ? "opacity-0 pointer-events-none" : "opacity-100"
-        }`}
-      >
-        <LoadingLayout />
-      </div>
+    <Suspense fallback={<LoadingLayout />}>
+      <div className="min-h-screen bg-slate-100 dark:bg-gray-900 transition-colors duration-200 relative overflow-hidden">
+        {/* Loading Overlay */}
+        <div
+          className={`fixed inset-0 z-50 transition-opacity duration-500 ${
+            isReady ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
+        >
+          <LoadingLayout />
+        </div>
 
-      {/* Main Content */}
-      <div
-        className={`transition-opacity duration-500 ${
-          isReady ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <MainLayout>
-          <Suspense fallback={null}>
-            <Hero />
-            {/* No fallback here since LoadingLayout is above */}
-            <main className="container mx-auto px-4 max-w-5xl py-8">
-              <Summary />
-              <Experience />
-              <Projects />
-              <TechnicalSkills />
-              <Education />
-              <Hobbies />
-            </main>
-          </Suspense>
-        </MainLayout>
+        {/* Main Content */}
+        <div
+          className={`transition-opacity duration-500 ${
+            isReady ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <MainLayout>
+            <Suspense fallback={null}>
+              <Hero />
+              {/* No fallback here since LoadingLayout is above */}
+              <main className="container mx-auto px-4 max-w-5xl py-8">
+                <Summary />
+                <Experience />
+                <Projects />
+                <TechnicalSkills />
+                <Education />
+                <Hobbies />
+              </main>
+            </Suspense>
+          </MainLayout>
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }
 
