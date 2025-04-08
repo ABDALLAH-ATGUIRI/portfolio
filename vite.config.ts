@@ -1,8 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-export default defineConfig({
-  base: "/portfolio/", // Matches your repo name for GitHub Pages
+export default defineConfig(({ command }) => ({
   plugins: [react()],
   optimizeDeps: {
     include: ["react", "react-dom", "@react-pdf/renderer"],
@@ -24,10 +23,11 @@ export default defineConfig({
   },
   root: ".",
   publicDir: "public",
+  base: command === "build" ? "/portfolio/" : "/",
   resolve: {
     alias: {
       "@": "/src",
       "@assets": "/src/assets",
     },
   },
-});
+}));
