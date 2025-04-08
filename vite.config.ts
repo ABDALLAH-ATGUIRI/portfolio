@@ -10,22 +10,7 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-    minify: "esbuild",
     sourcemap: false,
-    modulePreload: { polyfill: false },
-    chunkSizeWarningLimit: 1000,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ["react", "react-dom"],
-          icons: ["lucide-react"],
-          pdf: ["@react-pdf/renderer"],
-        },
-        chunkFileNames: "assets/[name]-[hash].js",
-        entryFileNames: "assets/[name]-[hash].js",
-        assetFileNames: "assets/[name]-[hash][extname]",
-      },
-    },
   },
   server: {
     headers: {
@@ -35,6 +20,14 @@ export default defineConfig({
   preview: {
     headers: {
       "Permissions-Policy": "geolocation=(), camera=(), microphone=()",
+    },
+  },
+  root: ".",
+  publicDir: "public",
+  resolve: {
+    alias: {
+      "@": "/src",
+      "@assets": "/src/assets",
     },
   },
 });
