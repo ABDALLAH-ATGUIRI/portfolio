@@ -23,7 +23,7 @@ export default defineConfig(({ command }) => ({
   },
   root: ".",
   publicDir: "public",
-  base: command === "build" ? "/portfolio/" : "/",
+  base: "/portfolio/",
   resolve: {
     alias: {
       "@": "/src",
