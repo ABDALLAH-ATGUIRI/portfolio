@@ -6,7 +6,7 @@
   "private": true,
   "license": "MIT",
   "main": "index.tsx",
-  "homepage": "https://github.com/ABDALLAH-ATGUIRI/portfolio",
+  "homepage": "https://abdallah-atguiri.github.io/portfolio/",
   "scripts": {
     "dev": "vite --host",
     "eject": "vite eject",
