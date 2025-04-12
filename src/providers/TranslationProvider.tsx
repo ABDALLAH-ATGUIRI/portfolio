@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { Language, translations } from "../langs";
-import { TranslationContext } from "../context/TranslationContext";
+import { Language, translations } from "@/langs";
+import { TranslationContext } from "@/context/TranslationContext";
 
 export const TranslationProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -24,7 +24,8 @@ export const TranslationProvider: React.FC<{ children: React.ReactNode }> = ({
         key
           .split(".")
           .reduce(
-            (obj: Record<string, any> | undefined, k: string) => (obj && typeof obj === "object" ? obj[k] : undefined),
+            (obj: Record<string, any> | undefined, k: string) =>
+              obj && typeof obj === "object" ? obj[k] : undefined,
             translations[language] as any
           ) ?? key
       );

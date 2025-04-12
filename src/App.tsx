@@ -1,13 +1,13 @@
 import { Suspense, useState, useEffect } from "react";
-import { Hero } from "./components/Hero";
-import { Summary } from "./components/Summary";
-import { Experience } from "./components/Experience";
-import { Education } from "./components/Education";
-import { Hobbies } from "./components/Hobbies";
-import { TechnicalSkills } from "./components/TechnicalSkills";
-import { LoadingLayout } from "./components/layouts/LoadingLayout";
-import { Projects } from "./components/Projects";
-import MainLayout from "./components/layouts/MainLayout";
+import { Hero } from "@/components/Hero";
+import { Summary } from "@/components/Summary";
+import { Experience } from "@/components/Experience";
+import { Education } from "@/components/Education";
+import { Hobbies } from "@/components/Hobbies";
+import { TechnicalSkills } from "@/components/TechnicalSkills";
+import { LoadingLayout } from "@/components/layouts/LoadingLayout";
+import { Projects } from "@/components/Projects";
+import MainLayout from "@/components/layouts/MainLayout";
 
 function App() {
   const [isReady, setIsReady] = useState(false);

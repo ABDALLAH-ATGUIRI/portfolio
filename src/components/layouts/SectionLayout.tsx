@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { TranslationContext } from "../../context/TranslationContext";
+import { TranslationContext } from "@/context/TranslationContext";
 
 interface SectionLayoutProps {
   children: React.ReactNode;

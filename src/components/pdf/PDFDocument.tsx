@@ -1,4 +1,3 @@
-// PDFDocument.tsx
 import React from "react";
 import {
   Page,
@@ -9,13 +8,13 @@ import {
   Link,
   Image,
 } from "@react-pdf/renderer";
-import { me, contactLinks, hobbies } from "../../data/personalInfo";
-import { Contact, Hobby, PersonalInfo } from "../../types/personalInfo";
-import robotoRegular from "../../assets/fonts/Roboto-Regular.ttf";
-import robotoBold from "../../assets/fonts/Roboto-Bold.ttf";
+import { me, contactLinks, hobbies } from "@/data/personalInfo";
+import { Contact, Hobby, PersonalInfo } from "@/types/personalInfo";
+import robotoRegular from "@/assets/fonts/Roboto-Regular.ttf";
+import robotoBold from "@/assets/fonts/Roboto-Bold.ttf";
 import styles from "./PDFDocumentStyle";
-import Experiences from "../../data/experience";
-import projects from "../../data/projects";
+import Experiences from "@/data/experience";
+import projects from "@/data/projects";
 
 // Register fonts at module level
 Font.register({
@@ -147,10 +146,11 @@ export const PDFDocument: React.FC<PDFDocumentProps> = ({ t }) => {
             </Text>
             <Text style={styles.contact}>phone : {phone}</Text>
             {contactLinks.map(({ href, ariaLabel }: Contact, index) => (
-              <Text style={styles.contact}>
-                {ariaLabel} :
+              <Text style={styles.contact} key={index}>
+                {ariaLabel} :{" "}
                 <Link key={index} src={href} style={styles.link}>
-                  {href}
+                  {" "}
+                  {href}{" "}
                 </Link>
               </Text>
             ))}
@@ -213,9 +213,9 @@ export const PDFDocument: React.FC<PDFDocumentProps> = ({ t }) => {
           </View>
           <Text style={styles.text}>
             Hobbies:{" "}
-            {/* {...hobbies.map(
+            {...hobbies.map(
               ({ name }: Hobby) => t(`hobbies.${name}.title`) + ", "
-            )} */}
+            )}
           </Text>
         </Section>
       </Page>

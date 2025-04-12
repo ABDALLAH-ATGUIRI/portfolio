@@ -1,9 +1,9 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import { Contact, PersonalInfo } from "../types/personalInfo";
-import useTranslation from "../hooks/useTranslation";
-import { DownloadButton } from "./global/DownloadButton";
-import { contactLinks, me } from "../data/personalInfo";
-import HeroBackground from "./global/HeroBackground";
+import { Contact, PersonalInfo } from "@/types/personalInfo";
+import useTranslation from "@/hooks/useTranslation";
+import { contactLinks, me } from "@/data/personalInfo";
+import { DownloadButton } from "@/components/global/DownloadButton";
+import { HeroBackground } from "@/components/global/HeroBackground";
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();

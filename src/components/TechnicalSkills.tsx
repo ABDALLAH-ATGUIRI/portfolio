@@ -1,8 +1,8 @@
 import { memo } from "react";
-import skills from "../data/skills";
-import { Skill } from "../types/skills";
+import skills from "@/data/skills";
+import { Skill } from "@/types/skills";
 import { SectionLayout } from "./layouts/SectionLayout";
-import useTranslation from "../hooks/useTranslation";
+import useTranslation from "@/hooks/useTranslation";
 import Chip from "./global/Chip";
 
 export const TechnicalSkills = memo(() => {

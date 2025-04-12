@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
     },
     "outDir": "./dist",
-  
+
     /* Base */
     "target": "ES2020",
     "useDefineForClassFields": true,
@@ -28,8 +28,8 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "src/main.jsx"],
-  "exclude": ["node_modules"]}
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "src/main.tsx"],
+  "exclude": ["node_modules"]
+}

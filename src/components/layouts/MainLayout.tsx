@@ -1,6 +1,6 @@
 import { Copyright } from "lucide-react";
-import { LanguageSwitcher } from "../global/LanguageSwitcher";
-import ThemeButton from "../global/ThemeButton";
+import { LanguageSwitcher } from "@/components/global/LanguageSwitcher";
+import ThemeButton from "@/components/global/ThemeButton";
 
 interface MainLayoutProps {
   children: React.ReactNode;

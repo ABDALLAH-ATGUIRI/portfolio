@@ -1,9 +1,9 @@
 import React from "react";
-import { Hobby } from "../types/personalInfo";
-import { SectionLayout } from "./layouts/SectionLayout";
-import useTranslation from "../hooks/useTranslation";
-import { hobbies } from "../data/personalInfo";
-import Chip from "./global/Chip";
+import { Hobby } from "@/types/personalInfo";
+import useTranslation from "@/hooks/useTranslation";
+import { hobbies } from "@/data/personalInfo";
+import Chip from "@/components/global/Chip";
+import { SectionLayout } from "@/components/layouts/SectionLayout";
 
 export const Hobbies: React.FC = () => {
   const { t } = useTranslation();
@@ -11,8 +11,8 @@ export const Hobbies: React.FC = () => {
   return (
     <SectionLayout id="hobbies" title={t("hobbies.title")}>
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {hobbies.map(({ icon: Icon, name }: Hobby, index) => (
-          <li key={name || index}>
+        {hobbies.map(({ icon: Icon, name }: Hobby, index: number) => (
+          <li key={`hobby-${index}`}>
             <Chip
               text={t(`hobbies.${name}.title`)}
               icon={<Icon className="dark:text-blue-300 text-blue-600" />}

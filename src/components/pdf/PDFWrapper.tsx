@@ -1,7 +1,7 @@
 import React from "react";
 import { PDFDocument } from "./PDFDocument";
-import useTranslation from "../../hooks/useTranslation";
-import { TranslationProvider } from "../../Providers/TranslationProvider";
+import useTranslation from "@/hooks/useTranslation";
+import { TranslationProvider } from "@/providers/TranslationProvider";
 
 // Wrapper component to provide translations
 const PDFWrapper: React.FC = () => {

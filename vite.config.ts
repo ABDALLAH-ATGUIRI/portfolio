@@ -3,11 +3,17 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig(({ command }) => ({
   plugins: [react()],
+  base: command === "build" ? "/portfolio/" : "/",
   optimizeDeps: {
     include: ["react", "react-dom", "@react-pdf/renderer"],
-    exclude: ["lucide-react"],
+    // exclude: ["lucide-react"],
   },
   build: {
+    rollupOptions: {
+      input: {
+        main: './src/main.tsx',
+      },
+    },
     outDir: "dist",
     sourcemap: false,
   },
@@ -21,9 +27,7 @@ export default defineConfig(({ command }) => ({
       "Permissions-Policy": "geolocation=(), camera=(), microphone=()",
     },
   },
-  root: ".",
   publicDir: "public",
-  base: "/portfolio/",
   resolve: {
     alias: {
       "@": "/src",

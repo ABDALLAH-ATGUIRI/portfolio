@@ -1,7 +1,4 @@
-{
-  /* Background with theme-aware styling */
-}
-const HeroBackground: React.FC = () => {
+export const HeroBackground: React.FC = () => {
   return (
     <div
       className="absolute inset-0 transition-colors duration-500
@@ -28,5 +25,3 @@ const HeroBackground: React.FC = () => {
     </div>
   );
 };
-
-export default HeroBackground;

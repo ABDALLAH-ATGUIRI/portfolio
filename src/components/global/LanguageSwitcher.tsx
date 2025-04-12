@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { FlagFr, FlagGb, FlagMa } from "../../assets/images/flags";
-import useTranslation from "../../hooks/useTranslation";
+import { FlagFr, FlagGb, FlagMa } from "@/assets/images/flags";
+import useTranslation from "@/hooks/useTranslation";
 
 type Language = "EN" | "FR" | "AR";
 
