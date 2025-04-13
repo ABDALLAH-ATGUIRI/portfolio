@@ -5,8 +5,8 @@
   "description": "Simple portfolio template with React and Tailwind CSS",
   "private": true,
   "license": "MIT",
-  "main": "index.tsx",
-  "homepage": "https://abdallah-atguiri.github.io/portfolio/",
+  "main": "main.tsx",
+  "homepage": "https://abdallah-atguiri.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
