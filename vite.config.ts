@@ -3,17 +3,12 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/portfolio/",
+  base: "/portfolio/", // or '/your-repo-name/' if using subpath
   optimizeDeps: {
     include: ["react", "react-dom", "@react-pdf/renderer"],
     exclude: ["lucide-react"],
   },
   build: {
-    rollupOptions: {
-      input: {
-        main: "./src/main.tsx",
-      },
-    },
     outDir: "dist",
     sourcemap: false,
   },
