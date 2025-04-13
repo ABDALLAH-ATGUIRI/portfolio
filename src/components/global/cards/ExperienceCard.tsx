@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import Experience from "@/types/experience";
+import { Experience } from "@/types";
 import useTranslation from "@/hooks/useTranslation";
 import Chip from "@/components/global/Chip";
 
