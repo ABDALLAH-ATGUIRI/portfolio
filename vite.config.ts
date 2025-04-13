@@ -6,7 +6,7 @@ export default defineConfig(({ command }) => ({
   base: command === "build" ? "/portfolio/" : "/",
   optimizeDeps: {
     include: ["react", "react-dom", "@react-pdf/renderer"],
-    // exclude: ["lucide-react"],
+    exclude: ["lucide-react"],
   },
   build: {
     rollupOptions: {
