@@ -1,12 +1,14 @@
 {
-  "setting" :{
-    "role" :"دور",
-    "developer" :"مطور"
+  "setting": {
+    "role": "دور",
+    "developer": "مطور"
   },
   "developer": {
-    "name": "عبد الله أطغيري",
+    "name": "عبد الله أثكيري",
     "role": "مطور Full-Stack",
-    "location": "المغرب"
+    "location": "المغرب",
+    "email": "abdallah.atguiri@gmail.com",
+    "phone": "٢١٢٦٢٣٧٧٩٢٧٠+"
   },
   "about_me": {
     "title": "نبذة عني",
@@ -69,8 +71,8 @@
       "title": "كرة السلة",
       "description": "أستمتع بلعب كرة السلة ومشاهدة مباريات كرة السلة. يساعدني ذلك على البقاء في حالة جيدة وصحية."
     },
-    "problem_solving":{
-      "title" : "حل المشكلات",
+    "problem_solving": {
+      "title": "حل المشكلات",
       "description": "المشاركة في الأنشطة التي تتحدى تفكيري المنطقي وإبداعي، مما يساعدني على تطوير حلول فعالة للمشاكل المعقدة."
     }
   },

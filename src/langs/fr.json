@@ -1,12 +1,14 @@
 {
-  "setting" :{
-    "role" :"rôle",
-    "developer" :"développeur"
+  "setting": {
+    "role": "rôle",
+    "developer": "développeur"
   },
   "developer": {
     "name": "Abdallah ATGUIRI",
     "role": "Développeur Full-Stack",
-    "location" : "Maroc"
+    "location": "Maroc",
+    "email": "abdallah.atguiri@gmail.com",
+    "phone": "+212 623 779 270"
   },
   "about_me": {
     "title": "À propos de moi",

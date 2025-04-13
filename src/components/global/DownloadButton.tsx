@@ -9,13 +9,7 @@ export const DownloadButton: React.FC = () => {
       <PDFDownloadLink
         document={<PDFWithTranslations />}
         fileName="abdallah-atguiri-cv.pdf"
-        className={[
-          "transition-colors duration-200",
-          "backdrop-blur-sm p-3 rounded-full border",
-          "dark:text-blue-200 dark:hover:text-white",
-          "dark:bg-blue-900/30 dark:hover:bg-blue-800/30",
-          "dark:border-blue-500/20",
-        ].join(" ")}
+        className="contact-button"
       >
         <Download aria-label="Download CV" className="w-6 h-6" />
       </PDFDownloadLink>

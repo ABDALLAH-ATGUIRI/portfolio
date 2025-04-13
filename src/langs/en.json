@@ -6,7 +6,9 @@
   "developer": {
     "name": "Abdallah ATGUIRI",
     "role": "Full-Stack Developer",
-    "location": "Morocco"
+    "location": "Morocco",
+    "email": "abdallah.atguiri@gmail.com",
+    "phone": "+212 623 779 270"
   },
   "about_me": {
     "title": "About Me",

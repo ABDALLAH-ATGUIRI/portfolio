@@ -9,7 +9,7 @@ import {
   Image,
 } from "@react-pdf/renderer";
 import { me, contactLinks, hobbies } from "@/data/personalInfo";
-import { Contact, Hobby, PersonalInfo } from "@/types/personalInfo";
+import { Contact, Hobby, PersonalInfo } from "@/types";
 import robotoRegular from "@/assets/fonts/Roboto-Regular.ttf";
 import robotoBold from "@/assets/fonts/Roboto-Bold.ttf";
 import styles from "./PDFDocumentStyle";

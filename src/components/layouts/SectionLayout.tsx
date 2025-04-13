@@ -14,6 +14,12 @@ export const SectionLayout: React.FC<SectionLayoutProps> = ({
 }) => {
   const context = useContext(TranslationContext);
 
+  if (!context) {
+    throw new Error("TranslationContext is not provided.");
+  }
+
+  const { language } = context;
+
   return (
     <section className="mb-12" id={id}>
       <div className="relative ">
@@ -21,7 +27,7 @@ export const SectionLayout: React.FC<SectionLayoutProps> = ({
         <span
           className={`
             absolute top-2 w-4 h-4 bg-blue-500 rounded-full border-2 border-white dark:border-gray-800 transform transition-transform duration-300 group-hover:scale-125
-            ${context?.language === "AR" ? "-right-8" : "-left-8"}
+            ${language === "AR" ? "-right-8" : "-left-8"}
           `}
         />
 

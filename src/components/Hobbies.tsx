@@ -1,5 +1,5 @@
 import React from "react";
-import { Hobby } from "@/types/personalInfo";
+import { Hobby } from "@/types";
 import useTranslation from "@/hooks/useTranslation";
 import { hobbies } from "@/data/personalInfo";
 import Chip from "@/components/global/Chip";
