@@ -14,11 +14,9 @@ export const Hobbies: React.FC = () => {
         {hobbies.map(({ icon: Icon, name }: Hobby, index: number) => (
           <li key={`hobby-${index}`}>
             <Chip
-              text={t(`hobbies.${name}.title`)}
-              icon={<Icon className="dark:text-blue-300 text-blue-600" />}
-              className="flex items-center gap-2 backdrop-blur-sm px-4 py-2 rounded-full border transition-colors duration-300
-                dark:bg-blue-900/30 dark:border-blue-500/20 dark:text-blue-100
-                bg-white/50 border-gray-200 text-gray-700"
+              text={t(`hobbies.${name}.name`)}
+              icon={<Icon />}
+              className="contact-button [&>svg]:!text-md w-full !px-5 !py-2"
             />
           </li>
         ))}

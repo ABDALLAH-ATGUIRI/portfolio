@@ -1,9 +1,9 @@
 import { memo } from "react";
-import skills from "@/data/skills";
-import { Skill } from "@/types/skills";
-import { SectionLayout } from "./layouts/SectionLayout";
+import { Skill } from "@/types";
 import useTranslation from "@/hooks/useTranslation";
-import Chip from "./global/Chip";
+import { SectionLayout } from "@/components/layouts/SectionLayout";
+import Chip from "@/components/global/Chip";
+import { skills } from "@/data/skills";
 
 export const TechnicalSkills = memo(() => {
   const { t } = useTranslation();
@@ -14,23 +14,25 @@ export const TechnicalSkills = memo(() => {
         className="mb-12 grid gap-6 md:grid-cols-6 lg:gap-8"
         aria-label="Technical Skills"
       >
-        {skills.map((skill: Skill) => (
+        {skills.map(({ id, title, skills: items }: Skill) => (
           <article
-            key={skill.id}
-            className={`rounded-xl bg-gradient-to-br from-transparent to-gray-50 p-6 shadow-md transition-all hover:shadow-lg dark:from-gray-800 dark:to-gray-900 ${
-              skill.id <= 2 ? "md:col-span-3" : "md:col-span-2"
-            }`}
+            key={id}
+            className={[
+              `rounded-xl border p-6 shadow-md transition-colors hover:shadow-lg dark:border-gray-700`,
+              `bg-gradient-to-br from-transparent to-gray-50 dark:from-gray-800 dark:to-gray-900`,
+              id <= 2 ? "md:col-span-3" : "md:col-span-2",
+            ].join(" ")}
             role="group"
-            aria-labelledby={`skill-${skill.id}`}
+            aria-labelledby={`skill-${id}`}
           >
             <h3
-              id={`skill-${skill.id}`}
+              id={`skill-${id}`}
               className="mb-4 text-xl font-semibold text-gray-800 dark:text-white"
             >
-              {t(`technical_skills.${skill.title}.title`)}
+              {t(`technical_skills.${title}.title`)}
             </h3>
             <div className="flex flex-wrap gap-2">
-              {skill.skills.map((item) => (
+              {items.map((item) => (
                 <Chip
                   key={item}
                   text={item}

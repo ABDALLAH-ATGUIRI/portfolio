@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionLayout } from "@/components/layouts/SectionLayout";
 import ProjectCard from "@/components/global/cards/ProjectCard";
 import useTranslation from "@/hooks/useTranslation";
-import projects from "@/data/projects";
+import { projects } from "@/data/projects";
 
 export const Projects: React.FC = () => {
   const { t } = useTranslation();

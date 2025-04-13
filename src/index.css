@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 html[lang="ar"] body {
-  font-family: 'ArabicFont', sans-serif; /* Replace with an actual Arabic font */
+  font-family: 'ArabicFont', sans-serif;
+  /* Replace with an actual Arabic font */
 }
 
 @keyframes slideDown {
@@ -47,4 +48,22 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
   /* Chrome, Safari, and Opera */
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  @apply w-2
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary dark:bg-primary/30 rounded-lg;
+}
+
+.contact-button {
+  @apply transition-colors duration-200 backdrop-blur-sm p-3 rounded-full border cursor-pointer;
+  @apply dark:text-blue-200 dark:hover:text-white dark:bg-blue-900/30 dark:hover:bg-blue-800/30 dark:border-blue-500/20 text-blue-600 hover:text-blue-700 bg-white/50 hover:bg-white/80 border-gray-200
 }

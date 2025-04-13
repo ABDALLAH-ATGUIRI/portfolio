@@ -30,7 +30,7 @@ export const Hero: React.FC = () => {
           <ProfileImage />
 
           {/* Text Content */}
-          <div className="text-center space-y-6 transition-colors duration-300 dark:text-white text-gray-900">
+          <div className="text-center space-y-3 transition-colors duration-300 dark:text-white text-gray-900">
             <div
               className={[
                 "space-y-2 inline-block w-full transition-colors duration-300 text-gray-900 dark:text-white",
@@ -66,7 +66,7 @@ export const Hero: React.FC = () => {
                     <Chip
                       text={text}
                       icon={icon}
-                      className="contact-button [&>svg]:!text-lg"
+                      className="contact-button [&>svg]:!text-md !px-5 !py-2"
                     />
                   </Fragment>
                 )
