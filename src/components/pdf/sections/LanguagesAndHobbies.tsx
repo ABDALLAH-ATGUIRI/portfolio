@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "@react-pdf/renderer";
 import useTranslation from "@/hooks/useTranslation";
-import { hobbies, LANGUAGES } from "@/data/personalInfo";
+import { hobbies, LANGUAGES } from "@/data";
 import { Hobby } from "@/types";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";

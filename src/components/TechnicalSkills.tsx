@@ -3,7 +3,7 @@ import { Skill } from "@/types";
 import useTranslation from "@/hooks/useTranslation";
 import { SectionLayout } from "@/components/layouts/SectionLayout";
 import Chip from "@/components/global/Chip";
-import { skills } from "@/data/skills";
+import { skills } from "@/data";
 
 export const TechnicalSkills = memo(() => {
   const { t } = useTranslation();

@@ -2,7 +2,7 @@ import React, { Fragment, useContext } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Contact } from "@/types";
 import useTranslation from "@/hooks/useTranslation";
-import { contactLinks } from "@/data/personalInfo";
+import { contactLinks } from "@/data";
 import { DownloadButton } from "@/components/global/DownloadButton";
 import { HeroBackground } from "@/components/global/HeroBackground";
 import { ProfileImage } from "@/components/global/ProfileImage";

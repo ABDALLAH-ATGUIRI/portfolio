@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Link } from "@react-pdf/renderer";
 import useTranslation from "@/hooks/useTranslation";
-import { projects } from "@/data/projects";
+import { projects } from "@/data";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";
 

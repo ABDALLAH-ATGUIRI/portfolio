@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image, Link } from "@react-pdf/renderer";
-import { contactLinks, me } from "@/data/personalInfo";
+import { contactLinks, me } from "@/data";
 import useTranslation from "@/hooks/useTranslation";
 import { Contact } from "@/types";
 import { styles } from "../PDFStyle";

@@ -3,7 +3,7 @@ import { Text, View } from "@react-pdf/renderer";
 import useTranslation from "@/hooks/useTranslation";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";
-import { Experiences } from "@/data/experience";
+import { Experiences } from "@/data";
 
 export const Experience: React.FC = () => {
   const { t } = useTranslation();
