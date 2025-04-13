@@ -2,8 +2,8 @@ import {
   agriwiseLogo,
   codNetworkLogo,
   digitalEliteLogo,
-} from "../assets/images/companies";
-import Experience from "../types/experience";
+} from "@/assets/images/companies";
+import { Experience } from "@/types";
 
 const Experiences: Experience[] = [
   {

@@ -1,4 +1,4 @@
-import { Contact, Hobby, PersonalInfo } from "../types/personalInfo";
+import { Contact, Hobby, PersonalInfo } from "../types";
 import MyPhoto from "../assets/images/abdallahatguiri.webp";
 import {
   Book,
@@ -28,7 +28,7 @@ const contactLinks: Contact[] = [
   { icon: Globe, href: "#", ariaLabel: "Portfolio" },
   {
     icon: Github,
-    href: "https://github.com/abdallahatguiri",
+    href: "https://github.com/ABDALLAH-ATGUIRI",
     ariaLabel: "GitHub",
   },
   {
@@ -36,7 +36,7 @@ const contactLinks: Contact[] = [
     href: "https://www.linkedin.com/in/abdallah-atguiri/",
     ariaLabel: "LinkedIn",
   },
-  { icon: Mail, href: "mailto:abdallahatguiri@gmail.com", ariaLabel: "Email" },
+  { icon: Mail, href: "mailto:abdallah.atguiri@gmail.com", ariaLabel: "Email" },
 ];
 
 const hobbies: Hobby[] = [

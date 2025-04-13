@@ -1,8 +1,8 @@
-import { Project } from "../types/project";
-import TaskManagementApp from "../assets/images/projects/task-management-app.png";
-import VirtualGearHub01 from "../assets/images/projects/virtual_gear_hub01.png";
-import VirtualGearHub02 from "../assets/images/projects/virtual_gear_hub02.png";
+import TaskManagementApp from "@/assets/images/projects/task-management-app.png";
+import VirtualGearHub01 from "@/assets/images/projects/virtual_gear_hub01.png";
+import VirtualGearHub02 from "@/assets/images/projects/virtual_gear_hub02.png";
 import OnlineRestaurentReservation from "../assets/images/projects/online_restaurant_reservation_application.png";
+import { Project } from "@/types";
 
 const projects: Project[] = [
   {
