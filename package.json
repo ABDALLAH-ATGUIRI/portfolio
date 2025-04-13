@@ -7,15 +7,14 @@
   "license": "MIT",
   "main": "main.tsx",
   "homepage": "https://abdallah-atguiri.github.io/portfolio",
-  "scripts": {
-    "dev": "vite --host",
-    "build": "vite build",
-    "preview": "vite preview",
-    "format": "prettier --write .",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "postbuild": "cp dist/index.html dist/404.html",
-    "deploy": "vite build && cp dist/index.html dist/404.html && npx gh-pages -d dist"
-  },
+"scripts": {
+  "dev": "vite --host",
+  "build": "vite build",
+  "preview": "vite preview",
+  "format": "prettier --write .",
+  "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+  "deploy": "vite build && cp dist/index.html dist/404.html && npx gh-pages -d dist"
+},
   "dependencies": {
     "@react-pdf/renderer": "^3.4.0",
     "lucide-react": "^0.344.0",
