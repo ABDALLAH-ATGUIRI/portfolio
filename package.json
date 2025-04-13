@@ -11,9 +11,10 @@
     "dev": "vite --host",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist",
     "format": "prettier --write .",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "postbuild": "cp dist/index.html dist/404.html",
+    "deploy": "npm run build && npm run postbuild && gh-pages -d dist"
   },
   "dependencies": {
     "@react-pdf/renderer": "^3.4.0",

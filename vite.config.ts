@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   plugins: [react()],
-  base: command === "build" ? "/portfolio/" : "/",
+  base: "/",
   optimizeDeps: {
     include: ["react", "react-dom", "@react-pdf/renderer"],
     exclude: ["lucide-react"],
@@ -11,7 +11,7 @@ export default defineConfig(({ command }) => ({
   build: {
     rollupOptions: {
       input: {
-        main: './src/main.tsx',
+        main: "./src/main.tsx",
       },
     },
     outDir: "dist",
@@ -34,4 +34,4 @@ export default defineConfig(({ command }) => ({
       "@assets": "/src/assets",
     },
   },
-}));
+});
