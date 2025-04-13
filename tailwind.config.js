@@ -5,24 +5,29 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#0d6efd",
-        secondary: "#6c757d",
-        success: "#198754",
-        danger: "#dc3545",
-        warning: "#ffc107",
-        info: "#0dcaf0",
-        light: "#f8f9fa",
-        dark: "#212529",
+        primary: {
+          DEFAULT: "#1e40af", // Blue-800, matches CV titles
+          light: "#3b82f6", // Blue-500, for hover/active
+        },
+        secondary: {
+          DEFAULT: "#4b5563", // Gray-600, matches CV body text
+          light: "#6b7280", // Gray-500, for subtle accents
+        },
+        background: {
+          light: "#f3f4f6", // Gray-100, matches CV chip backgrounds
+          dark: "#0f172a", // Slate-900, for dark mode
+        },
+        accent: "#bfdbfe", // Blue-200, matches CV borders
       },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "hero-pattern": `url("data:image/svg+xml,%3Csvg width='48' height='64' viewBox='0 0 48 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2330A2FF' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M4 0h8v8H4zM16 0h8v8h-8zM28 0h8v8h-8zM40 0h8v8h-8zM0 12h8v8H0zM12 12h8v8h-8zM24 12h8v8h-8zM36 12h8v8h-8zM4 24h8v8H4zM16 24h8v8h-8zM28 24h8v8h-8zM40 24h8v8h-8zM0 36h8v8H0zM12 36h8v8h-8zM24 36h8v8h-8zM36 36h8v8h-8zM4 48h8v8H4zM16 48h8v8h-8zM28 48h8v8h-8zM40 48h8v8h-8zM0 60h8v4H0zM12 60h8v4h-8zM24 60h8v4h-8zM36 60h8v4h-8z'/%3E%3C/g%3E%3C/svg%3E")`,
+        "hero-light":
+          "radial-gradient(circle at 30% 50%, #f3f4f6, #e5e7eb 70%)",
+        "hero-dark": "radial-gradient(circle_at_30%_50%,#f8fafc,#e2e8f0_70%)",
+        "hero-pattern": `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231e40af' fill-opacity='0.3' fill-rule='evenodd'%3E%3Cpath d='M0 0h8v8H0zM12 0h8v8h-8zM24 0h8v8h-8zM0 12h8v8H0zM12 12h8v8h-8zM24 12h8v8h-8zM0 24h8v8H0zM12 24h8v8h-8zM24 24h8v8h-8z'/%3E%3C/g%3E%3C/svg%3E")`,
       },
       boxShadow: {
-        light: '0 0 40px rgba(148, 163, 184, 0.2)',
-        dark: '0 0 40px rgba(59, 130, 246, 0.5)',
+        soft: "0 4px 20px rgba(59, 130, 246, 0.15)", // Blue-500, subtle for both modes
+        card: "0 2px 8px rgba(31, 41, 55, 0.1)", // Gray-800, for cards
       },
     },
   },

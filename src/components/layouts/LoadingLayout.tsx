@@ -1,34 +1,44 @@
 import React from "react";
 import { Terminal } from "lucide-react";
+import { HeroBackground } from "../global/HeroBackground";
 
 export const LoadingLayout: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-950 flex items-center justify-center px-4">
-      <div className="text-center space-y-6">
-        {/* Animated Terminal Icon with Pulse Effect */}
-        <div className="relative flex justify-center items-center mb-4">
-          <Terminal className="w-14 h-14 text-blue-600 dark:text-blue-400 animate-pulse" />
-          <div className="absolute w-20 h-20 border-2 border-blue-200 dark:border-blue-800 rounded-lg animate-ping opacity-30" />
+    <div
+      className="relative min-h-screen bg-background-light dark:bg-background-dark flex items-center justify-center px-4 sm:px-6"
+      aria-live="polite"
+      aria-busy="true"
+    >
+      {/* Subtle HeroBackground */}
+      <HeroBackground />
+
+      <div className="relative z-50 text-center space-y-4">
+        {/* Animated Terminal Icon */}
+        <div className="relative flex justify-center items-center">
+          <Terminal
+            className="w-20 h-20 text-primary dark:text-primary-light animate-pulse"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute w-16 h-16 border-2 border-accent dark:border-primary rounded-md animate-ping opacity-25"
+            aria-hidden="true"
+          />
         </div>
 
         {/* Loading Text with Progress Dots */}
         <div className="flex flex-col items-center gap-6">
-          <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 tracking-tight">
+          <h2 className="text-2xl font-semibold text-primary dark:text-primary-light">
             Loading...
           </h2>
           <div className="flex gap-1.5">
-            <span
-              className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full animate-bounce"
-              style={{ animationDelay: "0s" }}
-            />
-            <span
-              className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full animate-bounce"
-              style={{ animationDelay: "0.2s" }}
-            />
-            <span
-              className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full animate-bounce"
-              style={{ animationDelay: "0.4s" }}
-            />
+            {[0, 1, 2, 3, 4].map((_, index) => (
+              <span
+                key={index}
+                className="w-2 h-2 bg-primary rounded-full animate-bounce"
+                aria-hidden="true"
+                style={{ animationDelay: "0.2s" }}
+              />
+            ))}
           </div>
         </div>
       </div>

@@ -20,12 +20,13 @@ function App() {
 
   return (
     <Suspense fallback={<LoadingLayout />}>
-      <div className="min-h-screen bg-slate-100 dark:bg-gray-900 transition-colors duration-200 relative overflow-hidden">
+      <div className="min-h-screen text-secondary bg-background-light dark:bg-background-dark transition-colors duration-300 relative overflow-hidden">
         {/* Loading Overlay */}
         <div
-          className={`fixed inset-0 z-50 transition-opacity duration-500 ${
-            isReady ? "opacity-0 pointer-events-none" : "opacity-100"
-          }`}
+          className={[
+            "fixed inset-0 z-50 transition-opacity duration-500",
+            isReady ? "opacity-0 pointer-events-none" : "opacity-100",
+          ].join(" ")}
         >
           <LoadingLayout />
         </div>
