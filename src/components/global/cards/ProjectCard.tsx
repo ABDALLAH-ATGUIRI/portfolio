@@ -96,10 +96,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }): JSX.Element => {
 
       {/* Content */}
       <div className="p-6 flex flex-col flex-grow bg-gradient-to-br from-white to-gray-50 shadow-md transition-all hover:shadow-lg dark:from-gray-800 dark:to-gray-900 h-[48vh]">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 tracking-tight">
+        <h3 className=" text-lg md:text-xl font-bold text-gray-900 dark:text-white tracking-tight">
           {t(`projects.${project.key}.title`)}
         </h3>
-        <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-4 line-clamp-3 flex-grow">
+        <p className="text-gray-600 dark:text-gray-200 text-sm  md:text-base leading-relaxed mb-4">
           {t(`projects.${project.key}.description`)}
         </p>
         <div className="flex flex-wrap gap-2 mb-4">

@@ -18,17 +18,13 @@ export const TechnicalSkills = memo(() => {
           <article
             key={id}
             className={[
-              `rounded-xl border p-6 shadow-md transition-colors hover:shadow-lg dark:border-gray-700`,
-              `bg-gradient-to-br from-transparent to-gray-50 dark:from-gray-800 dark:to-gray-900`,
+              `card`,
               id <= 2 ? "md:col-span-3" : "md:col-span-2",
             ].join(" ")}
             role="group"
             aria-labelledby={`skill-${id}`}
           >
-            <h3
-              id={`skill-${id}`}
-              className="mb-4 text-xl font-semibold text-gray-800 dark:text-white"
-            >
+            <h3 id={`skill-${id}`} className="card-header mb-4">
               {t(`technical_skills.${title}.title`)}
             </h3>
             <div className="flex flex-wrap gap-2">

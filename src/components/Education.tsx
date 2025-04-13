@@ -9,18 +9,15 @@ export const Education: React.FC = () => {
     <SectionLayout id="education" title={t("education.title")}>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6">
         {["high_school", "youcode"].map((education) => (
-          <div
-            key={education}
-            className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-          >
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+          <div key={education} className="card">
+            <h3 className="card-header">
               {t(`education.diploma.${education}.title`)}
             </h3>
-            <p className="text-blue-600 dark:text-blue-400 font-medium mb-1">
+            <p className="text-blue-600 dark:text-blue-300 font-semibold text-sm mt-1">
               {t(`education.diploma.${education}.school`)}
             </p>
-            <p className="text-gray-500 dark:text-gray-400 italic text-sm mb-3">
-              {t(`education.diploma.${education}.date`)}
+            <p className="text-gray-500 dark:text-gray-400 text-xs md:text-sm italic mb-4 bg-gray-50 dark:bg-gray-900 px-3 py-1 rounded-full inline-block">
+              {t(`education.diploma.${education}.date`)}{" "}
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
               {t(`education.diploma.${education}.description`)}

@@ -2,9 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { Language, translations } from "@/langs";
 import { TranslationContext } from "@/context/TranslationContext";
 
-export const TranslationProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
+export const TranslationProvider: React.FC<{ children: React.ReactNode }> = ({children}) => {
   // Load language preference from localStorage
   const [language, setLanguage] = useState<Language>(() => {
     return (localStorage.getItem("appLanguage") as Language) || "EN";

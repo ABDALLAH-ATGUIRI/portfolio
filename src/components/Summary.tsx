@@ -7,7 +7,7 @@ export const Summary: React.FC = () => {
 
   return (
     <SectionLayout id="about_me" title={t("about_me.title")}>
-      <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed bg-transparent dark:bg-gray-800 p-6 rounded-lg shadow-md">
+      <p className="card">
         {t("about_me.description")}
       </p>
     </SectionLayout>

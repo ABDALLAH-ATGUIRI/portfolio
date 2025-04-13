@@ -29,6 +29,11 @@ export default {
         soft: "0 4px 20px rgba(59, 130, 246, 0.15)", // Blue-500, subtle for both modes
         card: "0 2px 8px rgba(31, 41, 55, 0.1)", // Gray-800, for cards
       },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        serif: ["Merriweather", "serif"],
+        mono: ["Fira Code", "monospace"],
+      },
     },
   },
 };

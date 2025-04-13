@@ -14,9 +14,9 @@ const ExperienceCard: React.FC<ExperienceCardProps> = memo(
     const { company_name, companyLogo, technical_skills } = experience;
 
     return (
-      <div className="dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full p-8">
+      <div className="card">
         {/* Header with Logo and Title */}
-        <div className="flex items-center gap-4 mb-4">
+        <div className="card-header flex items-center gap-4 mb-4">
           {companyLogo && (
             <img
               src={companyLogo}
@@ -27,7 +27,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = memo(
             />
           )}
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white tracking-tight">
+            <h3 className="font-bold tracking-tight">
               {t(`experience.companies.${company_name}.position`)}
             </h3>
             <p className="text-blue-600 dark:text-blue-300 font-semibold text-sm mt-1">
@@ -36,21 +36,23 @@ const ExperienceCard: React.FC<ExperienceCardProps> = memo(
           </div>
         </div>
         {/* Date Range */}
-        <p className="text-gray-500 dark:text-gray-400 text-sm italic mb-4 bg-gray-50 dark:bg-gray-900 px-3 py-1 rounded-full inline-block">
+        <p className="text-gray-500 dark:text-gray-400 text-xs md:text-sm italic mb-4 bg-gray-50 dark:bg-gray-900 px-3 py-1 rounded-full inline-block">
           {t(`experience.companies.${company_name}.date`)}
         </p>
         {/* Description */}
-        <p className="text-gray-600 dark:text-gray-200 text-base leading-relaxed mb-4">
+        <p className="card-body">
           {t(`experience.companies.${company_name}.description`)}
         </p>
         {/* Skills */}
-        {technical_skills.length > 0 && (
-          <div className="flex flex-wrap gap-2">
-            {technical_skills.map((skill, index) => (
-              <Chip key={index} text={skill} />
-            ))}
-          </div>
-        )}
+        <div className="card-footer">
+          {technical_skills.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {technical_skills.map((skill, index) => (
+                <Chip key={index} text={skill} />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     );
   }

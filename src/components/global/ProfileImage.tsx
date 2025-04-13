@@ -3,7 +3,7 @@ import MyPhoto from "@/assets/images/abdallahatguiri.webp";
 
 export const ProfileImage: React.FC = () => {
   return (
-    <div className="relative size-64 mx-auto lg:mx-0">
+    <div className="relative size-48 md:size-52 lg:size-64 mx-auto lg:mx-0">
       <div
         className={[
           "absolute inset-0 rounded-2xl overflow-hidden ",

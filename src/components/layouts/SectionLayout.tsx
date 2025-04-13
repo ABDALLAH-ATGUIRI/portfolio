@@ -31,7 +31,7 @@ export const SectionLayout: React.FC<SectionLayoutProps> = ({
           `}
         />
 
-        <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">
+        <h2 className="text-xl md:text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">
           {title}
         </h2>
       </div>
