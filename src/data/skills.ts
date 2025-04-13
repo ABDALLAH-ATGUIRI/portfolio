@@ -1,6 +1,6 @@
 import { Skill } from "@/types";
 
-const skills: Skill[] = [
+export const skills: Skill[] = [
   {
     id: 1,
     title: "frontend",
@@ -53,5 +53,3 @@ const skills: Skill[] = [
     skills: ["Linux", "Windows", "Figma", "Jest", "AI tools"],
   },
 ];
-
-export default skills;

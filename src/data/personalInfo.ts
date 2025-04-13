@@ -25,15 +25,19 @@ const me: PersonalInfo = {
 };
 
 const contactLinks: Contact[] = [
-  { icon: Globe, href: "#", ariaLabel: "Portfolio" },
+  {
+    icon: Globe,
+    href: "https://abdallah-atguiri.github.io/portfolio",
+    ariaLabel: "Portfolio",
+  },
   {
     icon: Github,
-    href: "https://github.com/ABDALLAH-ATGUIRI",
+    href: "https://www.github.com/ABDALLAH-ATGUIRI",
     ariaLabel: "GitHub",
   },
   {
     icon: Linkedin,
-    href: "https://www.linkedin.com/in/abdallah-atguiri/",
+    href: "https://www.linkedin.com/in/abdallah-atguiri",
     ariaLabel: "LinkedIn",
   },
   { icon: Mail, href: "mailto:abdallah.atguiri@gmail.com", ariaLabel: "Email" },
@@ -73,5 +77,7 @@ const hobbies: Hobby[] = [
     icon: Puzzle,
   },
 ];
+
+export const LANGUAGES = ["arabic", "french", "english"];
 
 export { me, contactLinks, hobbies };

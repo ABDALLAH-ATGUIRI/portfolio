@@ -4,7 +4,7 @@ import VirtualGearHub02 from "@/assets/images/projects/virtual_gear_hub02.png";
 import OnlineRestaurentReservation from "../assets/images/projects/online_restaurant_reservation_application.png";
 import { Project } from "@/types";
 
-const projects: Project[] = [
+export const projects: Project[] = [
   {
     key: "project_4",
     technologies: [
@@ -57,5 +57,3 @@ const projects: Project[] = [
     github: "https://github.com/ABDALLAH-ATGUIRI/Restaurant-app-frontend",
   },
 ];
-
-export default projects;

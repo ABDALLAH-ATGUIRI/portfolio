@@ -1,7 +1,8 @@
 {
   "setting": {
     "role": "role",
-    "developer": "developer"
+    "developer": "developer",
+    "technologies": "technologies"
   },
   "developer": {
     "name": "Abdallah ATGUIRI",
@@ -21,59 +22,74 @@
         "title": "Cod Network, Agadir, Morocco",
         "position": "Junior Full-Stack Developer",
         "date": "June 2023 - Present",
-        "description": "I specialize in Laravel and JavaScript frontend frameworks, including Vue.js and React. My expertise includes backend optimization, API development, and authentication using Laravel Passport. On the frontend, I craft dynamic user experiences with Tailwind CSS, Material-UI, and Redux. I have hands-on experience in e-commerce platforms and VR-related web applications, ensuring high performance, scalability, and a seamless user experience."
+        "description": "I specialize in Laravel and JavaScript frontend frameworks, including Vue.js and React. My expertise includes backend optimization, API development, and authentication using Laravel Passport. On the frontend, I craft dynamic user experiences with Tailwind CSS, Material-UI, and Redux. I have hands-on experience in e-commerce platforms, ensuring high performance, scalability, and a seamless user experience."
       },
       "agriwise": {
         "title": "Agriwise, Agadir, Morocco",
         "position": "Full-Stack Developer Intern (Laravel/Vue.js)",
         "date": "January 2023 - February 2023",
-        "description": "During my internship at Agriwise, I focused on frontend development using Vue.js, Tailwind CSS, and Element Plus to build dynamic and responsive user interfaces. I collaborated in an agriculture management platform project, gaining hands-on experience in farm management solutions. Additionally, I worked with Laravel for backend tasks, strengthening my skills in API integration and data handling. This experience also enhanced my ability to work in an Agile environment, following Scrum methodologies to improve teamwork and project efficiency"
+        "description": "During my internship at Agriwise, I focused on frontend development using Vue.js, Tailwind CSS, and Element Plus to build dynamic and responsive user interfaces. I collaborated in an agriculture management platform project, gaining hands-on experience in farm management solutions. Additionally, I worked with Laravel for backend tasks. This experience also enhanced my ability to work in an Agile environment, following Scrum methodologies to improve teamwork and project efficiency"
       },
       "digital_elite": {
         "title": "Digital Elite, Agadir, Morocco",
         "position": "Full-Stack Web Developer Intern",
         "date": "March 2023 - May 2023",
-        "description": "During my first internship at Digital Elite, I gained hands-on experience in web development using React and Node.js, contributing to real-world projects. This opportunity helped me develop a strong understanding of Agile methodologies, teamwork, and effective communication within a company environment. I also learned software development best practices, improving my ability to write clean, maintainable code and collaborate efficiently in a professional setting."
+        "description": "Contributed to React and Node.js projects, adopting Agile methodologies and clean code practices, improving teamwork and communication while delivering maintainable solutions in a professional environment."
       }
     }
   },
   "hobbies": {
     "title": "Hobbies",
     "coding": {
-      "title": "Coding",
+      "name": "Coding",
       "description": "I love coding and enjoy working on personal projects in my spare time. I am always looking to learn new technologies and improve my skills."
     },
     "reading": {
-      "title": "Reading",
+      "name": "Reading",
       "description": "I enjoy reading books, especially in the genres of science fiction and technology. I believe that reading helps me to expand my knowledge and creativity."
     },
     "gaming": {
-      "title": "Gaming",
+      "name": "Gaming",
       "description": "I enjoy playing video games in my free time. It helps me to relax and unwind after a long day of coding."
     },
     "exploring": {
-      "title": "Exploring",
+      "name": "Exploring",
       "description": "I love exploring new places and cultures. Traveling helps me to gain new perspectives and ideas that I can apply to my work."
     },
     "personal_projects": {
-      "title": "Personal Projects",
+      "name": "Personal Projects",
       "description": "I enjoy working on personal projects that allow me to experiment with new technologies and ideas. I believe that personal projects are a great way to learn and grow as a developer."
     },
     "learning": {
-      "title": "Learning",
+      "name": "Learning",
       "description": "I am always looking to learn new technologies and improve my skills. I enjoy learning about new programming languages, frameworks, and tools."
     },
     "basketball": {
-      "title": "Basketball",
+      "name": "Basketball",
       "description": "I enjoy playing basketball and watching basketball games. It helps me to stay fit and healthy."
     },
     "music": {
-      "title": "Music",
+      "name": "Music",
       "description": "I enjoy listening to music, especially in genres such as pop, rock, and electronic. It helps me to relax and unwind."
     },
     "problem_solving": {
-      "title": "Problem solving",
+      "name": "Problem solving",
       "description": "Engaging in activities that challenge my logical thinking and creativity, helping me to develop effective solutions for complex problems."
+    }
+  },
+  "languages": {
+    "title": "Languages",
+    "arabic": {
+      "name": "Arabic",
+      "level": "Native Speaker"
+    },
+    "french": {
+      "name": "French",
+      "level": "Beginner"
+    },
+    "english": {
+      "name": "English",
+      "level": "Intermediate"
     }
   },
   "technical_skills": {

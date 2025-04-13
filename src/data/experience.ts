@@ -5,7 +5,7 @@ import {
 } from "@/assets/images/companies";
 import { Experience } from "@/types";
 
-const Experiences: Experience[] = [
+export const Experiences: Experience[] = [
   {
     company_name: "cod_network",
     companyLogo: codNetworkLogo,
@@ -50,5 +50,3 @@ const Experiences: Experience[] = [
     ],
   },
 ];
-
-export default Experiences;

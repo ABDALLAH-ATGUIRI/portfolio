@@ -38,3 +38,10 @@ export interface Project {
   github?: string; // Optional property for GitHub URL
   demo?: string; // Optional property for demo URL
 }
+
+export interface Certificate {
+  title: string;
+  institution: string;
+  date: string;
+  description: string;
+}

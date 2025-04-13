@@ -1,11 +1,6 @@
-interface Certificate {
-  title: string;
-  institution: string;
-  date: string;
-  description: string;
-}
+import { Certificate } from "@/types";
 
-const CERTIFICATES: Certificate[] = [
+export const CERTIFICATES: Certificate[] = [
   {
     title: "Meta Front-End Developer",
     institution: "Meta",
@@ -28,5 +23,3 @@ const CERTIFICATES: Certificate[] = [
       "Achieved a score of 100% in the CodinGame JavaScript certification, demonstrating proficiency in JavaScript programming.",
   },
 ];
-
-export { CERTIFICATES };
