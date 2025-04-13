@@ -1,17 +1,41 @@
 import React from "react";
-import { PDFDocument } from "./PDFDocument";
-import useTranslation from "@/hooks/useTranslation";
+import { Document, Page } from "@react-pdf/renderer";
 import { TranslationProvider } from "@/providers/TranslationProvider";
+import {
+  CVHeader,
+  CvSummary,
+  TechnicalSkills,
+  Experience,
+  Projects,
+  Education,
+  LanguagesAndHobbies,
+} from "./sections";
 
-// Wrapper component to provide translations
-const PDFWrapper: React.FC = () => {
-  const { t } = useTranslation();
-  return <PDFDocument t={t} />;
-};
-
-// Top-level component with TranslationProvider
 export const PDFWithTranslations: React.FC = () => (
   <TranslationProvider>
-    <PDFWrapper />
+    <Document>
+      <Page
+        size="A4"
+        style={{
+          padding: 24,
+          backgroundColor: "#ffffff",
+          fontFamily: "Helvetica", // Use default font
+          fontSize: 12,
+          color: "#374151",
+        }}
+      >
+        {[
+          CVHeader,
+          CvSummary,
+          TechnicalSkills,
+          Experience,
+          Projects,
+          Education,
+          LanguagesAndHobbies,
+        ].map((Component, index) => (
+          <Component key={index} />
+        ))}
+      </Page>
+    </Document>
   </TranslationProvider>
 );
