@@ -60,7 +60,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary dark:bg-primary/30 rounded-lg;
+  @apply bg-primary/50 rounded-lg;
 }
 
 .contact-button {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Download } from "lucide-react";
 import { PDFDownloadLink } from "@react-pdf/renderer";
-import { PDFWithTranslations } from "@/components/pdf/PDFWrapper";
+import { PDFWithTranslations } from "@/components/pdf/CVDocument";
 
 export const DownloadButton: React.FC = () => {
   return (
