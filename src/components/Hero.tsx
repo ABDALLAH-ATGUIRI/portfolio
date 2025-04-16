@@ -6,7 +6,7 @@ import { contactLinks } from "@/data";
 import { DownloadButton } from "@/components/global/DownloadButton";
 import { HeroBackground } from "@/components/global/HeroBackground";
 import { ProfileImage } from "@/components/global/ProfileImage";
-import Chip from "@/components/global/Chip";
+import { Chip } from "@/components/global/Chip";
 import { TranslationContext } from "@/context/TranslationContext";
 
 export const Hero: React.FC = () => {
@@ -15,8 +15,8 @@ export const Hero: React.FC = () => {
 
   const contactInfo = [
     { icon: <MapPin />, text: t("developer.location") },
-    { icon: <Phone />, text: t("developer.phone") },
-    { icon: <Mail />, text: t("developer.email") },
+    { icon: <Phone />, text: t("developer.phone"), copy: true },
+    { icon: <Mail />, text: t("developer.email"), copy: true },
   ];
 
   return (
@@ -59,14 +59,15 @@ export const Hero: React.FC = () => {
             </div>
 
             {/*  */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 text-sm justify-center lg:justify-start">
+            <div className="flex flex-col md:flex-row items-center gap-4 text-sm justify-center lg:justify-start">
               {contactInfo.map(
-                ({ icon, text }, index: number): JSX.Element => (
+                ({ icon, text, copy }, index: number): JSX.Element => (
                   <Fragment key={index}>
                     <Chip
                       text={text}
                       icon={icon}
-                      className="contact-button [&>svg]:!text-sm !px-5 !py-2"
+                      className="contact-button [&>svg]:!text-sm w-80 md:w-auto !px-5 !py-2"
+                      copy={copy}
                     />
                   </Fragment>
                 )

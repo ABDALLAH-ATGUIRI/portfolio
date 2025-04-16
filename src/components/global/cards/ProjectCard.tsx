@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
 import { Project } from "@/types";
 import useTranslation from "@/hooks/useTranslation";
-import Chip from "@/components/global/Chip";
+import { Chip } from "@/components/global/Chip";
 
 interface ProjectCardProps {
   project: Project;
