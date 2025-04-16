@@ -23,11 +23,11 @@ export const styles = StyleSheet.create({
     overflow: "hidden", // Clip for zoom effect
   },
   profileImage: {
-    width: 80, // Larger than container for zoom
+    width: 100, // Larger than container for zoom
     height: 64,
     position: "absolute",
     top: -8, // Center vertically
-    left: -12, // Center horizontally
+    left: -20, // Center horizontally
   },
   name: {
     fontSize: 24,

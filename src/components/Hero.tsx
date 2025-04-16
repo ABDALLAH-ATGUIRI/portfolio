@@ -65,6 +65,7 @@ export const Hero: React.FC = () => {
                   <Fragment key={index}>
                     <Chip
                       text={text}
+                      title="Click to copy"
                       icon={icon}
                       className="contact-button [&>svg]:!text-sm w-80 md:w-auto !px-5 !py-2"
                       copy={copy}

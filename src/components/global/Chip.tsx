@@ -4,6 +4,7 @@ import React, { useState } from "react";
 interface ChipProps {
   text: string;
   className?: string;
+  title?: string;
   icon?: React.ReactNode;
   copy?: boolean;
 }
@@ -11,6 +12,7 @@ interface ChipProps {
 export const Chip: React.FC<ChipProps> = ({
   text,
   icon,
+  title,
   className,
   copy = false,
 }) => {
@@ -48,7 +50,7 @@ export const Chip: React.FC<ChipProps> = ({
   };
 
   const classes = {
-    defaultStyles: `inline-flex gap-3 items-center font-bold p-1 text-sm transition-all duration-300 rounded-full shadow-sm bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-700`,
+    defaultStyles: `inline-flex gap-3 items-center font-bold text-sm transition-all duration-300 rounded-full shadow-sm bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-700`,
     copiedStyles: `!bg-green-500/40 ring-2 ring-green-500 text-white`,
     clickable: copy ? "cursor-pointer" : "",
   };
@@ -56,12 +58,12 @@ export const Chip: React.FC<ChipProps> = ({
   return (
     <span
       onClick={copy ? handleCopy : undefined}
-      title={copy ? (copied ? "Copied!" : "Click to copy") : undefined}
+      title={copy ? (copied ? "Copied!" : title) : undefined}
       className={`${classes.defaultStyles} ${
         copied ? classes.copiedStyles : ""
       } ${classes.clickable} ${className || ""}`}
     >
-      {copied ? <Check size={20} /> : icon && <span>{icon}</span>}
+      {copied ? <Check /> : icon && <span>{icon}</span>}
       <span>{text}</span>
     </span>
   );

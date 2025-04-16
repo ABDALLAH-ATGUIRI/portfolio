@@ -19,7 +19,7 @@ import {
 } from "@/assets/images/companies";
 import { Experience, Contact, Hobby, PersonalInfo,Certificate, Skill, Project } from "@/types";
 
-  import MyPhoto from "@/assets/images/abdallahatguiri.webp";
+import MyPhoto from '@/assets/images/abdallahatguiri.jpg';
 import TaskManagementApp from "@/assets/images/projects/task-management-app.png";
 import VirtualGearHub01 from "@/assets/images/projects/virtual_gear_hub01.png";
 import VirtualGearHub02 from "@/assets/images/projects/virtual_gear_hub02.png";

@@ -1,7 +1,9 @@
 import React from "react";
-import MyPhoto from "@/assets/images/abdallahatguiri.webp";
+import { me } from "@/data";
 
 export const ProfileImage: React.FC = () => {
+    const { image } = me;
+  
   return (
     <div className="relative size-48 md:size-52 lg:size-64 mx-auto lg:mx-0">
       <div
@@ -12,7 +14,7 @@ export const ProfileImage: React.FC = () => {
         ].join(" ")}
       >
         <img
-          src={MyPhoto}
+          src={image}
           alt={`Abdallah Atguiri - Full Stack Web Developer`}
           className="w-full h-full object-cover object-center select-none"
           loading="lazy"
