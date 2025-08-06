@@ -6,7 +6,7 @@ import { Contact } from "@/types";
 import { styles } from "../PDFStyle";
 
 export const CVHeader: React.FC = () => {
-  const { image, phone } = me;
+  const { image } = me;
   const { t } = useTranslation();
 
   return (
@@ -25,9 +25,11 @@ export const CVHeader: React.FC = () => {
       </View>
       <View style={styles.contactSection}>
         <Text style={styles.contactItem}>
-          address : {t("developer.location")}
+          Address : {t("developer.location")}
         </Text>
-        <Text style={styles.contactItem}>phone : {phone}</Text>
+        <Text style={styles.contactItem}>
+          Phone : {t("developer.phone")}
+        </Text>
         {contactLinks.map(({ href, ariaLabel }: Contact, index) => (
           <Text style={styles.contactItem} key={index}>
             {ariaLabel} :{" "}

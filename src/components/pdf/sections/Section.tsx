@@ -11,7 +11,12 @@ export const Section: React.FC<{
       marginBottom: 4,
     }}
   >
-    <Text style={styles.sectionTitle}>{title}</Text>
+    <View
+      style={{ flexDirection: "row", alignItems: "center", marginBottom: 4 }}
+    >
+      <Text style={[styles.sectionTitle, { marginRight: 8 }]}>{title}</Text>
+      <View style={{ flex: 1, height: 1, backgroundColor: "#ccc" }} />
+    </View>{" "}
     {children}
   </View>
 );

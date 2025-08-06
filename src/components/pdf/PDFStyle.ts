@@ -6,8 +6,6 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginBottom: 8, // Consistent with prior optimization
     paddingBottom: 4,
-    borderBottomWidth: 1,
-    borderBottomColor: "#bfdbfe", // Blue-200
   },
   profileSection: {
     flexDirection: "row",
@@ -15,8 +13,8 @@ export const styles = StyleSheet.create({
     gap: 12,
   },
   imageContainer: {
-    width: 56, // Smaller than 48
-    height: 56,
+    width: 64, // Smaller than 48
+    height: 64,
     borderWidth: 1,
     borderColor: "#bfdbfe", // Blue-200
     borderRadius: 1,
@@ -24,10 +22,10 @@ export const styles = StyleSheet.create({
   },
   profileImage: {
     width: 100, // Larger than container for zoom
-    height: 64,
+    height: 68,
     position: "absolute",
-    top: -8, // Center vertically
-    left: -20, // Center horizontally
+    top: -5, // Center vertically
+    left: -18, // Center horizontally
   },
   name: {
     fontSize: 24,
@@ -35,7 +33,7 @@ export const styles = StyleSheet.create({
     color: "#1e40af", // Blue-800
   },
   role: {
-    fontSize: 10,
+    fontSize: 17,
     color: "#4b5563", // Gray-600
     marginTop: 1,
   },
@@ -50,12 +48,10 @@ export const styles = StyleSheet.create({
     marginBottom: 2,
   },
   sectionTitle: {
-    fontSize: 12,
-    fontWeight: 800,
+    fontSize: 10,
+    fontWeight: 900,
     color: "#1e40af",
     marginBottom: 3,
-    borderBottomWidth: 1,
-    borderBottomColor: "#bfdbfe",
     paddingBottom: 1,
   },
   title: {
@@ -71,10 +67,10 @@ export const styles = StyleSheet.create({
     marginBottom: 3,
   },
   countentText: {
-    fontSize: 9,
+    fontSize: 9.5,
     color: "#4b5563",
     marginLeft: 10,
-    marginBottom: 3,
+    marginBottom: 4,
     lineHeight: 1.4,
   },
   skillGroup: {

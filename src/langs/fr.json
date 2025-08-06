@@ -6,14 +6,14 @@
   },
   "developer": {
     "name": "Abdallah ATGUIRI",
-    "role": "Développeur Full-Stack",
+    "role": "Développeur Web Full-Stack",
     "location": "Maroc",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "+212 623 779 270"
   },
   "about_me": {
     "title": "À propos de moi",
-    "description": "Je suis Abdallah Atguiri, un développeur web Full Stack passionné, doté d'un don pour créer des expériences utilisateur fluides et des backends robustes et évolutifs. J'adore transformer mes idées en applications web interactives, non seulement fonctionnelles, mais aussi agréables à utiliser."
+    "description": "Développeur Web Full Stack passionné, spécialisé dans la création d’expériences utilisateur fluides et le développement de systèmes backend solides et évolutifs. J’aime transformer des idées en applications web interactives, performantes et agréables à utiliser."
   },
   "experience": {
     "title": "Expérience Professionnelle",
