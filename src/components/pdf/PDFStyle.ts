@@ -28,12 +28,12 @@ export const styles = StyleSheet.create({
     left: -14,
   },
   name: {
-    fontSize: 19,
+    fontSize: 22,
     fontWeight: "bold",
     color: "#0f172a", // Slate-900
   },
   role: {
-    fontSize: 13.5,
+    fontSize: 15.5,
     color: "#334155", // Slate-700
     marginTop: 1,
   },

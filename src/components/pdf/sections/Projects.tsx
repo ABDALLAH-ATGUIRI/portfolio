@@ -32,10 +32,7 @@ export const Projects: React.FC = () => {
           </View>
           {github && (
             <Text style={styles.countentText}>
-              • github :{" "}
-              <Link src={github} style={styles.contactLink}>
-                {github}
-              </Link>
+              • GitHub: <Link src={github} style={styles.contactLink}>{github.replace(/^https?:\/\/(www\.)?/, "")}</Link>
             </Text>
           )}
         </View>

@@ -25,9 +25,6 @@ export const CVHeader: React.FC = () => {
       </View>
       <View style={styles.contactSection}>
         <Text style={styles.contactItem}>
-          Address : {t("developer.location")}
-        </Text>
-        <Text style={styles.contactItem}>
           Phone : {t("developer.phone")}
         </Text>
         {contactLinks.map(({ href, ariaLabel }: Contact, index) => (
