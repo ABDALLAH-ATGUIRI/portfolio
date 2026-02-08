@@ -1,5 +1,5 @@
-import agriwiseLogo from "./agriwise-logo.png";
-import digitalEliteLogo from "./digital-elite-logo.png";
-import codNetworkLogo from "./cod-network-logo.jpg";
+import { assetPaths } from "@/config/assets";
 
-export { agriwiseLogo, digitalEliteLogo, codNetworkLogo };
+export const agriwiseLogo = assetPaths.images.companies.agriwise;
+export const digitalEliteLogo = assetPaths.images.companies.digitalElite;
+export const codNetworkLogo = assetPaths.images.companies.codNetwork;

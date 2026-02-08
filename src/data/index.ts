@@ -18,12 +18,7 @@ import {
   digitalEliteLogo,
 } from "@/assets/images/companies";
 import { Experience, Contact, Hobby, PersonalInfo,Certificate, Skill, Project } from "@/types";
-
-import MyPhoto from '@/assets/images/abdallahatguiri.jpg';
-import TaskManagementApp from "@/assets/images/projects/task-management-app.png";
-import VirtualGearHub01 from "@/assets/images/projects/virtual_gear_hub01.png";
-import VirtualGearHub02 from "@/assets/images/projects/virtual_gear_hub02.png";
-import OnlineRestaurentReservation from "@/assets/images/projects/online_restaurant_reservation_application.png";
+import { assetPaths } from "@/config/assets";
 
 export const projects: Project[] = [
   {
@@ -38,7 +33,7 @@ export const projects: Project[] = [
       "Matial-UI",
       "Vite",
     ],
-    images: [VirtualGearHub01, VirtualGearHub02],
+    images: [assetPaths.images.projects.virtualGearHub01, assetPaths.images.projects.virtualGearHub02],
     github: "https://github.com/ABDALLAH-ATGUIRI/virtual-gear-hub",
   },
   {
@@ -57,7 +52,7 @@ export const projects: Project[] = [
       "Tailwind CSS",
       "Vite",
     ],
-    images: [TaskManagementApp],
+    images: [assetPaths.images.projects.taskManagement],
     github: "https://github.com/ABDALLAH-ATGUIRI/Task_management_app",
     demo: "https://abdallah-atguiri.github.io/Task_management_app/",
   },
@@ -74,7 +69,7 @@ export const projects: Project[] = [
       "Prisma",
       "MongoDB",
     ],
-    images: [OnlineRestaurentReservation],
+    images: [assetPaths.images.projects.onlineRestaurant],
     github: "https://github.com/ABDALLAH-ATGUIRI/Restaurant-app-frontend",
   },
 ];
@@ -206,7 +201,7 @@ export const Experiences: Experience[] = [
 export const me: PersonalInfo = {
   name: "Abdallah Atguiri",
   title: "Full Stack Web Developer",
-  image: MyPhoto,
+  image: assetPaths.images.profile,
   location: "Morocco",
   phone: "+212623779270",
   email: "abdallahatguiri@gmail.com",

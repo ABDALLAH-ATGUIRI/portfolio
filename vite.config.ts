@@ -19,6 +19,21 @@ export default defineConfig({
     sourcemap: false, // Set to true if you need source maps for debugging
     minify: "esbuild", // Default minification, you can change to 'terser' for more aggressive minification
     chunkSizeWarningLimit: 500, // Change limit if needed for large bundles
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("@react-pdf/renderer")) {
+              return "react-pdf";
+            }
+            if (id.includes("lucide-react")) {
+              return "icons";
+            }
+            return "vendor";
+          }
+        },
+      },
+    },
   },
 
   // Server and preview headers for security and privacy

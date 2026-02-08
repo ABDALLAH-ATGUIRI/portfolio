@@ -1,5 +1,5 @@
-import FlagFr from "./fr.svg";
-import FlagGb from "./gb.svg";
-import FlagMa from "./ma.svg";
+import { assetPaths } from "@/config/assets";
 
-export { FlagFr, FlagGb, FlagMa };
+export const FlagFr = assetPaths.images.flags.fr;
+export const FlagGb = assetPaths.images.flags.gb;
+export const FlagMa = assetPaths.images.flags.ma;
