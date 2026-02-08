@@ -5,16 +5,17 @@ import { projects } from "@/data";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";
 
+const filteredProjects = projects.filter(({ key }) =>
+  ["project_1", "project_2"].includes(key)
+);
+
 export const Projects: React.FC = () => {
   const { t } = useTranslation();
-  const filteredProjects = projects.filter(({ key }) =>
-    ["project_1", "project_2"].includes(key)
-  );
 
   return (
     <Section title={t("projects.title")}>
-      {filteredProjects.map(({ key, technologies, github }, index) => (
-        <View key={index}>
+      {filteredProjects.map(({ key, technologies, github }) => (
+        <View key={key}>
           <Text style={styles.title}>{t(`projects.${key}.title`)}</Text>
           <Text style={styles.countentText}>
             {t(`projects.${key}.description`)}
@@ -23,18 +24,20 @@ export const Projects: React.FC = () => {
             <Text style={styles.countentText}>
               • {t(`setting.technologies`)} :{" "}
             </Text>
-            {technologies.map((tech, techIndex) => (
-              <Text key={techIndex} style={styles.chip}>
+            {technologies.map((tech) => (
+              <Text key={tech} style={styles.chip}>
                 {tech}
               </Text>
             ))}
           </View>
-          <Text style={styles.countentText}>
-            • github :{" "}
-            <Link src={github} style={styles.contactLink}>
-              {github}
-            </Link>
-          </Text>
+          {github && (
+            <Text style={styles.countentText}>
+              • github :{" "}
+              <Link src={github} style={styles.contactLink}>
+                {github}
+              </Link>
+            </Text>
+          )}
         </View>
       ))}
     </Section>

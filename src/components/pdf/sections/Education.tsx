@@ -9,8 +9,8 @@ export const Education: React.FC = () => {
 
   return (
     <Section title={t("education.title")}>
-      {["youcode", "high_school"].map((key, index) => (
-        <View key={index}>
+      {["youcode", "high_school"].map((key) => (
+        <View key={key}>
           <Text style={styles.title}>
             {t(`education.diploma.${key}.title`)}
           </Text>

@@ -5,14 +5,30 @@ import { TranslationContext } from "@/context/TranslationContext";
 export const TranslationProvider: React.FC<{ children: React.ReactNode }> = ({children}) => {
   // Load language preference from localStorage
   const [language, setLanguage] = useState<Language>(() => {
-    return (localStorage.getItem("appLanguage") as Language) || "EN";
+    if (typeof window === "undefined") {
+      return "EN";
+    }
+    try {
+      return (localStorage.getItem("appLanguage") as Language) || "EN";
+    } catch {
+      return "EN";
+    }
   });
 
   // Save language preference when changed
   useEffect(() => {
-    localStorage.setItem("appLanguage", language);
-    document.documentElement.lang = language.toLowerCase();
-    document.body.dir = language === "AR" ? "rtl" : "ltr";
+    if (typeof window === "undefined") return;
+    try {
+      localStorage.setItem("appLanguage", language);
+    } catch {
+      // ignore storage errors
+    }
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = language.toLowerCase();
+      if (document.body) {
+        document.body.dir = language === "AR" ? "rtl" : "ltr";
+      }
+    }
   }, [language]);
 
   // Optimized translation function with memoization

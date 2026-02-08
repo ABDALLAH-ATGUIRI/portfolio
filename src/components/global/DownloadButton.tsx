@@ -1,18 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { Download } from "lucide-react";
-import { PDFDownloadLink } from "@react-pdf/renderer";
-import { PDFWithTranslations } from "@/components/pdf/CVDocument";
 
 export const DownloadButton: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleDownload = async () => {
+    if (isLoading) return;
+    setIsLoading(true);
+    try {
+      const [{ pdf }, { PDFWithTranslations }] = await Promise.all([
+        import("@react-pdf/renderer"),
+        import("@/components/pdf/CVDocument"),
+      ]);
+
+      const blob = await pdf(<PDFWithTranslations />).toBlob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "abdallah-atguiri-cv.pdf";
+      link.click();
+      URL.revokeObjectURL(url);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="w-auto flex justify-center items-center">
-      <PDFDownloadLink
-        document={<PDFWithTranslations />}
-        fileName="abdallah-atguiri-cv.pdf"
+      <button
+        type="button"
+        onClick={handleDownload}
         className="contact-button"
+        aria-label={isLoading ? "Preparing CV" : "Download CV"}
+        disabled={isLoading}
       >
-        <Download aria-label="Download CV" className="w-6 h-6" />
-      </PDFDownloadLink>
+        <Download aria-hidden="true" className="w-6 h-6" />
+      </button>
     </div>
   );
 };

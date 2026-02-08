@@ -8,15 +8,22 @@ import { projects } from "@/data";
 export const Projects: React.FC = () => {
   const { t } = useTranslation();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const rafRef = useRef<number | null>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
   const checkScrollPosition = () => {
-    if (scrollContainerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1); // -1 for rounding errors
+    if (rafRef.current !== null) {
+      cancelAnimationFrame(rafRef.current);
     }
+    rafRef.current = requestAnimationFrame(() => {
+      if (scrollContainerRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } =
+          scrollContainerRef.current;
+        setCanScrollLeft(scrollLeft > 0);
+        setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1); // -1 for rounding errors
+      }
+    });
   };
 
   const scrollLeft = () => {
@@ -37,11 +44,16 @@ export const Projects: React.FC = () => {
     const container = scrollContainerRef.current;
     if (container) {
       checkScrollPosition(); // Initial check
-      container.addEventListener("scroll", checkScrollPosition);
-      window.addEventListener("resize", checkScrollPosition);
+      container.addEventListener("scroll", checkScrollPosition, {
+        passive: true,
+      });
+      window.addEventListener("resize", checkScrollPosition, { passive: true });
       return () => {
         container.removeEventListener("scroll", checkScrollPosition);
         window.removeEventListener("resize", checkScrollPosition);
+        if (rafRef.current !== null) {
+          cancelAnimationFrame(rafRef.current);
+        }
       };
     }
   }, []);

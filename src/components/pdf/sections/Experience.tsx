@@ -10,8 +10,8 @@ export const Experience: React.FC = () => {
 
   return (
     <Section title={t("experience.title")}>
-      {Experiences.map((experience, index) => (
-        <View key={index}>
+      {Experiences.map((experience) => (
+        <View key={experience.company_name}>
           <Text style={styles.title}>
             {t(`experience.companies.${experience.company_name}.position`)}
           </Text>

@@ -5,9 +5,10 @@ import { Section } from "./Section";
 import { styles } from "../PDFStyle";
 import { skills } from "@/data";
 
+const filteredSkills = skills.slice(0, -1); // Exclude last element
+
 export const TechnicalSkills: React.FC = () => {
   const { t } = useTranslation();
-  const filteredSkills = skills.slice(0, -1); // Exclude last element
   return (
     <Section title={t("technical_skills.title")}>
       <View
@@ -24,7 +25,7 @@ export const TechnicalSkills: React.FC = () => {
             </Text>
             <View style={styles.chipContainer}>
               {skills.map((item, index) => (
-                <Text key={index} style={styles.chip}>
+                <Text key={item} style={styles.chip}>
                   {item}
                 </Text>
               ))}

@@ -4,36 +4,36 @@ export const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: 8, // Consistent with prior optimization
-    paddingBottom: 4,
+    marginBottom: 4,
+    paddingBottom: 1.5,
   },
   profileSection: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 12,
+    gap: 8,
   },
   imageContainer: {
-    width: 64, // Smaller than 48
-    height: 64,
+    width: 54,
+    height: 54,
     borderWidth: 1,
     borderColor: "#bfdbfe", // Blue-200
     borderRadius: 1,
     overflow: "hidden", // Clip for zoom effect
   },
   profileImage: {
-    width: 100, // Larger than container for zoom
-    height: 68,
+    width: 84,
+    height: 58,
     position: "absolute",
-    top: -5, // Center vertically
-    left: -18, // Center horizontally
+    top: -3,
+    left: -14,
   },
   name: {
-    fontSize: 24,
+    fontSize: 19,
     fontWeight: "bold",
     color: "#1e40af", // Blue-800
   },
   role: {
-    fontSize: 17,
+    fontSize: 13.5,
     color: "#4b5563", // Gray-600
     marginTop: 1,
   },
@@ -43,62 +43,75 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   contactItem: {
-    fontSize: 7.5,
+    fontSize: 9,
     color: "#4b5563", // Gray-600
-    marginBottom: 2,
+    marginBottom: 1.2,
   },
   sectionTitle: {
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: 900,
     color: "#1e40af",
-    marginBottom: 3,
-    paddingBottom: 1,
+    marginBottom: 1.5,
+    paddingBottom: 0.3,
   },
   title: {
-    fontSize: 10,
+    fontSize: 11,
     fontWeight: 700, // Bold (700)
     color: "#1f2937", // gray-800
-    marginBottom: 1.5, // Reduced from 2
+    marginBottom: 0.8,
   },
   subtitle: {
-    fontSize: 8,
+    fontSize: 9.5,
     color: "#6b7280", // gray-500
     fontStyle: "italic",
-    marginBottom: 3,
+    marginBottom: 1.8,
   },
   countentText: {
-    fontSize: 9.5,
+    fontSize: 10.5,
     color: "#4b5563",
-    marginLeft: 10,
-    marginBottom: 4,
-    lineHeight: 1.4,
+    marginLeft: 5,
+    marginBottom: 1.8,
+    lineHeight: 1.28,
   },
   skillGroup: {
     flex: "1 0 48%", // Tighter two-column layout
-    marginBottom: 3, // Reduced from 4
+    marginBottom: 1.8,
   },
   chipContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 2, // Reduced from 3
+    gap: 1,
   },
   chip: {
     backgroundColor: "#f3f4f6", // Gray-100
-    borderRadius: 6, // Smaller
-    paddingVertical: 0.3, // Reduced from 0.5
-    paddingHorizontal: 4, // Reduced from 5
-    fontSize: 8, // Reduced from 7
+    borderRadius: 4,
+    paddingVertical: 0.15,
+    paddingHorizontal: 3,
+    fontSize: 9,
     color: "#4b5563", // Gray-600
   },
   contactLink: {
-    fontSize: 8,
+    fontSize: 9,
     color: "#2563eb", // Blue-600
     textDecoration: "none",
   },
   container: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 30,
-    paddingTop: 5,
+    gap: 12,
+    paddingTop: 1.5,
+  },
+  sectionWrapper: {
+    marginBottom: 1.6,
+  },
+  sectionHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 1.6,
+  },
+  sectionDivider: {
+    flex: 1,
+    height: 1,
+    backgroundColor: "#e5e7eb",
   },
 });

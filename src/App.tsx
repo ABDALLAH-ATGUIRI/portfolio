@@ -1,13 +1,40 @@
-import { Suspense, useState, useEffect } from "react";
-import { Hero } from "@/components/Hero";
-import { Summary } from "@/components/Summary";
-import { Experience } from "@/components/Experience";
-import { Education } from "@/components/Education";
-import { Hobbies } from "@/components/Hobbies";
-import { TechnicalSkills } from "@/components/TechnicalSkills";
+import { Suspense, useState, useEffect, lazy } from "react";
 import { LoadingLayout } from "@/components/layouts/LoadingLayout";
-import { Projects } from "@/components/Projects";
 import MainLayout from "@/components/layouts/MainLayout";
+
+const Hero = lazy(() =>
+  import("@/components/Hero").then((module) => ({ default: module.Hero }))
+);
+const Summary = lazy(() =>
+  import("@/components/Summary").then((module) => ({
+    default: module.Summary,
+  }))
+);
+const Experience = lazy(() =>
+  import("@/components/Experience").then((module) => ({
+    default: module.Experience,
+  }))
+);
+const Education = lazy(() =>
+  import("@/components/Education").then((module) => ({
+    default: module.Education,
+  }))
+);
+const Hobbies = lazy(() =>
+  import("@/components/Hobbies").then((module) => ({
+    default: module.Hobbies,
+  }))
+);
+const TechnicalSkills = lazy(() =>
+  import("@/components/TechnicalSkills").then((module) => ({
+    default: module.TechnicalSkills,
+  }))
+);
+const Projects = lazy(() =>
+  import("@/components/Projects").then((module) => ({
+    default: module.Projects,
+  }))
+);
 
 function App() {
   const [isReady, setIsReady] = useState(false);

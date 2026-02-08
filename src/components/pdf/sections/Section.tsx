@@ -6,17 +6,11 @@ export const Section: React.FC<{
   title: string;
   children: React.ReactNode;
 }> = ({ title, children }) => (
-  <View
-    style={{
-      marginBottom: 4,
-    }}
-  >
-    <View
-      style={{ flexDirection: "row", alignItems: "center", marginBottom: 4 }}
-    >
-      <Text style={[styles.sectionTitle, { marginRight: 8 }]}>{title}</Text>
-      <View style={{ flex: 1, height: 1, backgroundColor: "#ccc" }} />
-    </View>{" "}
+  <View style={styles.sectionWrapper}>
+    <View style={styles.sectionHeader}>
+      <Text style={[styles.sectionTitle, { marginRight: 6 }]}>{title}</Text>
+      <View style={styles.sectionDivider} />
+    </View>
     {children}
   </View>
 );
