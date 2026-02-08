@@ -27,15 +27,41 @@ html[lang="ar"] body {
   }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
 body {
-  @apply bg-gray-100 dark:bg-gray-900 text-gray-100 dark:text-gray-900;
+  @apply bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-950 dark:to-blue-950;
+  @apply text-gray-900 dark:text-gray-100;
   @apply transition-colors duration-300;
   @apply font-sans;
   @apply text-sm;
   @apply leading-6;
   @apply antialiased;
-  @apply text-gray-900 dark:text-gray-100;
-  @apply bg-white dark:bg-gray-800;
 }
 
 .hide-scrollbar {
@@ -64,26 +90,32 @@ body {
 }
 
 .contact-button {
-  @apply transition-colors duration-200 backdrop-blur-sm p-3 rounded-full border cursor-pointer;
-  @apply dark:text-blue-200 dark:hover:text-white dark:bg-blue-900/30 dark:hover:bg-blue-800/30 dark:border-blue-500/20 text-blue-600 hover:text-blue-700 bg-white/50 hover:bg-white/80 border-gray-200
+  @apply transition-all duration-300 backdrop-blur-md p-3 rounded-xl border cursor-pointer;
+  @apply dark:text-blue-200 dark:hover:text-white dark:bg-blue-900/40 dark:hover:bg-blue-800/50 dark:border-blue-500/30;
+  @apply text-blue-600 hover:text-blue-700 bg-white/60 hover:bg-white/90 border-blue-200/50;
+  @apply shadow-lg hover:shadow-xl dark:shadow-blue-900/40;
 }
 
 .card {
-  @apply text-gray-600 dark:text-gray-300 text-[16px] md:text-lg leading-relaxed bg-transparent dark:bg-gray-800 p-6 rounded-lg shadow-md;
-  @apply rounded-xl border p-6 shadow-md transition-colors hover:shadow-lg dark:border-gray-700;
-  @apply bg-gradient-to-br from-transparent to-gray-50 dark:from-gray-800 dark:to-gray-900;
-  @apply border border-gray-200 dark:border-gray-700;
-  @apply transition-transform duration-200 transform ;
+  @apply text-gray-600 dark:text-gray-300 text-[16px] md:text-lg leading-relaxed;
+  @apply rounded-2xl border p-6 shadow-lg transition-all duration-300 hover:shadow-xl dark:border-gray-700;
+  @apply bg-gradient-to-br from-white/90 to-blue-50/90 dark:from-gray-800/90 dark:to-slate-800/90;
+  @apply backdrop-blur-xl border-white/40 dark:border-blue-400/10;
+  @apply hover:scale-105 transform;
 }
+
 .card:hover {
-  @apply shadow-lg;
+  @apply shadow-2xl dark:shadow-blue-900/50;
 }
+
 .card-header {
-  @apply text-lg font-semibold text-gray-900 dark:text-gray-100;
+  @apply text-lg font-bold text-gray-900 dark:text-gray-100 mb-2;
 }
+
 .card-body {
   @apply text-gray-700 dark:text-gray-300;
 }
+
 .card-footer {
   @apply text-sm text-gray-500 dark:text-gray-400 py-4;
 }
