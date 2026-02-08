@@ -20,50 +20,46 @@ export const Hero: React.FC = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden pb-16">
+    <section className="relative overflow-hidden">
       <HeroBackground />
 
       {/* Content */}
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-5xl !min-h-screen md:min-h-[60vh] flex items-center">
-        <div className="grid grid-cols-1 w-full lg:grid-cols-[auto_1fr] gap-8 lg:gap-16 items-center py-16">
+        <div className="grid grid-cols-1 w-full lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-center py-16">
           {/* Profile Image */}
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-3xl blur-2xl opacity-30 animate-pulse" />
-            <ProfileImage />
-          </div>
+          <ProfileImage />
 
           {/* Text Content */}
-          <div className="text-center space-y-6 transition-colors duration-300 dark:text-white text-gray-900">
+          <div className="text-center space-y-4 transition-colors duration-300 dark:text-white text-gray-900">
             <div
               className={[
-                "space-y-3 inline-block w-full transition-colors duration-300 text-gray-900 dark:text-white",
+                "space-y-2 inline-block w-full transition-colors duration-300 text-gray-900 dark:text-white",
                 context?.language === "AR"
                   ? "lg:text-right lg:!order-1 [&>h1]:!mr-6"
                   : "lg:text-left lg:order-2 [&>h1]:!ml-6",
               ].join(" ")}
             >
-              <span className="font-mono text-sm text-blue-500 dark:text-blue-400 font-semibold">
+              <span className="font-mono text-sm text-primary dark:text-blue-300">
                 const {t("setting.developer")} = {`{`}
               </span>
               <h1
                 className={[
-                  "text-5xl lg:text-6xl font-black tracking-tight bg-clip-text text-transparent ",
-                  "bg-gradient-to-r from-gray-900 via-blue-600 to-blue-500 dark:from-gray-100 dark:via-blue-400 dark:to-cyan-300",
-                  "drop-shadow-lg",
+                  "text-4xl lg:text-5xl font-bold tracking-tight bg-clip-text text-transparent ",
+                  "bg-gradient-to-r from-gray-900 via-primary to-primary/50 dark:from-gray-100 dark:via-blue-400 dark:to-cyan-400",
                 ].join(" ")}
               >
                 {t("developer.name")}
               </h1>
-              <h2 className="text-2xl lg:text-3xl font-bold text-blue-600 dark:text-blue-300 tracking-wider">
+              <h1 className="text-xl lg:text-2xl font-medium font-mono text-primary dark:text-blue-200">
                 {t("setting.role")}: "{t("developer.role")}"
-              </h2>
-              <span className="font-mono text-sm text-blue-500 dark:text-blue-400 font-semibold inline-block">
+              </h1>
+              <span className="font-mono text-sm text-primary dark:text-blue-300">
                 {`}`};
               </span>
             </div>
 
-            {/* Contact Info */}
-            <div className="flex flex-col md:flex-row items-center gap-3 justify-center lg:justify-start flex-wrap">
+            {/*  */}
+            <div className="flex flex-col md:flex-row items-center gap-4 text-sm justify-center lg:justify-start">
               {contactInfo.map(
                 ({ icon, text, copy }, index: number): JSX.Element => (
                   <Fragment key={index}>
@@ -71,7 +67,7 @@ export const Hero: React.FC = () => {
                       text={text}
                       title="Click to copy"
                       icon={icon}
-                      className="contact-button !w-auto !px-5 !py-2.5 font-medium"
+                      className="contact-button [&>svg]:!text-sm w-80 md:w-auto !px-5 !py-2"
                       copy={copy}
                     />
                   </Fragment>
@@ -79,18 +75,18 @@ export const Hero: React.FC = () => {
               )}
             </div>
 
-            {/* Social Links */}
-            <div className="flex justify-center lg:justify-start gap-4 pt-4">
+            {/*  */}
+            <div className="flex justify-center lg:justify-start gap-6 pt-2">
               {contactLinks.map(({ icon: Icon, href, ariaLabel }: Contact) => (
                 <a
                   key={ariaLabel}
                   href={href}
-                  className="contact-button group hover:scale-110"
+                  className="contact-button"
                   aria-label={ariaLabel}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon className="w-6 h-6 group-hover:rotate-12 transition-transform" />
+                  <Icon />
                 </a>
               ))}
               <DownloadButton />
