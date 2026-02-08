@@ -30,11 +30,11 @@ export const styles = StyleSheet.create({
   name: {
     fontSize: 19,
     fontWeight: "bold",
-    color: "#1e40af", // Blue-800
+    color: "#0f172a", // Slate-900
   },
   role: {
     fontSize: 13.5,
-    color: "#4b5563", // Gray-600
+    color: "#334155", // Slate-700
     marginTop: 1,
   },
   contactSection: {
@@ -44,31 +44,31 @@ export const styles = StyleSheet.create({
   },
   contactItem: {
     fontSize: 9,
-    color: "#4b5563", // Gray-600
+    color: "#475569", // Slate-600
     marginBottom: 1.2,
   },
   sectionTitle: {
     fontSize: 12,
     fontWeight: 900,
-    color: "#1e40af",
+    color: "#1d4ed8", // Blue-700
     marginBottom: 1.5,
     paddingBottom: 0.3,
   },
   title: {
     fontSize: 11,
     fontWeight: 700, // Bold (700)
-    color: "#1f2937", // gray-800
+    color: "#111827", // Gray-900
     marginBottom: 0.8,
   },
   subtitle: {
     fontSize: 9.5,
-    color: "#6b7280", // gray-500
+    color: "#475569", // Slate-600
     fontStyle: "italic",
     marginBottom: 1.8,
   },
   countentText: {
     fontSize: 10.5,
-    color: "#4b5563",
+    color: "#374151", // Gray-700
     marginLeft: 5,
     marginBottom: 1.8,
     lineHeight: 1.28,
@@ -83,16 +83,16 @@ export const styles = StyleSheet.create({
     gap: 1,
   },
   chip: {
-    backgroundColor: "#f3f4f6", // Gray-100
+    backgroundColor: "#f8fafc", // Slate-50
     borderRadius: 4,
     paddingVertical: 0.15,
     paddingHorizontal: 3,
     fontSize: 9,
-    color: "#4b5563", // Gray-600
+    color: "#334155", // Slate-700
   },
   contactLink: {
     fontSize: 9,
-    color: "#2563eb", // Blue-600
+    color: "#1d4ed8", // Blue-700
     textDecoration: "none",
   },
   container: {
@@ -112,6 +112,6 @@ export const styles = StyleSheet.create({
   sectionDivider: {
     flex: 1,
     height: 1,
-    backgroundColor: "#e5e7eb",
+    backgroundColor: "#e2e8f0",
   },
 });

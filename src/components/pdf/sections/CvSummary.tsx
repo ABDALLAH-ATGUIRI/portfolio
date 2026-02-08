@@ -9,7 +9,7 @@ export const CvSummary: React.FC = () => {
   return (
     <View
       style={{
-        marginBottom: 4,
+        marginBottom: 3,
       }}
     >
       <Text style={styles.countentText}>{t("about_me.description")}</Text>
