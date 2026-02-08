@@ -1,1 +1,0 @@
-import{j as o}from"./vendor-hxiInSLa.js";import{S as r}from"./SectionLayout-Dn8b4WHD.js";import{u as e}from"./index-5lf62aXJ.js";import"./icons-Cj21XTIj.js";const n=()=>{const{t}=e();return o.jsx(r,{id:"about_me",title:t("about_me.title"),children:o.jsx("p",{className:"card",children:t("about_me.description")})})};export{n as Summary};
