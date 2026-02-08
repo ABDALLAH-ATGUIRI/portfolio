@@ -1,0 +1,4 @@
+import{r as n,j as r}from"./vendor-hxiInSLa.js";import{T as i}from"./index-Dwedsk_G.js";const d=({children:e,title:o,id:a})=>{const t=n.useContext(i);if(!t)throw new Error("TranslationContext is not provided.");const{language:s}=t;return r.jsxs("section",{className:"mb-12",id:a,children:[r.jsxs("div",{className:"relative ",children:[r.jsx("span",{className:`
+            absolute top-2 w-4 h-4 bg-blue-500 rounded-full border-2 border-white dark:border-gray-800 transform transition-transform duration-300 group-hover:scale-125
+            ${s==="AR"?"-right-8":"-left-8"}
+          `}),r.jsx("h2",{className:"text-xl md:text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2",children:o})]}),r.jsx("div",{className:"relative max-w-6xl mx-auto py-6",children:e})]})};export{d as S};
