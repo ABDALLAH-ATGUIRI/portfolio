@@ -9,19 +9,17 @@ export const Education: React.FC = () => {
 
   return (
     <Section title={t("education.title")}>
-      {["ensa_safi", "simplon_grand_ouest", "youcode", "high_school"].map(
-        (key) => (
-        <View key={key}>
-          <Text style={styles.title}>
-            {t(`education.diploma.${key}.title`)}
-          </Text>
-          <Text style={styles.subtitle}>
-            {t(`education.diploma.${key}.school`)} |{" "}
-            {t(`education.diploma.${key}.date`)}
-          </Text>
-          <Text style={styles.contentText}>
-            • {t(`education.diploma.${key}.description`)}
-          </Text>
+      {["ensa_safi", "youcode_simplon"].map((key) => (
+        <View key={key} style={{ flexDirection: "row", marginBottom: 1.5 }}>
+          <View style={{ flex: 1 }}>
+            <Text style={styles.title}>
+              {t(`education.diploma.${key}.title`)}
+            </Text>
+            <Text style={styles.subtitle}>
+              {t(`education.diploma.${key}.school`)} |{" "}
+              {t(`education.diploma.${key}.date`)}
+            </Text>
+          </View>
         </View>
       ))}
     </Section>

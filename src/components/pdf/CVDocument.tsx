@@ -12,23 +12,26 @@ import {
   Projects,
   Education,
   LanguagesAndHobbies,
+  Certificates,
 } from "./sections";
 
 const pageStyle = {
-  padding: 14,
+  paddingVertical: 20,
+  paddingHorizontal: 24,
   backgroundColor: "#ffffff",
   fontFamily: "Helvetica",
-  fontSize: 11,
+  fontSize: 8,
   color: "#374151",
 } as const;
 
 const CV_SECTIONS = [
   CVHeader,
   CvSummary,
-  TechnicalSkills,
   Experience,
-  Projects,
+  TechnicalSkills,
   Education,
+  Projects,
+  Certificates,
   LanguagesAndHobbies,
 ];
 

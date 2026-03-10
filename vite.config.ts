@@ -18,7 +18,7 @@ export default defineConfig({
     outDir: "dist",
     sourcemap: false, // Set to true if you need source maps for debugging
     minify: "esbuild", // Default minification, you can change to 'terser' for more aggressive minification
-    chunkSizeWarningLimit: 500, // Change limit if needed for large bundles
+    chunkSizeWarningLimit: 1500, // Change limit if needed for large bundles
     rollupOptions: {
       output: {
         manualChunks(id) {

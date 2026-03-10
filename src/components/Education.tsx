@@ -9,7 +9,7 @@ export const Education: React.FC = () => {
   return (
     <SectionLayout id="education" title={t("education.title")}>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6">
-        {["ensa_safi", "simplon_grand_ouest", "youcode", "high_school"].map(
+        {["ensa_safi", "youcode_simplon", "high_school"].map(
           (education, index) => {
             const isInProgress = education === "ensa_safi";
 

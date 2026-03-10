@@ -162,23 +162,17 @@
         "date": "Août 2019",
         "description": "J'ai obtenu mon diplôme d'études secondaires avec une spécialisation en sciences et physique."
       },
-      "youcode": {
+      "youcode_simplon": {
         "title": "Diplôme en développement Full-Stack",
-        "school": "YouCode, Safi, Maroc",
-        "date": "Septembre 2023",
-        "description": "J'ai complété un programme complet en développement full-stack, couvrant à la fois les technologies front-end et back-end."
+        "school": "YouCode (Simplon), Safi, Maroc / Simplon Grand Ouest, France",
+        "date": "Sep 2021 – Sep 2023",
+        "description": "Formation intensive en développement full-stack couvrant le front-end, le back-end, l'apprentissage par projets et le travail collaboratif Agile."
       },
       "ensa_safi": {
         "title": "Licence en ingénierie et architecture des systèmes d'information",
         "school": "ENSA Safi, Maroc",
         "date": "Oct 2025 – Juil 2026",
         "description": "Licence axée sur l'ingénierie des systèmes d'information, l'architecture logicielle et les technologies web modernes."
-      },
-      "simplon_grand_ouest": {
-        "title": "Diplôme de formation",
-        "school": "Simplon Grand Ouest, France",
-        "date": "Sep 2021 – Juin 2023",
-        "description": "Parcours professionnalisant intensif basé sur les projets, le travail collaboratif et les compétences numériques."
       }
     }
   },

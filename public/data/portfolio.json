@@ -41,12 +41,11 @@
     }
   ],
   "skills": [
-    { "id": 1, "title": "frontend", "skills": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Vue", "Next", "Tailwind", "Bootstrap", "Material UI", "Element+", "Redux", "Vuex", "Nuxt"] },
-    { "id": 2, "title": "backend", "skills": ["PHP", "Laravel", "Laravel Passport", "Sanctum", "Eloquent ORM", "API Development", "Authentication", "Redis", "Cron Jobs", "WebSockets"] },
+    { "id": 1, "title": "frontend", "skills": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Vue", "Next.js", "Nuxt", "Tailwind", "Redux", "Material UI"] },
+    { "id": 2, "title": "backend", "skills": ["PHP", "Laravel", "Node.js", "REST API", "Authentication", "WebSockets", "Redis"] },
     { "id": 3, "title": "database", "skills": ["MySQL", "MongoDB", "Redis"] },
     { "id": 4, "title": "version_control", "skills": ["Git", "GitHub", "GitLab", "Jira", "Bitbucket"] },
-    { "id": 5, "title": "devops", "skills": ["Docker", "Docker Compose", "GitHub Actions", "CI/CD pipelines", "Nginx", "Linux server administration", "Basic AWS (EC2, S3)"] },
-    { "id": 6, "title": "others", "skills": ["Linux & Windows", "Figma", "Jest", "Video editing (content creation)", "AI tools (ChatGPT, GitHub Copilot)"] }
+    { "id": 5, "title": "devops", "skills": ["Docker", "Docker Compose", "GitHub Actions", "CI/CD", "Nginx", "Linux", "AWS (EC2, S3)"] }
   ],
   "certificates": [
     { "title": "Meta Front-End Developer", "institution": "Meta", "date": "August 2023", "description": "Completed the Meta Front-End Developer Professional Certificate, covering HTML, CSS, JavaScript, React, and responsive web design." },

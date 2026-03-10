@@ -15,26 +15,25 @@ export const Projects: React.FC = () => {
   return (
     <Section title={t("projects.title")}>
       {filteredProjects.map(({ key, technologies, github }) => (
-        <View key={key}>
-          <Text style={styles.title}>{t(`projects.${key}.title`)}</Text>
+        <View key={key} style={{ marginBottom: 2 }}>
+          <View style={{ flexDirection: "row", alignItems: "center", gap: 4 }}>
+            <Text style={styles.title}>{t(`projects.${key}.title`)}</Text>
+            {github && (
+              <Link src={github} style={styles.contactLink}>
+                [GitHub]
+              </Link>
+            )}
+          </View>
           <Text style={styles.contentText}>
             {t(`projects.${key}.description`)}
           </Text>
-          <View style={styles.chipContainer}>
-            <Text style={styles.contentText}>
-              • {t(`setting.technologies`)} :{" "}
-            </Text>
+          <View style={{ ...styles.chipContainer, marginLeft: 4, marginTop: 1 }}>
             {technologies.map((tech) => (
               <Text key={tech} style={styles.chip}>
                 {tech}
               </Text>
             ))}
           </View>
-          {github && (
-            <Text style={styles.contentText}>
-              • GitHub: <Link src={github} style={styles.contactLink}>{github.replace(/^https?:\/\/(www\.)?/, "")}</Link>
-            </Text>
-          )}
         </View>
       ))}
     </Section>

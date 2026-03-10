@@ -14,10 +14,7 @@ export const CVHeader: React.FC = () => {
     <View style={styles.header}>
       <View style={styles.profileSection}>
         <View style={styles.imageContainer}>
-          <Image
-            src={image}
-            style={styles.profileImage}
-          />
+          <Image src={image} style={styles.profileImage} />
         </View>
         <View>
           <Text style={styles.name}>{t("developer.name")}</Text>
@@ -26,16 +23,18 @@ export const CVHeader: React.FC = () => {
       </View>
       <View style={styles.contactSection}>
         <Text style={styles.contactItem}>
-          Phone : {t("developer.phone")}
+          {t("developer.phone")} | {t("developer.email")}
         </Text>
-        {contactLinks.map(({ href, ariaLabel }: Contact, index) => (
-          <Text style={styles.contactItem} key={index}>
-            {ariaLabel} :{" "}
-            <Link key={index} src={href} style={styles.contactLink}>
-              {href.replace(/^https?:\/\//, "")}{" "}
-            </Link>
-          </Text>
-        ))}
+        {contactLinks
+          .filter(({ ariaLabel }: Contact) => ariaLabel !== "Email")
+          .map(({ href, ariaLabel }: Contact, index) => (
+            <Text style={styles.contactItem} key={index}>
+              {ariaLabel}:{" "}
+              <Link src={href} style={styles.contactLink}>
+                {href.replace(/^https?:\/\/(www\.)?/, "")}
+              </Link>
+            </Text>
+          ))}
       </View>
     </View>
   );
