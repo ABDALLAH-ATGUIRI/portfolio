@@ -2,14 +2,14 @@
   "me": {
     "name": "Abdallah Atguiri",
     "title": "Full Stack Web Developer",
-    "image": "/portfolio/assets/images/abdallahatguiri.jpg",
+    "image": "/assets/images/abdallahatguiri.jpg",
     "location": "Morocco",
     "phone": "+212623779270",
     "email": "abdallahatguiri@gmail.com",
     "summary": "about.description"
   },
   "contactLinks": [
-    { "icon": "Globe", "href": "https://abdallah-atguiri.github.io/portfolio", "ariaLabel": "Portfolio" },
+    { "icon": "Globe", "href": "", "ariaLabel": "Portfolio" },
     { "icon": "Github", "href": "https://www.github.com/ABDALLAH-ATGUIRI", "ariaLabel": "GitHub" },
     { "icon": "Linkedin", "href": "https://www.linkedin.com/in/abdallah-atguiri", "ariaLabel": "LinkedIn" },
     { "icon": "Mail", "href": "mailto:abdallah.atguiri@gmail.com", "ariaLabel": "Email" }
@@ -18,7 +18,7 @@
     {
       "key": "project_4",
       "technologies": ["React.js", "Redux", "React Icons", "React DnD", "JavaScript", "Tailwind CSS", "Matial-UI", "Vite"],
-      "images": ["/portfolio/assets/images/projects/virtual_gear_hub01.png", "/portfolio/assets/images/projects/virtual_gear_hub02.png"],
+      "images": ["/assets/images/projects/virtual_gear_hub01.png", "/assets/images/projects/virtual_gear_hub02.png"],
       "github": "https://github.com/ABDALLAH-ATGUIRI/virtual-gear-hub"
     },
     {
@@ -29,14 +29,14 @@
     {
       "key": "project_1",
       "technologies": ["React.js", "Redux", "React Icons", "React DnD", "JavaScript", "Tailwind CSS", "Vite"],
-      "images": ["/portfolio/assets/images/projects/task-management-app.png"],
+      "images": ["/assets/images/projects/task-management-app.png"],
       "github": "https://github.com/ABDALLAH-ATGUIRI/Task_management_app",
       "demo": "https://abdallah-atguiri.github.io/Task_management_app/"
     },
     {
       "key": "project_3",
       "technologies": ["React.js", "Redux", "React Icons", "Matial-UI", "Vite", "Node.js", "Nestjs", "Prisma", "MongoDB"],
-      "images": ["/portfolio/assets/images/projects/online_restaurant_reservation_application.png"],
+      "images": ["/assets/images/projects/online_restaurant_reservation_application.png"],
       "github": "https://github.com/ABDALLAH-ATGUIRI/Restaurant-app-frontend"
     }
   ],
@@ -54,17 +54,17 @@
   "experiences": [
     {
       "company_name": "cod_network",
-      "companyLogo": "/portfolio/assets/images/companies/cod-network-logo.jpg",
+      "companyLogo": "/assets/images/companies/cod-network-logo.jpg",
       "technical_skills": ["Laravel", "PHP", "JavaScript", "Vue.js", "React", "Tailwind CSS", "Docker", "MySQL", "Rides", "Rest API"]
     },
     {
       "company_name": "agriwise",
-      "companyLogo": "/portfolio/assets/images/companies/agriwise-logo.png",
+      "companyLogo": "/assets/images/companies/agriwise-logo.png",
       "technical_skills": ["Laravel", "Php", "JavaScript", "Vue.js", "Tailwind CSS"]
     },
     {
       "company_name": "digital_elite",
-      "companyLogo": "/portfolio/assets/images/companies/digital-elite-logo.png",
+      "companyLogo": "/assets/images/companies/digital-elite-logo.png",
       "technical_skills": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "JavaScript", "HTML", "CSS", "Git", "GitHub"]
     }
   ],
