@@ -9,13 +9,13 @@ export const Projects: React.FC = () => {
   const { t } = useTranslation();
   const { projects } = usePortfolio();
   const filteredProjects = projects.filter(({ key }) =>
-    ["project_1", "project_2"].includes(key)
+    ["project_1", "project_3", "project_4"].includes(key)
   );
 
   return (
     <Section title={t("projects.title")}>
       {filteredProjects.map(({ key, technologies, github }) => (
-        <View key={key} style={{ marginBottom: 2 }}>
+        <View key={key} style={{ marginBottom: 1.5 }}>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 4 }}>
             <Text style={styles.title}>{t(`projects.${key}.title`)}</Text>
             {github && (
@@ -27,7 +27,7 @@ export const Projects: React.FC = () => {
           <Text style={styles.contentText}>
             {t(`projects.${key}.description`)}
           </Text>
-          <View style={{ ...styles.chipContainer, marginLeft: 4, marginTop: 1 }}>
+          <View style={{ ...styles.chipContainer, marginLeft: 4, marginTop: 0.5 }}>
             {technologies.map((tech) => (
               <Text key={tech} style={styles.chip}>
                 {tech}

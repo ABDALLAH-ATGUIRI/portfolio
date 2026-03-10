@@ -14,7 +14,7 @@ export const TechnicalSkills: React.FC = () => {
         style={{
           flexDirection: "row",
           flexWrap: "wrap",
-          gap: 4,
+          gap: 3,
         }}
       >
         {skills.map(({ id, title, skills: items }) => (

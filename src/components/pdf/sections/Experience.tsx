@@ -12,7 +12,7 @@ export const Experience: React.FC = () => {
   return (
     <Section title={t("experience.title")}>
       {experiences.map((experience) => (
-        <View key={experience.company_name} style={{ marginBottom: 2 }}>
+        <View key={experience.company_name} style={{ marginBottom: 1.5 }}>
           <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
             <Text style={styles.title}>
               {t(`experience.companies.${experience.company_name}.position`)}
@@ -27,7 +27,7 @@ export const Experience: React.FC = () => {
           <Text style={styles.contentText}>
             {t(`experience.companies.${experience.company_name}.description`)}
           </Text>
-          <View style={{ ...styles.chipContainer, marginLeft: 4, marginTop: 1 }}>
+          <View style={{ ...styles.chipContainer, marginLeft: 4, marginTop: 0.5 }}>
             {experience.technical_skills.map((tech) => (
               <Text key={tech} style={styles.chip}>{tech}</Text>
             ))}

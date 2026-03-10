@@ -9,12 +9,15 @@ export const Certificates: React.FC = () => {
 
   return (
     <Section title="Certifications">
-      <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 6 }}>
-        {certificates.map(({ title, institution, date }) => (
-          <View key={title} style={{ flex: "1 0 30%", marginBottom: 1 }}>
+      <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 4 }}>
+        {certificates.map(({ title, institution, date, description }) => (
+          <View key={title} style={{ flex: "1 0 45%", marginBottom: 1.5 }}>
             <Text style={styles.title}>{title}</Text>
             <Text style={styles.subtitle}>
               {institution} | {date}
+            </Text>
+            <Text style={{ ...styles.contentText, marginLeft: 0, fontSize: 8 }}>
+              {description}
             </Text>
           </View>
         ))}

@@ -16,11 +16,11 @@ import {
 } from "./sections";
 
 const pageStyle = {
-  paddingVertical: 20,
-  paddingHorizontal: 24,
+  paddingVertical: 16,
+  paddingHorizontal: 22,
   backgroundColor: "#ffffff",
   fontFamily: "Helvetica",
-  fontSize: 8,
+  fontSize: 9,
   color: "#374151",
 } as const;
 
