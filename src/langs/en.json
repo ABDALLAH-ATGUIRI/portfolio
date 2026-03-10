@@ -7,16 +7,47 @@
   "developer": {
     "name": "Abdallah ATGUIRI",
     "role": "Full-Stack Web Developer",
+    "tagline": "Turning complex ideas into clean, scalable web apps — from pixel-perfect frontends to rock-solid backends.",
     "location": "Morocco",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "+212 623 779 270"
   },
   "about_me": {
     "title": "About Me",
-    "description": "Passionate Full Stack Web Developer with a strong focus on creating seamless user experiences and building robust, scalable backend systems. I thrive on transforming ideas into interactive, high-performing web applications that are both functional and enjoyable to use."
+    "description": "Passionate Full Stack Web Developer with over 2 years of professional experience building high-performance web applications. I specialize in React, Vue.js, and TypeScript on the frontend, paired with Laravel, Node.js, and REST APIs on the backend. From designing intuitive interfaces to architecting scalable databases with MySQL and MongoDB, I deliver end-to-end solutions. I thrive in Agile teams, value clean code, and continuously explore modern tools — including Docker, CI/CD pipelines, and AI-assisted development — to ship reliable software faster.",
+    "stats": {
+      "experience_value": "2+",
+      "experience_label": "Years Experience",
+      "companies_value": "3",
+      "companies_label": "Companies",
+      "projects_value": "4+",
+      "projects_label": "Projects",
+      "tech_value": "30+",
+      "tech_label": "Technologies"
+    },
+    "what_i_do": {
+      "title": "What I Do",
+      "frontend_title": "Frontend Development",
+      "frontend_desc": "React · Vue · TypeScript · Tailwind CSS",
+      "backend_title": "Backend Development",
+      "backend_desc": "Laravel · PHP · Node.js · REST APIs",
+      "database_title": "Database Design",
+      "database_desc": "MySQL · MongoDB · Redis",
+      "teamwork_title": "Agile Collaboration",
+      "teamwork_desc": "Scrum · Git · Clean Code · PR Reviews"
+    },
+    "certificates_title": "Certifications"
   },
   "experience": {
     "title": "Professional Experience",
+    "stats": {
+      "years": "2+",
+      "years_label": "Years Experience",
+      "companies": "3",
+      "companies_label": "Companies",
+      "focus": "Full-Stack",
+      "focus_label": "Development Focus"
+    },
     "companies": {
       "cod_network": {
         "title": "Cod Network, Agadir, Morocco",
@@ -94,6 +125,7 @@
   },
   "technical_skills": {
     "title": "Technical Skills",
+    "overall_label": "Technologies Mastered",
     "frontend": {
       "title": "Front-End Development",
       "description": "I am proficient in front-end development using technologies like HTML, CSS, and JavaScript. I have expertise in frameworks like React and Vue.js."
@@ -110,13 +142,19 @@
       "title": "Version Control",
       "description": "I am proficient in version control using Git and GitHub. I have experience in collaborating with teams using version control systems."
     },
+    "devops": {
+      "title": "DevOps & Cloud",
+      "description": "Experience with containerization, CI/CD, and basic cloud: Docker, Docker Compose, GitHub Actions, Nginx, Linux servers, and introductory AWS services (EC2, S3)."
+    },
     "others": {
       "title": "Other Skills",
-      "description": "I have experience in other technologies and tools such as Docker, Kubernetes, and AWS. I am always looking to learn new skills and improve my knowledge."
+      "description": "Additional skills including testing (Jest), design tools (Figma), operating systems, video content creation, and AI-assisted development using tools like ChatGPT and GitHub Copilot."
     }
   },
   "education": {
     "title": "Education",
+    "graduated": "Graduated",
+    "in_progress": "In progress",
     "diploma": {
       "high_school": {
         "title": "High School Diploma",
@@ -129,11 +167,28 @@
         "school": "YouCode, Safi, Morocco",
         "date": "September 2023",
         "description": "I completed a comprehensive program in full-stack development, covering both front-end and back-end technologies."
+      },
+      "ensa_safi": {
+        "title": "Bachelor's in Information Systems Engineering and Architecture",
+        "school": "ENSA Safi, Morocco",
+        "date": "Oct 2025 – Jul 2026",
+        "description": "Bachelor's degree focused on information systems engineering, software architecture, and modern web technologies."
+      },
+      "simplon_grand_ouest": {
+        "title": "Diploma of Education",
+        "school": "Simplon Grand Ouest, France",
+        "date": "Sep 2021 – Jun 2023",
+        "description": "Intensive professional training program emphasizing project-based learning, collaborative work, and digital skills."
       }
     }
   },
   "projects": {
     "title": "Projects",
+    "description": "A selection of personal and professional projects showcasing full-stack development across various domains.",
+    "stats": {
+      "total": "4+",
+      "total_label": "Projects Built"
+    },
     "project_1": {
       "title": "Task Management App",
       "description": "A task management app that allows users to create, manage, and prioritize tasks."

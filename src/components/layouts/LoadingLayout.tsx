@@ -31,12 +31,12 @@ export const LoadingLayout: React.FC = () => {
             Loading...
           </h2>
           <div className="flex gap-1.5">
-            {[0, 1, 2, 3, 4].map((_, index) => (
+            {[0, 1, 2, 3, 4].map((i) => (
               <span
-                key={index}
+                key={i}
                 className="w-2 h-2 bg-primary rounded-full animate-bounce"
                 aria-hidden="true"
-                style={{ animationDelay: "0.2s" }}
+                style={{ animationDelay: `${i * 0.15}s` }}
               />
             ))}
           </div>

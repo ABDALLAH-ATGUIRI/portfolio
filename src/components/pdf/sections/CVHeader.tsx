@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Image, Link } from "@react-pdf/renderer";
 import { contactLinks, me } from "@/data";
-import useTranslation from "@/hooks/useTranslation";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Contact } from "@/types";
 import { styles } from "../PDFStyle";
 
@@ -14,7 +14,7 @@ export const CVHeader: React.FC = () => {
       <View style={styles.profileSection}>
         <View style={styles.imageContainer}>
           <Image
-            src={image || "https://via.placeholder.com/48"}
+            src={image}
             style={styles.profileImage}
           />
         </View>

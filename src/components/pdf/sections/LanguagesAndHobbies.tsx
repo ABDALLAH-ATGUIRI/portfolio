@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "@react-pdf/renderer";
-import useTranslation from "@/hooks/useTranslation";
-import { hobbies, LANGUAGES } from "@/data";
+import { useTranslation } from "@/hooks/useTranslation";
+import { hobbies, languages } from "@/data";
 import { Hobby } from "@/types";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";
@@ -15,14 +15,14 @@ export const LanguagesAndHobbies: React.FC = () => {
   return (
     <Section title={t("languages.title") + " & " + t("hobbies.title")}>
       <View style={styles.container}>
-        {LANGUAGES.map((lang) => (
-          <Text key={lang} style={styles.countentText}>
+        {languages.map((lang) => (
+          <Text key={lang} style={styles.contentText}>
             • {t(`languages.${lang}.name`)} : {t(`languages.${lang}.level`)}
           </Text>
         ))}
       </View>
       <View style={styles.container}>
-        <Text style={styles.countentText}>
+        <Text style={styles.contentText}>
           • {t("hobbies.title")} : {hobbyNames}
         </Text>
       </View>

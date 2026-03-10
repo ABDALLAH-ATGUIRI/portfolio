@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Link } from "@react-pdf/renderer";
-import useTranslation from "@/hooks/useTranslation";
+import { useTranslation } from "@/hooks/useTranslation";
 import { projects } from "@/data";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";
@@ -17,11 +17,11 @@ export const Projects: React.FC = () => {
       {filteredProjects.map(({ key, technologies, github }) => (
         <View key={key}>
           <Text style={styles.title}>{t(`projects.${key}.title`)}</Text>
-          <Text style={styles.countentText}>
+          <Text style={styles.contentText}>
             {t(`projects.${key}.description`)}
           </Text>
           <View style={styles.chipContainer}>
-            <Text style={styles.countentText}>
+            <Text style={styles.contentText}>
               • {t(`setting.technologies`)} :{" "}
             </Text>
             {technologies.map((tech) => (
@@ -31,7 +31,7 @@ export const Projects: React.FC = () => {
             ))}
           </View>
           {github && (
-            <Text style={styles.countentText}>
+            <Text style={styles.contentText}>
               • GitHub: <Link src={github} style={styles.contactLink}>{github.replace(/^https?:\/\/(www\.)?/, "")}</Link>
             </Text>
           )}

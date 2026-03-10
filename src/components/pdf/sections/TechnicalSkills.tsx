@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "@react-pdf/renderer";
-import useTranslation from "@/hooks/useTranslation";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";
 import { skills } from "@/data";
@@ -24,7 +24,7 @@ export const TechnicalSkills: React.FC = () => {
               {t(`technical_skills.${title}.title`)}
             </Text>
             <View style={styles.chipContainer}>
-              {skills.map((item, index) => (
+              {skills.map((item) => (
                 <Text key={item} style={styles.chip}>
                   {item}
                 </Text>

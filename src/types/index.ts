@@ -1,3 +1,5 @@
+import type { LucideIcon } from "lucide-react";
+
 export interface Experience {
   company_name: string;
   companyLogo: string;
@@ -15,28 +17,28 @@ export interface PersonalInfo {
 }
 
 export interface Contact {
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon: LucideIcon;
   href: string;
   ariaLabel: string;
 }
 
 export interface Hobby {
   name: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon: LucideIcon;
 }
 
 export interface Skill {
   id: number;
   title: string;
-  skills: Array<string>;
+  skills: string[];
 }
 
 export interface Project {
-  images?: Array<string>;
+  images?: string[];
   key: string;
   technologies: string[];
-  github?: string; // Optional property for GitHub URL
-  demo?: string; // Optional property for demo URL
+  github?: string;
+  demo?: string;
 }
 
 export interface Certificate {

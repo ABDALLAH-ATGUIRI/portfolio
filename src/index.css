@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  /* Softer snap behavior for better UX, still sectional */
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
 html[lang="ar"] body {
   font-family: 'ArabicFont', sans-serif;
   /* Replace with an actual Arabic font */
@@ -27,15 +33,137 @@ html[lang="ar"] body {
   }
 }
 
+/* ── Entrance animations ────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.93);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes titleUnderline {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* Animation utility classes */
+.anim-fade-up {
+  animation: fadeInUp 0.65s ease-out both;
+}
+.anim-fade-left {
+  animation: fadeInLeft 0.65s ease-out both;
+}
+.anim-fade-right {
+  animation: fadeInRight 0.65s ease-out both;
+}
+.anim-scale-in {
+  animation: scaleIn 0.55s ease-out both;
+}
+
+/* ── Hero-specific animations ─────────────────────────────── */
+@keyframes heroOrbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(30px, -40px) scale(1.05); }
+  66%      { transform: translate(-20px, 20px) scale(0.97); }
+}
+@keyframes heroOrbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(-25px, 30px) scale(1.03); }
+  66%      { transform: translate(35px, -15px) scale(0.95); }
+}
+@keyframes heroOrbFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(20px, 25px) scale(1.06); }
+}
+@keyframes heroGradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+@keyframes heroGlowSpin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes heroScrollDot {
+  0%   { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(8px); }
+}
+
+.hero-orb-1 { animation: heroOrbFloat1 12s ease-in-out infinite; }
+.hero-orb-2 { animation: heroOrbFloat2 15s ease-in-out infinite; }
+.hero-orb-3 { animation: heroOrbFloat3 10s ease-in-out infinite; }
+
+.hero-gradient-text {
+  background-image: linear-gradient(135deg, #1e293b 0%, #1e40af 40%, #0891b2 60%, #1e293b 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: heroGradientShift 6s ease-in-out infinite;
+}
+.dark .hero-gradient-text {
+  background-image: linear-gradient(135deg, #f1f5f9 0%, #60a5fa 40%, #22d3ee 60%, #f1f5f9 100%);
+}
+
+.hero-glow-ring {
+  background: conic-gradient(from 0deg, #3b82f6, #06b6d4, #6366f1, #3b82f6);
+  animation: heroGlowSpin 8s linear infinite;
+  filter: blur(8px);
+}
+
+.hero-scroll-dot {
+  animation: heroScrollDot 1.5s ease-in-out infinite;
+}
+
+/* ── Stagger items inside a visible section ───────────────── */
+.stagger-item {
+  opacity: 0;
+}
+.section-visible .stagger-item {
+  animation: fadeInUp 0.5s ease-out both;
+}
+
 body {
-  @apply bg-gray-100 dark:bg-gray-900 text-gray-100 dark:text-gray-900;
-  @apply transition-colors duration-300;
-  @apply font-sans;
-  @apply text-sm;
-  @apply leading-6;
-  @apply antialiased;
-  @apply text-gray-900 dark:text-gray-100;
   @apply bg-white dark:bg-gray-800;
+  @apply text-gray-900 dark:text-gray-100;
+  @apply transition-colors duration-300;
+  @apply font-sans text-base leading-6 antialiased;
 }
 
 .hide-scrollbar {
@@ -86,4 +214,37 @@ body {
 }
 .card-footer {
   @apply text-sm text-gray-500 dark:text-gray-400 py-4;
+}
+
+/* ── Section divider ─────────────────────────────────────────── */
+.section-divider {
+  @apply flex items-center gap-3 my-4;
+}
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  @apply flex-1 h-px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    theme("colors.blue.300" / 25%),
+    transparent
+  );
+}
+.dark .section-divider::before,
+.dark .section-divider::after {
+  background: linear-gradient(
+    to right,
+    transparent,
+    theme("colors.blue.500" / 18%),
+    transparent
+  );
+}
+
+/* ── Section title underline accent ─────────────────────────── */
+.section-title-line {
+  @apply block h-0.5 mt-1 rounded-full origin-left;
+  background: linear-gradient(to right, theme("colors.blue.500"), transparent);
+  animation: titleUnderline 0.5s ease-out both;
+  animation-delay: 0.2s;
 }

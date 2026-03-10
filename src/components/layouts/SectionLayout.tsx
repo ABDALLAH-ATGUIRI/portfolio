@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
-import { TranslationContext } from "@/context/TranslationContext";
+import React from "react";
+import { useTranslation } from "@/hooks/useTranslation";
+import { useInView } from "@/hooks/useInView";
 
 interface SectionLayoutProps {
   children: React.ReactNode;
@@ -12,30 +13,62 @@ export const SectionLayout: React.FC<SectionLayoutProps> = ({
   title,
   id,
 }) => {
-  const context = useContext(TranslationContext);
-
-  if (!context) {
-    throw new Error("TranslationContext is not provided.");
-  }
-
-  const { language } = context;
+  const { language } = useTranslation();
+  const { ref, inView } = useInView<HTMLElement>(0.05);
+  const isRTL = language === "AR";
 
   return (
-    <section className="mb-12" id={id}>
-      <div className="relative ">
-        {/* Timeline Dot */}
-        <span
-          className={`
-            absolute top-2 w-4 h-4 bg-blue-500 rounded-full border-2 border-white dark:border-gray-800 transform transition-transform duration-300 group-hover:scale-125
-            ${language === "AR" ? "-right-8" : "-left-8"}
-          `}
+    <section
+      ref={ref}
+      id={id}
+      /* Full-screen snap section */
+      className={[
+        "min-h-screen snap-start snap-always overflow-y-auto",
+        "flex flex-col",
+        /* Header clearance + bottom padding */
+        "pt-20 pb-10",
+        /* Horizontal padding — enough room for the timeline dot */
+        isRTL
+          ? "pr-12 md:pr-14 pl-4 md:pl-8"
+          : "pl-12 md:pl-14 pr-4 md:pr-8",
+        inView ? "section-visible" : "",
+      ].join(" ")}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0)" : "translateY(24px)",
+        transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+      }}
+    >
+      {/* ── Section header ── */}
+      <div className="relative mb-6 container mx-auto max-w-5xl w-full">
+        {/* Vertical accent bar */}
+        <div
+          className={`absolute top-1 bottom-1 w-[3px] rounded-full bg-gradient-to-b from-blue-500 to-blue-400/20 ${
+            isRTL ? "-right-7" : "-left-7"
+          }`}
         />
 
-        <h2 className="text-xl md:text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">
+        {/* Timeline dot with glow ring */}
+        <span
+          className={`absolute top-[6px] w-3 h-3 rounded-full bg-blue-500 border-2 border-white dark:border-gray-900 ring-4 ring-blue-500/20 ${
+            isRTL ? "-right-[31px]" : "-left-[31px]"
+          }`}
+        />
+
+        <h2
+          className={`text-2xl md:text-3xl font-bold text-gray-800 dark:text-white pb-3 ${
+            isRTL ? "text-right" : "text-left"
+          }`}
+        >
           {title}
+          {inView && <span className="section-title-line" />}
         </h2>
       </div>
-      <div className="relative max-w-6xl mx-auto py-6">{children}</div>
+
+      {/* ── Section body ── */}
+      <div className="container mx-auto max-w-5xl w-full flex-1">
+        {children}
+      </div>
     </section>
   );
 };

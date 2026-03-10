@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 interface ChipProps {
   text: string;
@@ -18,52 +18,30 @@ export const Chip: React.FC<ChipProps> = ({
 }) => {
   const [copied, setCopied] = useState(false);
 
-  const fallbackCopy = (text: string) => {
-    const textarea = document.createElement("textarea");
-    textarea.value = text;
-    textarea.style.position = "fixed"; // avoid scrolling to bottom
-    document.body.appendChild(textarea);
-    textarea.focus();
-    textarea.select();
+  const handleCopy = useCallback(async () => {
     try {
-      document.execCommand("copy");
+      await navigator.clipboard.writeText(text);
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
-    } catch (err) {
-      console.error("Fallback: Failed to copy", err);
+    } catch {
+      // Clipboard API not available
     }
-    document.body.removeChild(textarea);
-  };
+  }, [text]);
 
-  const handleCopy = async () => {
-    if (navigator?.clipboard?.writeText) {
-      try {
-        await navigator.clipboard.writeText(text);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
-      } catch (err) {
-        console.error("Failed to copy:", err);
-      }
-    } else {
-      fallbackCopy(text);
-    }
-  };
-
-  const classes = {
-    defaultStyles: `inline-flex gap-3 items-center font-bold text-sm transition-all duration-300 rounded-full shadow-sm bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-700`,
-    copiedStyles: `!bg-green-500/40 ring-2 ring-green-500 text-white`,
-    clickable: copy ? "cursor-pointer" : "",
-  };
+  const base = className
+    || "inline-flex gap-3 items-center font-bold text-sm transition-all duration-300 rounded-full shadow-sm bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-700";
 
   return (
     <span
       onClick={copy ? handleCopy : undefined}
-      title={copy ? (copied ? "Copied!" : title) : undefined}
-      className={`${classes.defaultStyles} ${
-        copied ? classes.copiedStyles : ""
-      } ${classes.clickable} ${className || ""}`}
+      title={copy ? (copied ? "Copied!" : title) : title}
+      className={[
+        base,
+        copy ? "cursor-pointer" : "",
+        copied ? "!border-green-400 !text-green-600 dark:!text-green-400 ring-1 ring-green-400/50" : "",
+      ].join(" ")}
     >
-      {copied ? <Check /> : icon && <span>{icon}</span>}
+      {copied ? <Check size={14} /> : icon && <span className="flex items-center">{icon}</span>}
       <span>{text}</span>
     </span>
   );

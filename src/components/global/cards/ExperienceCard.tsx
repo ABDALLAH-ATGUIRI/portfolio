@@ -1,15 +1,14 @@
-import React, { memo } from "react";
-import { Experience } from "@/types";
-import useTranslation from "@/hooks/useTranslation";
+import { memo } from "react";
+import type { Experience } from "@/types";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Chip } from "@/components/global/Chip";
 
-// Define props interface
 interface ExperienceCardProps {
   experience: Experience;
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = memo(
-  ({ experience }): JSX.Element => {
+export const ExperienceCard = memo<ExperienceCardProps>(
+  ({ experience }) => {
     const { t } = useTranslation();
     const { company_name, companyLogo, technical_skills } = experience;
 
@@ -59,4 +58,3 @@ const ExperienceCard: React.FC<ExperienceCardProps> = memo(
 );
 
 ExperienceCard.displayName = "ExperienceCard";
-export default ExperienceCard;

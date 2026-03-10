@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { ChevronDown } from "lucide-react";
 import { FlagFr, FlagGb, FlagMa } from "@/assets/images/flags";
-import useTranslation from "@/hooks/useTranslation";
-
-type Language = "EN" | "FR" | "AR";
+import { useTranslation } from "@/hooks/useTranslation";
+import type { Language } from "@/langs";
 
 const languageOptions: {
   code: Language;
@@ -18,16 +17,29 @@ const languageOptions: {
 export const LanguageSwitcher: React.FC = () => {
   const { language, setLanguage } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const selectedLanguage = languageOptions.find((l) => l.code === language);
 
-  const handleSelect = (code: Language) => {
+  const handleSelect = useCallback((code: Language) => {
     setLanguage(code);
     setIsOpen(false);
-  };
+  }, [setLanguage]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
 
   return (
-    <div className="relative inline-block text-sm text-gray-800 dark:text-white">
+    <div ref={containerRef} className="relative inline-block text-sm text-gray-800 dark:text-white">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className="flex items-center gap-2 px-3 py-2 rounded-full shadow-md backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-200"

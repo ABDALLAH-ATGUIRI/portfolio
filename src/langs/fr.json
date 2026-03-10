@@ -7,16 +7,47 @@
   "developer": {
     "name": "Abdallah ATGUIRI",
     "role": "Développeur Web Full-Stack",
+    "tagline": "Je transforme des idées complexes en applications web élégantes et performantes — du frontend pixel-perfect au backend robuste.",
     "location": "Maroc",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "+212 623 779 270"
   },
   "about_me": {
     "title": "À propos de moi",
-    "description": "Développeur Web Full Stack passionné, spécialisé dans la création d’expériences utilisateur fluides et le développement de systèmes backend solides et évolutifs. J’aime transformer des idées en applications web interactives, performantes et agréables à utiliser."
+    "description": "Développeur Web Full Stack passionné avec plus de 2 ans d'expérience professionnelle dans la création d'applications web performantes. Je me spécialise en React, Vue.js et TypeScript côté frontend, associés à Laravel, Node.js et des APIs REST côté backend. De la conception d'interfaces intuitives à l'architecture de bases de données évolutives avec MySQL et MongoDB, je livre des solutions de bout en bout. Je m'épanouis dans les équipes Agile, je privilégie un code propre et j'explore constamment les outils modernes — Docker, pipelines CI/CD et développement assisté par l'IA — pour produire des logiciels fiables plus rapidement.",
+    "stats": {
+      "experience_value": "2+",
+      "experience_label": "Ans d’expérience",
+      "companies_value": "3",
+      "companies_label": "Entreprises",
+      "projects_value": "4+",
+      "projects_label": "Projets",
+      "tech_value": "30+",
+      "tech_label": "Technologies"
+    },
+    "what_i_do": {
+      "title": "Ce que je fais",
+      "frontend_title": "Développement Frontend",
+      "frontend_desc": "React · Vue · TypeScript · Tailwind CSS",
+      "backend_title": "Développement Backend",
+      "backend_desc": "Laravel · PHP · Node.js · APIs REST",
+      "database_title": "Conception de BDD",
+      "database_desc": "MySQL · MongoDB · Redis",
+      "teamwork_title": "Collaboration Agile",
+      "teamwork_desc": "Scrum · Git · Code propre · Revues PR"
+    },
+    "certificates_title": "Certifications"
   },
   "experience": {
     "title": "Expérience Professionnelle",
+    "stats": {
+      "years": "2+",
+      "years_label": "Ans d'expérience",
+      "companies": "3",
+      "companies_label": "Entreprises",
+      "focus": "Full-Stack",
+      "focus_label": "Domaine de développement"
+    },
     "companies": {
       "cod_network": {
         "title": "Cod Network, Agadir, Maroc",
@@ -94,6 +125,7 @@
   },
   "technical_skills": {
     "title": "Competences Technologiques",
+    "overall_label": "Technologies Maîtrisées",
     "frontend": {
       "title": "Developpement Front-End",
       "description": "Je suis expert en developpement front-end utilisant des technologies comme HTML, CSS et JavaScript. J'ai une expertise en frameworks comme React et Vue.js."
@@ -110,13 +142,19 @@
       "title": "Controle de Version",
       "description": "Je suis expert en controle de version utilisant Git et GitHub. J'ai une experience en collaboration avec des equipes utilisant des systemes de controle de version."
     },
+    "devops": {
+      "title": "DevOps & Cloud",
+      "description": "Experience avec la conteneurisation, les pipelines CI/CD et le cloud : Docker, Docker Compose, GitHub Actions, Nginx, serveurs Linux et bases d'AWS (EC2, S3)."
+    },
     "others": {
       "title": "Autres Competences",
-      "description": "Je suis expert en autres technologies et outils comme Docker, Kubernetes et AWS. Je suis toujours en recherche de nouvelles competences et d'ameliorations."
+      "description": "Compétences complémentaires : tests (Jest), outils de design (Figma), systèmes d'exploitation, création de contenu vidéo et utilisation d'outils d'IA comme ChatGPT et GitHub Copilot."
     }
   },
   "education": {
     "title": "Éducation",
+    "graduated": "Diplômé",
+    "in_progress": "En cours",
     "diploma": {
       "high_school": {
         "title": "Diplôme d'études secondaires",
@@ -129,11 +167,28 @@
         "school": "YouCode, Safi, Maroc",
         "date": "Septembre 2023",
         "description": "J'ai complété un programme complet en développement full-stack, couvrant à la fois les technologies front-end et back-end."
+      },
+      "ensa_safi": {
+        "title": "Licence en ingénierie et architecture des systèmes d'information",
+        "school": "ENSA Safi, Maroc",
+        "date": "Oct 2025 – Juil 2026",
+        "description": "Licence axée sur l'ingénierie des systèmes d'information, l'architecture logicielle et les technologies web modernes."
+      },
+      "simplon_grand_ouest": {
+        "title": "Diplôme de formation",
+        "school": "Simplon Grand Ouest, France",
+        "date": "Sep 2021 – Juin 2023",
+        "description": "Parcours professionnalisant intensif basé sur les projets, le travail collaboratif et les compétences numériques."
       }
     }
   },
   "projects": {
     "title": "Projets",
+    "description": "Une sélection de projets personnels et professionnels illustrant le développement full-stack dans divers domaines.",
+    "stats": {
+      "total": "4+",
+      "total_label": "Projets Réalisés"
+    },
     "project_1": {
       "title": "Application de gestion de tâches",
       "description": "Une application de gestion de tâches permettant aux utilisateurs de créer, de gerer et de prioriser leurs tâches."

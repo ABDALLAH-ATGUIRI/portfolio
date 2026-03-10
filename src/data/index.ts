@@ -17,7 +17,7 @@ import {
   codNetworkLogo,
   digitalEliteLogo,
 } from "@/assets/images/companies";
-import { Experience, Contact, Hobby, PersonalInfo,Certificate, Skill, Project } from "@/types";
+import type { Experience, Contact, Hobby, PersonalInfo, Certificate, Skill, Project } from "@/types";
 import { assetPaths } from "@/config/assets";
 
 export const projects: Project[] = [
@@ -122,13 +122,32 @@ export const skills: Skill[] = [
     skills: ["Git", "GitHub", "GitLab", "Jira", "Bitbucket"],
   },
   {
-    id: 8,
+    id: 5,
+    title: "devops",
+    skills: [
+      "Docker",
+      "Docker Compose",
+      "GitHub Actions",
+      "CI/CD pipelines",
+      "Nginx",
+      "Linux server administration",
+      "Basic AWS (EC2, S3)",
+    ],
+  },
+  {
+    id: 6,
     title: "others",
-    skills: ["Linux", "Windows", "Figma", "Jest", "AI tools"],
+    skills: [
+      "Linux & Windows",
+      "Figma",
+      "Jest",
+      "Video editing (content creation)",
+      "AI tools (ChatGPT, GitHub Copilot)",
+    ],
   },
 ];
 
-export const CERTIFICATES: Certificate[] = [
+export const certificates: Certificate[] = [
   {
     title: "Meta Front-End Developer",
     institution: "Meta",
@@ -152,7 +171,7 @@ export const CERTIFICATES: Certificate[] = [
   },
 ];
 
-export const Experiences: Experience[] = [
+export const experiences: Experience[] = [
   {
     company_name: "cod_network",
     companyLogo: codNetworkLogo,
@@ -262,4 +281,4 @@ export const hobbies: Hobby[] = [
   },
 ];
 
-export const LANGUAGES = ["arabic", "french", "english"];
+export const languages = ["arabic", "french", "english"] as const;

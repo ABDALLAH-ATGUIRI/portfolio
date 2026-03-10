@@ -7,16 +7,47 @@
   "developer": {
     "name": "عبد الله أثكيري",
     "role": "مطور ويب Full-Stack",
+    "tagline": "أحوّل الأفكار المعقدة إلى تطبيقات ويب أنيقة وقابلة للتوسع — من واجهات دقيقة إلى أنظمة خلفية متينة.",
     "location": "المغرب",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "٢١٢٦٢٣٧٧٩٢٧٠+"
   },
   "about_me": {
     "title": "نبذة عني",
-    "description": "مطور ويب فل ستاك شغوف، أركز على تقديم تجارب مستخدم سلسة وبناء أنظمة خلفية قوية وقابلة للتوسع. أستمتع بتحويل الأفكار إلى تطبيقات ويب تفاعلية وعملية وسهلة الاستخدام."
+    "description": "مطور ويب فل ستاك شغوف بخبرة تزيد عن سنتين في بناء تطبيقات ويب عالية الأداء. أتخصص في React و Vue.js و TypeScript للواجهة الأمامية، إلى جانب Laravel و Node.js و REST APIs للخلفية. من تصميم واجهات بديهية إلى بناء قواعد بيانات قابلة للتوسع باستخدام MySQL و MongoDB، أقدم حلولاً متكاملة من البداية إلى النهاية. أزدهر في فرق Agile، وأحرص على كتابة كود نظيف، وأستكشف باستمرار الأدوات الحديثة — Docker وأنابيب CI/CD والتطوير بمساعدة الذكاء الاصطناعي — لتسليم برمجيات موثوقة بشكل أسرع.",
+    "stats": {
+      "experience_value": "+2",
+      "experience_label": "سنوات خبرة",
+      "companies_value": "3",
+      "companies_label": "شركات",
+      "projects_value": "+4",
+      "projects_label": "مشاريع",
+      "tech_value": "+30",
+      "tech_label": "تقنية"
+    },
+    "what_i_do": {
+      "title": "ماذا أفعل",
+      "frontend_title": "تطوير الواجهة",
+      "frontend_desc": "React · Vue · TypeScript · Tailwind CSS",
+      "backend_title": "تطوير الخلفية",
+      "backend_desc": "Laravel · PHP · Node.js · REST APIs",
+      "database_title": "تصميم قواعد البيانات",
+      "database_desc": "MySQL · MongoDB · Redis",
+      "teamwork_title": "التعاون الرشيق",
+      "teamwork_desc": "Scrum · Git · الكود النظيف"
+    },
+    "certificates_title": "الشهادات"
   },
   "experience": {
     "title": "الخبرة المهنية",
+    "stats": {
+      "years": "+2",
+      "years_label": "سنوات خبرة",
+      "companies": "3",
+      "companies_label": "شركات",
+      "focus": "Full-Stack",
+      "focus_label": "مجال التطوير"
+    },
     "companies": {
       "cod_network": {
         "title": "Cod Network، أكادير، المغرب",
@@ -94,6 +125,7 @@
   },
   "technical_skills": {
     "title": "المهارات التقنية",
+    "overall_label": "تقنية مُتقنة",
     "frontend": {
       "title": "تطوير الواجهة المستخدم",
       "description": "احتاج إلى تقنيات تطوير الواجهة المستخدم مثل HTML، CSS، و JavaScript. أحتاج إلى تقنيات مثل React و Vue.js."
@@ -110,13 +142,19 @@
       "title": "تحكم الإصدارات",
       "description": "احتاج إلى تقنيات تحكم الإصدارات مثل Git و GitHub. أحتاج إلى العمل مع فرق باستخدام نظم تحكم الإصدارات."
     },
+    "devops": {
+      "title": "DevOps و السحابة",
+      "description": "خبرة في الحاويات وخطوط CI/CD وبعض خدمات السحابة: Docker، Docker Compose، GitHub Actions، Nginx، إدارة خوادم Linux و أساسيات AWS (EC2، S3)."
+    },
     "others": {
-      "title": "المهارات الأخرى",
-      "description": "احتاج إلى تقنيات أخرى مثل Docker، Kubernetes، و CI/CD. أحتاج إلى العمل مع فرق باستخدام نظم تحكم الإصدارات."
+      "title": "مهارات أخرى",
+      "description": "مهارات أخرى مثل الاختبارات (Jest)، أدوات التصميم (Figma)، أنظمة التشغيل، إنشاء محتوى فيديو واستخدام أدوات الذكاء الاصطناعي مثل ChatGPT و GitHub Copilot."
     }
   },
   "education": {
     "title": "التعليم",
+    "graduated": "متخرج",
+    "in_progress": "قيد الدراسة",
     "diploma": {
       "high_school": {
         "title": "دبلوم الثانوية العامة",
@@ -129,12 +167,28 @@
         "school": "يوكود، آسفي، المغرب",
         "date": "سبتمبر 2023",
         "description": "أكملت برنامجًا شاملًا في التطوير الشامل، يشمل تقنيات الواجهة الأمامية والخلفية."
+      },
+      "ensa_safi": {
+        "title": "إجازة في هندسة ونظم المعلومات والعمارة",
+        "school": "المدرسة الوطنية للعلوم التطبيقية، آسفي (ENSA Safi)",
+        "date": "أكتوبر 2025 – يوليو 2026",
+        "description": "إجازة تركز على هندسة نظم المعلومات، هندسة البرمجيات، وعمارة الأنظمة الحديثة."
+      },
+      "simplon_grand_ouest": {
+        "title": "دبلوم تكوين مهني",
+        "school": "Simplon Grand Ouest، فرنسا",
+        "date": "سبتمبر 2021 – يونيو 2023",
+        "description": "برنامج تكوين مكثف يعتمد على المشاريع والعمل التعاوني واكتساب المهارات الرقمية."
       }
     }
   },
   "projects": {
     "title": "المشاريع",
     "description": "هنا بعض المشاريع التي عملت عليها مؤخرًا. يمكنك الاطلاع على المزيد من مشاريعي على GitHub.",
+    "stats": {
+      "total": "+4",
+      "total_label": "مشاريع منجزة"
+    },
     "project_1": {
       "title": "تطبيق إدارة المهام",
       "description": "تطبيق إدارة المهام يسمح للمستخدمين بانشاء، تحديث واختيار المهام."

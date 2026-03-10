@@ -1,16 +1,16 @@
 import React from "react";
 import { Text, View } from "@react-pdf/renderer";
-import useTranslation from "@/hooks/useTranslation";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";
-import { Experiences } from "@/data";
+import { experiences } from "@/data";
 
 export const Experience: React.FC = () => {
   const { t } = useTranslation();
 
   return (
     <Section title={t("experience.title")}>
-      {Experiences.map((experience) => (
+      {experiences.map((experience) => (
         <View key={experience.company_name}>
           <Text style={styles.title}>
             {t(`experience.companies.${experience.company_name}.position`)}
@@ -19,7 +19,7 @@ export const Experience: React.FC = () => {
             {t(`experience.companies.${experience.company_name}.title`)} -{" "}
             {t(`experience.companies.${experience.company_name}.date`)}
           </Text>
-          <Text style={styles.countentText}>
+          <Text style={styles.contentText}>
             {t(`experience.companies.${experience.company_name}.description`)}
           </Text>
         </View>

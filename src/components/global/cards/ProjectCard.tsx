@@ -1,122 +1,125 @@
-import { useRef } from "react";
-import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
-import { Project } from "@/types";
-import useTranslation from "@/hooks/useTranslation";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, ExternalLink, Github, ImageOff } from "lucide-react";
+import type { Project } from "@/types";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Chip } from "@/components/global/Chip";
+
+const MAX_CHIPS = 5;
 
 interface ProjectCardProps {
   project: Project;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }): JSX.Element => {
+export const ProjectCard = ({ project }: ProjectCardProps) => {
   const { t } = useTranslation();
-  const imageScrollRef = useRef<HTMLDivElement>(null);
+  const images = project.images ?? [];
+  const [currentImage, setCurrentImage] = useState(0);
 
-  const disabledLeft =
-    imageScrollRef.current && imageScrollRef.current.scrollLeft === 0;
+  const goPrev = () => setCurrentImage((i) => Math.max(i - 1, 0));
+  const goNext = () => setCurrentImage((i) => Math.min(i + 1, images.length - 1));
 
-  const disabledRight =
-    imageScrollRef.current &&
-    imageScrollRef.current.scrollWidth -
-      imageScrollRef.current.scrollLeft -
-      imageScrollRef.current.clientWidth <=
-      0;
-  const scrollLeftDisabled = disabledLeft
-    ? "opacity-50 cursor-not-allowed"
-    : "";
-  const scrollRightDisabled = disabledRight
-    ? "opacity-50 cursor-not-allowed"
-    : "";
-
-  const scrollImagesLeft = () => {
-    if (imageScrollRef.current) {
-      imageScrollRef.current.scrollBy({ left: -1000, behavior: "smooth" });
-    }
-  };
-
-  const scrollImagesRight = () => {
-    if (imageScrollRef.current) {
-      imageScrollRef.current.scrollBy({ left: 1000, behavior: "smooth" });
-    }
-  };
+  const visibleTechs = project.technologies?.slice(0, MAX_CHIPS) ?? [];
+  const extraCount = (project.technologies?.length ?? 0) - MAX_CHIPS;
 
   return (
-    <article className="bg-transparent dark:bg-gray-900 rounded-xl overflow-hidden shadow-md dark:shadow-lg hover:shadow-lg dark:hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-800 h-full flex flex-col">
+    <article className="card overflow-hidden flex flex-col h-full group">
       {/* Image Gallery */}
-      <div className="relative">
-        <div
-          ref={imageScrollRef}
-          className="flex overflow-x-hidden gap-2 h-56 hide-scrollbar snap-start transform transition-transform duration-300 hover:scale-[1.02]"
-        >
-          {project.images && project.images.length > 0 ? (
-            project.images.map((image: string, imgIndex: number) => (
-              <img
-                key={imgIndex}
-                src={image}
-                alt={`${project.key} screenshot ${imgIndex + 1}`}
-                className="flex-none w-full object-cover snap-start"
-                loading="lazy"
-              />
-            ))
-          ) : (
-            <div className="flex items-center justify-center w-full bg-gray-200 dark:bg-gradient-to-br dark:from-gray-800 dark:to-gray-700">
-              <span className="text-gray-500 dark:text-gray-400 text-lg font-semibold">
-                No Preview Available
-              </span>
-            </div>
-          )}
-        </div>
-
-        {/* Image Scroll Buttons */}
-        {project.images && project.images.length > 1 && (
+      <div className="relative h-52 overflow-hidden bg-gray-100 dark:bg-gray-800">
+        {images.length > 0 ? (
           <>
-            <button
-              onClick={scrollImagesLeft}
-              className={
-                "absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-gray-800/80 hover:bg-gray-700/80 dark:bg-gray-800/90 dark:hover:bg-gray-700/90 text-gray-200 dark:text-gray-300 p-1 rounded-full transition-all duration-200" +
-                scrollLeftDisabled
-              }
-              aria-label="Scroll images left"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              onClick={scrollImagesRight}
-              className={
-                "absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-gray-800/80 hover:bg-gray-700/80 dark:bg-gray-800/90 dark:hover:bg-gray-700/90 text-gray-200 dark:text-gray-300 p-1 rounded-full transition-all duration-200" +
-                scrollRightDisabled
-              }
-              aria-label="Scroll images right"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
+            <img
+              key={currentImage}
+              src={images[currentImage]}
+              alt={`${project.key} screenshot ${currentImage + 1}`}
+              className="w-full h-full object-cover transition-opacity duration-300"
+              loading="lazy"
+            />
+
+            {/* Hover-reveal nav buttons */}
+            {images.length > 1 && (
+              <>
+                <button
+                  onClick={goPrev}
+                  disabled={currentImage === 0}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100 disabled:opacity-0"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={goNext}
+                  disabled={currentImage === images.length - 1}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100 disabled:opacity-0"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+
+                {/* Dot indicators */}
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                  {images.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setCurrentImage(i)}
+                      className={[
+                        "w-1.5 h-1.5 rounded-full transition-all duration-200",
+                        i === currentImage
+                          ? "bg-white scale-125"
+                          : "bg-white/50 hover:bg-white/80",
+                      ].join(" ")}
+                      aria-label={`Go to image ${i + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </>
+        ) : (
+          <div className="flex flex-col items-center justify-center w-full h-full gap-2 text-gray-400 dark:text-gray-500">
+            <ImageOff size={32} />
+            <span className="text-xs font-medium">No Preview Available</span>
+          </div>
         )}
       </div>
 
       {/* Content */}
-      <div className="p-6 flex flex-col flex-grow bg-gradient-to-br from-white to-gray-50 shadow-md transition-all hover:shadow-lg dark:from-gray-800 dark:to-gray-900 h-[48vh]">
-        <h3 className=" text-lg md:text-xl font-bold text-gray-900 dark:text-white tracking-tight">
+      <div className="p-5 flex flex-col flex-grow">
+        <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1 leading-snug">
           {t(`projects.${project.key}.title`)}
         </h3>
-        <p className="text-gray-600 dark:text-gray-200 text-sm  md:text-base leading-relaxed mb-4">
+        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
           {t(`projects.${project.key}.description`)}
         </p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.technologies?.map((tech: string, techIndex: number) => (
-            <Chip key={`${tech}-${techIndex}`} text={tech} />
-          ))}
-        </div>
-        <div className="flex gap-4 mt-auto border-t border-gray-200 dark:border-gray-700 pt-4">
+
+        {/* Technologies */}
+        {visibleTechs.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            {visibleTechs.map((tech, i) => (
+              <Chip
+                key={`${tech}-${i}`}
+                text={tech}
+                className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-200"
+              />
+            ))}
+            {extraCount > 0 && (
+              <span className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-900/30 px-2.5 py-0.5 text-xs font-medium text-blue-600 dark:text-blue-400">
+                +{extraCount} more
+              </span>
+            )}
+          </div>
+        )}
+
+        {/* Links */}
+        <div className="flex gap-3 mt-auto pt-4 border-t border-gray-200 dark:border-gray-700">
           {project.github && (
             <a
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg transition-colors duration-200 border border-gray-300 dark:border-gray-700"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg transition-colors duration-200 border border-gray-300 dark:border-gray-700 text-sm"
             >
-              <Github className="w-5 h-5" />
-              <span className="text-sm">GitHub</span>
+              <Github className="w-4 h-4" />
+              GitHub
             </a>
           )}
           {project.demo && (
@@ -124,10 +127,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }): JSX.Element => {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg transition-colors duration-200"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 text-white rounded-lg transition-colors duration-200 text-sm"
             >
-              <ExternalLink className="w-5 h-5" />
-              <span className="text-sm">Live Demo</span>
+              <ExternalLink className="w-4 h-4" />
+              Live Demo
             </a>
           )}
         </div>
@@ -135,5 +138,3 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }): JSX.Element => {
     </article>
   );
 };
-
-export default ProjectCard;

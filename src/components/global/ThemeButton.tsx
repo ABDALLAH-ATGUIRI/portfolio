@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
-const ThemeButton: React.FC = () => {
+export const ThemeButton: React.FC = () => {
 
   const [darkMode, setDarkMode] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -36,4 +36,4 @@ const ThemeButton: React.FC = () => {
   );
 };
 
-export default ThemeButton;
+

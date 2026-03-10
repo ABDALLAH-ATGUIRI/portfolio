@@ -1,85 +1,68 @@
 import { Suspense, useState, useEffect, lazy } from "react";
 import { LoadingLayout } from "@/components/layouts/LoadingLayout";
-import MainLayout from "@/components/layouts/MainLayout";
+import { MainLayout } from "@/components/layouts/MainLayout";
 
-const Hero = lazy(() =>
-  import("@/components/Hero").then((module) => ({ default: module.Hero }))
-);
-const Summary = lazy(() =>
-  import("@/components/Summary").then((module) => ({
-    default: module.Summary,
-  }))
-);
-const Experience = lazy(() =>
-  import("@/components/Experience").then((module) => ({
-    default: module.Experience,
-  }))
-);
-const Education = lazy(() =>
-  import("@/components/Education").then((module) => ({
-    default: module.Education,
-  }))
-);
-const Hobbies = lazy(() =>
-  import("@/components/Hobbies").then((module) => ({
-    default: module.Hobbies,
-  }))
-);
-const TechnicalSkills = lazy(() =>
-  import("@/components/TechnicalSkills").then((module) => ({
-    default: module.TechnicalSkills,
-  }))
-);
-const Projects = lazy(() =>
-  import("@/components/Projects").then((module) => ({
-    default: module.Projects,
-  }))
-);
+/** Helper to lazy-load a named export as `default` */
+function lazyNamed<T extends Record<string, React.ComponentType>>(
+  factory: () => Promise<T>,
+  name: keyof T
+) {
+  return lazy(() => factory().then((mod) => ({ default: mod[name] })));
+}
 
-function App() {
+const Hero = lazyNamed(() => import("@/components/Hero"), "Hero");
+const Summary = lazyNamed(() => import("@/components/Summary"), "Summary");
+const Experience = lazyNamed(() => import("@/components/Experience"), "Experience");
+const Education = lazyNamed(() => import("@/components/Education"), "Education");
+const Hobbies = lazyNamed(() => import("@/components/Hobbies"), "Hobbies");
+const TechnicalSkills = lazyNamed(() => import("@/components/TechnicalSkills"), "TechnicalSkills");
+const Projects = lazyNamed(() => import("@/components/Projects"), "Projects");
+
+function AppContent() {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    // Mark as ready once Suspense resolves (simulated here)
-    const timer = setTimeout(() => setIsReady(true), 1500); // Match lazy delay
+    const timer = setTimeout(() => setIsReady(true), 1500);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <Suspense fallback={<LoadingLayout />}>
-      <div className="min-h-screen text-secondary bg-background-light dark:bg-background-dark transition-colors duration-300 relative overflow-hidden">
-        {/* Loading Overlay */}
-        <div
-          className={[
-            "fixed inset-0 z-50 transition-opacity duration-500",
-            isReady ? "opacity-0 pointer-events-none" : "opacity-100",
-          ].join(" ")}
-        >
-          <LoadingLayout />
-        </div>
-
-        {/* Main Content */}
-        <div
-          className={`transition-opacity duration-500 ${
-            isReady ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <MainLayout>
-            <Suspense fallback={null}>
-              <Hero />
-              {/* No fallback here since LoadingLayout is above */}
-              <main className="container mx-auto px-4 max-w-5xl py-8">
-                <Summary />
-                <Experience />
-                <Projects />
-                <TechnicalSkills />
-                <Education />
-                <Hobbies />
-              </main>
-            </Suspense>
-          </MainLayout>
-        </div>
+    <div className="min-h-screen text-secondary bg-background-light dark:bg-background-dark transition-colors duration-300 relative">
+      {/* Loading Overlay */}
+      <div
+        className={`fixed inset-0 z-50 transition-opacity duration-500 ${
+          isReady ? "opacity-0 pointer-events-none" : "opacity-100"
+        }`}
+      >
+        <LoadingLayout />
       </div>
+
+      {/* Main Content */}
+      <div
+        className={`transition-opacity duration-500 ${
+          isReady ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <MainLayout>
+          <Suspense fallback={null}>
+            <Hero />
+            <Summary />
+            <Experience />
+            <Projects />
+            <TechnicalSkills />
+            <Education />
+            <Hobbies />
+          </Suspense>
+        </MainLayout>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Suspense fallback={<LoadingLayout />}>
+      <AppContent />
     </Suspense>
   );
 }

@@ -73,7 +73,7 @@ export const styles = StyleSheet.create({
     fontStyle: "italic",
     marginBottom: 1.8,
   },
-  countentText: {
+  contentText: {
     fontSize: 10.5,
     color: "#374151", // Gray-700
     marginLeft: 5,

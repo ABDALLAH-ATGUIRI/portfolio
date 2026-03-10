@@ -1,112 +1,51 @@
-import React, { useRef, useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React from "react";
+import { FolderOpen } from "lucide-react";
 import { SectionLayout } from "@/components/layouts/SectionLayout";
-import ProjectCard from "@/components/global/cards/ProjectCard";
-import useTranslation from "@/hooks/useTranslation";
+import { ProjectCard } from "@/components/global/cards/ProjectCard";
+import { useTranslation } from "@/hooks/useTranslation";
 import { projects } from "@/data";
 
 export const Projects: React.FC = () => {
   const { t } = useTranslation();
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const rafRef = useRef<number | null>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-
-  const checkScrollPosition = () => {
-    if (rafRef.current !== null) {
-      cancelAnimationFrame(rafRef.current);
-    }
-    rafRef.current = requestAnimationFrame(() => {
-      if (scrollContainerRef.current) {
-        const { scrollLeft, scrollWidth, clientWidth } =
-          scrollContainerRef.current;
-        setCanScrollLeft(scrollLeft > 0);
-        setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1); // -1 for rounding errors
-      }
-    });
-  };
-
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      const scrollDistance = scrollContainerRef.current.clientWidth + 24; // 100px for the gap
-      scrollContainerRef.current.scrollBy({ left: -scrollDistance, behavior: "smooth" });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      const scrollDistance = scrollContainerRef.current.clientWidth  + 24;
-      scrollContainerRef.current.scrollBy({ left: scrollDistance, behavior: "smooth" });
-    }
-  };
-
-  useEffect(() => {
-    const container = scrollContainerRef.current;
-    if (container) {
-      checkScrollPosition(); // Initial check
-      container.addEventListener("scroll", checkScrollPosition, {
-        passive: true,
-      });
-      window.addEventListener("resize", checkScrollPosition, { passive: true });
-      return () => {
-        container.removeEventListener("scroll", checkScrollPosition);
-        window.removeEventListener("resize", checkScrollPosition);
-        if (rafRef.current !== null) {
-          cancelAnimationFrame(rafRef.current);
-        }
-      };
-    }
-  }, []);
 
   return (
     <SectionLayout id="projects" title={t("projects.title")}>
-      <div className="max-w-6xl mx-auto py-8 relative">
-        {/* Scroll Container */}
-        <div
-          ref={scrollContainerRef}
-          className="flex overflow-x-hidden gap-6 snap-x snap-mandatory hide-scrollbar"
+      {/* Intro row — description + stat */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <p
+          className="stagger-item text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed max-w-xl"
+          style={{ animationDelay: "0ms" }}
         >
-          {projects.map((project, index) => (
-            <div
-              key={`${project.key}-${index}`}
-              className="flex-none w-full md:w-[calc(50%-1.5rem)] min-w-[300px]"
-            >
-              <ProjectCard project={project} />
-            </div>
-          ))}
-        </div>
+          {t("projects.description")}
+        </p>
 
-        <div className="flex items-center justify-between px-4 mt-8 max-w-xl mx-auto">
-          {/* Scroll right Button */}
-          <button
-            onClick={scrollLeft}
-            disabled={!canScrollLeft}
-            className="bg-gray-800/80 hover:bg-gray-700/80 dark:bg-gray-800/90 dark:hover:bg-gray-700/90 text-gray-200 dark:text-gray-300 p-2 rounded-full shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-
-          {/* Scroll Indicators */}
-          <div className="flex justify-center mt-6 gap-2">
-            {projects.map((_, index) => (
-              <span
-                key={index}
-                className="w-2.5 h-2.5 rounded-full bg-gray-600 dark:bg-gray-500 opacity-70 hover:bg-gray-300 dark:hover:bg-gray-200 transition-all duration-300"
-              />
-            ))}
+        <div
+          className="stagger-item card flex flex-col items-center justify-center gap-1 px-6 py-4 shrink-0"
+          style={{ animationDelay: "100ms" }}
+        >
+          <div className="p-1.5 rounded-lg bg-blue-50 dark:bg-blue-900/30 mb-1">
+            <FolderOpen size={16} className="text-blue-500 dark:text-blue-400" />
           </div>
-
-          {/* Scroll left Button */}
-          <button
-            onClick={scrollRight}
-            disabled={!canScrollRight}
-            className="bg-gray-800/80 hover:bg-gray-700/80 dark:bg-gray-800/90 dark:hover:bg-gray-700/90 text-gray-200 dark:text-gray-300 p-2 rounded-full shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
+          <span className="text-2xl font-extrabold text-blue-500 dark:text-blue-400 leading-none">
+            {t("projects.stats.total")}
+          </span>
+          <span className="text-xs text-gray-500 dark:text-gray-400">
+            {t("projects.stats.total_label")}
+          </span>
         </div>
+      </div>
+
+      {/* Projects grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {projects.map((project, index) => (
+          <div
+            key={project.key}
+            className="stagger-item"
+            style={{ animationDelay: `${200 + index * 100}ms` }}
+          >
+            <ProjectCard project={project} />
+          </div>
+        ))}
       </div>
     </SectionLayout>
   );

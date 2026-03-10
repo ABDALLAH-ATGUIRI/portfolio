@@ -1,8 +1,7 @@
 import React from "react";
 import { Hobby } from "@/types";
-import useTranslation from "@/hooks/useTranslation";
+import { useTranslation } from "@/hooks/useTranslation";
 import { hobbies } from "@/data";
-import { Chip } from "@/components/global/Chip";
 import { SectionLayout } from "@/components/layouts/SectionLayout";
 
 export const Hobbies: React.FC = () => {
@@ -10,17 +9,30 @@ export const Hobbies: React.FC = () => {
 
   return (
     <SectionLayout id="hobbies" title={t("hobbies.title")}>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {hobbies.map(({ icon: Icon, name }: Hobby, index: number) => (
-          <li key={`hobby-${index}`}>
-            <Chip
-              text={t(`hobbies.${name}.name`)}
-              icon={<Icon />}
-              className="contact-button [&>svg]:!text-md w-full !px-5 !py-2"
-            />
-          </li>
+          <div
+            key={`hobby-${index}`}
+            className="stagger-item card flex flex-col gap-3"
+            style={{ animationDelay: `${index * 70}ms` }}
+          >
+            {/* Icon + name */}
+            <div className="flex items-center gap-3">
+              <div className="p-2 rounded-lg bg-blue-50 dark:bg-blue-900/30 shrink-0">
+                <Icon size={18} className="text-blue-500 dark:text-blue-400" />
+              </div>
+              <h3 className="font-semibold text-sm text-gray-800 dark:text-white">
+                {t(`hobbies.${name}.name`)}
+              </h3>
+            </div>
+
+            {/* Description */}
+            <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+              {t(`hobbies.${name}.description`)}
+            </p>
+          </div>
         ))}
-      </ul>
+      </div>
     </SectionLayout>
   );
 };
