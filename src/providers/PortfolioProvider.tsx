@@ -9,6 +9,7 @@ function resolveData(raw: PortfolioData): ResolvedPortfolioData {
     ...raw,
     contactLinks: raw.contactLinks.map((c) => ({
       ...c,
+      href: c.ariaLabel === "Portfolio" ? window.location.origin : c.href,
       icon: resolveIcon(c.icon),
     })),
     hobbies: raw.hobbies.map((h) => ({
