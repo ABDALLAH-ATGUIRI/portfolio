@@ -1,12 +1,13 @@
 import React from "react";
 import { Text, View } from "@react-pdf/renderer";
 import { useTranslation } from "@/hooks/useTranslation";
+import { usePortfolio } from "@/hooks/usePortfolio";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";
-import { experiences } from "@/data";
 
 export const Experience: React.FC = () => {
   const { t } = useTranslation();
+  const { experiences } = usePortfolio();
 
   return (
     <Section title={t("experience.title")}>

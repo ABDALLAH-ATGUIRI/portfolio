@@ -9,7 +9,7 @@ export default defineConfig({
 
   // Dependency optimization (use defaults unless you have specific needs)
   optimizeDeps: {
-    include: ["react", "react-dom", "@react-pdf/renderer"],
+    include: ["react", "react-dom"],
     exclude: ["lucide-react"],
   },
 
@@ -23,13 +23,12 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes("node_modules")) {
-            if (id.includes("@react-pdf/renderer")) {
-              return "react-pdf";
+            if (id.includes("react-dom") || id.includes("react/")) {
+              return "react";
             }
             if (id.includes("lucide-react")) {
               return "icons";
             }
-            return "vendor";
           }
         },
       },
@@ -54,8 +53,7 @@ export default defineConfig({
   // Path aliases for cleaner imports
   resolve: {
     alias: {
-      "@": "/src", // Use @ for importing from src folder
-      "@assets": "/src/assets", // Clean imports for assets
+      "@": "/src",
     },
   },
 });

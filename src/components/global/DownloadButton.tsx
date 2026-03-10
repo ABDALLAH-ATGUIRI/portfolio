@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { FileText, Loader2 } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
+import { usePortfolio } from "@/hooks/usePortfolio";
 
 export const DownloadButton: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const { t, language } = useTranslation();
+  const portfolioData = usePortfolio();
 
   const handleDownload = async () => {
     if (isLoading) return;
@@ -13,7 +17,9 @@ export const DownloadButton: React.FC = () => {
         import("@/components/pdf/CVDocument"),
       ]);
 
-      const blob = await pdf(<PDFWithTranslations />).toBlob();
+      const blob = await pdf(
+        <PDFWithTranslations t={t} language={language} portfolioData={portfolioData} />
+      ).toBlob();
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;

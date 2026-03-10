@@ -1,7 +1,11 @@
 export type Language = "EN" | "AR" | "FR";
 
-import EN from "./en.json";
-import AR from "./ar.json";
-import FR from "./fr.json";
+const LANG_FILE: Record<Language, string> = {
+  EN: "en",
+  AR: "ar",
+  FR: "fr",
+};
 
-export const translations: Record<Language, typeof EN> = { EN, AR, FR };
+export function langFileName(lang: Language): string {
+  return LANG_FILE[lang];
+}

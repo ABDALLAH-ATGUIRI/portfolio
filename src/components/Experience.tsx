@@ -3,10 +3,11 @@ import { Building2, Code2, Clock3 } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { ExperienceCard } from "@/components/global/cards/ExperienceCard";
 import { SectionLayout } from "@/components/layouts/SectionLayout";
-import { experiences } from "@/data";
+import { usePortfolio } from "@/hooks/usePortfolio";
 
 export const Experience: React.FC = () => {
   const { t } = useTranslation();
+  const { experiences } = usePortfolio();
 
   const stats = [
     {

@@ -3,10 +3,11 @@ import { FolderOpen } from "lucide-react";
 import { SectionLayout } from "@/components/layouts/SectionLayout";
 import { ProjectCard } from "@/components/global/cards/ProjectCard";
 import { useTranslation } from "@/hooks/useTranslation";
-import { projects } from "@/data";
+import { usePortfolio } from "@/hooks/usePortfolio";
 
 export const Projects: React.FC = () => {
   const { t } = useTranslation();
+  const { projects } = usePortfolio();
 
   return (
     <SectionLayout id="projects" title={t("projects.title")}>

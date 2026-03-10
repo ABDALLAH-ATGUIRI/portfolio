@@ -2,7 +2,7 @@ import React from "react";
 import { Mail, MapPin, Phone, ArrowDown } from "lucide-react";
 import { Contact } from "@/types";
 import { useTranslation } from "@/hooks/useTranslation";
-import { contactLinks } from "@/data";
+import { usePortfolio } from "@/hooks/usePortfolio";
 import { DownloadButton } from "@/components/global/DownloadButton";
 import { HeroBackground } from "@/components/global/HeroBackground";
 import { ProfileImage } from "@/components/global/ProfileImage";
@@ -10,6 +10,7 @@ import { Chip } from "@/components/global/Chip";
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
+  const { contactLinks } = usePortfolio();
 
   const contactInfo: { icon: React.ReactNode; text: string; copy?: boolean }[] =
     [

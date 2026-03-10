@@ -1,13 +1,14 @@
 import React from "react";
 import { View, Text } from "@react-pdf/renderer";
 import { useTranslation } from "@/hooks/useTranslation";
-import { hobbies, languages } from "@/data";
+import { usePortfolio } from "@/hooks/usePortfolio";
 import { Hobby } from "@/types";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";
 
 export const LanguagesAndHobbies: React.FC = () => {
   const { t } = useTranslation();
+  const { hobbies, languages } = usePortfolio();
   const hobbyNames = hobbies
     .map(({ name }: Hobby) => t(`hobbies.${name}.name`))
     .join(", ");

@@ -1,6 +1,9 @@
 import React, { memo } from "react";
 import { Document, Page } from "@react-pdf/renderer";
-import { TranslationProvider } from "@/providers/TranslationProvider";
+import { TranslationContext } from "@/context/TranslationContext";
+import { PortfolioContext } from "@/context/PortfolioContext";
+import type { Language } from "@/langs";
+import type { ResolvedPortfolioData } from "@/types";
 import {
   CVHeader,
   CvSummary,
@@ -29,16 +32,29 @@ const CV_SECTIONS = [
   LanguagesAndHobbies,
 ];
 
-export const PDFWithTranslations: React.FC = memo(() => (
-  <TranslationProvider>
-    <Document>
-      <Page size="A4" style={pageStyle}>
-        {CV_SECTIONS.map((Component) => (
-          <Component key={Component.name} />
-        ))}
-      </Page>
-    </Document>
-  </TranslationProvider>
-));
+interface PDFProps {
+  t: (key: string) => string;
+  language: Language;
+  portfolioData: ResolvedPortfolioData;
+}
+
+/** PDF uses its own React reconciler — provide data synchronously via context */
+export const PDFWithTranslations: React.FC<PDFProps> = memo(
+  ({ t, language, portfolioData }) => (
+    <TranslationContext.Provider
+      value={{ language, setLanguage: () => {}, t }}
+    >
+      <PortfolioContext.Provider value={portfolioData}>
+        <Document>
+          <Page size="A4" style={pageStyle}>
+            {CV_SECTIONS.map((Component) => (
+              <Component key={Component.name} />
+            ))}
+          </Page>
+        </Document>
+      </PortfolioContext.Provider>
+    </TranslationContext.Provider>
+  )
+);
 
 PDFWithTranslations.displayName = "PDFWithTranslations";

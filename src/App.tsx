@@ -1,6 +1,7 @@
-import { Suspense, useState, useEffect, lazy } from "react";
+import { Suspense, useState, useEffect, lazy, useContext } from "react";
 import { LoadingLayout } from "@/components/layouts/LoadingLayout";
 import { MainLayout } from "@/components/layouts/MainLayout";
+import { PortfolioContext } from "@/context/PortfolioContext";
 
 /** Helper to lazy-load a named export as `default` */
 function lazyNamed<T extends Record<string, React.ComponentType>>(
@@ -20,11 +21,13 @@ const Projects = lazyNamed(() => import("@/components/Projects"), "Projects");
 
 function AppContent() {
   const [isReady, setIsReady] = useState(false);
+  const data = useContext(PortfolioContext);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsReady(true), 1500);
+    if (!data) return;
+    const timer = setTimeout(() => setIsReady(true), 800);
     return () => clearTimeout(timer);
-  }, []);
+  }, [data]);
 
   return (
     <div className="min-h-screen text-secondary bg-background-light dark:bg-background-dark transition-colors duration-300 relative">

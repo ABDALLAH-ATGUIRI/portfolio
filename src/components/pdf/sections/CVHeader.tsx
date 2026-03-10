@@ -1,11 +1,12 @@
 import React from "react";
 import { View, Text, Image, Link } from "@react-pdf/renderer";
-import { contactLinks, me } from "@/data";
+import { usePortfolio } from "@/hooks/usePortfolio";
 import { useTranslation } from "@/hooks/useTranslation";
 import { Contact } from "@/types";
 import { styles } from "../PDFStyle";
 
 export const CVHeader: React.FC = () => {
+  const { me, contactLinks } = usePortfolio();
   const { image } = me;
   const { t } = useTranslation();
 

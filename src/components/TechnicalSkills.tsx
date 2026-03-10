@@ -4,7 +4,7 @@ import { Skill } from "@/types";
 import { useTranslation } from "@/hooks/useTranslation";
 import { SectionLayout } from "@/components/layouts/SectionLayout";
 import { Chip } from "@/components/global/Chip";
-import { skills } from "@/data";
+import { usePortfolio } from "@/hooks/usePortfolio";
 
 const SKILL_ICONS: Record<string, React.ElementType> = {
   frontend: Layout,
@@ -17,6 +17,7 @@ const SKILL_ICONS: Record<string, React.ElementType> = {
 
 export const TechnicalSkills = memo(() => {
   const { t } = useTranslation();
+  const { skills } = usePortfolio();
   const totalSkills = skills.reduce((sum, g) => sum + g.skills.length, 0);
 
   return (

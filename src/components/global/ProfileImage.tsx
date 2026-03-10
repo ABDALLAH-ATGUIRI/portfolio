@@ -1,8 +1,8 @@
 import React from "react";
-import { me } from "@/data";
+import { usePortfolio } from "@/hooks/usePortfolio";
 
 export const ProfileImage: React.FC = () => {
-    const { image } = me;
+    const { me: { image } } = usePortfolio();
   
   return (
     <div className="relative size-48 md:size-52 lg:size-64 mx-auto lg:mx-0">

@@ -16,12 +16,27 @@ export interface PersonalInfo {
   summary: string;
 }
 
+/** JSON-serializable contact (icon stored as string key) */
+export interface ContactData {
+  icon: string;
+  href: string;
+  ariaLabel: string;
+}
+
+/** Resolved contact with actual Lucide component */
 export interface Contact {
   icon: LucideIcon;
   href: string;
   ariaLabel: string;
 }
 
+/** JSON-serializable hobby (icon stored as string key) */
+export interface HobbyData {
+  name: string;
+  icon: string;
+}
+
+/** Resolved hobby with actual Lucide component */
 export interface Hobby {
   name: string;
   icon: LucideIcon;
@@ -46,4 +61,28 @@ export interface Certificate {
   institution: string;
   date: string;
   description: string;
+}
+
+/** Raw portfolio JSON shape (before icon resolution) */
+export interface PortfolioData {
+  me: PersonalInfo;
+  contactLinks: ContactData[];
+  projects: Project[];
+  skills: Skill[];
+  certificates: Certificate[];
+  experiences: Experience[];
+  hobbies: HobbyData[];
+  languages: string[];
+}
+
+/** Resolved portfolio data (icons are Lucide components) */
+export interface ResolvedPortfolioData {
+  me: PersonalInfo;
+  contactLinks: Contact[];
+  projects: Project[];
+  skills: Skill[];
+  certificates: Certificate[];
+  experiences: Experience[];
+  hobbies: Hobby[];
+  languages: string[];
 }

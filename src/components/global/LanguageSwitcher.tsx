@@ -1,17 +1,18 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { ChevronDown } from "lucide-react";
-import { FlagFr, FlagGb, FlagMa } from "@/assets/images/flags";
 import { useTranslation } from "@/hooks/useTranslation";
 import type { Language } from "@/langs";
+
+const BASE = import.meta.env.BASE_URL;
 
 const languageOptions: {
   code: Language;
   label: string;
   icon: string;
 }[] = [
-  { code: "EN", label: "English", icon: FlagGb },
-  { code: "FR", label: "Français", icon: FlagFr },
-  { code: "AR", label: "العربية", icon: FlagMa },
+  { code: "EN", label: "English", icon: `${BASE}assets/images/flags/gb.svg` },
+  { code: "FR", label: "Français", icon: `${BASE}assets/images/flags/fr.svg` },
+  { code: "AR", label: "العربية", icon: `${BASE}assets/images/flags/ma.svg` },
 ];
 
 export const LanguageSwitcher: React.FC = () => {

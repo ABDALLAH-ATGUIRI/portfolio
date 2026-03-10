@@ -1,14 +1,14 @@
 import React from "react";
 import { View, Text } from "@react-pdf/renderer";
 import { useTranslation } from "@/hooks/useTranslation";
+import { usePortfolio } from "@/hooks/usePortfolio";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";
-import { skills } from "@/data";
-
-const filteredSkills = skills.slice(0, -1); // Exclude last element
 
 export const TechnicalSkills: React.FC = () => {
   const { t } = useTranslation();
+  const { skills } = usePortfolio();
+  const filteredSkills = skills.slice(0, -1);
   return (
     <Section title={t("technical_skills.title")}>
       <View

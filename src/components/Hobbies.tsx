@@ -1,11 +1,12 @@
 import React from "react";
 import { Hobby } from "@/types";
 import { useTranslation } from "@/hooks/useTranslation";
-import { hobbies } from "@/data";
+import { usePortfolio } from "@/hooks/usePortfolio";
 import { SectionLayout } from "@/components/layouts/SectionLayout";
 
 export const Hobbies: React.FC = () => {
   const { t } = useTranslation();
+  const { hobbies } = usePortfolio();
 
   return (
     <SectionLayout id="hobbies" title={t("hobbies.title")}>

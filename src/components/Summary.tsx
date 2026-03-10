@@ -2,10 +2,11 @@ import React from "react";
 import { Monitor, Server, Database, Users, Award } from "lucide-react";
 import { SectionLayout } from "@/components/layouts/SectionLayout";
 import { useTranslation } from "@/hooks/useTranslation";
-import { certificates } from "@/data";
+import { usePortfolio } from "@/hooks/usePortfolio";
 
 export const Summary: React.FC = () => {
   const { t } = useTranslation();
+  const { certificates } = usePortfolio();
 
   const stats = [
     {

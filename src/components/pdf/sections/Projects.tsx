@@ -1,16 +1,16 @@
 import React from "react";
 import { View, Text, Link } from "@react-pdf/renderer";
 import { useTranslation } from "@/hooks/useTranslation";
-import { projects } from "@/data";
+import { usePortfolio } from "@/hooks/usePortfolio";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";
 
-const filteredProjects = projects.filter(({ key }) =>
-  ["project_1", "project_2"].includes(key)
-);
-
 export const Projects: React.FC = () => {
   const { t } = useTranslation();
+  const { projects } = usePortfolio();
+  const filteredProjects = projects.filter(({ key }) =>
+    ["project_1", "project_2"].includes(key)
+  );
 
   return (
     <Section title={t("projects.title")}>
