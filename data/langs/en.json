@@ -1,0 +1,203 @@
+{
+  "setting": {
+    "role": "role",
+    "developer": "developer",
+    "technologies": "technologies"
+  },
+  "developer": {
+    "name": "Abdallah ATGUIRI",
+    "role": "Full-Stack Web Developer",
+    "tagline": "Turning complex ideas into clean, scalable web apps — from pixel-perfect frontends to rock-solid backends.",
+    "location": "Morocco",
+    "email": "abdallah.atguiri@gmail.com",
+    "phone": "+212 623 779 270"
+  },
+  "about_me": {
+    "title": "About Me",
+    "description": "Full-Stack Developer with 2+ years of experience building scalable web applications using React, Vue.js, TypeScript, Laravel, and Node.js. Proficient in REST API development, database design (MySQL, MongoDB), Docker, and CI/CD. Strong focus on clean code, Agile collaboration, and delivering reliable end-to-end solutions.",
+    "stats": {
+      "experience_value": "2+",
+      "experience_label": "Years Experience",
+      "companies_value": "3",
+      "companies_label": "Companies",
+      "projects_value": "4+",
+      "projects_label": "Projects",
+      "tech_value": "30+",
+      "tech_label": "Technologies"
+    },
+    "what_i_do": {
+      "title": "What I Do",
+      "frontend_title": "Frontend Development",
+      "frontend_desc": "React · Vue · TypeScript · Tailwind CSS",
+      "backend_title": "Backend Development",
+      "backend_desc": "Laravel · PHP · Node.js · REST APIs",
+      "database_title": "Database Design",
+      "database_desc": "MySQL · MongoDB · Redis",
+      "teamwork_title": "Agile Collaboration",
+      "teamwork_desc": "Scrum · Git · Clean Code · PR Reviews"
+    },
+    "certificates_title": "Certifications"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "stats": {
+      "years": "2+",
+      "years_label": "Years Experience",
+      "companies": "3",
+      "companies_label": "Companies",
+      "focus": "Full-Stack",
+      "focus_label": "Development Focus"
+    },
+    "companies": {
+      "cod_network": {
+        "title": "Cod Network, Agadir, Morocco",
+        "position": "Junior Full-Stack Developer",
+        "date": "June 2023 - Present",
+        "description": "Built and maintained e-commerce platforms with Laravel and Vue.js/React. Developed REST APIs, implemented authentication (Passport), optimized backend performance, and delivered responsive UIs with Tailwind CSS and Material-UI."
+      },
+      "agriwise": {
+        "title": "Agriwise, Agadir, Morocco",
+        "position": "Full-Stack Developer Intern (Laravel/Vue.js)",
+        "date": "January 2023 - February 2023",
+        "description": "Developed responsive UIs with Vue.js, Tailwind CSS, and Element Plus for an agriculture management platform. Contributed to Laravel backend services in an Agile/Scrum environment."
+      },
+      "digital_elite": {
+        "title": "Digital Elite, Agadir, Morocco",
+        "position": "Full-Stack Web Developer Intern",
+        "date": "March 2023 - May 2023",
+        "description": "Built features with React and Node.js following Agile practices and clean code principles. Gained experience in team collaboration and delivering maintainable solutions."
+      }
+    }
+  },
+  "hobbies": {
+    "title": "Hobbies",
+    "coding": {
+      "name": "Coding",
+      "description": "I love coding and enjoy working on personal projects in my spare time. I am always looking to learn new technologies and improve my skills."
+    },
+    "reading": {
+      "name": "Reading",
+      "description": "I enjoy reading books, especially in the genres of science fiction and technology. I believe that reading helps me to expand my knowledge and creativity."
+    },
+    "gaming": {
+      "name": "Gaming",
+      "description": "I enjoy playing video games in my free time. It helps me to relax and unwind after a long day of coding."
+    },
+    "exploring": {
+      "name": "Exploring",
+      "description": "I love exploring new places and cultures. Traveling helps me to gain new perspectives and ideas that I can apply to my work."
+    },
+    "personal_projects": {
+      "name": "Personal Projects",
+      "description": "I enjoy working on personal projects that allow me to experiment with new technologies and ideas. I believe that personal projects are a great way to learn and grow as a developer."
+    },
+    "learning": {
+      "name": "Learning",
+      "description": "I am always looking to learn new technologies and improve my skills. I enjoy learning about new programming languages, frameworks, and tools."
+    },
+    "basketball": {
+      "name": "Basketball",
+      "description": "I enjoy playing basketball and watching basketball games. It helps me to stay fit and healthy."
+    },
+    "music": {
+      "name": "Music",
+      "description": "I enjoy listening to music, especially in genres such as pop, rock, and electronic. It helps me to relax and unwind."
+    },
+    "problem_solving": {
+      "name": "Problem solving",
+      "description": "Engaging in activities that challenge my logical thinking and creativity, helping me to develop effective solutions for complex problems."
+    }
+  },
+  "languages": {
+    "title": "Languages",
+    "arabic": {
+      "name": "Arabic",
+      "level": "Native Speaker"
+    },
+    "french": {
+      "name": "French",
+      "level": "Beginner"
+    },
+    "english": {
+      "name": "English",
+      "level": "Intermediate"
+    }
+  },
+  "technical_skills": {
+    "title": "Technical Skills",
+    "overall_label": "Technologies Mastered",
+    "frontend": {
+      "title": "Front-End Development",
+      "description": "I am proficient in front-end development using technologies like HTML, CSS, and JavaScript. I have expertise in frameworks like React and Vue.js."
+    },
+    "backend": {
+      "title": "Back-End Development",
+      "description": "I am proficient in back-end development using technologies like Node.js, Express, and MongoDB. I have expertise in building RESTful APIs and working with databases."
+    },
+    "database": {
+      "title": "Database Management",
+      "description": "I am proficient in database management using technologies like MongoDB, MySQL, and PostgreSQL. I have expertise in designing and optimizing database schemas."
+    },
+    "version_control": {
+      "title": "Version Control",
+      "description": "I am proficient in version control using Git and GitHub. I have experience in collaborating with teams using version control systems."
+    },
+    "devops": {
+      "title": "DevOps & Cloud",
+      "description": "Experience with containerization, CI/CD, and basic cloud: Docker, Docker Compose, GitHub Actions, Nginx, Linux servers, and introductory AWS services (EC2, S3)."
+    },
+    "others": {
+      "title": "Other Skills",
+      "description": "Additional skills including testing (Jest), design tools (Figma), operating systems, video content creation, and AI-assisted development using tools like ChatGPT and GitHub Copilot."
+    }
+  },
+  "education": {
+    "title": "Education",
+    "graduated": "Graduated",
+    "in_progress": "In progress",
+    "diploma": {
+      "high_school": {
+        "title": "High School Diploma",
+        "school": "School Hassan II School, Safi, Morocco",
+        "date": "August 2019",
+        "description": "I graduated from high school with a focus on science and Physics."
+      },
+      "youcode_simplon": {
+        "title": "Diploma in Full-Stack Web Development",
+        "school": "YouCode (Simplon), Safi, Morocco / Simplon Grand Ouest, France",
+        "date": "Sep 2021 – Sep 2023",
+        "description": "Intensive full-stack development program covering front-end, back-end, project-based learning, and collaborative Agile workflows."
+      },
+      "ensa_safi": {
+        "title": "Bachelor's in Information Systems Engineering and Architecture",
+        "school": "ENSA Safi, Morocco",
+        "date": "Oct 2025 – Jul 2026",
+        "description": "Bachelor's degree focused on information systems engineering, software architecture, and modern web technologies."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "A selection of personal and professional projects showcasing full-stack development across various domains.",
+    "stats": {
+      "total": "4+",
+      "total_label": "Projects Built"
+    },
+    "project_1": {
+      "title": "Task Management App",
+      "description": "Drag-and-drop task manager with create, prioritize, and organize features using React and Redux."
+    },
+    "project_2": {
+      "title": "E-commerce Platform",
+      "description": "Full-stack e-commerce with Laravel REST API, user auth, product management, and order processing."
+    },
+    "project_3": {
+      "title": "Online Restaurant Reservation Application",
+      "description": "The proposed online restaurant reservation application aims to address these issues by providing customers with a simple, user-friendly platform to search for and book reservations at their desired restaurants, while also giving restaurants the tools they need to manage reservations more efficiently."
+    },
+    "project_4": {
+      "title": "Virtual Gear Hub",
+      "description": "Virtual Gear Hub is an innovative e-commerce platform designed to provide gamers with a wide selection of high-quality accessories for virtual reality (VR) gaming. The platform caters to both casual and professional gamers, offering a diverse range of VR gear, including motion controllers, haptic feedback gloves, headsets, tracking systems"
+    }
+  }
+}
