@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://atguiri.dev/sitemap.xml
