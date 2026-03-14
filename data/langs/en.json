@@ -204,6 +204,10 @@
     "title": "Contact",
     "description": "Feel free to reach out — whether you have a project in mind, a question, or just want to say hello.",
     "send_email": "Send Email",
-    "get_in_touch": "Get in Touch"
+    "get_in_touch": "Get in Touch",
+    "location_label": "Location",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "find_me": "Find me on"
   }
 }
