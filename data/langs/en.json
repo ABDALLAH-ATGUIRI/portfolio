@@ -199,5 +199,11 @@
       "title": "Virtual Gear Hub",
       "description": "Virtual Gear Hub is an innovative e-commerce platform designed to provide gamers with a wide selection of high-quality accessories for virtual reality (VR) gaming. The platform caters to both casual and professional gamers, offering a diverse range of VR gear, including motion controllers, haptic feedback gloves, headsets, tracking systems"
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Feel free to reach out — whether you have a project in mind, a question, or just want to say hello.",
+    "send_email": "Send Email",
+    "get_in_touch": "Get in Touch"
   }
 }
