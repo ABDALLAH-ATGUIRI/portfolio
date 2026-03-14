@@ -28,12 +28,12 @@ export const CVHeader: React.FC = () => {
         {contactLinks
           .filter(({ ariaLabel }: Contact) => ariaLabel !== "Email")
           .map(({ href, ariaLabel }: Contact, index) => (
-            <Text style={styles.contactItem} key={index}>
-              {ariaLabel}:{" "}
+            <View style={styles.contactRow} key={index}>
+              <Text style={styles.contactLabel}>{ariaLabel}:</Text>
               <Link src={href} style={styles.contactLink}>
                 {href.replace(/^https?:\/\/(www\.)?/, "")}
               </Link>
-            </Text>
+            </View>
           ))}
       </View>
     </View>

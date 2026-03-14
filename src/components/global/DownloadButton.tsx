@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FileText, Loader2 } from "lucide-react";
+import { Download, Loader2 } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { usePortfolio } from "@/hooks/usePortfolio";
 
@@ -35,16 +35,16 @@ export const DownloadButton: React.FC = () => {
     <button
       type="button"
       onClick={handleDownload}
-      className="group grid place-items-center h-12 w-12 rounded-xl border border-gray-200/80 bg-white/80 text-gray-500 shadow-sm backdrop-blur-sm transition-all duration-200 hover:border-blue-400 hover:text-blue-600 hover:shadow-md hover:-translate-y-0.5 dark:border-gray-700/80 dark:bg-gray-800/80 dark:text-gray-400 dark:hover:border-blue-500 dark:hover:text-blue-400 disabled:opacity-60"
+      className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-800 text-white px-6 py-3 text-sm font-bold shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5 hover:bg-blue-900 disabled:opacity-60"
       aria-label={isLoading ? "Preparing CV" : "Download CV"}
-      title="Download CV"
       disabled={isLoading}
     >
       {isLoading ? (
-        <Loader2 aria-hidden="true" className="w-5 h-5 animate-spin" />
+        <Loader2 aria-hidden="true" className="w-4 h-4 animate-spin" />
       ) : (
-        <FileText aria-hidden="true" className="w-5 h-5 transition-transform group-hover:scale-110" />
+        <Download aria-hidden="true" className="w-4 h-4" />
       )}
+      Download CV
     </button>
   );
 };

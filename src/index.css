@@ -159,6 +159,41 @@ html[lang="ar"] body {
   animation: fadeInUp 0.5s ease-out both;
 }
 
+/* ── Hero 3D character scene ──────────────────────────────── */
+.hero-3d-scene {
+  perspective: 800px;
+}
+.hero-3d-card {
+  transform-style: preserve-3d;
+  animation: hero3dFloat 6s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes hero3dFloat {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50%      { transform: translate3d(0, -10px, 0); }
+}
+@keyframes heroIconFloat1 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-10px) rotate(5deg); }
+}
+@keyframes heroIconFloat2 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-8px) rotate(-5deg); }
+}
+@keyframes heroIconFloat3 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-12px) rotate(3deg); }
+}
+.hero-float-1 { animation: heroIconFloat1 4s ease-in-out infinite; }
+.hero-float-2 { animation: heroIconFloat2 5s ease-in-out infinite 0.5s; }
+.hero-float-3 { animation: heroIconFloat3 4.5s ease-in-out infinite 1s; }
+
+@media (max-width: 768px) {
+  .hero-3d-card {
+    animation-duration: 8s;
+  }
+}
+
 body {
   @apply bg-white dark:bg-gray-800;
   @apply text-gray-900 dark:text-gray-100;

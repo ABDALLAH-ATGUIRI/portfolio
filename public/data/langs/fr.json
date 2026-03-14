@@ -199,5 +199,15 @@
       "title": "Virtual Gear Hub",
       "description": "Virtual Gear Hub est une plateforme de commerce en ligne concue pour fournir aux joueurs de jeux virtuels une grande variete d'accessoires de qualite pour la virtualite"
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "N'hésitez pas à me contacter — que vous ayez un projet en tête, une question, ou simplement envie de dire bonjour.",
+    "send_email": "Envoyer un Email",
+    "get_in_touch": "Me Contacter",
+    "location_label": "Localisation",
+    "phone_label": "Téléphone",
+    "email_label": "Email",
+    "find_me": "Me retrouver sur"
   }
 }

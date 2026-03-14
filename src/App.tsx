@@ -18,6 +18,7 @@ const Education = lazyNamed(() => import("@/components/Education"), "Education")
 const Hobbies = lazyNamed(() => import("@/components/Hobbies"), "Hobbies");
 const TechnicalSkills = lazyNamed(() => import("@/components/TechnicalSkills"), "TechnicalSkills");
 const Projects = lazyNamed(() => import("@/components/Projects"), "Projects");
+const Contact = lazyNamed(() => import("@/components/Contact"), "Contact");
 
 function AppContent() {
   const [isReady, setIsReady] = useState(false);
@@ -56,6 +57,7 @@ function AppContent() {
               <TechnicalSkills />
               <Education />
               <Hobbies />
+              <Contact />
             </Suspense>
           </MainLayout>
         </div>

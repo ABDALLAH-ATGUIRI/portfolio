@@ -43,14 +43,27 @@ export const styles = StyleSheet.create({
   },
   contactSection: {
     flexDirection: "column",
-    alignItems: "flex-end",
+    alignItems: "flex-start",
     justifyContent: "center",
+    minWidth: 180,
   },
   contactItem: {
     fontSize: 8.5,
     fontFamily: "Helvetica",
     color: "#4b5563",
     marginBottom: 1,
+    lineHeight: 1.2,
+  },
+  contactRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 1,
+  },
+  contactLabel: {
+    width: 46,
+    fontSize: 8.5,
+    fontFamily: "Helvetica-Bold",
+    color: "#4b5563",
   },
   sectionTitle: {
     fontSize: 11,

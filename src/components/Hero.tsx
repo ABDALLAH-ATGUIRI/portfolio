@@ -1,33 +1,21 @@
 import React from "react";
-import { Mail, MapPin, Phone, ArrowDown } from "lucide-react";
-import { Contact } from "@/types";
+import { ArrowDown, Code2, Terminal, Braces } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
-import { usePortfolio } from "@/hooks/usePortfolio";
-import { DownloadButton } from "@/components/global/DownloadButton";
 import { HeroBackground } from "@/components/global/HeroBackground";
-import { ProfileImage } from "@/components/global/ProfileImage";
-import { Chip } from "@/components/global/Chip";
+import { DeveloperAvatar } from "@/components/global/DeveloperAvatar";
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
-  const { contactLinks } = usePortfolio();
-
-  const contactInfo: { icon: React.ReactNode; text: string; copy?: boolean }[] =
-    [
-      { icon: <MapPin size={16} />, text: t("developer.location"), copy: true },
-      { icon: <Phone size={16} />, text: t("developer.phone"), copy: true },
-      { icon: <Mail size={16} />, text: t("developer.email"), copy: true },
-    ];
 
   return (
     <section className="relative overflow-hidden min-h-screen snap-start snap-always flex flex-col">
       <HeroBackground />
 
       <div className="relative flex-1 container mx-auto max-w-5xl px-5 sm:px-8 flex items-center">
-        <div className="grid w-full grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-14 items-center py-24 lg:py-0">
+        <div className="grid w-full grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center py-24 lg:py-0">
 
           {/* ── Left: text ───────────────────────────────── */}
-          <div className=" col-span-2 order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-5">
+          <div className="order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-5">
 
             {/* Status badge */}
             <span
@@ -48,7 +36,7 @@ export const Hero: React.FC = () => {
               {t("developer.name")}
             </h1>
 
-            {/* Short tagline — unique to Hero */}
+            {/* Short tagline */}
             <p
               className="anim-fade-up max-w-md text-base sm:text-lg leading-relaxed text-gray-500 dark:text-gray-400"
               style={{ animationDelay: "0.18s" }}
@@ -56,55 +44,50 @@ export const Hero: React.FC = () => {
               {t("developer.tagline")}
             </p>
 
-            {/* Contact pills */}
-            <div
-              className="anim-fade-up flex flex-wrap justify-center lg:justify-start gap-2"
-              style={{ animationDelay: "0.26s" }}
-            >
-              {contactInfo.map(({ icon, text, copy }, i) => (
-                <Chip
-                  key={i}
-                  text={text}
-                  title={copy ? "Click to copy" : undefined}
-                  icon={icon}
-                  copy={copy}
-                  className="inline-flex items-center gap-2 rounded-full border border-gray-200/80 bg-white/80 px-4 py-2 text-sm font-medium text-gray-600 shadow-sm backdrop-blur-sm transition-all hover:border-blue-400 hover:text-blue-600 hover:shadow-md dark:border-gray-700/80 dark:bg-gray-800/80 dark:text-gray-300 dark:hover:border-blue-500 dark:hover:text-blue-300 cursor-pointer"
-                />
-              ))}
-            </div>
-
-            {/* Actions */}
+            {/* CTA */}
             <div
               className="anim-fade-up flex items-center gap-3 pt-2"
-              style={{ animationDelay: "0.34s" }}
+              style={{ animationDelay: "0.26s" }}
             >
-              {contactLinks.map(({ icon: Icon, href, ariaLabel }: Contact) => (
-                <a
-                  key={ariaLabel}
-                  href={href}
-                  className="group grid place-items-center h-12 w-12 rounded-xl border border-gray-200/80 bg-white/80 text-gray-500 shadow-sm backdrop-blur-sm transition-all duration-200 hover:border-blue-400 hover:text-blue-600 hover:shadow-md hover:-translate-y-0.5 dark:border-gray-700/80 dark:bg-gray-800/80 dark:text-gray-400 dark:hover:border-blue-500 dark:hover:text-blue-400"
-                  aria-label={ariaLabel}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon className="w-5 h-5 transition-transform group-hover:scale-110" />
-                </a>
-              ))}
-              <DownloadButton />
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 rounded-xl bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 text-sm font-semibold shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5"
+              >
+                {t("contact.get_in_touch")}
+              </a>
+              <a
+                href="#about_me"
+                className="inline-flex items-center gap-2 rounded-xl border border-gray-200/80 bg-white/80 text-gray-600 px-6 py-3 text-sm font-semibold shadow-sm backdrop-blur-sm transition-all hover:border-blue-400 hover:text-blue-600 hover:shadow-md dark:border-gray-700/80 dark:bg-gray-800/80 dark:text-gray-300 dark:hover:border-blue-500 dark:hover:text-blue-300"
+              >
+                {t("about_me.title")}
+              </a>
             </div>
           </div>
 
-          {/* ── Right: profile image ─────────────────────── */}
+          {/* ── Right: 3D Character ─────────────────────── */}
           <div className="order-1 lg:order-2 flex justify-center anim-scale-in" style={{ animationDelay: "0.15s" }}>
-            <div className="relative">
-              {/* Rotating gradient ring */}
-              <div className="absolute -inset-3 rounded-3xl hero-glow-ring opacity-60" />
-              {/* Ambient glow */}
-              <div className="absolute -inset-10 rounded-full bg-gradient-to-tr from-blue-500/20 via-cyan-400/10 to-indigo-500/15 blur-3xl opacity-50 animate-pulse" />
-              {/* Image frame */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/20 dark:ring-gray-700/40">
-                <ProfileImage />
+            <div className="relative hero-3d-scene">
+              {/* Floating code icons */}
+              <div className="absolute -top-6 -left-6 p-3 rounded-2xl bg-blue-500/10 dark:bg-blue-400/10 border border-blue-200/50 dark:border-blue-500/20 backdrop-blur-sm shadow-lg hero-float-1">
+                <Code2 size={24} className="text-blue-500 dark:text-blue-400" />
               </div>
+              <div className="absolute -bottom-4 -left-8 p-3 rounded-2xl bg-emerald-500/10 dark:bg-emerald-400/10 border border-emerald-200/50 dark:border-emerald-500/20 backdrop-blur-sm shadow-lg hero-float-2">
+                <Terminal size={24} className="text-emerald-500 dark:text-emerald-400" />
+              </div>
+              <div className="absolute -top-2 -right-8 p-3 rounded-2xl bg-purple-500/10 dark:bg-purple-400/10 border border-purple-200/50 dark:border-purple-500/20 backdrop-blur-sm shadow-lg hero-float-3">
+                <Braces size={24} className="text-purple-500 dark:text-purple-400" />
+              </div>
+
+              {/* 3D card with perspective */}
+              <div className="hero-3d-card relative">
+                {/* Ambient glow */}
+                <div className="absolute -inset-10 rounded-full bg-gradient-to-tr from-blue-500/20 via-cyan-400/10 to-indigo-500/15 blur-3xl opacity-50 animate-pulse" />
+                {/* Avatar */}
+                <DeveloperAvatar className="relative w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 drop-shadow-2xl" />
+              </div>
+
+              {/* Platform/shadow */}
+              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-4 rounded-[50%] bg-blue-500/10 dark:bg-blue-400/5 blur-xl" />
             </div>
           </div>
         </div>
