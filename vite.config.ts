@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
 
   // Base path for GitHub Pages or similar deployment
-  base: "/",
+  base: "/portfolio/",
 
   // Dependency optimization (use defaults unless you have specific needs)
   optimizeDeps: {
