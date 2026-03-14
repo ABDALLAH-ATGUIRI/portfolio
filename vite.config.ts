@@ -4,8 +4,8 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
 
-  // Base path for GitHub Pages or similar deployment
-  base: "/portfolio/",
+  // Base path for custom domain
+  base: "/",
 
   // Dependency optimization (use defaults unless you have specific needs)
   optimizeDeps: {

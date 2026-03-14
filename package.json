@@ -6,7 +6,7 @@
   "private": true,
   "license": "MIT",
   "main": "main.tsx",
-  "homepage": "https://abdallah-atguiri.github.io/portfolio",
+  "homepage": "https://atguiri.dev",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
