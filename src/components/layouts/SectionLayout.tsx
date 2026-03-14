@@ -21,6 +21,7 @@ export const SectionLayout: React.FC<SectionLayoutProps> = ({
     <section
       ref={ref}
       id={id}
+      aria-label={title}
       /* Full-screen snap section */
       className={[
         "min-h-screen snap-start snap-always overflow-y-auto",

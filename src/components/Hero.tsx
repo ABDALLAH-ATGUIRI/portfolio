@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative overflow-hidden min-h-screen snap-start snap-always flex flex-col">
+    <section className="relative overflow-hidden min-h-screen snap-start snap-always flex flex-col" aria-label="Abdallah Atguiri — Full Stack Web Developer Hero">
       <HeroBackground />
 
       <div className="relative flex-1 container mx-auto max-w-5xl px-5 sm:px-8 flex items-center">
