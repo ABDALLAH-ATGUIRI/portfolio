@@ -41,23 +41,25 @@ function AppContent() {
       </div>
 
       {/* Main Content */}
-      <div
-        className={`transition-opacity duration-500 ${
-          isReady ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <MainLayout>
-          <Suspense fallback={null}>
-            <Hero />
-            <Summary />
-            <Experience />
-            <Projects />
-            <TechnicalSkills />
-            <Education />
-            <Hobbies />
-          </Suspense>
-        </MainLayout>
-      </div>
+      {data && (
+        <div
+          className={`transition-opacity duration-500 ${
+            isReady ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <MainLayout>
+            <Suspense fallback={null}>
+              <Hero />
+              <Summary />
+              <Experience />
+              <Projects />
+              <TechnicalSkills />
+              <Education />
+              <Hobbies />
+            </Suspense>
+          </MainLayout>
+        </div>
+      )}
     </div>
   );
 }
