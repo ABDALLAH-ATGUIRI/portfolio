@@ -209,5 +209,23 @@
     "phone_label": "Téléphone",
     "email_label": "Email",
     "find_me": "Me retrouver sur"
+  },
+  "cv_versions": {
+    "title": "Télécharger CV",
+    "fullstack": {
+      "label": "Full Stack (Laravel)",
+      "role": "Développeur Full-Stack Laravel",
+      "summary": "Développeur Full-Stack avec plus de 2 ans d'expérience dans la création d'applications web performantes avec Laravel, React, Vue.js et TypeScript. Compétent en développement d'API REST, conception de bases de données (MySQL, MongoDB), Docker et CI/CD. Focus sur le code propre, la collaboration Agile et la livraison de solutions fiables de bout en bout."
+    },
+    "backend": {
+      "label": "Backend (Laravel/PHP)",
+      "role": "Développeur Backend Laravel/PHP",
+      "summary": "Développeur Backend avec plus de 2 ans d'expérience dans la création d'applications serveur robustes avec Laravel, PHP et Node.js. Compétent en développement d'API REST, conception de bases de données (MySQL, MongoDB), systèmes d'authentification, Docker et CI/CD. Focus sur l'architecture propre, l'optimisation des performances et la collaboration Agile."
+    },
+    "frontend": {
+      "label": "Frontend (React/Vue)",
+      "role": "Développeur Frontend React/Vue",
+      "summary": "Développeur Frontend avec plus de 2 ans d'expérience dans la création d'interfaces utilisateur dynamiques et réactives avec React, Vue.js et TypeScript. Compétent en gestion d'état (Redux), frameworks CSS modernes (Tailwind CSS, Material-UI) et architecture orientée composants. Focus sur le code propre, l'optimisation des performances et la collaboration Agile."
+    }
   }
 }
