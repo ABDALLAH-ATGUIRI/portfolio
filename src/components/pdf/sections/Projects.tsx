@@ -8,13 +8,10 @@ import { styles } from "../PDFStyle";
 export const Projects: React.FC = () => {
   const { t } = useTranslation();
   const { projects } = usePortfolio();
-  const filteredProjects = projects.filter(({ key }) =>
-    ["project_1", "project_3", "project_4"].includes(key)
-  );
 
   return (
     <Section title={t("projects.title")}>
-      {filteredProjects.map(({ key, technologies, github }) => (
+      {projects.map(({ key, technologies, github }) => (
         <View key={key} style={{ marginBottom: 1.5 }}>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 4 }}>
             <Text style={styles.title}>{t(`projects.${key}.title`)}</Text>

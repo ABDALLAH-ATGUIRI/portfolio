@@ -208,5 +208,23 @@
     "phone_label": "الهاتف",
     "email_label": "البريد الإلكتروني",
     "find_me": "تابعني على"
+  },
+  "cv_versions": {
+    "title": "تحميل السيرة الذاتية",
+    "fullstack": {
+      "label": "Full Stack (Laravel)",
+      "role": "مطور Full-Stack Laravel",
+      "summary": "مطور Full-Stack بخبرة تزيد عن سنتين في بناء تطبيقات ويب قابلة للتوسع باستخدام Laravel و React و Vue.js و TypeScript. متمكن من تطوير REST API وتصميم قواعد البيانات (MySQL, MongoDB) و Docker و CI/CD. تركيز قوي على الكود النظيف والتعاون الرشيق وتقديم حلول موثوقة شاملة."
+    },
+    "backend": {
+      "label": "Backend (Laravel/PHP)",
+      "role": "مطور Backend Laravel/PHP",
+      "summary": "مطور Backend بخبرة تزيد عن سنتين في بناء تطبيقات خلفية قوية باستخدام Laravel و PHP و Node.js. متمكن من تطوير REST API وتصميم قواعد البيانات (MySQL, MongoDB) وأنظمة المصادقة و Docker و CI/CD. تركيز قوي على العمارة النظيفة وتحسين الأداء والتعاون الرشيق."
+    },
+    "frontend": {
+      "label": "Frontend (React/Vue)",
+      "role": "مطور Frontend React/Vue",
+      "summary": "مطور Frontend بخبرة تزيد عن سنتين في بناء واجهات مستخدم ديناميكية ومتجاوبة باستخدام React و Vue.js و TypeScript. متمكن من إدارة الحالة (Redux) وأطر CSS الحديثة (Tailwind CSS, Material-UI) والعمارة القائمة على المكونات. تركيز قوي على الكود النظيف وتحسين الأداء والتعاون الرشيق."
+    }
   }
 }
