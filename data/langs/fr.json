@@ -6,15 +6,15 @@
   },
   "developer": {
     "name": "Abdallah ATGUIRI",
-    "role": "Développeur Web Full-Stack",
-    "tagline": "Je transforme des idées complexes en applications web élégantes et performantes — du frontend pixel-perfect au backend robuste.",
+    "role": "Développeur Web Full-Stack & AI Coder",
+    "tagline": "Je construis des apps web scalables avec React, Laravel & Node.js — accélérées par le coding IA et le vibe coding.",
     "location": "Maroc",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "+212 623 779 270"
   },
   "about_me": {
     "title": "À propos de moi",
-    "description": "Développeur Web Full Stack passionné avec plus de 2 ans d'expérience professionnelle dans la création d'applications web performantes. Je me spécialise en React, Vue.js et TypeScript côté frontend, associés à Laravel, Node.js et des APIs REST côté backend. De la conception d'interfaces intuitives à l'architecture de bases de données évolutives avec MySQL et MongoDB, je livre des solutions de bout en bout. Je m'épanouis dans les équipes Agile, je privilégie un code propre et j'explore constamment les outils modernes — Docker, pipelines CI/CD et développement assisté par l'IA — pour produire des logiciels fiables plus rapidement.",
+    "description": "Développeur Full-Stack & AI Coder avec plus de 2 ans d'expérience dans la création d'applications web performantes (React, Vue.js, TypeScript, Laravel, Node.js). Je combine une ingénierie solide avec le développement assisté par l'IA (Cursor, Copilot, Claude) et le vibe coding pour livrer plus vite sans sacrifier la qualité. Compétent en APIs REST, bases de données, Docker et CI/CD. Focus sur l'architecture propre et la collaboration Agile.",
     "stats": {
       "experience_value": "2+",
       "experience_label": "Ans d’expérience",
@@ -33,6 +33,8 @@
       "backend_desc": "Laravel · PHP · Node.js · APIs REST",
       "database_title": "Conception de BDD",
       "database_desc": "MySQL · MongoDB · Redis",
+      "ai_title": "AI Coding & Vibe Coding",
+      "ai_desc": "Cursor · Copilot · Claude · Prompt Engineering",
       "teamwork_title": "Collaboration Agile",
       "teamwork_desc": "Scrum · Git · Code propre · Revues PR"
     },
@@ -53,19 +55,19 @@
         "title": "Cod Network, Agadir, Maroc",
         "position": "Développeur Full-Stack Junior",
         "date": "Juin 2023 - Présent",
-        "description": "Je me spécialise en Laravel et en frameworks frontend JavaScript, notamment Vue.js et React. Mon expertise comprend l’optimisation du backend, le développement d’API et l’authentification avec Laravel Passport. Côté frontend, je crée des expériences utilisateur dynamiques avec Tailwind CSS, Material-UI et Redux. J’ai une expérience pratique dans le développement de plateformes e-commerce, en veillant à la performance, à l’évolutivité et à une expérience utilisateur fluide."
+        "description": "Construction et maintenance de plateformes e-commerce avec Laravel et Vue.js/React. APIs REST, auth Passport, perf, et livraison accélérée avec Cursor/Copilot."
       },
       "agriwise": {
         "title": "Agriwise, Agadir, Maroc",
         "position": "Stagiaire Développeur Full-Stack (Laravel/Vue.js)",
         "date": "Janvier 2023 - Février 2023",
-        "description": "Lors de mon stage chez Agriwise, je me suis concentré sur le développement frontend en utilisant Vue.js, Tailwind CSS et Element Plus pour créer des interfaces utilisateur dynamiques et réactives. J’ai travaillé sur un projet de plateforme de gestion agricole, acquérant une expérience pratique dans la gestion des fermes. J’ai également utilisé Laravel pour des tâches backend. Cette expérience m’a permis de travailler dans un environnement Agile, en suivant les méthodologies Scrum pour améliorer la collaboration et l'efficacité des projets."
+        "description": "Interfaces responsive avec Vue.js, Tailwind CSS et Element Plus pour une plateforme agricole ; contribution Laravel en Agile/Scrum."
       },
       "digital_elite": {
         "title": "Digital Elite, Agadir, Maroc",
         "position": "Stagiaire Développeur Web Full-Stack",
         "date": "Mars 2023 - Mai 2023",
-        "description": "Lors de mon premier stage chez Digital Elite, j'ai acquis une expérience pratique en développement web en utilisant React et Node.js, contribuant à des projets réels. Cette expérience m'a permis de développer une solide compréhension des méthodologies Agile, du travail en équipe et de la communication efficace au sein de l'entreprise. J'ai également appris les meilleures pratiques du développement logiciel, ce qui m'a aidé à écrire un code propre et maintenable tout en collaborant efficacement dans un environnement professionnel."
+        "description": "Fonctionnalités React et Node.js en Agile avec clean code au sein d'une équipe professionnelle."
       }
     }
   },
@@ -142,14 +144,37 @@
       "title": "DevOps & Outils",
       "description": "Je suis expert en controle de version utilisant Git et GitHub. J'ai une experience en collaboration avec des equipes utilisant des systemes de controle de version."
     },
+    "ai": {
+      "title": "AI Coding & Outils",
+      "description": "Développement assisté par l'IA avec Cursor, GitHub Copilot, ChatGPT et Claude. Prompt engineering, vibe coding et workflows agentiques pour livrer plus vite avec une haute qualité."
+    },
     "devops": {
       "title": "DevOps & Cloud",
       "description": "Experience avec la conteneurisation, les pipelines CI/CD et le cloud : Docker, Docker Compose, GitHub Actions, Nginx, serveurs Linux et bases d'AWS (EC2, S3)."
     },
     "others": {
       "title": "Autres Competences",
-      "description": "Compétences complémentaires : tests (Jest), outils de design (Figma), systèmes d'exploitation, création de contenu vidéo et utilisation d'outils d'IA comme ChatGPT et GitHub Copilot."
+      "description": "Compétences complémentaires : tests (Jest), outils de design (Figma), systèmes d'exploitation et création de contenu vidéo."
     }
+  },
+  "ai": {
+    "title": "AI Coding & Vibe Coding",
+    "description": "Je travaille comme AI Coder et Vibe Coder — j'utilise les outils d'IA modernes pour concevoir, coder, déboguer et livrer plus vite, tout en gardant la maîtrise de l'architecture et de la qualité.",
+    "ai_coder": {
+      "title": "AI Coder",
+      "description": "Usage quotidien de Cursor, GitHub Copilot, ChatGPT et Claude pour l'implémentation, le refactoring, les tests, le débogage et la documentation — toujours revu et prêt pour la production."
+    },
+    "vibe_coder": {
+      "title": "Vibe Coder",
+      "description": "Prototypage rapide via un développement conversationnel et piloté par prompts. Je transforme les idées en UI et APIs fonctionnelles, puis je les consolide avec une architecture propre."
+    },
+    "cv_line_ai_coder": "Cursor, Copilot & Claude pour features, refactors, tests et debug avec revue humaine",
+    "cv_line_vibe_coder": "prototypage par prompts, puis consolidation avec architecture propre",
+    "practices_title": "Comment j'utilise l'IA",
+    "practice_1": "Prompt engineering pour une génération et des revues de code précises",
+    "practice_2": "Débogage, refactoring et scaffolding de tests assistés par l'IA",
+    "practice_3": "Workflows agentiques dans Cursor pour livrer des features multi-fichiers",
+    "practice_4": "Revue humaine systématique — l'IA accélère, je garantis la qualité"
   },
   "education": {
     "title": "Éducation",
@@ -210,22 +235,36 @@
     "email_label": "Email",
     "find_me": "Me retrouver sur"
   },
+  "nav": {
+    "about": "À propos",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "ai": "AI Coding",
+    "education": "Formation",
+    "hobbies": "Loisirs",
+    "contact": "Contact"
+  },
+  "cv": {
+    "summary_title": "Résumé Professionnel",
+    "tech_label": "Tech"
+  },
   "cv_versions": {
     "title": "Télécharger CV",
     "fullstack": {
       "label": "Full Stack (Laravel)",
-      "role": "Développeur Full-Stack Laravel",
-      "summary": "Développeur Full-Stack avec plus de 2 ans d'expérience dans la création d'applications web performantes avec Laravel, React, Vue.js et TypeScript. Compétent en développement d'API REST, conception de bases de données (MySQL, MongoDB), Docker et CI/CD. Focus sur le code propre, la collaboration Agile et la livraison de solutions fiables de bout en bout."
+      "role": "Développeur Full-Stack Laravel & AI Coder",
+      "summary": "Développeur Full-Stack & AI Coder (2+ ans) : Laravel, React, Vue.js, TypeScript. APIs REST, MySQL/MongoDB, Docker, CI/CD. Livraison accélérée avec Cursor, Copilot et vibe coding, avec maîtrise de l'architecture et de la qualité."
     },
     "backend": {
       "label": "Backend (Laravel/PHP)",
-      "role": "Développeur Backend Laravel/PHP",
-      "summary": "Développeur Backend avec plus de 2 ans d'expérience dans la création d'applications serveur robustes avec Laravel, PHP et Node.js. Compétent en développement d'API REST, conception de bases de données (MySQL, MongoDB), systèmes d'authentification, Docker et CI/CD. Focus sur l'architecture propre, l'optimisation des performances et la collaboration Agile."
+      "role": "Développeur Backend Laravel/PHP & AI Coder",
+      "summary": "Développeur Backend & AI Coder (2+ ans) : Laravel, PHP, Node.js. Auth, MySQL/MongoDB, Docker, CI/CD. Coding assisté par l'IA pour concevoir, déboguer et livrer avec une architecture solide."
     },
     "frontend": {
       "label": "Frontend (React/Vue)",
-      "role": "Développeur Frontend React/Vue",
-      "summary": "Développeur Frontend avec plus de 2 ans d'expérience dans la création d'interfaces utilisateur dynamiques et réactives avec React, Vue.js et TypeScript. Compétent en gestion d'état (Redux), frameworks CSS modernes (Tailwind CSS, Material-UI) et architecture orientée composants. Focus sur le code propre, l'optimisation des performances et la collaboration Agile."
+      "role": "Développeur Frontend React/Vue & AI Coder",
+      "summary": "Développeur Frontend & AI Coder (2+ ans) : React, Vue.js, TypeScript. Redux, Tailwind, architecture composants. Vibe coding pour prototyper et peaufiner rapidement avec revue qualité."
     }
   }
 }
