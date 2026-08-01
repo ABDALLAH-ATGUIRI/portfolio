@@ -9,8 +9,7 @@ html {
 }
 
 html[lang="ar"] body {
-  font-family: 'ArabicFont', sans-serif;
-  /* Replace with an actual Arabic font */
+  font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
 }
 
 @keyframes slideDown {

@@ -6,15 +6,15 @@
   },
   "developer": {
     "name": "عبد الله أثكيري",
-    "role": "مطور ويب Full-Stack",
-    "tagline": "أحوّل الأفكار المعقدة إلى تطبيقات ويب أنيقة وقابلة للتوسع — من واجهات دقيقة إلى أنظمة خلفية متينة.",
+    "role": "مطور ويب Full-Stack و AI Coder",
+    "tagline": "أبني تطبيقات ويب قابلة للتوسع باستخدام React و Laravel و Node.js — مع تسريع التطوير عبر AI Coding و Vibe Coding.",
     "location": "المغرب",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "٢١٢٦٢٣٧٧٩٢٧٠+"
   },
   "about_me": {
     "title": "نبذة عني",
-    "description": "مطور ويب فل ستاك شغوف بخبرة تزيد عن سنتين في بناء تطبيقات ويب عالية الأداء. أتخصص في React و Vue.js و TypeScript للواجهة الأمامية، إلى جانب Laravel و Node.js و REST APIs للخلفية. من تصميم واجهات بديهية إلى بناء قواعد بيانات قابلة للتوسع باستخدام MySQL و MongoDB، أقدم حلولاً متكاملة من البداية إلى النهاية. أزدهر في فرق Agile، وأحرص على كتابة كود نظيف، وأستكشف باستمرار الأدوات الحديثة — Docker وأنابيب CI/CD والتطوير بمساعدة الذكاء الاصطناعي — لتسليم برمجيات موثوقة بشكل أسرع.",
+    "description": "مطور Full-Stack و AI Coder بخبرة تزيد عن سنتين في بناء تطبيقات ويب قابلة للتوسع باستخدام React و Vue.js و TypeScript و Laravel و Node.js. أجمع بين الهندسة الصلبة والتطوير بمساعدة الذكاء الاصطناعي (Cursor و Copilot و Claude) وممارسات Vibe Coding لتسليم أسرع دون التضحية بجودة الكود. متمكن من REST APIs وتصميم قواعد البيانات و Docker و CI/CD، مع تركيز على المعمارية النظيفة والعمل الرشيق.",
     "stats": {
       "experience_value": "+2",
       "experience_label": "سنوات خبرة",
@@ -33,6 +33,8 @@
       "backend_desc": "Laravel · PHP · Node.js · REST APIs",
       "database_title": "تصميم قواعد البيانات",
       "database_desc": "MySQL · MongoDB · Redis",
+      "ai_title": "AI Coding و Vibe Coding",
+      "ai_desc": "Cursor · Copilot · Claude · هندسة الأوامر",
       "teamwork_title": "التعاون الرشيق",
       "teamwork_desc": "Scrum · Git · الكود النظيف"
     },
@@ -53,19 +55,19 @@
         "title": "Cod Network، أكادير، المغرب",
         "position": "مطور مبتدئ Full-Stack",
         "date": "يونيو 2023 - الآن",
-        "description": "خلال فترة تدريبي في Agriwise، ركزت على تطوير الواجهة الأمامية باستخدام Vue.js و Tailwind CSS و Element Plus لإنشاء واجهات مستخدم ديناميكية ومتجاوبة. عملت على مشروع منصة لإدارة الزراعة، مما أكسبني خبرة عملية في إدارة المزارع. كما استخدمت Laravel في بعض المهام الخلفية، مما عزز مهاراتي في تكامل واجهات برمجة التطبيقات (APIs) ومعالجة البيانات. مكنتني هذه التجربة أيضًا من العمل في بيئة Agile، متبعًا منهجيات Scrum لتحسين التعاون وكفاءة المشاريع."
+        "description": "بناء وصيانة منصات تجارة إلكترونية بـ Laravel و Vue.js/React. واجهات REST ومصادقة Passport وتحسين الأداء، مع تسريع التسليم عبر Cursor/Copilot."
       },
       "agriwise": {
         "title": "Agriwise، أكادير، المغرب",
         "position": "متدرب مطور Full-Stack (Laravel/Vue.js)",
         "date": "يناير 2023 - فبراير 2023",
-        "description": "خلال فترة تدريبي في Agriwise، ركزت على تطوير الواجهة الأمامية باستخدام Vue.js و Tailwind CSS و Element Plus لإنشاء واجهات مستخدم ديناميكية ومتجاوبة. عملت على مشروع منصة لإدارة الزراعة، مما أكسبني خبرة عملية في إدارة المزارع. كما استخدمت Laravel في بعض المهام الخلفية، مما عزز مهاراتي في تكامل واجهات برمجة التطبيقات (APIs) ومعالجة البيانات. مكنتني هذه التجربة أيضًا من العمل في بيئة Agile، متبعًا منهجيات Scrum لتحسين التعاون وكفاءة المشاريع."
+        "description": "واجهات متجاوبة بـ Vue.js و Tailwind و Element Plus لمنصة زراعية، مع مساهمة في Laravel ضمن بيئة Agile/Scrum."
       },
       "digital_elite": {
         "title": "Digital Elite، أكادير، المغرب",
         "position": "متدرب مطور ويب Full-Stack",
         "date": "مارس 2023 - مايو 2023",
-        "description": "خلال تدريبي الأول في Digital Elite، اكتسبت خبرة عملية في تطوير الويب باستخدام React و Node.js، وشاركت في مشاريع حقيقية. مكنتني هذه التجربة من تطوير فهم قوي لـ منهجيات Agile، والعمل الجماعي، و التواصل الفعّال داخل بيئة الشركة. كما تعلمت أفضل الممارسات في تطوير البرمجيات، مما ساعدني في كتابة كود نظيف وقابل للصيانة، بالإضافة إلى التعاون بكفاءة في بيئة مهنية."
+        "description": "تطوير ميزات بـ React و Node.js وفق ممارسات Agile والكود النظيف ضمن فريق مهني."
       }
     }
   },
@@ -142,14 +144,37 @@
       "title": "DevOps والأدوات",
       "description": "احتاج إلى تقنيات تحكم الإصدارات مثل Git و GitHub. أحتاج إلى العمل مع فرق باستخدام نظم تحكم الإصدارات."
     },
+    "ai": {
+      "title": "AI Coding والأدوات",
+      "description": "تطوير بمساعدة الذكاء الاصطناعي باستخدام Cursor و GitHub Copilot و ChatGPT و Claude. هندسة الأوامر و Vibe Coding وسير عمل وكيلية لتسليم أسرع بجودة عالية."
+    },
     "devops": {
       "title": "DevOps و السحابة",
       "description": "خبرة في الحاويات وخطوط CI/CD وبعض خدمات السحابة: Docker، Docker Compose، GitHub Actions، Nginx، إدارة خوادم Linux و أساسيات AWS (EC2، S3)."
     },
     "others": {
       "title": "مهارات أخرى",
-      "description": "مهارات أخرى مثل الاختبارات (Jest)، أدوات التصميم (Figma)، أنظمة التشغيل، إنشاء محتوى فيديو واستخدام أدوات الذكاء الاصطناعي مثل ChatGPT و GitHub Copilot."
+      "description": "مهارات أخرى مثل الاختبارات (Jest)، أدوات التصميم (Figma)، أنظمة التشغيل، وإنشاء محتوى فيديو."
     }
+  },
+  "ai": {
+    "title": "AI Coding و Vibe Coding",
+    "description": "أعمل كـ AI Coder و Vibe Coder — أستخدم أدوات الذكاء الاصطناعي الحديثة للتصميم والبرمجة والتصحيح والتسليم بسرعة أكبر، مع الحفاظ على ملكية المعمارية وجودة الكود.",
+    "ai_coder": {
+      "title": "AI Coder",
+      "description": "استخدام يومي لـ Cursor و GitHub Copilot و ChatGPT و Claude في التنفيذ وإعادة الهيكلة وتوليد الاختبارات والتصحيح والتوثيق — مع مراجعة بشرية دائمة وجاهزية للإنتاج."
+    },
+    "vibe_coder": {
+      "title": "Vibe Coder",
+      "description": "نمذجة سريعة للمنتجات عبر تطوير حواري قائم على الأوامر. أحول الأفكار إلى واجهات وواجهات برمجة تعمل بسرعة، ثم أُحكمها بمعمارية نظيفة وأفضل الممارسات."
+    },
+    "cv_line_ai_coder": "Cursor و Copilot و Claude للميزات وإعادة الهيكلة والاختبارات والتصحيح مع مراجعة بشرية",
+    "cv_line_vibe_coder": "نمذجة سريعة بالأوامر ثم تقوية بمعمارية نظيفة",
+    "practices_title": "كيف أستخدم الذكاء الاصطناعي",
+    "practice_1": "هندسة الأوامر لتوليد ومراجعة كود دقيقة",
+    "practice_2": "تصحيح وإعادة هيكلة وبناء اختبارات بمساعدة الذكاء الاصطناعي",
+    "practice_3": "سير عمل وكيلية في Cursor لتسليم ميزات متعددة الملفات",
+    "practice_4": "مراجعة بشرية دائماً — الذكاء الاصطناعي يسرّع وأنا أضمن الجودة"
   },
   "education": {
     "title": "التعليم",
@@ -209,22 +234,36 @@
     "email_label": "البريد الإلكتروني",
     "find_me": "تابعني على"
   },
+  "nav": {
+    "about": "نبذة",
+    "experience": "الخبرة",
+    "projects": "المشاريع",
+    "skills": "المهارات",
+    "ai": "الذكاء الاصطناعي",
+    "education": "التعليم",
+    "hobbies": "الهوايات",
+    "contact": "التواصل"
+  },
+  "cv": {
+    "summary_title": "الملخص المهني",
+    "tech_label": "التقنيات"
+  },
   "cv_versions": {
     "title": "تحميل السيرة الذاتية",
     "fullstack": {
       "label": "Full Stack (Laravel)",
-      "role": "مطور Full-Stack Laravel",
-      "summary": "مطور Full-Stack بخبرة تزيد عن سنتين في بناء تطبيقات ويب قابلة للتوسع باستخدام Laravel و React و Vue.js و TypeScript. متمكن من تطوير REST API وتصميم قواعد البيانات (MySQL, MongoDB) و Docker و CI/CD. تركيز قوي على الكود النظيف والتعاون الرشيق وتقديم حلول موثوقة شاملة."
+      "role": "مطور Full-Stack Laravel و AI Coder",
+      "summary": "مطور Full-Stack و AI Coder (+2 سنوات): Laravel و React و Vue.js و TypeScript. REST APIs و MySQL/MongoDB و Docker و CI/CD. تسليم أسرع عبر Cursor و Copilot و Vibe Coding مع ملكية المعمارية والجودة."
     },
     "backend": {
       "label": "Backend (Laravel/PHP)",
-      "role": "مطور Backend Laravel/PHP",
-      "summary": "مطور Backend بخبرة تزيد عن سنتين في بناء تطبيقات خلفية قوية باستخدام Laravel و PHP و Node.js. متمكن من تطوير REST API وتصميم قواعد البيانات (MySQL, MongoDB) وأنظمة المصادقة و Docker و CI/CD. تركيز قوي على العمارة النظيفة وتحسين الأداء والتعاون الرشيق."
+      "role": "مطور Backend Laravel/PHP و AI Coder",
+      "summary": "مطور Backend و AI Coder (+2 سنوات): Laravel و PHP و Node.js. مصادقة و MySQL/MongoDB و Docker و CI/CD. برمجة بمساعدة الذكاء الاصطناعي للتصميم والتصحيح والتسليم بمعمارية متينة."
     },
     "frontend": {
       "label": "Frontend (React/Vue)",
-      "role": "مطور Frontend React/Vue",
-      "summary": "مطور Frontend بخبرة تزيد عن سنتين في بناء واجهات مستخدم ديناميكية ومتجاوبة باستخدام React و Vue.js و TypeScript. متمكن من إدارة الحالة (Redux) وأطر CSS الحديثة (Tailwind CSS, Material-UI) والعمارة القائمة على المكونات. تركيز قوي على الكود النظيف وتحسين الأداء والتعاون الرشيق."
+      "role": "مطور Frontend React/Vue و AI Coder",
+      "summary": "مطور Frontend و AI Coder (+2 سنوات): React و Vue.js و TypeScript. Redux و Tailwind وعمارة المكونات. Vibe Coding للنمذجة والتحسين السريع مع مراجعة الجودة."
     }
   }
 }

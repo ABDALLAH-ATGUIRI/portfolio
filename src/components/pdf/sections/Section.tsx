@@ -8,8 +8,7 @@ export const Section: React.FC<{
 }> = ({ title, children }) => (
   <View style={styles.sectionWrapper}>
     <View style={styles.sectionHeader}>
-      <Text style={[styles.sectionTitle, { marginRight: 6 }]}>{title}</Text>
-      <View style={styles.sectionDivider} />
+      <Text style={styles.sectionTitle}>{title}</Text>
     </View>
     {children}
   </View>

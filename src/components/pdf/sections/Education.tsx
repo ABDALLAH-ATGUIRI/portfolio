@@ -10,16 +10,18 @@ export const Education: React.FC = () => {
   return (
     <Section title={t("education.title")}>
       {["ensa_safi", "youcode_simplon"].map((key) => (
-        <View key={key} style={{ flexDirection: "row", marginBottom: 1 }}>
-          <View style={{ flex: 1 }}>
+        <View key={key} style={styles.entry} wrap={false}>
+          <View style={styles.rowBetween}>
             <Text style={styles.title}>
               {t(`education.diploma.${key}.title`)}
             </Text>
-            <Text style={styles.subtitle}>
-              {t(`education.diploma.${key}.school`)} |{" "}
+            <Text style={styles.date}>
               {t(`education.diploma.${key}.date`)}
             </Text>
           </View>
+          <Text style={styles.subtitle}>
+            {t(`education.diploma.${key}.school`)}
+          </Text>
         </View>
       ))}
     </Section>

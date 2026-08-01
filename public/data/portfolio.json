@@ -1,7 +1,7 @@
 {
   "me": {
     "name": "Abdallah Atguiri",
-    "title": "Full Stack Web Developer",
+    "title": "Full Stack Web Developer & AI Coder",
     "image": "/assets/images/abdallahatguiri.jpg",
     "location": "Morocco",
     "phone": "+212623779270",
@@ -9,7 +9,7 @@
     "summary": "about.description"
   },
   "contactLinks": [
-    { "icon": "Globe", "href": "", "ariaLabel": "Portfolio" },
+    { "icon": "Globe", "href": "https://atguiri.dev", "ariaLabel": "Portfolio" },
     { "icon": "Github", "href": "https://www.github.com/ABDALLAH-ATGUIRI", "ariaLabel": "GitHub" },
     { "icon": "Linkedin", "href": "https://www.linkedin.com/in/abdallah-atguiri", "ariaLabel": "LinkedIn" },
     { "icon": "Mail", "href": "mailto:abdallah.atguiri@gmail.com", "ariaLabel": "Email" }
@@ -17,7 +17,7 @@
   "projects": [
     {
       "key": "project_4",
-      "technologies": ["React.js", "Redux", "React Icons", "React DnD", "JavaScript", "Tailwind CSS", "Matial-UI", "Vite"],
+      "technologies": ["React.js", "Redux", "React Icons", "React DnD", "JavaScript", "Tailwind CSS", "Material-UI", "Vite"],
       "images": ["/assets/images/projects/virtual_gear_hub01.png", "/assets/images/projects/virtual_gear_hub02.png"],
       "github": "https://github.com/ABDALLAH-ATGUIRI/virtual-gear-hub"
     },
@@ -35,18 +35,20 @@
     },
     {
       "key": "project_3",
-      "technologies": ["React.js", "Redux", "React Icons", "Matial-UI", "Vite", "Node.js", "Nestjs", "Prisma", "MongoDB"],
+      "technologies": ["React.js", "Redux", "React Icons", "Material-UI", "Vite", "Node.js", "Nestjs", "Prisma", "MongoDB"],
       "images": ["/assets/images/projects/online_restaurant_reservation_application.png"],
       "github": "https://github.com/ABDALLAH-ATGUIRI/Restaurant-app-frontend"
     }
   ],
   "skills": [
+    { "id": 5, "title": "ai", "skills": ["Cursor", "GitHub Copilot", "ChatGPT", "Claude", "Prompt Engineering", "Vibe Coding", "AI-Assisted Debugging", "Agentic Workflows"] },
     { "id": 1, "title": "frontend", "skills": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Vue", "Next.js", "Nuxt", "Tailwind", "Redux", "Material UI"] },
     { "id": 2, "title": "backend", "skills": ["PHP", "Laravel", "Node.js", "REST API", "Authentication", "WebSockets", "Redis"] },
-    { "id": 3, "title": "database", "skills": ["MySQL", "MongoDB", "Redis"] },
-    { "id": 4, "title": "version_control", "skills": ["Git", "GitHub", "GitLab", "Jira", "Bitbucket", "Docker", "Docker Compose", "GitHub Actions", "CI/CD", "Nginx", "Linux", "AWS (EC2, S3)"] }
+    { "id": 4, "title": "version_control", "skills": ["Git", "GitHub", "GitLab", "Jira", "Bitbucket", "Docker", "Docker Compose", "GitHub Actions", "CI/CD", "Nginx", "Linux", "AWS (EC2, S3)"] },
+    { "id": 3, "title": "database", "skills": ["MySQL", "MongoDB", "Redis"] }
   ],
   "certificates": [
+    { "title": "DevOps Engineering", "institution": "KLOUDKODE", "date": "2026", "description": "Completed the DevOps Engineering program at KLOUDKODE, covering CI/CD, containerization, cloud infrastructure, and modern DevOps practices." },
     { "title": "Meta Front-End Developer", "institution": "Meta", "date": "August 2023", "description": "Completed the Meta Front-End Developer Professional Certificate, covering HTML, CSS, JavaScript, React, and responsive web design." },
     { "title": "IBM Back-End Developer", "institution": "IBM", "date": "August 2023", "description": "Completed the IBM Back-End Developer Professional Certificate, covering Node.js, Express, SQL, and RESTful APIs." },
     { "title": "CodinGame JavaScript Certification", "institution": "CodinGame", "date": "July 2023", "description": "Achieved a score of 100% in the CodinGame JavaScript certification, demonstrating proficiency in JavaScript programming." }
@@ -55,7 +57,7 @@
     {
       "company_name": "cod_network",
       "companyLogo": "/assets/images/companies/cod-network-logo.jpg",
-      "technical_skills": ["Laravel", "PHP", "JavaScript", "Vue.js", "React", "Tailwind CSS", "Docker", "MySQL", "Rides", "Rest API"]
+      "technical_skills": ["Laravel", "PHP", "JavaScript", "Vue.js", "React", "Tailwind CSS", "Docker", "MySQL", "Redis", "Rest API", "Cursor", "AI Tools"]
     },
     {
       "company_name": "agriwise",
@@ -71,7 +73,7 @@
   "hobbies": [
     { "name": "coding", "icon": "Code" },
     { "name": "music", "icon": "Music" },
-    { "name": "basketball", "icon": "Globe" },
+    { "name": "basketball", "icon": "Medal" },
     { "name": "reading", "icon": "Book" },
     { "name": "exploring", "icon": "Compass" },
     { "name": "gaming", "icon": "Gamepad" },

@@ -27,48 +27,71 @@ export const LanguageSwitcher: React.FC = () => {
     setIsOpen(false);
   }, [setLanguage]);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     if (!isOpen) return;
+
     const handleClickOutside = (e: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
         setIsOpen(false);
       }
     };
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, [isOpen]);
 
   return (
     <div ref={containerRef} className="relative inline-block text-sm text-gray-800 dark:text-white">
       <button
+        type="button"
         onClick={() => setIsOpen((prev) => !prev)}
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
+        aria-label="Select language"
         className="flex items-center gap-2 px-3 py-2 rounded-full shadow-md backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-200"
       >
         {selectedLanguage?.icon && (
           <img
             src={selectedLanguage.icon}
-            alt={`${selectedLanguage.label} flag`}
+            alt=""
+            aria-hidden="true"
             className="w-4 h-4"
           />
         )}
         <span>{selectedLanguage?.label}</span>
         <ChevronDown
           size={16}
+          aria-hidden="true"
           className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
 
       {isOpen && (
-        <ul className="absolute z-10 mt-2 w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <ul
+          role="listbox"
+          aria-label="Language options"
+          className="absolute end-0 z-10 mt-2 min-w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden"
+        >
           {languageOptions.map(({ code, label, icon }) => (
-            <li
-              key={code}
-              onClick={() => handleSelect(code)}
-              className="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer transition-colors duration-200"
-            >
-              <img src={icon} alt={`${label} flag`} className="w-4 h-4" />
-              <span>{label}</span>
+            <li key={code} role="presentation">
+              <button
+                type="button"
+                role="option"
+                aria-selected={language === code}
+                onClick={() => handleSelect(code)}
+                className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer transition-colors duration-200 text-left"
+              >
+                <img src={icon} alt="" aria-hidden="true" className="w-4 h-4" />
+                <span>{label}</span>
+              </button>
             </li>
           ))}
         </ul>

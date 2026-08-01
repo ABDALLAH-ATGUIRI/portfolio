@@ -6,15 +6,15 @@
   },
   "developer": {
     "name": "Abdallah ATGUIRI",
-    "role": "Full-Stack Web Developer",
-    "tagline": "Turning complex ideas into clean, scalable web apps — from pixel-perfect frontends to rock-solid backends.",
+    "role": "Full-Stack Web Developer & AI Coder",
+    "tagline": "Building scalable web apps with React, Laravel & Node.js — accelerated by AI coding and modern vibe-coding workflows.",
     "location": "Morocco",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "+212 623 779 270"
   },
   "about_me": {
     "title": "About Me",
-    "description": "Full-Stack Developer with 2+ years of experience building scalable web applications using React, Vue.js, TypeScript, Laravel, and Node.js. Proficient in REST API development, database design (MySQL, MongoDB), Docker, and CI/CD. Strong focus on clean code, Agile collaboration, and delivering reliable end-to-end solutions.",
+    "description": "Full-Stack Developer & AI Coder with 2+ years building scalable web apps using React, Vue.js, TypeScript, Laravel, and Node.js. I combine solid engineering with AI-assisted development (Cursor, Copilot, Claude) and vibe-coding practices to ship faster without sacrificing code quality. Proficient in REST APIs, database design, Docker, and CI/CD. Strong focus on clean architecture, Agile collaboration, and modern delivery.",
     "stats": {
       "experience_value": "2+",
       "experience_label": "Years Experience",
@@ -33,6 +33,8 @@
       "backend_desc": "Laravel · PHP · Node.js · REST APIs",
       "database_title": "Database Design",
       "database_desc": "MySQL · MongoDB · Redis",
+      "ai_title": "AI Coding & Vibe Coding",
+      "ai_desc": "Cursor · Copilot · Claude · Prompt Engineering",
       "teamwork_title": "Agile Collaboration",
       "teamwork_desc": "Scrum · Git · Clean Code · PR Reviews"
     },
@@ -53,19 +55,19 @@
         "title": "Cod Network, Agadir, Morocco",
         "position": "Junior Full-Stack Developer",
         "date": "June 2023 - Present",
-        "description": "Built and maintained e-commerce platforms with Laravel and Vue.js/React. Developed REST APIs, implemented authentication (Passport), optimized backend performance, and delivered responsive UIs with Tailwind CSS and Material-UI."
+        "description": "Build and maintain e-commerce platforms with Laravel and Vue.js/React. REST APIs, Passport auth, performance work, and AI-assisted delivery with Cursor/Copilot."
       },
       "agriwise": {
         "title": "Agriwise, Agadir, Morocco",
         "position": "Full-Stack Developer Intern (Laravel/Vue.js)",
         "date": "January 2023 - February 2023",
-        "description": "Developed responsive UIs with Vue.js, Tailwind CSS, and Element Plus for an agriculture management platform. Contributed to Laravel backend services in an Agile/Scrum environment."
+        "description": "Built responsive UIs with Vue.js, Tailwind CSS and Element Plus for an agriculture platform; contributed to Laravel backend in Agile/Scrum."
       },
       "digital_elite": {
         "title": "Digital Elite, Agadir, Morocco",
         "position": "Full-Stack Web Developer Intern",
         "date": "March 2023 - May 2023",
-        "description": "Built features with React and Node.js following Agile practices and clean code principles. Gained experience in team collaboration and delivering maintainable solutions."
+        "description": "Shipped React and Node.js features with Agile practices and clean code in a professional team."
       }
     }
   },
@@ -142,14 +144,37 @@
       "title": "DevOps & Tools",
       "description": "I am proficient in version control using Git and GitHub. I have experience in collaborating with teams using version control systems."
     },
+    "ai": {
+      "title": "AI Coding & Tooling",
+      "description": "AI-assisted development with Cursor, GitHub Copilot, ChatGPT, and Claude. Prompt engineering, vibe coding, and agentic workflows to ship faster with high code quality."
+    },
     "devops": {
       "title": "DevOps & Cloud",
       "description": "Experience with containerization, CI/CD, and basic cloud: Docker, Docker Compose, GitHub Actions, Nginx, Linux servers, and introductory AWS services (EC2, S3)."
     },
     "others": {
       "title": "Other Skills",
-      "description": "Additional skills including testing (Jest), design tools (Figma), operating systems, video content creation, and AI-assisted development using tools like ChatGPT and GitHub Copilot."
+      "description": "Additional skills including testing (Jest), design tools (Figma), operating systems, and video content creation."
     }
+  },
+  "ai": {
+    "title": "AI Coding & Vibe Coding",
+    "description": "I work as an AI Coder and Vibe Coder — using modern AI tools to design, build, debug, and ship features faster while keeping full ownership of architecture and code quality.",
+    "ai_coder": {
+      "title": "AI Coder",
+      "description": "Daily use of Cursor, GitHub Copilot, ChatGPT, and Claude for feature implementation, refactoring, test generation, debugging, and documentation — always reviewed and production-ready."
+    },
+    "vibe_coder": {
+      "title": "Vibe Coder",
+      "description": "Rapid product prototyping through conversational, prompt-driven development. I turn ideas into working UIs and APIs quickly, then harden them with clean architecture and best practices."
+    },
+    "cv_line_ai_coder": "Cursor, Copilot & Claude for features, refactors, tests and debugging with human review",
+    "cv_line_vibe_coder": "prompt-driven prototyping, then harden with clean architecture",
+    "practices_title": "How I use AI",
+    "practice_1": "Prompt engineering for precise code generation and reviews",
+    "practice_2": "AI-assisted debugging, refactoring, and test scaffolding",
+    "practice_3": "Agentic workflows in Cursor for multi-file feature delivery",
+    "practice_4": "Human-in-the-loop review — AI accelerates, I own the quality"
   },
   "education": {
     "title": "Education",
@@ -192,12 +217,12 @@
       "description": "Full-stack e-commerce with Laravel REST API, user auth, product management, and order processing."
     },
     "project_3": {
-      "title": "Online Restaurant Reservation Application",
-      "description": "The proposed online restaurant reservation application aims to address these issues by providing customers with a simple, user-friendly platform to search for and book reservations at their desired restaurants, while also giving restaurants the tools they need to manage reservations more efficiently."
+      "title": "Online Restaurant Reservation",
+      "description": "Full-stack reservation platform: search & book restaurants, plus tools for restaurants to manage bookings efficiently."
     },
     "project_4": {
       "title": "Virtual Gear Hub",
-      "description": "Virtual Gear Hub is an innovative e-commerce platform designed to provide gamers with a wide selection of high-quality accessories for virtual reality (VR) gaming. The platform caters to both casual and professional gamers, offering a diverse range of VR gear, including motion controllers, haptic feedback gloves, headsets, tracking systems"
+      "description": "VR gaming e-commerce for accessories — controllers, haptic gloves, headsets, and tracking systems for casual and pro gamers."
     }
   },
   "contact": {
@@ -210,22 +235,36 @@
     "email_label": "Email",
     "find_me": "Find me on"
   },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "ai": "AI Coding",
+    "education": "Education",
+    "hobbies": "Hobbies",
+    "contact": "Contact"
+  },
+  "cv": {
+    "summary_title": "Professional Summary",
+    "tech_label": "Tech"
+  },
   "cv_versions": {
     "title": "Download CV",
     "fullstack": {
       "label": "Full Stack (Laravel)",
-      "role": "Full-Stack Laravel Developer",
-      "summary": "Full-Stack Developer with 2+ years of experience building scalable web applications using Laravel, React, Vue.js, and TypeScript. Proficient in REST API development, database design (MySQL, MongoDB), Docker, and CI/CD. Strong focus on clean code, Agile collaboration, and delivering reliable end-to-end solutions."
+      "role": "Full-Stack Laravel Developer & AI Coder",
+      "summary": "Full-Stack Developer & AI Coder with 2+ years building scalable apps with Laravel, React, Vue.js and TypeScript. Strong in REST APIs, MySQL/MongoDB, Docker and CI/CD. Ship faster with Cursor, Copilot and vibe-coding while owning architecture and quality."
     },
     "backend": {
       "label": "Backend (Laravel/PHP)",
-      "role": "Backend Laravel/PHP Developer",
-      "summary": "Backend Developer with 2+ years of experience building robust server-side applications using Laravel, PHP, and Node.js. Proficient in REST API development, database design (MySQL, MongoDB), authentication systems, Docker, and CI/CD. Strong focus on clean architecture, performance optimization, and Agile collaboration."
+      "role": "Backend Laravel/PHP Developer & AI Coder",
+      "summary": "Backend Developer & AI Coder with 2+ years building APIs with Laravel, PHP and Node.js. Strong in auth, MySQL/MongoDB, Docker and CI/CD. Use AI-assisted coding to design, debug and ship server features with solid architecture."
     },
     "frontend": {
       "label": "Frontend (React/Vue)",
-      "role": "Frontend React/Vue Developer",
-      "summary": "Frontend Developer with 2+ years of experience building dynamic, responsive user interfaces using React, Vue.js, and TypeScript. Proficient in state management (Redux), modern CSS frameworks (Tailwind CSS, Material-UI), and component-driven architecture. Strong focus on clean code, performance optimization, and Agile collaboration."
+      "role": "Frontend React/Vue Developer & AI Coder",
+      "summary": "Frontend Developer & AI Coder with 2+ years building UIs with React, Vue.js and TypeScript. Skilled in Redux, Tailwind and component architecture. Apply vibe coding to prototype and polish interfaces quickly with quality review."
     }
   }
 }

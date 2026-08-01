@@ -1,141 +1,167 @@
 import { StyleSheet } from "@react-pdf/renderer";
 
+/**
+ * ATS-friendly CV theme
+ * - Standard Helvetica (embedded, machine-readable)
+ * - High-contrast near-black body text
+ * - Single navy accent for section headers
+ * - No chip backgrounds (parsers misread pill UIs)
+ */
+export const colors = {
+  text: "#111827",
+  muted: "#4b5563",
+  accent: "#0f172a",
+  line: "#cbd5e1",
+  link: "#1e40af",
+  white: "#ffffff",
+} as const;
+
 export const styles = StyleSheet.create({
+  page: {
+    paddingTop: 28,
+    paddingBottom: 28,
+    paddingHorizontal: 36,
+    backgroundColor: colors.white,
+    fontFamily: "Helvetica",
+    fontSize: 9.5,
+    color: colors.text,
+    lineHeight: 1.35,
+  },
+
+  /* ── Header ─────────────────────────────────────────── */
   header: {
     flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 4,
-    paddingBottom: 3,
-    borderBottomWidth: 1.5,
-    borderBottomColor: "#0369a1",
-  },
-  profileSection: {
-    flexDirection: "row",
     alignItems: "center",
-    gap: 8,
+    gap: 12,
+    marginBottom: 10,
+    paddingBottom: 8,
+    borderBottomWidth: 2,
+    borderBottomColor: colors.accent,
   },
   imageContainer: {
-    width: 48,
-    height: 48,
-    borderWidth: 1.5,
-    borderColor: "#0369a1",
-    borderRadius: 24,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
     overflow: "hidden",
+    borderWidth: 1.5,
+    borderColor: colors.accent,
+    flexShrink: 0,
   },
   profileImage: {
-    width: 72,
-    height: 50,
+    width: 84,
+    height: 58,
     position: "absolute",
-    top: -2,
-    left: -12,
+    top: -1,
+    left: -14,
+  },
+  headerText: {
+    flex: 1,
   },
   name: {
-    fontSize: 17,
+    fontSize: 18,
     fontFamily: "Helvetica-Bold",
-    color: "#111827",
-    letterSpacing: -0.3,
+    color: colors.accent,
+    letterSpacing: 0.4,
+    textTransform: "uppercase",
+    marginBottom: 2,
   },
   role: {
-    fontSize: 11,
-    fontFamily: "Helvetica-Bold",
-    color: "#0369a1",
-    marginTop: 1,
-  },
-  contactSection: {
-    flexDirection: "column",
-    alignItems: "flex-start",
-    justifyContent: "center",
-    minWidth: 180,
-  },
-  contactItem: {
-    fontSize: 8.5,
-    fontFamily: "Helvetica",
-    color: "#4b5563",
-    marginBottom: 1,
-    lineHeight: 1.2,
-  },
-  contactRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginBottom: 1,
-  },
-  contactLabel: {
-    width: 46,
-    fontSize: 8.5,
-    fontFamily: "Helvetica-Bold",
-    color: "#4b5563",
-  },
-  sectionTitle: {
-    fontSize: 11,
-    fontFamily: "Helvetica-Bold",
-    color: "#0369a1",
-    marginBottom: 0,
-    textTransform: "uppercase",
-    letterSpacing: 0.8,
-  },
-  title: {
     fontSize: 10,
     fontFamily: "Helvetica-Bold",
-    color: "#111827",
-    marginBottom: 0,
+    color: colors.muted,
+    marginBottom: 4,
   },
-  subtitle: {
+  contactLine: {
     fontSize: 8.5,
-    fontFamily: "Helvetica-Oblique",
-    color: "#6b7280",
-    marginBottom: 0.5,
-  },
-  contentText: {
-    fontSize: 9,
     fontFamily: "Helvetica",
-    color: "#374151",
-    marginLeft: 4,
-    marginBottom: 0.5,
-    lineHeight: 1.3,
-  },
-  skillGroup: {
-    flex: "1 0 48%",
-    marginBottom: 1,
-  },
-  chipContainer: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 2,
-  },
-  chip: {
-    backgroundColor: "#f0f9ff",
-    borderRadius: 3,
-    paddingVertical: 1,
-    paddingHorizontal: 4,
-    fontSize: 7.5,
-    fontFamily: "Helvetica",
-    color: "#0c4a6e",
-    borderWidth: 0.5,
-    borderColor: "#bae6fd",
+    color: colors.text,
+    marginBottom: 2,
+    lineHeight: 1.4,
   },
   contactLink: {
     fontSize: 8.5,
     fontFamily: "Helvetica",
-    color: "#0369a1",
+    color: colors.link,
     textDecoration: "none",
   },
-  container: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 4,
-    paddingTop: 1,
-  },
+
+  /* ── Sections ───────────────────────────────────────── */
   sectionWrapper: {
-    marginBottom: 3,
+    marginBottom: 8,
   },
   sectionHeader: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 1.5,
+    marginBottom: 4,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.line,
+    paddingBottom: 2,
   },
-  sectionDivider: {
+  sectionTitle: {
+    fontSize: 10,
+    fontFamily: "Helvetica-Bold",
+    color: colors.accent,
+    textTransform: "uppercase",
+    letterSpacing: 1.1,
+  },
+
+  /* ── Typography ─────────────────────────────────────── */
+  title: {
+    fontSize: 10,
+    fontFamily: "Helvetica-Bold",
+    color: colors.text,
+  },
+  subtitle: {
+    fontSize: 9,
+    fontFamily: "Helvetica",
+    color: colors.muted,
+    marginBottom: 1,
+  },
+  date: {
+    fontSize: 9,
+    fontFamily: "Helvetica",
+    color: colors.muted,
+  },
+  contentText: {
+    fontSize: 9.5,
+    fontFamily: "Helvetica",
+    color: colors.text,
+    marginBottom: 1,
+    lineHeight: 1.35,
+  },
+  skillLine: {
+    fontSize: 9,
+    fontFamily: "Helvetica",
+    color: colors.text,
+    marginBottom: 2,
+    lineHeight: 1.35,
+  },
+  skillLabel: {
+    fontFamily: "Helvetica-Bold",
+    color: colors.text,
+  },
+  techLine: {
+    fontSize: 8.5,
+    fontFamily: "Helvetica-Oblique",
+    color: colors.muted,
+    marginTop: 1,
+  },
+
+  /* ── Layout helpers ─────────────────────────────────── */
+  rowBetween: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    marginBottom: 1,
+  },
+  entry: {
+    marginBottom: 6,
+  },
+  twoCol: {
+    flexDirection: "row",
+    gap: 16,
+  },
+  col: {
     flex: 1,
-    height: 1,
-    backgroundColor: "#d1d5db",
   },
 });

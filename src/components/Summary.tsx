@@ -1,5 +1,5 @@
 import React from "react";
-import { Monitor, Server, Database, Users, Award } from "lucide-react";
+import { Monitor, Server, Database, Users, Award, Sparkles } from "lucide-react";
 import { SectionLayout } from "@/components/layouts/SectionLayout";
 import { useTranslation } from "@/hooks/useTranslation";
 import { usePortfolio } from "@/hooks/usePortfolio";
@@ -44,6 +44,11 @@ export const Summary: React.FC = () => {
       desc: t("about_me.what_i_do.database_desc"),
     },
     {
+      Icon: Sparkles,
+      title: t("about_me.what_i_do.ai_title"),
+      desc: t("about_me.what_i_do.ai_desc"),
+    },
+    {
       Icon: Users,
       title: t("about_me.what_i_do.teamwork_title"),
       desc: t("about_me.what_i_do.teamwork_desc"),
@@ -52,7 +57,6 @@ export const Summary: React.FC = () => {
 
   return (
     <SectionLayout id="about_me" title={t("about_me.title")}>
-      {/* Description */}
       <p
         className="stagger-item text-gray-600 dark:text-gray-300 text-base md:text-lg leading-relaxed"
         style={{ animationDelay: "0ms" }}
@@ -60,7 +64,6 @@ export const Summary: React.FC = () => {
         {t("about_me.description")}
       </p>
 
-      {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
         {stats.map((stat, i) => (
           <div
@@ -78,7 +81,6 @@ export const Summary: React.FC = () => {
         ))}
       </div>
 
-      {/* What I Do */}
       <h3
         className="stagger-item text-lg font-semibold text-gray-800 dark:text-white mt-10 mb-4"
         style={{ animationDelay: "420ms" }}
@@ -107,10 +109,9 @@ export const Summary: React.FC = () => {
         ))}
       </div>
 
-      {/* Certifications */}
       <h3
         className="stagger-item text-lg font-semibold text-gray-800 dark:text-white mt-10 mb-4"
-        style={{ animationDelay: "820ms" }}
+        style={{ animationDelay: "900ms" }}
       >
         {t("about_me.certificates_title")}
       </h3>
@@ -119,7 +120,7 @@ export const Summary: React.FC = () => {
           <div
             key={i}
             className="stagger-item flex items-center gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gradient-to-r from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/60"
-            style={{ animationDelay: `${900 + i * 80}ms` }}
+            style={{ animationDelay: `${980 + i * 80}ms` }}
           >
             <div className="p-2 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 shrink-0">
               <Award size={18} className="text-yellow-500" />

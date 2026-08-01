@@ -5,13 +5,23 @@ import { resolveIcon } from "@/utils/iconMap";
 import type { PortfolioData, ResolvedPortfolioData } from "@/types";
 
 function resolveData(raw: PortfolioData): ResolvedPortfolioData {
+  const isLocal =
+    typeof window !== "undefined" &&
+    /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
+
   return {
     ...raw,
-    contactLinks: raw.contactLinks.map((c) => ({
-      ...c,
-      href: c.ariaLabel === "Portfolio" ? window.location.origin : c.href,
-      icon: resolveIcon(c.icon),
-    })),
+    contactLinks: raw.contactLinks.map((c) => {
+      let href = c.href;
+      if (c.ariaLabel === "Portfolio") {
+        // Always use production URL on CV/PDF; never leak localhost
+        href =
+          !c.href || isLocal
+            ? "https://atguiri.dev"
+            : c.href || window.location.origin;
+      }
+      return { ...c, href, icon: resolveIcon(c.icon) };
+    }),
     hobbies: raw.hobbies.map((h) => ({
       ...h,
       icon: resolveIcon(h.icon),

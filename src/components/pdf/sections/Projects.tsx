@@ -5,34 +5,45 @@ import { usePortfolio } from "@/hooks/usePortfolio";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";
 
+const MAX_TECH = 6;
+
 export const Projects: React.FC = () => {
   const { t } = useTranslation();
   const { projects } = usePortfolio();
 
   return (
     <Section title={t("projects.title")}>
-      {projects.map(({ key, technologies, github }) => (
-        <View key={key} style={{ marginBottom: 1.5 }}>
-          <View style={{ flexDirection: "row", alignItems: "center", gap: 4 }}>
-            <Text style={styles.title}>{t(`projects.${key}.title`)}</Text>
-            {github && (
-              <Link src={github} style={styles.contactLink}>
-                [GitHub]
-              </Link>
-            )}
-          </View>
-          <Text style={styles.contentText}>
-            {t(`projects.${key}.description`)}
-          </Text>
-          <View style={{ ...styles.chipContainer, marginLeft: 4, marginTop: 0.5 }}>
-            {technologies.map((tech) => (
-              <Text key={tech} style={styles.chip}>
-                {tech}
+      {projects.map(({ key, technologies, github, demo }) => {
+        const tech = technologies.slice(0, MAX_TECH).join(", ");
+        return (
+          <View key={key} style={styles.entry} wrap={false}>
+            <View style={styles.rowBetween}>
+              <Text style={styles.title}>{t(`projects.${key}.title`)}</Text>
+              <Text style={styles.date}>
+                {github && (
+                  <Link src={github} style={styles.contactLink}>
+                    GitHub
+                  </Link>
+                )}
+                {github && demo ? "  ·  " : ""}
+                {demo && (
+                  <Link src={demo} style={styles.contactLink}>
+                    Demo
+                  </Link>
+                )}
               </Text>
-            ))}
+            </View>
+            <Text style={styles.contentText}>
+              {t(`projects.${key}.description`)}
+            </Text>
+            {tech ? (
+              <Text style={styles.techLine}>
+                {t("cv.tech_label")}: {tech}
+              </Text>
+            ) : null}
           </View>
-        </View>
-      ))}
+        );
+      })}
     </Section>
   );
 };

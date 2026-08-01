@@ -1,23 +1,32 @@
 import { Copyright } from "lucide-react";
 import { LanguageSwitcher } from "@/components/global/LanguageSwitcher";
+import { SiteNav } from "@/components/global/SiteNav";
 import { ThemeButton } from "@/components/global/ThemeButton";
 import type { ReactNode } from "react";
 
 export const MainLayout = ({ children }: { children: ReactNode }) => {
   return (
     <div>
-      {/* HEADER */}
-      <header className="fixed top-4 right-4 z-50" role="banner">
-        <nav aria-label="Site settings" className="flex items-center gap-3 rounded-full px-3 py-2 backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 border border-gray-200/70 dark:border-gray-700/60 shadow-sm text-gray-900 dark:text-gray-100">
-          <ThemeButton />
-          <LanguageSwitcher />
-        </nav>
+      <a
+        href="#about_me"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-white"
+      >
+        Skip to content
+      </a>
+
+      <header className="fixed top-0 inset-x-0 z-50 px-4 pt-4" role="banner">
+        <div className="container mx-auto max-w-5xl flex items-center justify-between gap-4 rounded-2xl px-4 py-2 backdrop-blur-md bg-white/80 dark:bg-gray-900/80 border border-gray-200/70 dark:border-gray-700/60 shadow-sm">
+          <SiteNav />
+
+          <nav aria-label="Site settings" className="flex items-center gap-2 shrink-0">
+            <ThemeButton />
+            <LanguageSwitcher />
+          </nav>
+        </div>
       </header>
 
-      {/* Main Content */}
-      <main role="main" aria-label="Abdallah Atguiri — Full Stack Web Developer Portfolio">{children}</main>
+      <div>{children}</div>
 
-      {/* FOOTER */}
       <footer role="contentinfo">
         <div className="container mx-auto pb-10 max-w-5xl text-center flex justify-center items-center gap-2 text-xs md:text-sm text-gray-500 dark:text-gray-400">
           <Copyright size={16} />

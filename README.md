@@ -87,18 +87,19 @@ npm run deploy
 src/
 ├── components/          # React components
 │   ├── pdf/            # PDF CV sections & styles
-│   ├── global/         # Shared UI (buttons, chips, etc.)
+│   ├── global/         # Shared UI (buttons, chips, nav, etc.)
 │   └── layouts/        # Page layouts
-├── config/             # Configuration (assets, constants)
-├── context/            # React context (translations)
-├── data/               # Content & metadata
-├── hooks/              # Custom hooks (useTranslation)
-├── langs/              # i18n files (en.json, ar.json, fr.json)
-├── providers/          # Context providers
+├── context/            # React context providers
+├── hooks/              # Custom hooks
+├── providers/          # Translation & portfolio data providers
 ├── types/              # TypeScript interfaces
-└── assets/             # Local fonts (images in /public)
+├── utils/              # Helpers (fetchJson, iconMap)
+└── langs/              # Language type definitions
 
 public/
+├── data/
+│   ├── portfolio.json  # Projects, skills, experience, certificates
+│   └── langs/          # i18n files (en.json, ar.json, fr.json)
 ├── assets/images/      # Optimized images (served via HTTP)
 │   ├── companies/      # Company logos
 │   ├── flags/          # Language flags
@@ -109,34 +110,34 @@ public/
 ## 🎯 Customization
 
 ### Update Personal Info
-Edit `src/data/index.ts`:
-```typescript
-export const me: PersonalInfo = {
-  name: "Your Name",
-  title: "Your Title",
-  image: assetPaths.images.profile,
-  location: "City, Country",
-  phone: "+1234567890",
-  email: "you@example.com",
-};
+Edit `public/data/portfolio.json`:
+```json
+{
+  "me": {
+    "name": "Your Name",
+    "title": "Your Title",
+    "image": "/assets/images/your-photo.jpg",
+    "location": "City, Country",
+    "phone": "+1234567890",
+    "email": "you@example.com"
+  }
+}
 ```
 
 ### Add/Edit Projects
-Modify the `projects` array in `src/data/index.ts`:
-```typescript
-export const projects: Project[] = [
-  {
-    key: "project_key",
-    technologies: ["React", "TypeScript", "Tailwind"],
-    images: [assetPaths.images.projects.yourImage],
-    github: "https://github.com/...",
-    demo: "https://...",
-  },
-];
+Modify the `projects` array in `public/data/portfolio.json`:
+```json
+{
+  "key": "project_key",
+  "technologies": ["React", "TypeScript", "Tailwind"],
+  "images": ["/assets/images/projects/your-image.png"],
+  "github": "https://github.com/...",
+  "demo": "https://..."
+}
 ```
 
 ### Manage Translations
-Edit `src/langs/{en,ar,fr}.json`:
+Edit `public/data/langs/{en,ar,fr}.json`:
 ```json
 {
   "developer": {
@@ -196,7 +197,7 @@ MIT License - See LICENSE file for details.
 ## 👤 Author
 
 **Abdallah ATGUIRI**
-- 🌐 [Portfolio](https://abdallah-atguiri.github.io/portfolio)
+- 🌐 [Portfolio](https://atguiri.dev)
 - 💼 [LinkedIn](https://linkedin.com/in/abdallah-atguiri)
 - 🐙 [GitHub](https://github.com/ABDALLAH-ATGUIRI)
 - 📧 [Email](mailto:abdallah.atguiri@gmail.com)

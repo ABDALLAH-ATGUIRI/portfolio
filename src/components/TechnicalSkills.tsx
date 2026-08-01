@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Layout, Server, Database, GitBranch, Wrench, Code2 } from "lucide-react";
+import { Layout, Server, Database, GitBranch, Wrench, Code2, Sparkles } from "lucide-react";
 import { Skill } from "@/types";
 import { useTranslation } from "@/hooks/useTranslation";
 import { SectionLayout } from "@/components/layouts/SectionLayout";
@@ -12,7 +12,17 @@ const SKILL_ICONS: Record<string, React.ElementType> = {
   database: Database,
   version_control: GitBranch,
   devops: Wrench,
+  ai: Sparkles,
   others: Code2,
+};
+
+/** Balanced grid spans: AI full-width, then FE/BE, then DevOps/DB */
+const SKILL_SPAN: Record<string, string> = {
+  ai: "md:col-span-6",
+  frontend: "md:col-span-3",
+  backend: "md:col-span-3",
+  version_control: "md:col-span-3",
+  database: "md:col-span-3",
 };
 
 export const TechnicalSkills = memo(() => {
@@ -22,7 +32,6 @@ export const TechnicalSkills = memo(() => {
 
   return (
     <SectionLayout title={t("technical_skills.title")} id="technical_skills">
-      {/* Total summary pill */}
       <div
         className="stagger-item flex items-center gap-2 mb-6 text-sm text-gray-600 dark:text-gray-400"
         style={{ animationDelay: "0ms" }}
@@ -34,7 +43,6 @@ export const TechnicalSkills = memo(() => {
         </span>
       </div>
 
-      {/* Skills grid */}
       <div
         className="mb-12 grid gap-6 md:grid-cols-6 lg:gap-8"
         aria-label="Technical Skills"
@@ -46,21 +54,17 @@ export const TechnicalSkills = memo(() => {
               key={id}
               className={[
                 "card stagger-item",
-                id <= 2 ? "md:col-span-3" : "md:col-span-2",
+                SKILL_SPAN[title] ?? "md:col-span-2",
               ].join(" ")}
               style={{ animationDelay: `${80 + index * 120}ms` }}
               role="group"
               aria-labelledby={`skill-${id}`}
             >
-              {/* Group header with icon + count */}
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 rounded-lg bg-blue-50 dark:bg-blue-900/30 shrink-0">
                   <Icon size={16} className="text-blue-500 dark:text-blue-400" />
                 </div>
-                <h3
-                  id={`skill-${id}`}
-                  className="card-header flex-1"
-                >
+                <h3 id={`skill-${id}`} className="card-header flex-1">
                   {t(`technical_skills.${title}.title`)}
                 </h3>
                 <span className="text-xs font-semibold text-blue-500 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-2 py-0.5 rounded-full">

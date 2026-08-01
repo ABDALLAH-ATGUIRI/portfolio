@@ -9,6 +9,7 @@ import {
   GraduationCap,
   Linkedin,
   Mail,
+  Medal,
   Music,
   Puzzle,
 } from "lucide-react";
@@ -23,6 +24,7 @@ const iconMap: Record<string, LucideIcon> = {
   GraduationCap,
   Linkedin,
   Mail,
+  Medal,
   Music,
   Puzzle,
 };

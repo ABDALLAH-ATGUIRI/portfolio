@@ -31,18 +31,36 @@ export const Chip: React.FC<ChipProps> = ({
   const base = className
     || "inline-flex gap-3 items-center font-bold text-sm transition-all duration-300 rounded-full shadow-sm bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-700";
 
-  return (
-    <span
-      onClick={copy ? handleCopy : undefined}
-      title={copy ? (copied ? "Copied!" : title) : title}
-      className={[
-        base,
-        copy ? "cursor-pointer" : "",
-        copied ? "!border-green-400 !text-green-600 dark:!text-green-400 ring-1 ring-green-400/50" : "",
-      ].join(" ")}
-    >
+  const classes = [
+    base,
+    copy ? "cursor-pointer" : "",
+    copied ? "!border-green-400 !text-green-600 dark:!text-green-400 ring-1 ring-green-400/50" : "",
+  ].join(" ");
+
+  const content = (
+    <>
       {copied ? <Check size={14} /> : icon && <span className="flex items-center">{icon}</span>}
       <span>{text}</span>
+    </>
+  );
+
+  if (copy) {
+    return (
+      <button
+        type="button"
+        onClick={handleCopy}
+        title={copied ? "Copied!" : title}
+        aria-label={copied ? "Copied to clipboard" : title ?? `Copy ${text}`}
+        className={classes}
+      >
+        {content}
+      </button>
+    );
+  }
+
+  return (
+    <span title={title} className={classes}>
+      {content}
     </span>
   );
 };
