@@ -63,6 +63,13 @@ export interface Certificate {
   description: string;
 }
 
+export interface StoreProduct {
+  key: string;
+  icon: string;
+  price: string;
+  href: string;
+}
+
 /** Raw portfolio JSON shape (before icon resolution) */
 export interface PortfolioData {
   me: PersonalInfo;
@@ -73,6 +80,7 @@ export interface PortfolioData {
   experiences: Experience[];
   hobbies: HobbyData[];
   languages: string[];
+  storeProducts: StoreProduct[];
 }
 
 /** Resolved portfolio data (icons are Lucide components) */
@@ -85,4 +93,5 @@ export interface ResolvedPortfolioData {
   experiences: Experience[];
   hobbies: Hobby[];
   languages: string[];
+  storeProducts: StoreProduct[];
 }

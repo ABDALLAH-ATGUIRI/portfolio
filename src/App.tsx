@@ -19,6 +19,7 @@ const Hobbies = lazyNamed(() => import("@/components/Hobbies"), "Hobbies");
 const TechnicalSkills = lazyNamed(() => import("@/components/TechnicalSkills"), "TechnicalSkills");
 const AiSection = lazyNamed(() => import("@/components/AiSection"), "AiSection");
 const Projects = lazyNamed(() => import("@/components/Projects"), "Projects");
+const Store = lazyNamed(() => import("@/components/Store"), "Store");
 const Contact = lazyNamed(() => import("@/components/Contact"), "Contact");
 
 function AppContent() {
@@ -36,6 +37,7 @@ function AppContent() {
           <Summary />
           <Experience />
           <Projects />
+          <Store />
           <TechnicalSkills />
           <AiSection />
           <Education />

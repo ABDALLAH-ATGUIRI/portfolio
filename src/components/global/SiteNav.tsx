@@ -6,6 +6,7 @@ const SECTIONS = [
   { id: "about_me", key: "about" },
   { id: "experience", key: "experience" },
   { id: "projects", key: "projects" },
+  { id: "store", key: "store" },
   { id: "technical_skills", key: "skills" },
   { id: "ai", key: "ai" },
   { id: "education", key: "education" },

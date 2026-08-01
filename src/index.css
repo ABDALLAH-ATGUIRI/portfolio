@@ -129,7 +129,7 @@ html[lang="ar"] body {
 .hero-orb-3 { animation: heroOrbFloat3 10s ease-in-out infinite; }
 
 .hero-gradient-text {
-  background-image: linear-gradient(135deg, #1e293b 0%, #1e40af 40%, #0891b2 60%, #1e293b 100%);
+  background-image: linear-gradient(135deg, #0f172a 0%, #0e7490 40%, #0284c7 65%, #0f172a 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -137,7 +137,7 @@ html[lang="ar"] body {
   animation: heroGradientShift 6s ease-in-out infinite;
 }
 .dark .hero-gradient-text {
-  background-image: linear-gradient(135deg, #f1f5f9 0%, #60a5fa 40%, #22d3ee 60%, #f1f5f9 100%);
+  background-image: linear-gradient(135deg, #f8fafc 0%, #67e8f9 40%, #38bdf8 65%, #f8fafc 100%);
 }
 
 .hero-glow-ring {

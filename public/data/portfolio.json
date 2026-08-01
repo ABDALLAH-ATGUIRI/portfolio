@@ -80,5 +80,31 @@
     { "name": "learning", "icon": "GraduationCap" },
     { "name": "problem_solving", "icon": "Puzzle" }
   ],
-  "languages": ["arabic", "french", "english"]
+  "languages": ["arabic", "french", "english"],
+  "storeProducts": [
+    {
+      "key": "prompt_lab",
+      "icon": "sparkles",
+      "price": "$29",
+      "href": "mailto:abdallah.atguiri@gmail.com?subject=Buy%20AI%20Prompt%20Lab"
+    },
+    {
+      "key": "ui_3d_kit",
+      "icon": "box",
+      "price": "$49",
+      "href": "mailto:abdallah.atguiri@gmail.com?subject=Buy%203D%20UI%20Kit"
+    },
+    {
+      "key": "gen_brand",
+      "icon": "palette",
+      "price": "$39",
+      "href": "mailto:abdallah.atguiri@gmail.com?subject=Buy%20Generative%20Brand%20Pack"
+    },
+    {
+      "key": "agent_workflows",
+      "icon": "cpu",
+      "price": "$59",
+      "href": "mailto:abdallah.atguiri@gmail.com?subject=Buy%20Agentic%20Workflow%20Pack"
+    }
+  ]
 }

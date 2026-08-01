@@ -31,6 +31,7 @@ export default {
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
+        display: ["Space Grotesk", "Inter", "sans-serif"],
         serif: ["Merriweather", "serif"],
         mono: ["Fira Code", "monospace"],
       },

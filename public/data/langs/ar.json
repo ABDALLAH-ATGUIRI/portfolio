@@ -7,7 +7,7 @@
   "developer": {
     "name": "عبد الله أثكيري",
     "role": "مطور ويب Full-Stack و AI Coder",
-    "tagline": "أبني تطبيقات ويب قابلة للتوسع باستخدام React و Laravel و Node.js — مع تسريع التطوير عبر AI Coding و Vibe Coding.",
+    "tagline": "أبني تطبيقات ويب قابلة للتوسع باستخدام React و Laravel و Node.js — مع AI Coding و Vibe Coding وتصميم ثلاثي الأبعاد توليدي.",
     "location": "المغرب",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "٢١٢٦٢٣٧٧٩٢٧٠+"
@@ -242,7 +242,37 @@
     "ai": "الذكاء الاصطناعي",
     "education": "التعليم",
     "hobbies": "الهوايات",
-    "contact": "التواصل"
+    "contact": "التواصل",
+    "store": "المتجر"
+  },
+  "store": {
+    "title": "المتجر التوليدي",
+    "description": "منتجات رقمية صُممت عبر AI Coding والتصميم التوليدي — حزم جاهزة للمطورين المعاصرين.",
+    "cta": "استكشف المتجر",
+    "buy": "احصل عليه",
+    "price_label": "السعر",
+    "products": {
+      "prompt_lab": {
+        "title": "مختبر أوامر الذكاء الاصطناعي",
+        "description": "50 أمرًا جاهزًا للإنتاج لـ Cursor و Claude و Copilot — تصحيح وإعادة هيكلة وواجهات برمجة وأنظمة UI.",
+        "badge": "حزمة AI"
+      },
+      "ui_3d_kit": {
+        "title": "حزمة واجهات ثلاثية الأبعاد",
+        "description": "مشاهد Three.js / R3F ومواد زجاجية ونماذج عائمة لصفحات هبوط فاخرة.",
+        "badge": "تصميم 3D"
+      },
+      "gen_brand": {
+        "title": "حزمة هوية توليدية",
+        "description": "تنويعات شعارات وأنظمة تدرجات وإبداعات اجتماعية مولَّدة للعلامات التقنية.",
+        "badge": "هوية"
+      },
+      "agent_workflows": {
+        "title": "حزمة سير عمل وكيلية",
+        "description": "أوامر وخطط قابلة لإعادة الاستخدام لميزات متعددة الملفات والمراجعات والتسليم الأسرع.",
+        "badge": "سير عمل"
+      }
+    }
   },
   "cv": {
     "summary_title": "الملخص المهني",

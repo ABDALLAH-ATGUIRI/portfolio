@@ -7,7 +7,7 @@
   "developer": {
     "name": "Abdallah ATGUIRI",
     "role": "Développeur Web Full-Stack & AI Coder",
-    "tagline": "Je construis des apps web scalables avec React, Laravel & Node.js — accélérées par le coding IA et le vibe coding.",
+    "tagline": "Je construis des apps web scalables avec React, Laravel & Node.js — élevées par AI coding, vibe coding et design 3D génératif.",
     "location": "Maroc",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "+212 623 779 270"
@@ -243,7 +243,37 @@
     "ai": "AI Coding",
     "education": "Formation",
     "hobbies": "Loisirs",
-    "contact": "Contact"
+    "contact": "Contact",
+    "store": "Boutique"
+  },
+  "store": {
+    "title": "Boutique Générative",
+    "description": "Produits digitaux conçus avec AI coding et design génératif — packs prêts à l'emploi pour builders modernes.",
+    "cta": "Voir la boutique",
+    "buy": "Obtenir",
+    "price_label": "Prix",
+    "products": {
+      "prompt_lab": {
+        "title": "AI Prompt Lab",
+        "description": "50 prompts production-ready pour Cursor, Claude et Copilot — debug, refactors, APIs et systèmes UI.",
+        "badge": "Pack IA"
+      },
+      "ui_3d_kit": {
+        "title": "Kit UI 3D",
+        "description": "Scènes Three.js / R3F, matériaux glass et mockups flottants pour landing pages premium.",
+        "badge": "Design 3D"
+      },
+      "gen_brand": {
+        "title": "Pack Branding Génératif",
+        "description": "Variantes de logos, systèmes de gradients et créatifs sociaux générés pour marques tech.",
+        "badge": "Brand"
+      },
+      "agent_workflows": {
+        "title": "Pack Workflows Agentiques",
+        "description": "Prompts et playbooks réutilisables pour features multi-fichiers, reviews et livraison accélérée.",
+        "badge": "Workflows"
+      }
+    }
   },
   "cv": {
     "summary_title": "Résumé Professionnel",
