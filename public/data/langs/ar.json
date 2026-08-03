@@ -5,45 +5,45 @@
     "technologies": "تقنيات"
   },
   "developer": {
-    "name": "عبد الله أثكيري",
-    "role": "مطور ويب Full-Stack و AI Coder",
-    "tagline": "أبني تطبيقات ويب قابلة للتوسع باستخدام React و Laravel و Node.js — مع AI Coding و Vibe Coding وتصميم ثلاثي الأبعاد توليدي.",
+    "name": "عبد الله اتقيري",
+    "role": "مطور Full-Stack و AI Coder",
+    "tagline": "أصمم وأسلّم أنظمة الإنتاج من الطرف إلى الطرف — المعمارية وواجهات البرمجة والواجهات — مع React و Laravel وهندسة معززة بالذكاء الاصطناعي.",
     "location": "المغرب",
     "email": "abdallah.atguiri@gmail.com",
-    "phone": "٢١٢٦٢٣٧٧٩٢٧٠+"
+    "phone": "+212 623 779 270"
   },
   "about_me": {
     "title": "نبذة عني",
-    "description": "مطور Full-Stack و AI Coder بخبرة تزيد عن سنتين في بناء تطبيقات ويب قابلة للتوسع باستخدام React و Vue.js و TypeScript و Laravel و Node.js. أجمع بين الهندسة الصلبة والتطوير بمساعدة الذكاء الاصطناعي (Cursor و Copilot و Claude) وممارسات Vibe Coding لتسليم أسرع دون التضحية بجودة الكود. متمكن من REST APIs وتصميم قواعد البيانات و Docker و CI/CD، مع تركيز على المعمارية النظيفة والعمل الرشيق.",
+    "description": "مطور Full-Stack و AI Coder بخبرة +3 سنوات في تسليم منصات ويب للإنتاج. قوي في React و Vue و TypeScript و Laravel و Node.js — نمذجة النطاق و REST APIs والأداء و DevOps (Docker و CI/CD و Linux) ومنتجات (ATG-LABS / stlup.com و MonGestion). أستخدم Cursor و Copilot و Claude كمضاعفات قوة مع الإبقاء على المعمارية والمراجعات والجودة تحت سيطرتي.",
     "stats": {
-      "experience_value": "+2",
+      "experience_value": "+3",
       "experience_label": "سنوات خبرة",
       "companies_value": "3",
       "companies_label": "شركات",
-      "projects_value": "+4",
-      "projects_label": "مشاريع",
+      "projects_value": "2",
+      "projects_label": "منتجات رئيسية",
       "tech_value": "+30",
       "tech_label": "تقنية"
     },
     "what_i_do": {
-      "title": "ماذا أفعل",
-      "frontend_title": "تطوير الواجهة",
+      "title": "كيف أُسلّم",
+      "frontend_title": "هندسة الواجهة",
       "frontend_desc": "React · Vue · TypeScript · Tailwind CSS",
-      "backend_title": "تطوير الخلفية",
+      "backend_title": "معمارية الخلفية",
       "backend_desc": "Laravel · PHP · Node.js · REST APIs",
-      "database_title": "تصميم قواعد البيانات",
+      "database_title": "البيانات والأداء",
       "database_desc": "MySQL · MongoDB · Redis",
-      "ai_title": "AI Coding و Vibe Coding",
+      "ai_title": "تسليم معزز بالذكاء الاصطناعي",
       "ai_desc": "Cursor · Copilot · Claude · هندسة الأوامر",
-      "teamwork_title": "التعاون الرشيق",
-      "teamwork_desc": "Scrum · Git · الكود النظيف"
+      "teamwork_title": "ممارسة الهندسة",
+      "teamwork_desc": "معمارية · مراجعة كود · Agile · تسليم نظيف"
     },
     "certificates_title": "الشهادات"
   },
   "experience": {
     "title": "الخبرة المهنية",
     "stats": {
-      "years": "+2",
+      "years": "+3",
       "years_label": "سنوات خبرة",
       "companies": "3",
       "companies_label": "شركات",
@@ -53,21 +53,24 @@
     "companies": {
       "cod_network": {
         "title": "Cod Network، أكادير، المغرب",
-        "position": "مطور مبتدئ Full-Stack",
+        "position": "مطور Full-Stack",
         "date": "يونيو 2023 - الآن",
-        "description": "بناء وصيانة منصات تجارة إلكترونية بـ Laravel و Vue.js/React. واجهات REST ومصادقة Passport وتحسين الأداء، مع تسريع التسليم عبر Cursor/Copilot."
+        "description": "بناء وتطوير منصات التجارة الإلكترونية من الطرف إلى الطرف بـ Laravel و Vue.js/React: REST APIs و Passport وتحسين الأداء وتسليم موثوق للإنتاج مع Cursor/Copilot وفق معايير جودة واضحة.",
+        "cv_description": "منصات تجارة إلكترونية (Laravel + Vue/React): REST و مصادقة وأداء."
       },
       "agriwise": {
         "title": "Agriwise، أكادير، المغرب",
-        "position": "متدرب مطور Full-Stack (Laravel/Vue.js)",
+        "position": "مطور Full-Stack",
         "date": "يناير 2023 - فبراير 2023",
-        "description": "واجهات متجاوبة بـ Vue.js و Tailwind و Element Plus لمنصة زراعية، مع مساهمة في Laravel ضمن بيئة Agile/Scrum."
+        "description": "أنظمة واجهات للإنتاج بـ Vue.js و Tailwind و Element Plus لمنصة زراعية مع تقوية وحدات Laravel في Agile/Scrum.",
+        "cv_description": "واجهات إنتاج (Vue و Tailwind) ووحدات Laravel لمنصة زراعية."
       },
       "digital_elite": {
         "title": "Digital Elite، أكادير، المغرب",
-        "position": "متدرب مطور ويب Full-Stack",
+        "position": "مطور Full-Stack",
         "date": "مارس 2023 - مايو 2023",
-        "description": "تطوير ميزات بـ React و Node.js وفق ممارسات Agile والكود النظيف ضمن فريق مهني."
+        "description": "تسليم ميزات منتج بـ React و Node.js ضمن فريق Agile مع معمارية نظيفة ومراجعة الأقران.",
+        "cv_description": "ميزات منتج React و Node.js في Agile مع مراجعة الأقران."
       }
     }
   },
@@ -114,14 +117,14 @@
     "title": "اللغات",
     "arabic": {
       "name": "العربية",
-      "level": "متكامل"
+      "level": "لغة أم"
     },
     "french": {
       "name": "الفرنسية",
-      "level": "مبتدئ"
+      "level": "مبتدئ"
     },
     "english": {
-      "name": "الانجليزية",
+      "name": "الإنجليزية",
       "level": "متوسط"
     }
   },
@@ -129,43 +132,43 @@
     "title": "المهارات التقنية",
     "overall_label": "تقنية مُتقنة",
     "frontend": {
-      "title": "تطوير الواجهة المستخدم",
-      "description": "احتاج إلى تقنيات تطوير الواجهة المستخدم مثل HTML، CSS، و JavaScript. أحتاج إلى تقنيات مثل React و Vue.js."
+      "title": "تطوير الواجهة",
+      "description": "مهارات واجهات حديثة: HTML و CSS و JavaScript و TypeScript و React و Vue و Tailwind."
     },
     "backend": {
       "title": "تطوير الخلفية",
-      "description": "احتاج إلى تقنيات تطوير الخلفية مثل Node.js، Express، و MongoDB. أحتاج إلى بناء واجهات برمجة التطبيقات RESTful والعمل مع قواعد البيانات."
+      "description": "بناء واجهات برمجة تطبيقات وخدمات خلفية: PHP و Laravel و Node.js و REST و Redis."
     },
     "database": {
-      "title": "إدارة قواعد البيانات",
-      "description": "احتاج إلى تقنيات إدارة قواعد البيانات مثل MongoDB، MySQL، و PostgreSQL. أحتاج إلى تصميم وتحسين مخططات قواعد البيانات."
+      "title": "قواعد البيانات",
+      "description": "تصميم واستخدام قواعد البيانات: MySQL و MongoDB و Redis."
     },
     "version_control": {
-      "title": "DevOps والأدوات",
-      "description": "احتاج إلى تقنيات تحكم الإصدارات مثل Git و GitHub. أحتاج إلى العمل مع فرق باستخدام نظم تحكم الإصدارات."
+      "title": "إدارة الإصدارات والتعاون",
+      "description": "Git و GitHub و GitLab و Jira و Bitbucket."
     },
     "ai": {
       "title": "AI Coding والأدوات",
-      "description": "تطوير بمساعدة الذكاء الاصطناعي باستخدام Cursor و GitHub Copilot و ChatGPT و Claude. هندسة الأوامر و Vibe Coding وسير عمل وكيلية لتسليم أسرع بجودة عالية."
+      "description": "تطوير بمساعدة الذكاء الاصطناعي: Cursor و GitHub Copilot و ChatGPT و Claude وهندسة الأوامر."
     },
     "devops": {
-      "title": "DevOps و السحابة",
-      "description": "خبرة في الحاويات وخطوط CI/CD وبعض خدمات السحابة: Docker، Docker Compose، GitHub Actions، Nginx، إدارة خوادم Linux و أساسيات AWS (EC2، S3)."
+      "title": "DevOps و Linux والسحابة",
+      "description": "خوادم Linux وحاويات وCI/CD والسحابة: Docker و GitHub Actions و Nginx و AWS (EC2, S3)."
     },
     "others": {
-      "title": "مهارات أخرى",
-      "description": "مهارات أخرى مثل الاختبارات (Jest)، أدوات التصميم (Figma)، أنظمة التشغيل، وإنشاء محتوى فيديو."
+      "title": "مهارات أخرى",
+      "description": "اختبارات، أدوات تصميم (Figma)، أنظمة تشغيل، وإنشاء محتوى."
     }
   },
   "ai": {
-    "title": "AI Coding و Vibe Coding",
-    "description": "أعمل كـ AI Coder و Vibe Coder — أستخدم أدوات الذكاء الاصطناعي الحديثة للتصميم والبرمجة والتصحيح والتسليم بسرعة أكبر، مع الحفاظ على ملكية المعمارية وجودة الكود.",
+    "title": "هندسة معززة بالذكاء الاصطناعي",
+    "description": "أتعامل مع الذكاء الاصطناعي كمضاعف قوة جاد: تصميم وتنفيذ وتصحيح وتسليم أسرع مع إبقاء المعمارية والأمان وجودة الإنتاج تحت ملكيتي.",
     "ai_coder": {
-      "title": "AI Coder",
+      "title": "مهندس معزز بالذكاء الاصطناعي",
       "description": "استخدام يومي لـ Cursor و GitHub Copilot و ChatGPT و Claude في التنفيذ وإعادة الهيكلة وتوليد الاختبارات والتصحيح والتوثيق — مع مراجعة بشرية دائمة وجاهزية للإنتاج."
     },
     "vibe_coder": {
-      "title": "Vibe Coder",
+      "title": "نمذجة المنتجات",
       "description": "نمذجة سريعة للمنتجات عبر تطوير حواري قائم على الأوامر. أحول الأفكار إلى واجهات وواجهات برمجة تعمل بسرعة، ثم أُحكمها بمعمارية نظيفة وأفضل الممارسات."
     },
     "cv_line_ai_coder": "Cursor و Copilot و Claude للميزات وإعادة الهيكلة والاختبارات والتصحيح مع مراجعة بشرية",
@@ -203,34 +206,31 @@
   },
   "projects": {
     "title": "المشاريع",
-    "description": "منتجات رئيسية أصممها وأطلقها من الألف إلى الياء — من الهندسة المعيارية إلى تجربة استخدام جاهزة للإنتاج.",
+    "description": "منتجات رئيسية أصممها وأسلمها من الطرف إلى الطرف — خلفيات معيارية وتجربة استخدام للإنتاج.",
     "stats": {
       "total": "2",
       "total_label": "منتجات رئيسية"
     },
     "role_label": "الدور",
+    "live_site": "الموقع",
+    "github": "GitHub",
+    "prev_image": "الصورة السابقة",
+    "next_image": "الصورة التالية",
+    "no_preview": "لا توجد معاينة",
     "atg_labs": {
       "title": "ATG-LABS",
       "tagline": "تحويل الأفكار إلى واقع",
-      "role": "مؤسس · مهندس Full-Stack",
-      "description": "منصة تصنيع رقمي حية (stlup.com): عروض طباعة ثلاثية الأبعاد، متجر، خدمات وعمليات في بنية معيارية — Laravel 12 و Inertia/React و Filament و PostgreSQL و Redis."
+      "role": "مؤسس · Full-Stack",
+      "description": "منصة تصنيع رقمي حية (stlup.com): عروض طباعة ثلاثية الأبعاد ومتجر وخدمات وعمليات — Laravel 12 و Inertia/React و Filament و PostgreSQL و Redis. ملكية المنتج من المعمارية إلى الإنتاج.",
+      "cv_description": "منصة تصنيع رقمي (stlup.com): عروض ومتجر وخدمات. Laravel 12، Inertia/React، Filament، PostgreSQL، Redis."
     },
     "mongestion": {
       "title": "MonGestion",
       "tagline": "مخزون، نقطة بيع وعمليات الأعمال",
-      "role": "مطور Full-Stack",
-      "description": "منصة ويب للمخزون ونقطة البيع للمتاجر والشركات الصغيرة: مخازن متعددة، مبيعات، مشتريات، POS، مدفوعات، تقارير، موارد بشرية ودعم متعدد اللغات (RTL). واجهة API بـ Laravel ولوحة Vue.js مع Passport."
+      "role": "Full-Stack · بناء المنتج",
+      "description": "منصة مخزون ونقطة بيع للشركات الصغيرة: مخازن متعددة ومبيعات ومشتريات وPOS ومدفوعات وتقارير وموارد بشرية ومتعدد اللغات (RTL). تصميم API Laravel + لوحة Vue.js مع Passport للإنتاج.",
+      "cv_description": "مخزون ونقطة بيع: مخازن متعددة ومبيعات ومشتريات وموارد بشرية. Laravel، Vue.js، Passport."
     }
-  },
-  "contact": {
-    "title": "تواصل معي",
-    "description": "لا تتردد في التواصل معي — سواء كان لديك مشروع في ذهنك، سؤال، أو مجرد رغبة في إلقاء التحية.",
-    "send_email": "إرسال بريد إلكتروني",
-    "get_in_touch": "تواصل معي",
-    "location_label": "الموقع",
-    "phone_label": "الهاتف",
-    "email_label": "البريد الإلكتروني",
-    "find_me": "تابعني على"
   },
   "nav": {
     "about": "نبذة",
@@ -241,7 +241,21 @@
     "education": "التعليم",
     "hobbies": "الهوايات",
     "contact": "التواصل",
-    "store": "المتجر"
+    "store": "المتجر",
+    "main": "التنقل الرئيسي",
+    "open_menu": "فتح القائمة",
+    "close_menu": "إغلاق القائمة"
+  },
+  "contact": {
+    "title": "تواصل معي",
+    "description": "منفتح على أدوار Full-Stack بملكية حقيقية للعمل والمنتج والتعاون — لنتحدث عن stack وأهدافكم.",
+    "send_email": "إرسال بريد إلكتروني",
+    "get_in_touch": "تواصل معي",
+    "location_label": "الموقع",
+    "phone_label": "الهاتف",
+    "email_label": "البريد الإلكتروني",
+    "find_me": "تابعني على",
+    "copy": "نسخ"
   },
   "store": {
     "title": "المتجر التوليدي",
@@ -280,18 +294,18 @@
     "title": "تحميل السيرة الذاتية",
     "fullstack": {
       "label": "Full Stack (Laravel)",
-      "role": "مطور Full-Stack Laravel و AI Coder",
-      "summary": "مطور Full-Stack و AI Coder (+2 سنوات): Laravel و React و Vue.js و TypeScript. REST APIs و MySQL/MongoDB و Docker و CI/CD. تسليم أسرع عبر Cursor و Copilot و Vibe Coding مع ملكية المعمارية والجودة."
+      "role": "مطور Full-Stack (Laravel) و AI Coder",
+      "summary": "مطور Full-Stack (+3 سنوات): Laravel و React و Vue و TypeScript. APIs وبيانات و Docker/CI/CD وتسليم معزز بالذكاء الاصطناعي مع معمارية وجودة. منتجات: ATG-LABS و MonGestion."
     },
     "backend": {
       "label": "Backend (Laravel/PHP)",
-      "role": "مطور Backend Laravel/PHP و AI Coder",
-      "summary": "مطور Backend و AI Coder (+2 سنوات): Laravel و PHP و Node.js. مصادقة و MySQL/MongoDB و Docker و CI/CD. برمجة بمساعدة الذكاء الاصطناعي للتصميم والتصحيح والتسليم بمعمارية متينة."
+      "role": "مطور Backend (Laravel/PHP) و AI Coder",
+      "summary": "مطور Backend (+3 سنوات): Laravel و PHP و Node.js والمصادقة و MySQL و Docker و CI/CD. APIs موثوقة وتسليم بمعايير معمارية."
     },
     "frontend": {
       "label": "Frontend (React/Vue)",
-      "role": "مطور Frontend React/Vue و AI Coder",
-      "summary": "مطور Frontend و AI Coder (+2 سنوات): React و Vue.js و TypeScript. Redux و Tailwind وعمارة المكونات. Vibe Coding للنمذجة والتحسين السريع مع مراجعة الجودة."
+      "role": "مطور Frontend (React/Vue) و AI Coder",
+      "summary": "مطور Frontend (+3 سنوات): React و Vue و TypeScript و Tailwind. معمارية مكوّنات وأنظمة واجهة وتسليم للإنتاج."
     }
   }
 }

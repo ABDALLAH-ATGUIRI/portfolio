@@ -19,7 +19,7 @@ export const ExperienceCard = memo<ExperienceCardProps>(
           {companyLogo && (
             <img
               src={companyLogo}
-              alt={`${company_name} logo`}
+              alt={`${t(`experience.companies.${company_name}.title`)} logo`}
               className="w-14 h-14 object-contain rounded-full border-2 border-gray-200 dark:border-gray-600 p-1 bg-white"
               loading="lazy"
               onError={(e) => (e.currentTarget.style.display = "none")}

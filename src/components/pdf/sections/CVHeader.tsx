@@ -7,7 +7,7 @@ import { styles } from "../PDFStyle";
 const stripUrl = (href: string) =>
   href.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
 
-/** Header with photo + name, role, and contact links */
+/** Compact header — photo + name, role, contact (one-page) */
 export const CVHeader: React.FC = () => {
   const { me, contactLinks } = usePortfolio();
   const { t } = useTranslation();
@@ -22,8 +22,13 @@ export const CVHeader: React.FC = () => {
     github && { href: github, label: stripUrl(github) },
   ].filter(Boolean) as { href: string; label: string }[];
 
+  // Machine-readable identity (ASCII) so contact always works on ATS parsers
+  const phone = me.phone || t("developer.phone");
+  const email = me.email || t("developer.email");
+  const location = t("developer.location");
+
   return (
-    <View style={styles.header}>
+    <View style={styles.header} wrap={false}>
       <View style={styles.imageContainer}>
         <Image src={me.image} style={styles.profileImage} />
       </View>
@@ -33,19 +38,19 @@ export const CVHeader: React.FC = () => {
         <Text style={styles.role}>{t("developer.role")}</Text>
 
         <Text style={styles.contactLine}>
-          {t("developer.location")}  ·  {t("developer.phone")}  ·  {t("developer.email")}
+          {location}  ·  {phone}  ·  {email}
         </Text>
 
-        <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+        <Text style={styles.contactLine}>
           {links.map((link, i) => (
-            <Text key={link.href} style={styles.contactLine}>
+            <Text key={link.href}>
               <Link src={link.href} style={styles.contactLink}>
                 {link.label}
               </Link>
               {i < links.length - 1 ? "  ·  " : ""}
             </Text>
           ))}
-        </View>
+        </Text>
       </View>
     </View>
   );

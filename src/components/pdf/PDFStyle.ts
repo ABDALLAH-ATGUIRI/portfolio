@@ -1,10 +1,11 @@
 import { StyleSheet } from "@react-pdf/renderer";
 
 /**
- * ATS-friendly CV theme
- * - Standard Helvetica (embedded, machine-readable)
+ * ATS-friendly, ONE-PAGE A4 CV theme (all languages / versions).
+ * Keep density high so FR/AR expansions still fit a single page.
+ * - Helvetica (embedded, machine-readable)
  * - High-contrast near-black body text
- * - Single navy accent for section headers
+ * - Navy accent for section headers
  * - No chip backgrounds (parsers misread pill UIs)
  */
 export const colors = {
@@ -16,70 +17,77 @@ export const colors = {
   white: "#ffffff",
 } as const;
 
+/** Max list lengths — protect one-page fit */
+export const CV_LIMITS = {
+  skillsPerGroup: 7,
+  techPerExperience: 6,
+  techPerProject: 5,
+} as const;
+
 export const styles = StyleSheet.create({
   page: {
-    paddingTop: 28,
-    paddingBottom: 28,
-    paddingHorizontal: 36,
+    paddingTop: 22,
+    paddingBottom: 20,
+    paddingHorizontal: 30,
     backgroundColor: colors.white,
     fontFamily: "Helvetica",
-    fontSize: 9.5,
+    fontSize: 9,
     color: colors.text,
-    lineHeight: 1.35,
+    lineHeight: 1.28,
   },
 
   /* ── Header ─────────────────────────────────────────── */
   header: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 12,
-    marginBottom: 10,
-    paddingBottom: 8,
-    borderBottomWidth: 2,
+    gap: 10,
+    marginBottom: 7,
+    paddingBottom: 6,
+    borderBottomWidth: 1.5,
     borderBottomColor: colors.accent,
   },
   imageContainer: {
-    width: 56,
-    height: 56,
-    borderRadius: 28,
+    width: 48,
+    height: 48,
+    borderRadius: 24,
     overflow: "hidden",
-    borderWidth: 1.5,
+    borderWidth: 1.25,
     borderColor: colors.accent,
     flexShrink: 0,
   },
   profileImage: {
-    width: 84,
-    height: 58,
+    width: 72,
+    height: 50,
     position: "absolute",
     top: -1,
-    left: -14,
+    left: -12,
   },
   headerText: {
     flex: 1,
   },
   name: {
-    fontSize: 18,
+    fontSize: 15,
     fontFamily: "Helvetica-Bold",
     color: colors.accent,
-    letterSpacing: 0.4,
+    letterSpacing: 0.3,
     textTransform: "uppercase",
-    marginBottom: 2,
+    marginBottom: 1,
   },
   role: {
-    fontSize: 10,
+    fontSize: 9,
     fontFamily: "Helvetica-Bold",
     color: colors.muted,
-    marginBottom: 4,
+    marginBottom: 3,
   },
   contactLine: {
-    fontSize: 8.5,
+    fontSize: 8,
     fontFamily: "Helvetica",
     color: colors.text,
-    marginBottom: 2,
-    lineHeight: 1.4,
+    marginBottom: 1,
+    lineHeight: 1.3,
   },
   contactLink: {
-    fontSize: 8.5,
+    fontSize: 8,
     fontFamily: "Helvetica",
     color: colors.link,
     textDecoration: "none",
@@ -87,64 +95,64 @@ export const styles = StyleSheet.create({
 
   /* ── Sections ───────────────────────────────────────── */
   sectionWrapper: {
-    marginBottom: 8,
+    marginBottom: 6,
   },
   sectionHeader: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 4,
+    marginBottom: 3,
     borderBottomWidth: 1,
     borderBottomColor: colors.line,
-    paddingBottom: 2,
+    paddingBottom: 1.5,
   },
   sectionTitle: {
-    fontSize: 10,
+    fontSize: 9,
     fontFamily: "Helvetica-Bold",
     color: colors.accent,
     textTransform: "uppercase",
-    letterSpacing: 1.1,
+    letterSpacing: 0.9,
   },
 
   /* ── Typography ─────────────────────────────────────── */
   title: {
-    fontSize: 10,
+    fontSize: 9,
     fontFamily: "Helvetica-Bold",
     color: colors.text,
   },
   subtitle: {
-    fontSize: 9,
+    fontSize: 8,
     fontFamily: "Helvetica",
     color: colors.muted,
     marginBottom: 1,
   },
   date: {
-    fontSize: 9,
+    fontSize: 8,
     fontFamily: "Helvetica",
     color: colors.muted,
   },
   contentText: {
-    fontSize: 9.5,
+    fontSize: 8.5,
     fontFamily: "Helvetica",
     color: colors.text,
     marginBottom: 1,
-    lineHeight: 1.35,
+    lineHeight: 1.28,
   },
   skillLine: {
-    fontSize: 9,
+    fontSize: 8,
     fontFamily: "Helvetica",
     color: colors.text,
-    marginBottom: 2,
-    lineHeight: 1.35,
+    marginBottom: 1.5,
+    lineHeight: 1.28,
   },
   skillLabel: {
     fontFamily: "Helvetica-Bold",
     color: colors.text,
   },
   techLine: {
-    fontSize: 8.5,
+    fontSize: 7.5,
     fontFamily: "Helvetica-Oblique",
     color: colors.muted,
-    marginTop: 1,
+    marginTop: 0.5,
   },
 
   /* ── Layout helpers ─────────────────────────────────── */
@@ -152,14 +160,14 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    marginBottom: 1,
+    marginBottom: 0.5,
   },
   entry: {
-    marginBottom: 6,
+    marginBottom: 4,
   },
   twoCol: {
     flexDirection: "row",
-    gap: 16,
+    gap: 12,
   },
   col: {
     flex: 1,

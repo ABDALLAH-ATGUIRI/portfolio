@@ -3,9 +3,8 @@ import { Text, View } from "@react-pdf/renderer";
 import { useTranslation } from "@/hooks/useTranslation";
 import { usePortfolio } from "@/hooks/usePortfolio";
 import { Section } from "./Section";
-import { styles } from "../PDFStyle";
-
-const MAX_TECH = 8;
+import { styles, CV_LIMITS } from "../PDFStyle";
+import { cvText } from "../cvText";
 
 export const Experience: React.FC = () => {
   const { t } = useTranslation();
@@ -14,22 +13,29 @@ export const Experience: React.FC = () => {
   return (
     <Section title={t("experience.title")}>
       {experiences.map((experience) => {
-        const tech = experience.technical_skills.slice(0, MAX_TECH).join(", ");
+        const tech = experience.technical_skills
+          .slice(0, CV_LIMITS.techPerExperience)
+          .join(", ");
+        const company = experience.company_name;
         return (
-          <View key={experience.company_name} style={styles.entry} wrap={false}>
+          <View key={company} style={styles.entry} wrap={false}>
             <View style={styles.rowBetween}>
               <Text style={styles.title}>
-                {t(`experience.companies.${experience.company_name}.position`)}
+                {t(`experience.companies.${company}.position`)}
               </Text>
               <Text style={styles.date}>
-                {t(`experience.companies.${experience.company_name}.date`)}
+                {t(`experience.companies.${company}.date`)}
               </Text>
             </View>
             <Text style={styles.subtitle}>
-              {t(`experience.companies.${experience.company_name}.title`)}
+              {t(`experience.companies.${company}.title`)}
             </Text>
             <Text style={styles.contentText}>
-              {t(`experience.companies.${experience.company_name}.description`)}
+              {cvText(
+                t,
+                `experience.companies.${company}.cv_description`,
+                `experience.companies.${company}.description`
+              )}
             </Text>
             {tech ? (
               <Text style={styles.techLine}>

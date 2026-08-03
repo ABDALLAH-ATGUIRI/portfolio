@@ -14,7 +14,6 @@ function resolveData(raw: PortfolioData): ResolvedPortfolioData {
     contactLinks: raw.contactLinks.map((c) => {
       let href = c.href;
       if (c.ariaLabel === "Portfolio") {
-        // Always use production URL on CV/PDF; never leak localhost
         href =
           !c.href || isLocal
             ? "https://atguiri.dev"
@@ -31,12 +30,40 @@ function resolveData(raw: PortfolioData): ResolvedPortfolioData {
 
 export const PortfolioProvider = ({ children }: { children: ReactNode }) => {
   const [data, setData] = useState<ResolvedPortfolioData | null>(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetchJson<PortfolioData>("data/portfolio.json").then((raw) =>
-      setData(resolveData(raw))
-    );
+    let cancelled = false;
+    fetchJson<PortfolioData>("data/portfolio.json")
+      .then((raw) => {
+        if (!cancelled) setData(resolveData(raw));
+      })
+      .catch(() => {
+        if (!cancelled) setError(true);
+      });
+    return () => {
+      cancelled = true;
+    };
   }, []);
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center p-6 text-center">
+        <div>
+          <p className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
+            Couldn’t load portfolio data
+          </p>
+          <button
+            type="button"
+            onClick={() => window.location.reload()}
+            className="text-sm text-cyan-600 dark:text-cyan-400 underline"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <PortfolioContext.Provider value={data}>

@@ -36,7 +36,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             <img
               key={currentImage}
               src={images[currentImage]}
-              alt={`${title} — screen ${currentImage + 1}`}
+              alt={`${title} — ${currentImage + 1}/${images.length}`}
               className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
               loading="lazy"
             />
@@ -48,8 +48,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                   type="button"
                   onClick={goPrev}
                   disabled={currentImage === 0}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100 disabled:opacity-0"
-                  aria-label="Previous image"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/55 hover:bg-black/75 text-white p-1.5 rounded-full transition-opacity duration-200 opacity-80 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100 disabled:opacity-30"
+                  aria-label={t("projects.prev_image")}
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
@@ -57,8 +57,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                   type="button"
                   onClick={goNext}
                   disabled={currentImage === images.length - 1}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100 disabled:opacity-0"
-                  aria-label="Next image"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/55 hover:bg-black/75 text-white p-1.5 rounded-full transition-opacity duration-200 opacity-80 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100 disabled:opacity-30"
+                  aria-label={t("projects.next_image")}
                 >
                   <ChevronRight className="w-4 h-4" />
                 </button>
@@ -75,7 +75,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                           ? "bg-white scale-125"
                           : "bg-white/50 hover:bg-white/80",
                       ].join(" ")}
-                      aria-label={`Go to image ${i + 1}`}
+                      aria-label={`${title} image ${i + 1}`}
+                      aria-current={i === currentImage ? "true" : undefined}
                     />
                   ))}
                 </div>
@@ -85,7 +86,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         ) : (
           <div className="flex flex-col items-center justify-center w-full h-full gap-2 text-gray-400 dark:text-gray-500">
             <ImageOff size={32} />
-            <span className="text-xs font-medium">No Preview Available</span>
+            <span className="text-xs font-medium">{t("projects.no_preview")}</span>
           </div>
         )}
       </div>
@@ -135,7 +136,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                 className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 rounded-lg transition-colors duration-200 border border-slate-300 dark:border-slate-700 text-sm"
               >
                 <Github className="w-4 h-4" />
-                GitHub
+                {t("projects.github")}
               </a>
             )}
             {project.demo && (
@@ -146,7 +147,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                 className="flex items-center gap-1.5 px-3 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg transition-colors duration-200 text-sm"
               >
                 <ExternalLink className="w-4 h-4" />
-                Live Site
+                {t("projects.live_site")}
               </a>
             )}
           </div>

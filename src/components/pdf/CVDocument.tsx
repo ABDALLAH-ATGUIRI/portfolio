@@ -14,12 +14,14 @@ import {
   Experience,
   Projects,
   Education,
+  Certificates,
   LanguagesAndHobbies,
 } from "./sections";
 
 /**
- * ATS-optimized section order:
- * Summary → Skills (keywords early) → Experience → Projects → Education → Languages
+ * ONE PAGE ONLY — all CV versions and all languages (EN / FR / AR).
+ * ATS order: Summary → Skills → Experience → Projects → Education → Certs → Languages
+ * Certs are role-filtered (2–3 max) so page size stays recruitable / standard.
  */
 const CV_SECTIONS = [
   CVHeader,
@@ -28,6 +30,7 @@ const CV_SECTIONS = [
   Experience,
   Projects,
   Education,
+  Certificates,
   LanguagesAndHobbies,
 ];
 
@@ -51,6 +54,9 @@ function filterPortfolioData(
     projects: config.projectKeys
       .map((key) => data.projects.find((p) => p.key === key))
       .filter((p): p is NonNullable<typeof p> => Boolean(p)),
+    certificates: config.certificateKeys
+      .map((key) => data.certificates.find((c) => c.key === key))
+      .filter((c): c is NonNullable<typeof c> => Boolean(c)),
   };
 }
 
@@ -92,7 +98,8 @@ export const PDFWithTranslations: React.FC<PDFProps> = memo(
       >
         <PortfolioContext.Provider value={filteredData}>
           <Document>
-            <Page size="A4" style={styles.page}>
+            {/* wrap={false} hard-blocks a second page (one-page CV) */}
+            <Page size="A4" style={styles.page} wrap={false}>
               {CV_SECTIONS.map((Component) => (
                 <Component key={Component.name} />
               ))}

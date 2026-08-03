@@ -16,12 +16,13 @@ const SKILL_ICONS: Record<string, React.ElementType> = {
   others: Code2,
 };
 
-/** Balanced grid spans: AI full-width, then FE/BE, then DevOps/DB */
+/** Balanced grid: AI full-width, FE/BE, DevOps, then tools/DB */
 const SKILL_SPAN: Record<string, string> = {
   ai: "md:col-span-6",
   frontend: "md:col-span-3",
   backend: "md:col-span-3",
-  version_control: "md:col-span-3",
+  devops: "md:col-span-3",
+  version_control: "md:col-span-2",
   database: "md:col-span-3",
 };
 

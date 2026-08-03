@@ -6,68 +6,71 @@
   },
   "developer": {
     "name": "Abdallah ATGUIRI",
-    "role": "Développeur Web Full-Stack & AI Coder",
-    "tagline": "Je construis des apps web scalables avec React, Laravel & Node.js — élevées par AI coding, vibe coding et design 3D génératif.",
+    "role": "Développeur Full-Stack & AI Coder",
+    "tagline": "Je conçois et livre des systèmes en production de bout en bout — architecture, APIs et UI — avec React, Laravel et une ingénierie assistée par l'IA.",
     "location": "Maroc",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "+212 623 779 270"
   },
   "about_me": {
     "title": "À propos de moi",
-    "description": "Développeur Full-Stack & AI Coder avec plus de 2 ans d'expérience dans la création d'applications web performantes (React, Vue.js, TypeScript, Laravel, Node.js). Je combine une ingénierie solide avec le développement assisté par l'IA (Cursor, Copilot, Claude) et le vibe coding pour livrer plus vite sans sacrifier la qualité. Compétent en APIs REST, bases de données, Docker et CI/CD. Focus sur l'architecture propre et la collaboration Agile.",
+    "description": "Développeur Full-Stack & AI Coder avec 3+ ans de livraison de plateformes web en production. Solide sur React, Vue, TypeScript, Laravel et Node.js — modélisation métier, APIs REST, performance, DevOps (Docker, CI/CD, Linux) et produits (ATG-LABS / stlup.com, MonGestion). J'utilise Cursor, Copilot et Claude comme leviers tout en gardant le contrôle sur l'architecture, les revues et la qualité.",
     "stats": {
-      "experience_value": "2+",
+      "experience_value": "3+",
       "experience_label": "Ans d’expérience",
       "companies_value": "3",
       "companies_label": "Entreprises",
-      "projects_value": "4+",
-      "projects_label": "Projets",
+      "projects_value": "2",
+      "projects_label": "Produits phares",
       "tech_value": "30+",
       "tech_label": "Technologies"
     },
     "what_i_do": {
-      "title": "Ce que je fais",
-      "frontend_title": "Développement Frontend",
+      "title": "Comment je livre",
+      "frontend_title": "Ingénierie Frontend",
       "frontend_desc": "React · Vue · TypeScript · Tailwind CSS",
-      "backend_title": "Développement Backend",
+      "backend_title": "Architecture Backend",
       "backend_desc": "Laravel · PHP · Node.js · APIs REST",
-      "database_title": "Conception de BDD",
+      "database_title": "Données & Performance",
       "database_desc": "MySQL · MongoDB · Redis",
-      "ai_title": "AI Coding & Vibe Coding",
-      "ai_desc": "Cursor · Copilot · Claude · Prompt Engineering",
-      "teamwork_title": "Collaboration Agile",
-      "teamwork_desc": "Scrum · Git · Code propre · Revues PR"
+      "ai_title": "Livraison augmentée par l'IA",
+      "ai_desc": "Cursor · Copilot · Claude · Ingénierie de prompts",
+      "teamwork_title": "Pratique d'ingénierie",
+      "teamwork_desc": "Architecture · Code review · Agile · Livraison propre"
     },
     "certificates_title": "Certifications"
   },
   "experience": {
     "title": "Expérience Professionnelle",
     "stats": {
-      "years": "2+",
+      "years": "3+",
       "years_label": "Ans d'expérience",
       "companies": "3",
       "companies_label": "Entreprises",
       "focus": "Full-Stack",
-      "focus_label": "Domaine de développement"
+      "focus_label": "Focus d'ingénierie"
     },
     "companies": {
       "cod_network": {
         "title": "Cod Network, Agadir, Maroc",
-        "position": "Développeur Full-Stack Junior",
+        "position": "Développeur Full-Stack",
         "date": "Juin 2023 - Présent",
-        "description": "Construction et maintenance de plateformes e-commerce avec Laravel et Vue.js/React. APIs REST, auth Passport, perf, et livraison accélérée avec Cursor/Copilot."
+        "description": "Construction et évolution de plateformes e-commerce de bout en bout (Laravel, Vue.js/React) : APIs REST, auth Passport, performance, livraison production fiable accélérée avec Cursor/Copilot sous standards de qualité clairs.",
+        "cv_description": "Plateformes e-commerce (Laravel + Vue/React) : APIs REST, auth, performance, livraison assistée par l'IA."
       },
       "agriwise": {
         "title": "Agriwise, Agadir, Maroc",
-        "position": "Stagiaire Développeur Full-Stack (Laravel/Vue.js)",
+        "position": "Développeur Full-Stack",
         "date": "Janvier 2023 - Février 2023",
-        "description": "Interfaces responsive avec Vue.js, Tailwind CSS et Element Plus pour une plateforme agricole ; contribution Laravel en Agile/Scrum."
+        "description": "Systèmes UI de production (Vue.js, Tailwind, Element Plus) pour une plateforme agricole ; consolidation des modules Laravel en Agile/Scrum.",
+        "cv_description": "UI production (Vue, Tailwind) et modules Laravel pour une plateforme agricole."
       },
       "digital_elite": {
         "title": "Digital Elite, Agadir, Maroc",
-        "position": "Stagiaire Développeur Web Full-Stack",
+        "position": "Développeur Full-Stack",
         "date": "Mars 2023 - Mai 2023",
-        "description": "Fonctionnalités React et Node.js en Agile avec clean code au sein d'une équipe professionnelle."
+        "description": "Livraison de features produit React et Node.js en équipe Agile, architecture propre et revue par les pairs.",
+        "cv_description": "Features produit React & Node.js en Agile avec revue par les pairs."
       }
     }
   },
@@ -75,46 +78,46 @@
     "title": "Loisirs",
     "coding": {
       "name": "Codage",
-      "description": "Je aime coder et j'aime travailler sur des projets personnels dans mon temps libre. Je suis toujours en recherche de nouvelles technologies et de nouvelles possibilités."
+      "description": "J'aime coder et travailler sur des projets personnels. Je cherche toujours à apprendre de nouvelles technologies."
     },
     "reading": {
       "name": "Lecture",
-      "description": "Je aime lire des livres, surtout dans les genres de science-fiction et de technologie. Je crois que la lecture m'aide à expandre mon savoir et mes possibilités."
+      "description": "J'aime lire, surtout la science-fiction et la technologie, pour élargir mes connaissances."
     },
     "gaming": {
-      "name": "Jeux-vide",
-      "description": "Je aime jouer aux jeux-videos en mon temps libre. Cela m'aide à me relaxer et à me relaxer apres une longue journee de codage."
+      "name": "Jeux vidéo",
+      "description": "Je joue aux jeux vidéo pour me détendre après une longue journée de code."
     },
     "exploring": {
       "name": "Exploration",
-      "description": "Je aime explorer de nouveaux lieux et cultures. Le voyage m'aide à obtenir de nouvelles perspectives et d'autres idees que je peux appliquer dans mon travail."
+      "description": "J'aime découvrir de nouveaux lieux et cultures : le voyage nourrit mon regard produit."
     },
     "personal_projects": {
       "name": "Projets personnels",
-      "description": "Je aime travailler sur des projets personnels qui me permettent d'expérimenter de nouvelles technologies et idées. Je crois que les projets personnels sont un excellent moyen d'apprendre et de grandir en tant que développeur."
+      "description": "Je développe des projets personnels pour expérimenter de nouvelles idées et technologies."
     },
     "music": {
       "name": "Musique",
-      "description": "J'aime écouter de la musique pendant que je code. Cela m'aide à me concentrer et à rester motivé."
+      "description": "J'écoute de la musique pendant que je code pour me concentrer et rester motivé."
     },
     "learning": {
       "name": "Apprentissage",
-      "description": "Je suis toujours à la recherche d'apprendre de nouvelles technologies et d'améliorer mes compétences. J'aime apprendre de nouveaux langages de programmation, frameworks et outils."
+      "description": "J'apprends en continu : langages, frameworks et outils pour progresser comme développeur."
     },
     "basketball": {
       "name": "Basketball",
-      "description": "Je aime jouer au basketball et regarder des matchs de basketball. Cela m'aide à rester en forme et en bonne santé."
+      "description": "Je pratique et regarde le basketball pour rester en forme."
     },
     "problem_solving": {
       "name": "Résolution de problèmes",
-      "description": "Participer à des activités qui stimulent ma réflexion logique et ma créativité, m'aidant à développer des solutions efficaces pour des problèmes complexes."
+      "description": "J'aime les défis logiques qui poussent la créativité et l'efficacité des solutions."
     }
   },
   "languages": {
     "title": "Langues",
     "arabic": {
       "name": "Arabe",
-      "level": "Native Speaker"
+      "level": "Langue maternelle"
     },
     "french": {
       "name": "Français",
@@ -126,14 +129,14 @@
     }
   },
   "technical_skills": {
-    "title": "Competences Technologiques",
+    "title": "Compétences Technologiques",
     "overall_label": "Technologies Maîtrisées",
     "frontend": {
-      "title": "Developpement Front-End",
+      "title": "Développement Front-End",
       "description": "Je suis expert en developpement front-end utilisant des technologies comme HTML, CSS et JavaScript. J'ai une expertise en frameworks comme React et Vue.js."
     },
     "backend": {
-      "title": "Developpement Back-End",
+      "title": "Développement Back-End",
       "description": "Je suis expert en developpement back-end utilisant des technologies comme Node.js, Express et MongoDB. J'ai une expertise en conception et en gestion de bases de données."
     },
     "database": {
@@ -141,31 +144,31 @@
       "description": "Je suis expert en gestion de bases de données utilisant des technologies comme MongoDB et MySQL. J'ai une expertise en conception et en optimisation de bases de données."
     },
     "version_control": {
-      "title": "DevOps & Outils",
-      "description": "Je suis expert en controle de version utilisant Git et GitHub. J'ai une experience en collaboration avec des equipes utilisant des systemes de controle de version."
+      "title": "Versioning & Collaboration",
+      "description": "Workflows Git et collaboration d'équipe : Git, GitHub, GitLab, Jira et Bitbucket."
     },
     "ai": {
       "title": "AI Coding & Outils",
       "description": "Développement assisté par l'IA avec Cursor, GitHub Copilot, ChatGPT et Claude. Prompt engineering, vibe coding et workflows agentiques pour livrer plus vite avec une haute qualité."
     },
     "devops": {
-      "title": "DevOps & Cloud",
-      "description": "Experience avec la conteneurisation, les pipelines CI/CD et le cloud : Docker, Docker Compose, GitHub Actions, Nginx, serveurs Linux et bases d'AWS (EC2, S3)."
+      "title": "DevOps, Linux & Cloud",
+      "description": "Serveurs Linux, conteneurs, CI/CD et bases cloud : Docker, Docker Compose, GitHub Actions, Nginx et AWS (EC2, S3)."
     },
     "others": {
-      "title": "Autres Competences",
+      "title": "Autres Compétences",
       "description": "Compétences complémentaires : tests (Jest), outils de design (Figma), systèmes d'exploitation et création de contenu vidéo."
     }
   },
   "ai": {
-    "title": "AI Coding & Vibe Coding",
-    "description": "Je travaille comme AI Coder et Vibe Coder — j'utilise les outils d'IA modernes pour concevoir, coder, déboguer et livrer plus vite, tout en gardant la maîtrise de l'architecture et de la qualité.",
+    "title": "Ingénierie augmentée par l'IA",
+    "description": "J'utilise l'IA comme levier sérieux : concevoir, implémenter, déboguer et livrer plus vite, tout en gardant l'architecture, la sécurité et la qualité production sous mon contrôle.",
     "ai_coder": {
-      "title": "AI Coder",
+      "title": "Ingénieur augmenté par l'IA",
       "description": "Usage quotidien de Cursor, GitHub Copilot, ChatGPT et Claude pour l'implémentation, le refactoring, les tests, le débogage et la documentation — toujours revu et prêt pour la production."
     },
     "vibe_coder": {
-      "title": "Vibe Coder",
+      "title": "Prototypage produit",
       "description": "Prototypage rapide via un développement conversationnel et piloté par prompts. Je transforme les idées en UI et APIs fonctionnelles, puis je les consolide avec une architecture propre."
     },
     "cv_line_ai_coder": "Cursor, Copilot & Claude pour features, refactors, tests et debug avec revue humaine",
@@ -203,45 +206,56 @@
   },
   "projects": {
     "title": "Projets",
-    "description": "Produits phares que je conçois et livre de bout en bout — de l'architecture modulaire à l'UX prête pour la production.",
+    "description": "Produits phares que j'architecture et livre de bout en bout — backends modulaires, UX production et usage réel.",
     "stats": {
       "total": "2",
       "total_label": "Produits phares"
     },
     "role_label": "Rôle",
+    "live_site": "Site en ligne",
+    "github": "GitHub",
+    "prev_image": "Image précédente",
+    "next_image": "Image suivante",
+    "no_preview": "Aperçu indisponible",
     "atg_labs": {
       "title": "ATG-LABS",
       "tagline": "Transformer les idées en réalité",
-      "role": "Fondateur · Ingénieur full-stack",
-      "description": "Plateforme de fabrication digitale en ligne (stlup.com) : devis d'impression 3D, boutique, services et ops dans une stack modulaire — Laravel 12, Inertia/React, Filament, PostgreSQL & Redis."
+      "role": "Fondateur · Full-Stack",
+      "description": "Plateforme de fabrication digitale (stlup.com) : devis d'impression 3D, boutique, services et ops — Laravel 12, Inertia/React, Filament, PostgreSQL & Redis. Ownership produit de l'architecture à la production.",
+      "cv_description": "Plateforme fabrication digitale (stlup.com) : devis, boutique & services. Laravel 12, Inertia/React, Filament, PostgreSQL, Redis."
     },
     "mongestion": {
       "title": "MonGestion",
       "tagline": "Inventaire, caisse (POS) & opérations",
-      "role": "Développeur full-stack",
-      "description": "Plateforme web d'inventaire et de point de vente pour le commerce et les PME : multi-entrepôts, ventes, achats, POS, paiements, rapports, RH et multilingue (RTL inclus). API Laravel avec admin Vue.js et auth Passport."
+      "role": "Full-Stack · Builder produit",
+      "description": "Plateforme inventaire & POS pour PME : multi-entrepôts, ventes, achats, POS, paiements, rapports, RH, multilingue (RTL). API Laravel + admin Vue.js avec Passport en production.",
+      "cv_description": "Inventaire & POS PME : multi-entrepôts, ventes, achats, RH, multilingue. Laravel, Vue.js, Passport."
     }
-  },
-  "contact": {
-    "title": "Contact",
-    "description": "N'hésitez pas à me contacter — que vous ayez un projet en tête, une question, ou simplement envie de dire bonjour.",
-    "send_email": "Envoyer un Email",
-    "get_in_touch": "Me Contacter",
-    "location_label": "Localisation",
-    "phone_label": "Téléphone",
-    "email_label": "Email",
-    "find_me": "Me retrouver sur"
   },
   "nav": {
     "about": "À propos",
     "experience": "Expérience",
     "projects": "Projets",
     "skills": "Compétences",
-    "ai": "AI Coding",
+    "ai": "Codage IA",
     "education": "Formation",
     "hobbies": "Loisirs",
     "contact": "Contact",
-    "store": "Boutique"
+    "store": "Boutique",
+    "main": "Navigation principale",
+    "open_menu": "Ouvrir le menu",
+    "close_menu": "Fermer le menu"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Ouvert aux postes full-stack avec vraie ownership, travail produit et collaborations — parlons de votre stack et de vos objectifs.",
+    "send_email": "Envoyer un Email",
+    "get_in_touch": "Me Contacter",
+    "location_label": "Localisation",
+    "phone_label": "Téléphone",
+    "email_label": "Email",
+    "find_me": "Me retrouver sur",
+    "copy": "Copier"
   },
   "store": {
     "title": "Boutique Générative",
@@ -280,18 +294,18 @@
     "title": "Télécharger CV",
     "fullstack": {
       "label": "Full Stack (Laravel)",
-      "role": "Développeur Full-Stack Laravel & AI Coder",
-      "summary": "Développeur Full-Stack & AI Coder (2+ ans) : Laravel, React, Vue.js, TypeScript. APIs REST, MySQL/MongoDB, Docker, CI/CD. Livraison accélérée avec Cursor, Copilot et vibe coding, avec maîtrise de l'architecture et de la qualité."
+      "role": "Développeur Full-Stack (Laravel) & AI Coder",
+      "summary": "Développeur Full-Stack (3+ ans) : Laravel, React, Vue, TypeScript. APIs, data, Docker/CI/CD, livraison assistée par l'IA avec architecture & qualité. Produits : ATG-LABS, MonGestion."
     },
     "backend": {
       "label": "Backend (Laravel/PHP)",
-      "role": "Développeur Backend Laravel/PHP & AI Coder",
-      "summary": "Développeur Backend & AI Coder (2+ ans) : Laravel, PHP, Node.js. Auth, MySQL/MongoDB, Docker, CI/CD. Coding assisté par l'IA pour concevoir, déboguer et livrer avec une architecture solide."
+      "role": "Développeur Backend (Laravel/PHP) & AI Coder",
+      "summary": "Développeur Backend (3+ ans) : Laravel, PHP, Node.js, auth, MySQL, Docker, CI/CD. APIs robustes et livraison IA sous standards d'architecture."
     },
     "frontend": {
       "label": "Frontend (React/Vue)",
-      "role": "Développeur Frontend React/Vue & AI Coder",
-      "summary": "Développeur Frontend & AI Coder (2+ ans) : React, Vue.js, TypeScript. Redux, Tailwind, architecture composants. Vibe coding pour prototyper et peaufiner rapidement avec revue qualité."
+      "role": "Développeur Frontend (React/Vue) & AI Coder",
+      "summary": "Développeur Frontend (3+ ans) : React, Vue, TypeScript, Tailwind. Architecture de composants, systèmes UI et livraison production."
     }
   }
 }

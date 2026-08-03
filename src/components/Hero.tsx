@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowDown, Sparkles, Boxes } from "lucide-react";
+import { ArrowDown, Sparkles, Boxes, FolderKanban } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { HeroBackground } from "@/components/global/HeroBackground";
 import { DeveloperAvatar } from "@/components/global/DeveloperAvatar";
@@ -9,13 +9,13 @@ export const Hero: React.FC = () => {
 
   return (
     <section
-      className="relative overflow-hidden min-h-screen snap-start snap-always flex flex-col pt-24"
-      aria-label="Abdallah Atguiri — Full Stack Web Developer Hero"
+      className="relative overflow-hidden min-h-[100svh] snap-start snap-always flex flex-col pt-24"
+      aria-label={t("developer.name")}
     >
       <HeroBackground />
 
-      <div className="relative flex-1 container mx-auto max-w-6xl px-5 sm:px-8 flex items-center">
-        <div className="w-full flex flex-col items-center text-center gap-6 py-16 sm:py-20">
+      <div className="relative flex-1 container mx-auto max-w-5xl px-5 sm:px-8 flex items-center">
+        <div className="w-full flex flex-col items-center text-center gap-6 py-14 sm:py-18">
           <div
             className="anim-scale-in relative"
             style={{ animationDelay: "0.05s" }}
@@ -23,8 +23,9 @@ export const Hero: React.FC = () => {
             <div className="absolute -inset-3 rounded-[2rem] bg-cyan-400/15 blur-2xl dark:bg-cyan-400/20" />
             <DeveloperAvatar className="relative w-36 h-36 sm:w-40 sm:h-40 shadow-xl ring-4 ring-white/70 dark:ring-slate-900/60" />
           </div>
+
           <span className="anim-fade-up inline-flex items-center gap-2 rounded-full border border-cyan-300/40 bg-white/60 px-3.5 py-1.5 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur-md dark:border-cyan-500/25 dark:bg-slate-900/50 dark:text-cyan-200">
-            <Sparkles size={14} className="text-cyan-500" />
+            <Sparkles size={14} className="text-cyan-500" aria-hidden="true" />
             {t("developer.role")}
           </span>
 
@@ -47,17 +48,24 @@ export const Hero: React.FC = () => {
             style={{ animationDelay: "0.24s" }}
           >
             <a
-              href="#store"
+              href="#projects"
               className="inline-flex items-center gap-2 rounded-2xl bg-slate-900 text-white px-6 py-3 text-sm font-semibold shadow-lg shadow-slate-900/20 transition-all hover:-translate-y-0.5 hover:bg-slate-800 dark:bg-cyan-500 dark:text-slate-950 dark:hover:bg-cyan-400"
             >
-              <Boxes size={16} />
-              {t("store.cta")}
+              <FolderKanban size={16} aria-hidden="true" />
+              {t("projects.title")}
             </a>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 rounded-2xl border border-slate-200/80 bg-white/70 text-slate-700 px-6 py-3 text-sm font-semibold shadow-sm backdrop-blur-sm transition-all hover:border-cyan-400 hover:text-cyan-700 dark:border-slate-700/80 dark:bg-slate-900/60 dark:text-slate-200 dark:hover:border-cyan-500 dark:hover:text-cyan-300"
             >
               {t("contact.get_in_touch")}
+            </a>
+            <a
+              href="#store"
+              className="inline-flex items-center gap-2 rounded-2xl border border-transparent text-slate-500 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-300 px-3 py-3 text-sm font-medium transition-colors"
+            >
+              <Boxes size={16} aria-hidden="true" />
+              {t("store.cta")}
             </a>
           </div>
         </div>
@@ -70,12 +78,17 @@ export const Hero: React.FC = () => {
         <a
           href="#about_me"
           className="group flex flex-col items-center gap-2 text-slate-400 transition-colors hover:text-cyan-500 dark:text-slate-500 dark:hover:text-cyan-400"
-          aria-label="Scroll down"
+          aria-label={t("nav.about")}
         >
           <div className="relative w-6 h-9 rounded-full border-2 border-current flex justify-center pt-1.5">
             <div className="w-1 h-2 rounded-full bg-current hero-scroll-dot" />
           </div>
-          <ArrowDown size={14} className="animate-bounce" style={{ animationDuration: "1.5s" }} />
+          <ArrowDown
+            size={14}
+            className="animate-bounce"
+            style={{ animationDuration: "1.5s" }}
+            aria-hidden="true"
+          />
         </a>
       </div>
     </section>

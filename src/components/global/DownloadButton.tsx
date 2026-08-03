@@ -99,19 +99,35 @@ export const DownloadButton: React.FC = () => {
       setIsOpen(false);
       setIsLoading(version);
       try {
-        const [{ pdf }, { PDFWithTranslations }] = await Promise.all([
-          import("@react-pdf/renderer"),
-          import("@/components/pdf/CVDocument"),
-        ]);
+        const [{ pdf }, { PDFWithTranslations }, { fetchJson }, { createT }] =
+          await Promise.all([
+            import("@react-pdf/renderer"),
+            import("@/components/pdf/CVDocument"),
+            import("@/utils/fetchJson"),
+            import("@/utils/createT"),
+          ]);
+
+        // Helvetica cannot render Arabic — use EN content for AR UI downloads
+        // so CVs stay one readable page. FR/EN use the UI language.
+        const pdfLanguage = language === "AR" ? "EN" : language;
+        let pdfT = t;
+        if (pdfLanguage !== language) {
+          const en = await fetchJson<Record<string, unknown>>(
+            "data/langs/en.json"
+          );
+          pdfT = createT(
+            en as Parameters<typeof createT>[0]
+          );
+        }
 
         const config = CV_VERSION_CONFIG[version];
         const blob = await pdf(
           <PDFWithTranslations
-            t={t}
-            language={language}
+            t={pdfT}
+            language={pdfLanguage}
             portfolioData={portfolioData}
             cvVersion={version}
-          />,
+          />
         ).toBlob();
         const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
@@ -123,7 +139,7 @@ export const DownloadButton: React.FC = () => {
         setIsLoading(null);
       }
     },
-    [isLoading, t, language, portfolioData],
+    [isLoading, t, language, portfolioData]
   );
 
   return (

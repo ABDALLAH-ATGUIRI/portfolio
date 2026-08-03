@@ -30,7 +30,7 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
       <footer role="contentinfo">
         <div className="container mx-auto pb-10 max-w-5xl text-center flex justify-center items-center gap-2 text-xs md:text-sm text-gray-500 dark:text-gray-400">
           <Copyright size={16} />
-          <p>2026 Abdallah Atguiri — Full Stack Web Developer. All rights reserved.</p>
+          <p>2026 Abdallah Atguiri — Full-Stack Developer. All rights reserved.</p>
         </div>
       </footer>
     </div>

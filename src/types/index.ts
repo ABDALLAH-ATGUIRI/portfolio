@@ -57,6 +57,8 @@ export interface Project {
 }
 
 export interface Certificate {
+  /** Stable id for CV version filtering */
+  key: string;
   title: string;
   institution: string;
   date: string;

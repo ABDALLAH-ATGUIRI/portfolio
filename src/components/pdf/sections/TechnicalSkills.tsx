@@ -3,11 +3,11 @@ import { Text } from "@react-pdf/renderer";
 import { useTranslation } from "@/hooks/useTranslation";
 import { usePortfolio } from "@/hooks/usePortfolio";
 import { Section } from "./Section";
-import { styles } from "../PDFStyle";
+import { styles, CV_LIMITS } from "../PDFStyle";
 
 /**
  * Skills as plain labeled lines — ATS parsers read this reliably.
- * Includes AI group for keyword coverage.
+ * Lists are truncated to protect one-page layout.
  */
 export const TechnicalSkills: React.FC = () => {
   const { t } = useTranslation();
@@ -20,7 +20,8 @@ export const TechnicalSkills: React.FC = () => {
           <Text style={styles.skillLabel}>
             {t(`technical_skills.${title}.title`)}:{" "}
           </Text>
-          {items.join(", ")}
+          {items.slice(0, CV_LIMITS.skillsPerGroup).join(", ")}
+          {items.length > CV_LIMITS.skillsPerGroup ? "…" : ""}
         </Text>
       ))}
     </Section>

@@ -1,18 +1,34 @@
 {
   "me": {
     "name": "Abdallah Atguiri",
-    "title": "Full Stack Web Developer & AI Coder",
+    "title": "Full-Stack Developer & AI Coder",
     "image": "/assets/images/abdallahatguiri.jpg",
     "location": "Morocco",
     "phone": "+212623779270",
-    "email": "abdallahatguiri@gmail.com",
-    "summary": "about.description"
+    "email": "abdallah.atguiri@gmail.com",
+    "summary": "about_me.description"
   },
   "contactLinks": [
-    { "icon": "Globe", "href": "https://atguiri.dev", "ariaLabel": "Portfolio" },
-    { "icon": "Github", "href": "https://www.github.com/ABDALLAH-ATGUIRI", "ariaLabel": "GitHub" },
-    { "icon": "Linkedin", "href": "https://www.linkedin.com/in/abdallah-atguiri", "ariaLabel": "LinkedIn" },
-    { "icon": "Mail", "href": "mailto:abdallah.atguiri@gmail.com", "ariaLabel": "Email" }
+    {
+      "icon": "Globe",
+      "href": "https://atguiri.dev",
+      "ariaLabel": "Portfolio"
+    },
+    {
+      "icon": "Github",
+      "href": "https://www.github.com/ABDALLAH-ATGUIRI",
+      "ariaLabel": "GitHub"
+    },
+    {
+      "icon": "Linkedin",
+      "href": "https://www.linkedin.com/in/abdallah-atguiri",
+      "ariaLabel": "LinkedIn"
+    },
+    {
+      "icon": "Mail",
+      "href": "mailto:abdallah.atguiri@gmail.com",
+      "ariaLabel": "Email"
+    }
   ],
   "projects": [
     {
@@ -34,9 +50,9 @@
       "demo": "https://stlup.com/",
       "images": [
         "/assets/images/projects/atg-labs/01-landing.jpg",
-        "/assets/images/projects/atg-labs/02-print.jpg",
-        "/assets/images/projects/atg-labs/03-quote.jpg",
-        "/assets/images/projects/atg-labs/04-services.jpg"
+        "/assets/images/projects/atg-labs/02-store.jpg",
+        "/assets/images/projects/atg-labs/03-print.jpg",
+        "/assets/images/projects/atg-labs/04-modules.jpg"
       ]
     },
     {
@@ -62,46 +78,201 @@
     }
   ],
   "skills": [
-    { "id": 5, "title": "ai", "skills": ["Cursor", "GitHub Copilot", "ChatGPT", "Claude", "Prompt Engineering", "Vibe Coding", "AI-Assisted Debugging", "Agentic Workflows"] },
-    { "id": 1, "title": "frontend", "skills": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Vue", "Next.js", "Nuxt", "Tailwind", "Redux", "Material UI"] },
-    { "id": 2, "title": "backend", "skills": ["PHP", "Laravel", "Node.js", "REST API", "Authentication", "WebSockets", "Redis"] },
-    { "id": 4, "title": "version_control", "skills": ["Git", "GitHub", "GitLab", "Jira", "Bitbucket", "Docker", "Docker Compose", "GitHub Actions", "CI/CD", "Nginx", "Linux", "AWS (EC2, S3)"] },
-    { "id": 3, "title": "database", "skills": ["MySQL", "MongoDB", "Redis"] }
+    {
+      "id": 5,
+      "title": "ai",
+      "skills": [
+        "Cursor",
+        "GitHub Copilot",
+        "ChatGPT",
+        "Claude",
+        "Prompt Engineering",
+        "Vibe Coding",
+        "AI-Assisted Debugging",
+        "Agentic Workflows"
+      ]
+    },
+    {
+      "id": 1,
+      "title": "frontend",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Vue",
+        "Next.js",
+        "Nuxt",
+        "Tailwind",
+        "Redux",
+        "Material UI"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "backend",
+      "skills": [
+        "PHP",
+        "Laravel",
+        "Node.js",
+        "REST API",
+        "Authentication",
+        "WebSockets",
+        "Redis"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "devops",
+      "skills": [
+        "Linux",
+        "Docker",
+        "Docker Compose",
+        "GitHub Actions",
+        "CI/CD",
+        "Nginx",
+        "AWS (EC2, S3)"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "version_control",
+      "skills": [
+        "Git",
+        "GitHub",
+        "GitLab",
+        "Jira",
+        "Bitbucket"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "database",
+      "skills": [
+        "MySQL",
+        "MongoDB",
+        "Redis",
+        "PostgreSQL"
+      ]
+    }
   ],
   "certificates": [
-    { "title": "DevOps Engineering", "institution": "KLOUDKODE", "date": "2026", "description": "Completed the DevOps Engineering program at KLOUDKODE, covering CI/CD, containerization, cloud infrastructure, and modern DevOps practices." },
-    { "title": "Meta Front-End Developer", "institution": "Meta", "date": "August 2023", "description": "Completed the Meta Front-End Developer Professional Certificate, covering HTML, CSS, JavaScript, React, and responsive web design." },
-    { "title": "IBM Back-End Developer", "institution": "IBM", "date": "August 2023", "description": "Completed the IBM Back-End Developer Professional Certificate, covering Node.js, Express, SQL, and RESTful APIs." },
-    { "title": "CodinGame JavaScript Certification", "institution": "CodinGame", "date": "July 2023", "description": "Achieved a score of 100% in the CodinGame JavaScript certification, demonstrating proficiency in JavaScript programming." }
+    {
+      "key": "devops_engineering",
+      "title": "DevOps Engineering",
+      "institution": "KLOUDKODE",
+      "date": "2026",
+      "description": "Completed the DevOps Engineering program at KLOUDKODE, covering CI/CD, containerization, cloud infrastructure, and modern DevOps practices."
+    },
+    {
+      "key": "meta_frontend",
+      "title": "Meta Front-End Developer",
+      "institution": "Meta",
+      "date": "August 2023",
+      "description": "Completed the Meta Front-End Developer Professional Certificate, covering HTML, CSS, JavaScript, React, and responsive web design."
+    },
+    {
+      "key": "ibm_backend",
+      "title": "IBM Back-End Developer",
+      "institution": "IBM",
+      "date": "August 2023",
+      "description": "Completed the IBM Back-End Developer Professional Certificate, covering Node.js, Express, SQL, and RESTful APIs."
+    },
+    {
+      "key": "codingame_js",
+      "title": "CodinGame JavaScript Certification",
+      "institution": "CodinGame",
+      "date": "July 2023",
+      "description": "Achieved a score of 100% in the CodinGame JavaScript certification, demonstrating proficiency in JavaScript programming."
+    }
   ],
   "experiences": [
     {
       "company_name": "cod_network",
       "companyLogo": "/assets/images/companies/cod-network-logo.jpg",
-      "technical_skills": ["Laravel", "PHP", "JavaScript", "Vue.js", "React", "Tailwind CSS", "Docker", "MySQL", "Redis", "Rest API", "Cursor", "AI Tools"]
+      "technical_skills": [
+        "Laravel",
+        "PHP",
+        "JavaScript",
+        "Vue.js",
+        "React",
+        "Tailwind CSS",
+        "Docker",
+        "MySQL",
+        "Redis",
+        "Rest API",
+        "Cursor",
+        "AI Tools"
+      ]
     },
     {
       "company_name": "agriwise",
       "companyLogo": "/assets/images/companies/agriwise-logo.png",
-      "technical_skills": ["Laravel", "Php", "JavaScript", "Vue.js", "Tailwind CSS"]
+      "technical_skills": [
+        "Laravel",
+        "Php",
+        "JavaScript",
+        "Vue.js",
+        "Tailwind CSS"
+      ]
     },
     {
       "company_name": "digital_elite",
       "companyLogo": "/assets/images/companies/digital-elite-logo.png",
-      "technical_skills": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "JavaScript", "HTML", "CSS", "Git", "GitHub"]
+      "technical_skills": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Tailwind CSS",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Git",
+        "GitHub"
+      ]
     }
   ],
   "hobbies": [
-    { "name": "coding", "icon": "Code" },
-    { "name": "music", "icon": "Music" },
-    { "name": "basketball", "icon": "Medal" },
-    { "name": "reading", "icon": "Book" },
-    { "name": "exploring", "icon": "Compass" },
-    { "name": "gaming", "icon": "Gamepad" },
-    { "name": "learning", "icon": "GraduationCap" },
-    { "name": "problem_solving", "icon": "Puzzle" }
+    {
+      "name": "coding",
+      "icon": "Code"
+    },
+    {
+      "name": "music",
+      "icon": "Music"
+    },
+    {
+      "name": "basketball",
+      "icon": "Medal"
+    },
+    {
+      "name": "reading",
+      "icon": "Book"
+    },
+    {
+      "name": "exploring",
+      "icon": "Compass"
+    },
+    {
+      "name": "gaming",
+      "icon": "Gamepad"
+    },
+    {
+      "name": "learning",
+      "icon": "GraduationCap"
+    },
+    {
+      "name": "problem_solving",
+      "icon": "Puzzle"
+    }
   ],
-  "languages": ["arabic", "french", "english"],
+  "languages": [
+    "arabic",
+    "french",
+    "english"
+  ],
   "storeProducts": [
     {
       "key": "prompt_lab",

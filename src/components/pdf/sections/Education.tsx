@@ -4,6 +4,7 @@ import { useTranslation } from "@/hooks/useTranslation";
 import { Section } from "./Section";
 import { styles } from "../PDFStyle";
 
+/** Compact education — title + school + date only (one-page CV) */
 export const Education: React.FC = () => {
   const { t } = useTranslation();
 
