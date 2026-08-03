@@ -7,7 +7,7 @@
   "developer": {
     "name": "Abdallah ATGUIRI",
     "role": "Full-Stack Web Developer & AI Coder",
-    "tagline": "Building scalable web apps with React, Laravel & Node.js — accelerated by AI coding and modern vibe-coding workflows.",
+    "tagline": "Building scalable web apps with React, Laravel & Node.js — elevated by AI coding, vibe coding, and generative 3D design.",
     "location": "Morocco",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "+212 623 779 270"
@@ -203,26 +203,23 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "A selection of personal and professional projects showcasing full-stack development across various domains.",
+    "description": "Flagship products I design and ship end-to-end — from modular architecture to production-ready UX.",
     "stats": {
-      "total": "4+",
-      "total_label": "Projects Built"
+      "total": "2",
+      "total_label": "Flagship Products"
     },
-    "project_1": {
-      "title": "Task Management App",
-      "description": "Drag-and-drop task manager with create, prioritize, and organize features using React and Redux."
+    "role_label": "Role",
+    "atg_labs": {
+      "title": "ATG-LABS",
+      "tagline": "Engineering ideas into reality",
+      "role": "Founder · Full-Stack Engineer",
+      "description": "Live digital manufacturing platform (stlup.com): 3D print quoting, store, services, and ops in one modular stack — Laravel 12, Inertia/React, Filament, PostgreSQL & Redis."
     },
-    "project_2": {
-      "title": "E-commerce Platform",
-      "description": "Full-stack e-commerce with Laravel REST API, user auth, product management, and order processing."
-    },
-    "project_3": {
-      "title": "Online Restaurant Reservation",
-      "description": "Full-stack reservation platform: search & book restaurants, plus tools for restaurants to manage bookings efficiently."
-    },
-    "project_4": {
-      "title": "Virtual Gear Hub",
-      "description": "VR gaming e-commerce for accessories — controllers, haptic gloves, headsets, and tracking systems for casual and pro gamers."
+    "mongestion": {
+      "title": "MonGestion",
+      "tagline": "Inventory, POS & business operations",
+      "role": "Full-Stack Developer",
+      "description": "Web inventory and point-of-sale platform for retail and SMEs: multi-warehouse stock, sales, purchases, POS, payments, reports, HRM, and multi-language (incl. RTL). Laravel API with Vue.js admin and Passport auth."
     }
   },
   "contact": {
@@ -243,7 +240,37 @@
     "ai": "AI Coding",
     "education": "Education",
     "hobbies": "Hobbies",
-    "contact": "Contact"
+    "contact": "Contact",
+    "store": "Store"
+  },
+  "store": {
+    "title": "Generative Store",
+    "description": "Digital products crafted with AI coding and generative design — ready-to-use packs for modern builders.",
+    "cta": "Explore Store",
+    "buy": "Get it",
+    "price_label": "Price",
+    "products": {
+      "prompt_lab": {
+        "title": "AI Prompt Lab",
+        "description": "50 production-ready prompts for Cursor, Claude, and Copilot — debugging, refactors, APIs, and UI systems.",
+        "badge": "AI Pack"
+      },
+      "ui_3d_kit": {
+        "title": "3D UI Kit",
+        "description": "Premium Three.js / R3F scene starters, glass materials, and floating product mockups for landing pages.",
+        "badge": "3D Design"
+      },
+      "gen_brand": {
+        "title": "Generative Brand Pack",
+        "description": "Logo variants, gradient systems, and social creatives generated and refined for tech brands.",
+        "badge": "Brand"
+      },
+      "agent_workflows": {
+        "title": "Agentic Workflow Pack",
+        "description": "Reusable agent prompts and playbooks for multi-file features, reviews, and shipping faster with AI.",
+        "badge": "Workflows"
+      }
+    }
   },
   "cv": {
     "summary_title": "Professional Summary",
