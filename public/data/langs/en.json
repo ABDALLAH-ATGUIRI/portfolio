@@ -203,26 +203,23 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "A selection of personal and professional projects showcasing full-stack development across various domains.",
+    "description": "Flagship products I design and ship end-to-end — from modular architecture to production-ready UX.",
     "stats": {
-      "total": "4+",
-      "total_label": "Projects Built"
+      "total": "2",
+      "total_label": "Flagship Products"
     },
-    "project_1": {
-      "title": "Task Management App",
-      "description": "Drag-and-drop task manager with create, prioritize, and organize features using React and Redux."
+    "role_label": "Role",
+    "atg_labs": {
+      "title": "ATG-LABS",
+      "tagline": "Engineering ideas into reality",
+      "role": "Founder · Full-Stack Engineer",
+      "description": "Live digital manufacturing platform (stlup.com): 3D print quoting, store, services, and ops in one modular stack — Laravel 12, Inertia/React, Filament, PostgreSQL & Redis."
     },
-    "project_2": {
-      "title": "E-commerce Platform",
-      "description": "Full-stack e-commerce with Laravel REST API, user auth, product management, and order processing."
-    },
-    "project_3": {
-      "title": "Online Restaurant Reservation",
-      "description": "Full-stack reservation platform: search & book restaurants, plus tools for restaurants to manage bookings efficiently."
-    },
-    "project_4": {
-      "title": "Virtual Gear Hub",
-      "description": "VR gaming e-commerce for accessories — controllers, haptic gloves, headsets, and tracking systems for casual and pro gamers."
+    "mongestion": {
+      "title": "MonGestion",
+      "tagline": "Inventory, POS & business operations",
+      "role": "Full-Stack Developer",
+      "description": "Web inventory and point-of-sale platform for retail and SMEs: multi-warehouse stock, sales, purchases, POS, payments, reports, HRM, and multi-language (incl. RTL). Laravel API with Vue.js admin and Passport auth."
     }
   },
   "contact": {

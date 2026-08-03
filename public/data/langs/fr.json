@@ -203,26 +203,23 @@
   },
   "projects": {
     "title": "Projets",
-    "description": "Une sélection de projets personnels et professionnels illustrant le développement full-stack dans divers domaines.",
+    "description": "Produits phares que je conçois et livre de bout en bout — de l'architecture modulaire à l'UX prête pour la production.",
     "stats": {
-      "total": "4+",
-      "total_label": "Projets Réalisés"
+      "total": "2",
+      "total_label": "Produits phares"
     },
-    "project_1": {
-      "title": "Application de gestion de tâches",
-      "description": "Une application de gestion de tâches permettant aux utilisateurs de créer, de gerer et de prioriser leurs tâches."
+    "role_label": "Rôle",
+    "atg_labs": {
+      "title": "ATG-LABS",
+      "tagline": "Transformer les idées en réalité",
+      "role": "Fondateur · Ingénieur full-stack",
+      "description": "Plateforme de fabrication digitale en ligne (stlup.com) : devis d'impression 3D, boutique, services et ops dans une stack modulaire — Laravel 12, Inertia/React, Filament, PostgreSQL & Redis."
     },
-    "project_2": {
-      "title": "Plateforme commerciale en ligne",
-      "description": "Une plateforme commerciale en ligne utilisant Laravel pour le backend, React.js pour le frontend et MySQL pour la gestion des données."
-    },
-    "project_3": {
-      "title": "Application de reservation de restaurants en ligne",
-      "description": "L'application de reservation de restaurants en ligne vise a aider les clients a trouver et a reserver des restaurants de leur choix."
-    },
-    "project_4": {
-      "title": "Virtual Gear Hub",
-      "description": "Virtual Gear Hub est une plateforme de commerce en ligne concue pour fournir aux joueurs de jeux virtuels une grande variete d'accessoires de qualite pour la virtualite"
+    "mongestion": {
+      "title": "MonGestion",
+      "tagline": "Inventaire, caisse (POS) & opérations",
+      "role": "Développeur full-stack",
+      "description": "Plateforme web d'inventaire et de point de vente pour le commerce et les PME : multi-entrepôts, ventes, achats, POS, paiements, rapports, RH et multilingue (RTL inclus). API Laravel avec admin Vue.js et auth Passport."
     }
   },
   "contact": {

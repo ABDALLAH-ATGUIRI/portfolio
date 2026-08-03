@@ -16,28 +16,49 @@
   ],
   "projects": [
     {
-      "key": "project_4",
-      "technologies": ["React.js", "Redux", "React Icons", "React DnD", "JavaScript", "Tailwind CSS", "Material-UI", "Vite"],
-      "images": ["/assets/images/projects/virtual_gear_hub01.png", "/assets/images/projects/virtual_gear_hub02.png"],
-      "github": "https://github.com/ABDALLAH-ATGUIRI/virtual-gear-hub"
+      "key": "atg_labs",
+      "technologies": [
+        "Laravel 12",
+        "PHP 8.4",
+        "Inertia.js",
+        "React",
+        "TypeScript",
+        "Filament",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
+        "Tailwind CSS",
+        "Horizon",
+        "Sanctum"
+      ],
+      "demo": "https://stlup.com/",
+      "images": [
+        "/assets/images/projects/atg-labs/01-landing.jpg",
+        "/assets/images/projects/atg-labs/02-print.jpg",
+        "/assets/images/projects/atg-labs/03-quote.jpg",
+        "/assets/images/projects/atg-labs/04-services.jpg"
+      ]
     },
     {
-      "key": "project_2",
-      "technologies": ["Laravel", "MySQL", "Repository Pattern", "Passport"],
-      "github": "https://github.com/ABDALLAH-ATGUIRI/e-commerce-laravel"
-    },
-    {
-      "key": "project_1",
-      "technologies": ["React.js", "Redux", "React Icons", "React DnD", "JavaScript", "Tailwind CSS", "Vite"],
-      "images": ["/assets/images/projects/task-management-app.png"],
-      "github": "https://github.com/ABDALLAH-ATGUIRI/Task_management_app",
-      "demo": "https://abdallah-atguiri.github.io/Task_management_app/"
-    },
-    {
-      "key": "project_3",
-      "technologies": ["React.js", "Redux", "React Icons", "Material-UI", "Vite", "Node.js", "Nestjs", "Prisma", "MongoDB"],
-      "images": ["/assets/images/projects/online_restaurant_reservation_application.png"],
-      "github": "https://github.com/ABDALLAH-ATGUIRI/Restaurant-app-frontend"
+      "key": "mongestion",
+      "technologies": [
+        "Laravel",
+        "Vue.js",
+        "Vuex",
+        "MySQL",
+        "Passport",
+        "Bootstrap Vue",
+        "REST API",
+        "DomPDF",
+        "Excel Export"
+      ],
+      "images": [
+        "/assets/images/projects/mongestion/01-dashboard.jpg",
+        "/assets/images/projects/mongestion/02-pos-restaurant.jpg",
+        "/assets/images/projects/mongestion/03-statistics.jpg",
+        "/assets/images/projects/mongestion/04-inventory.jpg",
+        "/assets/images/projects/mongestion/05-pos-modes.jpg"
+      ]
     }
   ],
   "skills": [
