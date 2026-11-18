@@ -8,19 +8,20 @@
     "name": "Abdallah ATGUIRI",
     "role": "Full-Stack Developer & AI Coder",
     "tagline": "I design and ship production systems end-to-end — architecture, APIs, and UI — with React, Laravel & modern AI-assisted engineering.",
+    "availability": "Open to work",
     "location": "Morocco",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "+212 623 779 270"
   },
   "about_me": {
     "title": "About Me",
-    "description": "Full-Stack Developer & AI Coder with 3+ years shipping production web platforms. Strong across React, Vue, TypeScript, Laravel, and Node.js — domain modeling, REST APIs, performance, DevOps (Docker, CI/CD, Linux), and multi-product work (ATG-LABS / stlup.com, MonGestion). I use Cursor, Copilot, and Claude as force multipliers while keeping architecture, reviews, and quality under my control.",
+    "description": "I take a product from the shape of the problem to something people use in production. Over three years I have owned that path end to end: the domain, the services behind it, the interface, and the care that keeps a system fast and understandable. AI helps me explore and review faster. The architecture, the tradeoffs, and what ships stay mine.",
     "stats": {
       "experience_value": "3+",
       "experience_label": "Years Experience",
       "companies_value": "3",
       "companies_label": "Companies",
-      "projects_value": "2",
+      "projects_value": "3",
       "projects_label": "Flagship Products",
       "tech_value": "30+",
       "tech_label": "Technologies"
@@ -28,15 +29,15 @@
     "what_i_do": {
       "title": "How I Deliver",
       "frontend_title": "Frontend Engineering",
-      "frontend_desc": "React · Vue · TypeScript · Tailwind CSS",
+      "frontend_desc": "Interfaces with a clear structure, calm interaction, and speed that holds up in real use.",
       "backend_title": "Backend Architecture",
-      "backend_desc": "Laravel · PHP · Node.js · REST APIs",
+      "backend_desc": "A domain that matches the business, services that stay stable, and room to grow without a rewrite.",
       "database_title": "Data & Performance",
-      "database_desc": "MySQL · MongoDB · Redis · PostgreSQL",
+      "database_desc": "Data shaped around the product, with performance treated as part of the design.",
       "ai_title": "AI-Augmented Delivery",
-      "ai_desc": "Cursor · Copilot · Claude · Agentic workflows",
+      "ai_desc": "AI speeds up research, drafts, and review. Judgment and the final quality stay with me.",
       "teamwork_title": "Engineering Practice",
-      "teamwork_desc": "Architecture · Code review · Agile · Clean delivery"
+      "teamwork_desc": "Small, reviewable changes and standards another engineer can pick up and maintain."
     },
     "certificates_title": "Certifications"
   },
@@ -200,36 +201,53 @@
         "title": "Bachelor's in Information Systems Engineering and Architecture",
         "school": "ENSA Safi, Morocco",
         "date": "Oct 2025 – Jul 2026",
-        "description": "Bachelor's degree focused on information systems engineering, software architecture, and modern web technologies."
+        "description": "Graduated with a bachelor's degree in information systems engineering, software architecture, and modern web technologies."
       }
     }
   },
   "projects": {
     "title": "Projects",
-    "description": "Flagship products I architect and ship end-to-end — modular backends, production UX, and real users.",
+    "description": "Products I design and ship end to end — domain model, API, and the interface people use.",
     "stats": {
-      "total": "2",
+      "total": "3",
       "total_label": "Flagship Products"
     },
+    "live": "Live",
     "role_label": "Role",
     "live_site": "Live Site",
     "github": "GitHub",
     "prev_image": "Previous image",
     "next_image": "Next image",
     "no_preview": "No preview available",
+    "fleetava": {
+      "title": "Fleetava",
+      "tagline": "Car rental, one platform per agency",
+      "role": "Founder · Full-Stack",
+      "description": "Multi-tenant platform for rental agencies. Each agency keeps its own fleet, bookings, contracts, and public site, with database-per-tenant isolation and a platform control plane.",
+      "cv_description": "Multi-tenant car rental platform: fleet, bookings, contracts, and agency sites. React, TypeScript, Laravel, MySQL.",
+      "highlight_1": "Database per agency, plus onboarding, pause, and an audit trail",
+      "highlight_2": "Public catalog, bookings, contracts, and drawn signatures",
+      "highlight_3": "Desk for fleet, cash, fines, tariffs, and staff"
+    },
     "atg_labs": {
       "title": "ATG-LABS",
       "tagline": "Engineering ideas into reality",
       "role": "Founder · Full-Stack",
       "description": "Live digital manufacturing platform (stlup.com): 3D print quoting, store, services, and ops in one modular stack — Laravel 12, Inertia/React, Filament, PostgreSQL & Redis. End-to-end ownership from architecture to production.",
-      "cv_description": "Digital manufacturing platform (stlup.com): quotes, store & services. Laravel 12, Inertia/React, Filament, PostgreSQL, Redis."
+      "cv_description": "Digital manufacturing platform (stlup.com): quotes, store & services. Laravel 12, Inertia/React, Filament, PostgreSQL, Redis.",
+      "highlight_1": "Quoting, store, and services in one product",
+      "highlight_2": "Laravel 12, Inertia/React, Filament, PostgreSQL, and Redis",
+      "highlight_3": "Owned from architecture through production on stlup.com"
     },
     "mongestion": {
       "title": "MonGestion",
       "tagline": "Inventory, POS & business operations",
       "role": "Full-Stack · Product builder",
       "description": "Web inventory and POS platform for retail/SMEs: multi-warehouse, sales, purchases, POS, payments, reports, HRM, multi-language (RTL). Laravel API + Vue.js admin with Passport for production use.",
-      "cv_description": "Inventory & POS for SMEs: multi-warehouse, sales, purchases, HRM, multi-lang. Laravel, Vue.js, Passport."
+      "cv_description": "Inventory & POS for SMEs: multi-warehouse, sales, purchases, HRM, multi-lang. Laravel, Vue.js, Passport.",
+      "highlight_1": "Multi-warehouse inventory, sales, purchases, and POS",
+      "highlight_2": "Payments, reports, and HR in one operations platform",
+      "highlight_3": "Laravel API and Vue.js admin with Passport auth"
     }
   },
   "nav": {
@@ -286,6 +304,21 @@
       }
     }
   },
+  "assistant": {
+    "title": "Ask me",
+    "subtitle": "Work, projects, skills, and contact",
+    "placeholder": "Ask about a project, my stack, or how to reach me",
+    "send": "Send",
+    "open": "Ask me",
+    "close": "Close chat",
+    "greeting": "Hi. Ask me about my work, the products I've shipped, my stack, or how to reach me.",
+    "fallback": "I answer from this portfolio. Try a project name, my experience, or how to contact me.",
+    "suggestion_1": "Who are you?",
+    "suggestion_2": "What have you shipped?",
+    "suggestion_3": "How can I contact you?",
+    "suggestion_4": "What is your stack?",
+    "cv_hint": "Use Download CV in the contact section. There is a full-stack version, a backend version, and a frontend version."
+  },
   "cv": {
     "summary_title": "Professional Summary",
     "tech_label": "Tech"
@@ -295,7 +328,7 @@
     "fullstack": {
       "label": "Full Stack (Laravel)",
       "role": "Full-Stack Developer (Laravel) & AI Coder",
-      "summary": "Full-Stack Developer (3+ yrs): Laravel, React, Vue, TypeScript. APIs, data, Docker/CI/CD, AI-assisted delivery with solid architecture & quality. Products: ATG-LABS, MonGestion."
+      "summary": "Full-Stack Developer (3+ yrs): Laravel, React, Vue, TypeScript. APIs, data, Docker/CI/CD, AI-assisted delivery with solid architecture & quality. Products: Fleetava, ATG-LABS, MonGestion."
     },
     "backend": {
       "label": "Backend (Laravel/PHP)",
