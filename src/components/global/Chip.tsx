@@ -29,7 +29,7 @@ export const Chip: React.FC<ChipProps> = ({
   }, [text]);
 
   const base = className
-    || "inline-flex gap-3 items-center font-bold text-sm transition-all duration-300 rounded-full shadow-sm bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-700";
+    || "inline-flex gap-3 items-center font-bold text-sm transition-all duration-300 rounded-full shadow-sm bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-700 hover:-translate-y-0.5";
 
   const classes = [
     base,

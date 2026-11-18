@@ -6,8 +6,8 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#1e40af", // Blue-800, matches CV titles
-          light: "#3b82f6", // Blue-500, for hover/active
+          DEFAULT: "#6d28d9",
+          light: "#22d3ee",
         },
         secondary: {
           DEFAULT: "#4b5563", // Gray-600, matches CV body text
@@ -15,7 +15,7 @@ export default {
         },
         background: {
           light: "#f3f4f6", // Gray-100, matches CV chip backgrounds
-          dark: "#0f172a", // Slate-900, for dark mode
+          dark: "#070b18",
         },
         accent: "#bfdbfe", // Blue-200, matches CV borders
       },

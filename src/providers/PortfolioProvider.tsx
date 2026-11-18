@@ -11,6 +11,7 @@ function resolveData(raw: PortfolioData): ResolvedPortfolioData {
 
   return {
     ...raw,
+    projects: raw.projects.filter((project) => project.status !== "hidden"),
     contactLinks: raw.contactLinks.map((c) => {
       let href = c.href;
       if (c.ariaLabel === "Portfolio") {

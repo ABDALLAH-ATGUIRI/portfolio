@@ -11,8 +11,6 @@ export const Education: React.FC = () => {
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6">
         {["ensa_safi", "youcode_simplon", "high_school"].map(
           (education, index) => {
-            const isInProgress = education === "ensa_safi";
-
             return (
               <div
                 key={education}
@@ -51,9 +49,7 @@ export const Education: React.FC = () => {
                   </div>
                   <span className="inline-flex items-center gap-1 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 text-xs font-medium px-2.5 py-1 rounded-full border border-green-200 dark:border-green-800/40">
                     <CheckCircle2 size={12} />
-                    {isInProgress
-                      ? t("education.in_progress")
-                      : t("education.graduated")}
+                    {t("education.graduated")}
                   </span>
                 </div>
 

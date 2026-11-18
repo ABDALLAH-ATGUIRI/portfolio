@@ -1,8 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Monitor, Server, Database, Users, Award, Sparkles } from "lucide-react";
 import { SectionLayout } from "@/components/layouts/SectionLayout";
 import { useTranslation } from "@/hooks/useTranslation";
+import { useInView } from "@/hooks/useInView";
 import { usePortfolio } from "@/hooks/usePortfolio";
+
+function AnimatedStat({ value }: { value: string }) {
+  const { ref, inView } = useInView<HTMLSpanElement>(0.5);
+  const match = /^(\d+)/.exec(value);
+  const target = match ? Number(match[1]) : null;
+  const suffix = match ? value.slice(match[1].length) : "";
+  const [shown, setShown] = useState(0);
+
+  useEffect(() => {
+    if (target == null || !inView) return;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) {
+      setShown(target);
+      return;
+    }
+
+    const start = performance.now();
+    const durationMs = 900;
+    let frame = 0;
+    const tick = (now: number) => {
+      const progress = Math.min(1, (now - start) / durationMs);
+      const eased = 1 - (1 - progress) ** 3;
+      setShown(Math.round(eased * target));
+      if (progress < 1) frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [inView, target]);
+
+  return (
+    <span ref={ref}>
+      {target == null ? value : `${shown}${suffix}`}
+    </span>
+  );
+}
 
 export const Summary: React.FC = () => {
   const { t } = useTranslation();
@@ -72,7 +108,7 @@ export const Summary: React.FC = () => {
             style={{ animationDelay: `${100 + i * 80}ms` }}
           >
             <span className="text-3xl font-extrabold text-blue-500 dark:text-blue-400 leading-none">
-              {stat.value}
+              <AnimatedStat value={stat.value} />
             </span>
             <span className="text-xs text-gray-500 dark:text-gray-400 text-center mt-1">
               {stat.label}
@@ -101,7 +137,7 @@ export const Summary: React.FC = () => {
               <p className="font-semibold text-sm text-gray-800 dark:text-white">
                 {title}
               </p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5 font-mono">
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">
                 {desc}
               </p>
             </div>

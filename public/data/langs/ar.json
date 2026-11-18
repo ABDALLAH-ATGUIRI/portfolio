@@ -8,19 +8,20 @@
     "name": "عبد الله اتقيري",
     "role": "مطور Full-Stack و AI Coder",
     "tagline": "أصمم وأسلّم أنظمة الإنتاج من الطرف إلى الطرف — المعمارية وواجهات البرمجة والواجهات — مع React و Laravel وهندسة معززة بالذكاء الاصطناعي.",
+    "availability": "متاح للعمل",
     "location": "المغرب",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "+212 623 779 270"
   },
   "about_me": {
     "title": "نبذة عني",
-    "description": "مطور Full-Stack و AI Coder بخبرة +3 سنوات في تسليم منصات ويب للإنتاج. قوي في React و Vue و TypeScript و Laravel و Node.js — نمذجة النطاق و REST APIs والأداء و DevOps (Docker و CI/CD و Linux) ومنتجات (ATG-LABS / stlup.com و MonGestion). أستخدم Cursor و Copilot و Claude كمضاعفات قوة مع الإبقاء على المعمارية والمراجعات والجودة تحت سيطرتي.",
+    "description": "آخذ المنتج من شكل المشكلة إلى شيء يستخدمه الناس في الإنتاج. خلال ثلاث سنوات حملت هذا المسار من الطرف إلى الطرف: المجال، والخدمات خلفه، والواجهة، والعناية التي تُبقي النظام سريعاً ومفهوماً. الذكاء الاصطناعي يساعدني على الاستكشاف والمراجعة بسرعة أكبر. المعمارية والقرارات وما يصل إلى الإنتاج تبقى مسؤوليتي.",
     "stats": {
       "experience_value": "+3",
       "experience_label": "سنوات خبرة",
       "companies_value": "3",
       "companies_label": "شركات",
-      "projects_value": "2",
+      "projects_value": "3",
       "projects_label": "منتجات رئيسية",
       "tech_value": "+30",
       "tech_label": "تقنية"
@@ -28,15 +29,15 @@
     "what_i_do": {
       "title": "كيف أُسلّم",
       "frontend_title": "هندسة الواجهة",
-      "frontend_desc": "React · Vue · TypeScript · Tailwind CSS",
+      "frontend_desc": "واجهات ببنية واضحة وتفاعل هادئ وسرعة تصمد في الاستخدام الحقيقي.",
       "backend_title": "معمارية الخلفية",
-      "backend_desc": "Laravel · PHP · Node.js · REST APIs",
+      "backend_desc": "مجال يطابق العمل، وخدمات مستقرة، ومساحة للنمو دون إعادة البناء.",
       "database_title": "البيانات والأداء",
-      "database_desc": "MySQL · MongoDB · Redis",
+      "database_desc": "بيانات مصممة حول المنتج، والأداء جزء من التصميم لا إصلاح لاحق.",
       "ai_title": "تسليم معزز بالذكاء الاصطناعي",
-      "ai_desc": "Cursor · Copilot · Claude · هندسة الأوامر",
+      "ai_desc": "الذكاء الاصطناعي يسرّع البحث والمسودات والمراجعة. الحكم والجودة النهائية يبقيان عندي.",
       "teamwork_title": "ممارسة الهندسة",
-      "teamwork_desc": "معمارية · مراجعة كود · Agile · تسليم نظيف"
+      "teamwork_desc": "تغييرات صغيرة قابلة للمراجعة ومعايير يستطيع مهندس آخر استلامها."
     },
     "certificates_title": "الشهادات"
   },
@@ -200,36 +201,53 @@
         "title": "إجازة في هندسة ونظم المعلومات والعمارة",
         "school": "المدرسة الوطنية للعلوم التطبيقية، آسفي (ENSA Safi)",
         "date": "أكتوبر 2025 – يوليو 2026",
-        "description": "إجازة تركز على هندسة نظم المعلومات، هندسة البرمجيات، وعمارة الأنظمة الحديثة."
+        "description": "إجازة محصل عليها في هندسة نظم المعلومات، وهندسة البرمجيات، وتقنيات الويب الحديثة."
       }
     }
   },
   "projects": {
     "title": "المشاريع",
-    "description": "منتجات رئيسية أصممها وأسلمها من الطرف إلى الطرف — خلفيات معيارية وتجربة استخدام للإنتاج.",
+    "description": "منتجات أصممها وأسلمها من الطرف إلى الطرف — نموذج العمل وواجهة البرمجة والواجهة التي يستخدمها الناس.",
     "stats": {
-      "total": "2",
+      "total": "3",
       "total_label": "منتجات رئيسية"
     },
+    "live": "مباشر",
     "role_label": "الدور",
     "live_site": "الموقع",
     "github": "GitHub",
     "prev_image": "الصورة السابقة",
     "next_image": "الصورة التالية",
     "no_preview": "لا توجد معاينة",
+    "fleetava": {
+      "title": "Fleetava",
+      "tagline": "تأجير السيارات، منصة لكل وكالة",
+      "role": "مؤسس · Full-Stack",
+      "description": "منصة متعددة الوكالات لتأجير السيارات. تحتفظ كل وكالة بأسطولها وحجوزاتها وعقودها وموقعها، مع قاعدة بيانات مستقلة ولوحة تحكم للمنصة.",
+      "cv_description": "منصة تأجير متعددة الوكالات: أسطول وحجوزات وعقود ومواقع. React و TypeScript و Laravel و MySQL.",
+      "highlight_1": "قاعدة بيانات لكل وكالة، مع التهيئة والإيقاف وسجل التدقيق",
+      "highlight_2": "كتالوج عام وحجوزات وعقود وتوقيع مرسوم",
+      "highlight_3": "مكتب للأسطول والصندوق والمخالفات والتعريفات والفريق"
+    },
     "atg_labs": {
       "title": "ATG-LABS",
       "tagline": "تحويل الأفكار إلى واقع",
       "role": "مؤسس · Full-Stack",
       "description": "منصة تصنيع رقمي حية (stlup.com): عروض طباعة ثلاثية الأبعاد ومتجر وخدمات وعمليات — Laravel 12 و Inertia/React و Filament و PostgreSQL و Redis. ملكية المنتج من المعمارية إلى الإنتاج.",
-      "cv_description": "منصة تصنيع رقمي (stlup.com): عروض ومتجر وخدمات. Laravel 12، Inertia/React، Filament، PostgreSQL، Redis."
+      "cv_description": "منصة تصنيع رقمي (stlup.com): عروض ومتجر وخدمات. Laravel 12، Inertia/React، Filament، PostgreSQL، Redis.",
+      "highlight_1": "عروض ومتجر وخدمات في منتج واحد",
+      "highlight_2": "Laravel 12 و Inertia/React و Filament و PostgreSQL و Redis",
+      "highlight_3": "من المعمارية حتى الإنتاج على stlup.com"
     },
     "mongestion": {
       "title": "MonGestion",
       "tagline": "مخزون، نقطة بيع وعمليات الأعمال",
       "role": "Full-Stack · بناء المنتج",
       "description": "منصة مخزون ونقطة بيع للشركات الصغيرة: مخازن متعددة ومبيعات ومشتريات وPOS ومدفوعات وتقارير وموارد بشرية ومتعدد اللغات (RTL). تصميم API Laravel + لوحة Vue.js مع Passport للإنتاج.",
-      "cv_description": "مخزون ونقطة بيع: مخازن متعددة ومبيعات ومشتريات وموارد بشرية. Laravel، Vue.js، Passport."
+      "cv_description": "مخزون ونقطة بيع: مخازن متعددة ومبيعات ومشتريات وموارد بشرية. Laravel، Vue.js، Passport.",
+      "highlight_1": "مخزون متعدد المخازن ومبيعات ومشتريات ونقطة بيع",
+      "highlight_2": "مدفوعات وتقارير وموارد بشرية في منصة واحدة",
+      "highlight_3": "واجهة Laravel ولوحة Vue.js مع Passport"
     }
   },
   "nav": {
@@ -286,6 +304,21 @@
       }
     }
   },
+  "assistant": {
+    "title": "اسألني",
+    "subtitle": "العمل والمشاريع والمهارات والتواصل",
+    "placeholder": "اسأل عن مشروع أو مهاراتي أو طريقة التواصل",
+    "send": "إرسال",
+    "open": "اسألني",
+    "close": "إغلاق المحادثة",
+    "greeting": "مرحبا. اسألني عن عملي والمنتجات التي سلّمتها ومهاراتي أو طريقة التواصل.",
+    "fallback": "أجيب من هذا الموقع. جرّب اسم مشروع أو خبرتي أو طريقة التواصل.",
+    "suggestion_1": "من أنت؟",
+    "suggestion_2": "ماذا سلّمت؟",
+    "suggestion_3": "كيف أتواصل معك؟",
+    "suggestion_4": "ما هي مهاراتك؟",
+    "cv_hint": "زر تحميل السيرة الذاتية موجود في قسم التواصل. تتوفر نسخة Full Stack ونسخة Backend ونسخة Frontend."
+  },
   "cv": {
     "summary_title": "الملخص المهني",
     "tech_label": "التقنيات"
@@ -295,7 +328,7 @@
     "fullstack": {
       "label": "Full Stack (Laravel)",
       "role": "مطور Full-Stack (Laravel) و AI Coder",
-      "summary": "مطور Full-Stack (+3 سنوات): Laravel و React و Vue و TypeScript. APIs وبيانات و Docker/CI/CD وتسليم معزز بالذكاء الاصطناعي مع معمارية وجودة. منتجات: ATG-LABS و MonGestion."
+      "summary": "مطور Full-Stack (+3 سنوات): Laravel و React و Vue و TypeScript. APIs وبيانات و Docker/CI/CD وتسليم معزز بالذكاء الاصطناعي مع معمارية وجودة. منتجات: Fleetava و ATG-LABS و MonGestion."
     },
     "backend": {
       "label": "Backend (Laravel/PHP)",

@@ -32,7 +32,29 @@
   ],
   "projects": [
     {
+      "key": "fleetava",
+      "status": "published",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Laravel",
+        "MySQL",
+        "TanStack Query",
+        "Redis",
+        "Vite"
+      ],
+      "demo": "https://fleetava.com",
+      "images": [
+        "/assets/images/projects/fleetava/01-landing.jpg",
+        "/assets/images/projects/fleetava/02-dashboard.jpg",
+        "/assets/images/projects/fleetava/03-fleet.jpg",
+        "/assets/images/projects/fleetava/04-bookings.jpg"
+      ]
+    },
+    {
       "key": "atg_labs",
+      "status": "published",
       "technologies": [
         "Laravel 12",
         "PHP 8.4",
@@ -57,6 +79,7 @@
     },
     {
       "key": "mongestion",
+      "status": "published",
       "technologies": [
         "Laravel",
         "Vue.js",

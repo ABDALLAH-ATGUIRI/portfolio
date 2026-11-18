@@ -1,6 +1,8 @@
 import { Suspense, lazy, useContext, type ComponentType } from "react";
+import { PortfolioAssistant } from "@/components/assistant/PortfolioAssistant";
 import { LoadingLayout } from "@/components/layouts/LoadingLayout";
 import { MainLayout } from "@/components/layouts/MainLayout";
+import { AssistantProvider } from "@/context/AssistantContext";
 import { PortfolioContext } from "@/context/PortfolioContext";
 import { Hero } from "@/components/Hero";
 
@@ -25,7 +27,6 @@ const TechnicalSkills = lazyNamed(
 );
 const AiSection = lazyNamed(() => import("@/components/AiSection"), "AiSection");
 const Projects = lazyNamed(() => import("@/components/Projects"), "Projects");
-const Store = lazyNamed(() => import("@/components/Store"), "Store");
 const Contact = lazyNamed(() => import("@/components/Contact"), "Contact");
 
 function SectionFallback() {
@@ -49,28 +50,26 @@ function AppContent() {
   }
 
   return (
-    <MainLayout>
-      {/* Hero is above-the-fold — load eagerly for LCP */}
-      <Hero />
-      <main className="container mx-auto max-w-5xl px-4 sm:px-6 pb-16">
-        {/* Paint primary content first */}
-        <Suspense fallback={<SectionFallback />}>
-          <Summary />
-          <Experience />
-          <Projects />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <Store />
-          <TechnicalSkills />
-          <AiSection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <Education />
-          <Hobbies />
-          <Contact />
-        </Suspense>
-      </main>
-    </MainLayout>
+    <AssistantProvider>
+      <MainLayout>
+        <Hero />
+        <main className="container mx-auto max-w-5xl px-4 sm:px-6 pb-8">
+          <Suspense fallback={<SectionFallback />}>
+            <Summary />
+            <Experience />
+            <Projects />
+            <TechnicalSkills />
+            <AiSection />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <Education />
+            <Hobbies />
+            <Contact />
+          </Suspense>
+        </main>
+        <PortfolioAssistant />
+      </MainLayout>
+    </AssistantProvider>
   );
 }
 

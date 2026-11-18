@@ -8,19 +8,20 @@
     "name": "Abdallah ATGUIRI",
     "role": "Développeur Full-Stack & AI Coder",
     "tagline": "Je conçois et livre des systèmes en production de bout en bout — architecture, APIs et UI — avec React, Laravel et une ingénierie assistée par l'IA.",
+    "availability": "Disponible",
     "location": "Maroc",
     "email": "abdallah.atguiri@gmail.com",
     "phone": "+212 623 779 270"
   },
   "about_me": {
     "title": "À propos de moi",
-    "description": "Développeur Full-Stack & AI Coder avec 3+ ans de livraison de plateformes web en production. Solide sur React, Vue, TypeScript, Laravel et Node.js — modélisation métier, APIs REST, performance, DevOps (Docker, CI/CD, Linux) et produits (ATG-LABS / stlup.com, MonGestion). J'utilise Cursor, Copilot et Claude comme leviers tout en gardant le contrôle sur l'architecture, les revues et la qualité.",
+    "description": "Je prends un produit depuis la forme du problème jusqu’à quelque chose que les gens utilisent en production. En trois ans, j’ai porté ce chemin de bout en bout : le métier, les services derrière, l’interface, et le soin qui garde un système rapide et lisible. L’IA m’aide à explorer et à relire plus vite. L’architecture, les choix et ce qui part en production restent les miens.",
     "stats": {
       "experience_value": "3+",
       "experience_label": "Ans d’expérience",
       "companies_value": "3",
       "companies_label": "Entreprises",
-      "projects_value": "2",
+      "projects_value": "3",
       "projects_label": "Produits phares",
       "tech_value": "30+",
       "tech_label": "Technologies"
@@ -28,15 +29,15 @@
     "what_i_do": {
       "title": "Comment je livre",
       "frontend_title": "Ingénierie Frontend",
-      "frontend_desc": "React · Vue · TypeScript · Tailwind CSS",
+      "frontend_desc": "Des interfaces claires, une interaction posée, et une vitesse qui tient dans un usage réel.",
       "backend_title": "Architecture Backend",
-      "backend_desc": "Laravel · PHP · Node.js · APIs REST",
+      "backend_desc": "Un domaine fidèle au métier, des services stables, et de la marge pour grandir sans tout réécrire.",
       "database_title": "Données & Performance",
-      "database_desc": "MySQL · MongoDB · Redis",
+      "database_desc": "Des données pensées pour le produit, et la performance traitée comme une part du design.",
       "ai_title": "Livraison augmentée par l'IA",
-      "ai_desc": "Cursor · Copilot · Claude · Ingénierie de prompts",
+      "ai_desc": "L’IA accélère la recherche, les brouillons et la relecture. Le jugement et la qualité finale restent les miens.",
       "teamwork_title": "Pratique d'ingénierie",
-      "teamwork_desc": "Architecture · Code review · Agile · Livraison propre"
+      "teamwork_desc": "Des changements petits et relisibles, et des standards qu’une autre personne peut reprendre."
     },
     "certificates_title": "Certifications"
   },
@@ -200,36 +201,53 @@
         "title": "Licence en ingénierie et architecture des systèmes d'information",
         "school": "ENSA Safi, Maroc",
         "date": "Oct 2025 – Juil 2026",
-        "description": "Licence axée sur l'ingénierie des systèmes d'information, l'architecture logicielle et les technologies web modernes."
+        "description": "Licence obtenue en ingénierie des systèmes d'information, architecture logicielle et technologies web modernes."
       }
     }
   },
   "projects": {
     "title": "Projets",
-    "description": "Produits phares que j'architecture et livre de bout en bout — backends modulaires, UX production et usage réel.",
+    "description": "Produits que je conçois et livre de bout en bout — modèle métier, API et interface utilisée au quotidien.",
     "stats": {
-      "total": "2",
+      "total": "3",
       "total_label": "Produits phares"
     },
+    "live": "En ligne",
     "role_label": "Rôle",
     "live_site": "Site en ligne",
     "github": "GitHub",
     "prev_image": "Image précédente",
     "next_image": "Image suivante",
     "no_preview": "Aperçu indisponible",
+    "fleetava": {
+      "title": "Fleetava",
+      "tagline": "La location, une plateforme par agence",
+      "role": "Fondateur · Full-Stack",
+      "description": "Plateforme multi-agences pour la location. Chaque agence garde sa flotte, ses réservations, ses contrats et son site, avec une base dédiée et une console plateforme.",
+      "cv_description": "Plateforme location multi-agences : flotte, réservations, contrats et sites. React, TypeScript, Laravel, MySQL.",
+      "highlight_1": "Une base par agence, avec ouverture, pause et journal d'audit",
+      "highlight_2": "Catalogue public, réservations, contrats et signature dessinée",
+      "highlight_3": "Bureau pour la flotte, la caisse, les amendes, les tarifs et l'équipe"
+    },
     "atg_labs": {
       "title": "ATG-LABS",
       "tagline": "Transformer les idées en réalité",
       "role": "Fondateur · Full-Stack",
       "description": "Plateforme de fabrication digitale (stlup.com) : devis d'impression 3D, boutique, services et ops — Laravel 12, Inertia/React, Filament, PostgreSQL & Redis. Ownership produit de l'architecture à la production.",
-      "cv_description": "Plateforme fabrication digitale (stlup.com) : devis, boutique & services. Laravel 12, Inertia/React, Filament, PostgreSQL, Redis."
+      "cv_description": "Plateforme fabrication digitale (stlup.com) : devis, boutique & services. Laravel 12, Inertia/React, Filament, PostgreSQL, Redis.",
+      "highlight_1": "Devis, boutique et services dans un seul produit",
+      "highlight_2": "Laravel 12, Inertia/React, Filament, PostgreSQL et Redis",
+      "highlight_3": "De l'architecture à la production sur stlup.com"
     },
     "mongestion": {
       "title": "MonGestion",
       "tagline": "Inventaire, caisse (POS) & opérations",
       "role": "Full-Stack · Builder produit",
       "description": "Plateforme inventaire & POS pour PME : multi-entrepôts, ventes, achats, POS, paiements, rapports, RH, multilingue (RTL). API Laravel + admin Vue.js avec Passport en production.",
-      "cv_description": "Inventaire & POS PME : multi-entrepôts, ventes, achats, RH, multilingue. Laravel, Vue.js, Passport."
+      "cv_description": "Inventaire & POS PME : multi-entrepôts, ventes, achats, RH, multilingue. Laravel, Vue.js, Passport.",
+      "highlight_1": "Inventaire multi-entrepôts, ventes, achats et caisse",
+      "highlight_2": "Paiements, rapports et RH dans la même plateforme",
+      "highlight_3": "API Laravel et admin Vue.js avec Passport"
     }
   },
   "nav": {
@@ -286,6 +304,21 @@
       }
     }
   },
+  "assistant": {
+    "title": "Me demander",
+    "subtitle": "Parcours, projets, compétences et contact",
+    "placeholder": "Un projet, ma stack, ou comment me joindre",
+    "send": "Envoyer",
+    "open": "Me demander",
+    "close": "Fermer le chat",
+    "greeting": "Bonjour. Demandez-moi mon parcours, les produits livrés, ma stack, ou comment me joindre.",
+    "fallback": "Je réponds à partir de ce portfolio. Essayez un projet, mon expérience, ou comment me contacter.",
+    "suggestion_1": "Qui es-tu ?",
+    "suggestion_2": "Qu'as-tu livré ?",
+    "suggestion_3": "Comment te contacter ?",
+    "suggestion_4": "Quelle est ta stack ?",
+    "cv_hint": "Le bouton Télécharger CV est dans la section contact. Il existe une version full-stack, backend et frontend."
+  },
   "cv": {
     "summary_title": "Résumé Professionnel",
     "tech_label": "Tech"
@@ -295,7 +328,7 @@
     "fullstack": {
       "label": "Full Stack (Laravel)",
       "role": "Développeur Full-Stack (Laravel) & AI Coder",
-      "summary": "Développeur Full-Stack (3+ ans) : Laravel, React, Vue, TypeScript. APIs, data, Docker/CI/CD, livraison assistée par l'IA avec architecture & qualité. Produits : ATG-LABS, MonGestion."
+      "summary": "Développeur Full-Stack (3+ ans) : Laravel, React, Vue, TypeScript. APIs, data, Docker/CI/CD, livraison assistée par l'IA avec architecture & qualité. Produits : Fleetava, ATG-LABS, MonGestion."
     },
     "backend": {
       "label": "Backend (Laravel/PHP)",

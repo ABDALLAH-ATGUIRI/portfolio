@@ -32,14 +32,14 @@ export const SectionLayout: React.FC<SectionLayoutProps> = ({
     >
       <div className="relative mb-6 w-full">
         <div
-          className={`absolute top-1 bottom-1 w-[3px] rounded-full bg-gradient-to-b from-cyan-500 to-cyan-400/15 ${
+          className={`absolute top-1 bottom-1 w-[3px] rounded-full bg-gradient-to-b from-violet-500 via-fuchsia-400 to-cyan-400/20 ${
             isRTL ? "-right-7" : "-left-7"
           }`}
           aria-hidden="true"
         />
 
         <span
-          className={`absolute top-[6px] w-3 h-3 rounded-full bg-cyan-500 border-2 border-white dark:border-slate-900 ring-4 ring-cyan-500/20 ${
+          className={`absolute top-[6px] w-3 h-3 rounded-full bg-cyan-400 border-2 border-white dark:border-[#070b18] ring-4 ring-violet-500/25 ${
             isRTL ? "-right-[31px]" : "-left-[31px]"
           }`}
           aria-hidden="true"

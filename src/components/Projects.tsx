@@ -11,7 +11,6 @@ export const Projects: React.FC = () => {
 
   return (
     <SectionLayout id="projects" title={t("projects.title")}>
-      {/* Intro row — description + stat */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <p
           className="stagger-item text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed max-w-xl"
@@ -28,7 +27,7 @@ export const Projects: React.FC = () => {
             <FolderOpen size={16} className="text-blue-500 dark:text-blue-400" />
           </div>
           <span className="text-2xl font-extrabold text-blue-500 dark:text-blue-400 leading-none">
-            {t("projects.stats.total")}
+            {projects.length}
           </span>
           <span className="text-xs text-gray-500 dark:text-gray-400">
             {t("projects.stats.total_label")}
@@ -36,8 +35,7 @@ export const Projects: React.FC = () => {
         </div>
       </div>
 
-      {/* Projects grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="flex flex-col gap-6">
         {projects.map((project, index) => (
           <div
             key={project.key}

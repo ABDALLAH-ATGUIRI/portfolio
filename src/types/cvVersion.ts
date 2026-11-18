@@ -26,7 +26,7 @@ export const CV_VERSION_CONFIG: Record<CvVersion, CvVersionConfig> = {
     summaryKey: "cv_versions.fullstack.summary",
     // AI · Front · Back · DevOps (Linux/Docker/AWS) · DB
     skillIds: [5, 1, 2, 6, 3],
-    projectKeys: ["atg_labs", "mongestion"],
+    projectKeys: ["fleetava", "atg_labs"],
     certificateKeys: ["devops_engineering", "meta_frontend", "ibm_backend"],
     fileName: "abdallah-atguiri-fullstack-cv.pdf",
     label: "cv_versions.fullstack.label",
@@ -36,7 +36,7 @@ export const CV_VERSION_CONFIG: Record<CvVersion, CvVersionConfig> = {
     summaryKey: "cv_versions.backend.summary",
     // AI · Back · DevOps · DB
     skillIds: [5, 2, 6, 3],
-    projectKeys: ["atg_labs", "mongestion"],
+    projectKeys: ["fleetava", "atg_labs"],
     certificateKeys: ["devops_engineering", "ibm_backend"],
     fileName: "abdallah-atguiri-backend-cv.pdf",
     label: "cv_versions.backend.label",
@@ -46,7 +46,7 @@ export const CV_VERSION_CONFIG: Record<CvVersion, CvVersionConfig> = {
     summaryKey: "cv_versions.frontend.summary",
     // AI · Front · DevOps tools (Linux/CI useful everywhere)
     skillIds: [5, 1, 6],
-    projectKeys: ["atg_labs", "mongestion"],
+    projectKeys: ["fleetava", "atg_labs"],
     certificateKeys: ["meta_frontend", "devops_engineering"],
     fileName: "abdallah-atguiri-frontend-cv.pdf",
     label: "cv_versions.frontend.label",

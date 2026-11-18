@@ -1,10 +1,27 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, ExternalLink, Github, ImageOff } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight, ExternalLink, Github, ImageOff } from "lucide-react";
 import type { Project } from "@/types";
 import { useTranslation } from "@/hooks/useTranslation";
 import { Chip } from "@/components/global/Chip";
 
 const MAX_CHIPS = 6;
+const MAX_HIGHLIGHTS = 3;
+
+function optionalCopy(t: (key: string) => string, key: string): string | null {
+  const value = t(key);
+  if (!value || value === key) return null;
+  return value;
+}
+
+function projectHighlights(t: (key: string) => string, projectKey: string): string[] {
+  const highlights: string[] = [];
+  for (let index = 1; index <= MAX_HIGHLIGHTS; index += 1) {
+    const value = optionalCopy(t, `projects.${projectKey}.highlight_${index}`);
+    if (!value) break;
+    highlights.push(value);
+  }
+  return highlights;
+}
 
 interface ProjectCardProps {
   project: Project;
@@ -27,19 +44,26 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
   const description = t(`projects.${project.key}.description`);
   const hasTagline = tagline && !tagline.startsWith("projects.");
   const hasRole = role && !role.startsWith("projects.");
+  const highlights = projectHighlights(t, project.key);
 
   return (
-    <article className="card overflow-hidden flex flex-col h-full group border border-slate-200/80 dark:border-slate-700/80 shadow-sm hover:shadow-lg hover:border-cyan-500/30 dark:hover:border-cyan-400/25 transition-all duration-300">
-      <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-900">
+    <article className="card project-card overflow-hidden flex flex-col lg:flex-row h-full group border border-slate-200/80 dark:border-slate-700/80 shadow-sm hover:shadow-lg hover:border-cyan-500/30 dark:hover:border-cyan-400/25 transition-all duration-300">
+      <div className="relative aspect-[16/10] w-full lg:aspect-auto lg:w-[46%] lg:self-stretch shrink-0 overflow-hidden bg-slate-100 dark:bg-slate-900">
         {images.length > 0 ? (
           <>
             <img
               key={currentImage}
               src={images[currentImage]}
               alt={`${title} — ${currentImage + 1}/${images.length}`}
-              className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+              className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02] lg:absolute lg:inset-0"
               loading="lazy"
             />
+            {project.demo && (
+              <span className="absolute top-3 start-3 z-10 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-slate-800 shadow-sm dark:bg-slate-950/80 dark:text-cyan-200">
+                <span className="live-ping h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                {t("projects.live")}
+              </span>
+            )}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-slate-950/40 to-transparent" />
 
             {images.length > 1 && (
@@ -108,6 +132,20 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
           {description}
         </p>
+
+        {highlights.length > 0 && (
+          <ul className="mb-4 space-y-1.5">
+            {highlights.map((highlight) => (
+              <li
+                key={highlight}
+                className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-300"
+              >
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-cyan-600 dark:text-cyan-400" />
+                <span>{highlight}</span>
+              </li>
+            ))}
+          </ul>
+        )}
 
         {visibleTechs.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mb-4">

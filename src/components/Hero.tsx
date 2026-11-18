@@ -1,11 +1,13 @@
 import React from "react";
-import { ArrowDown, Sparkles, Boxes, FolderKanban } from "lucide-react";
+import { ArrowDown, Sparkles, FolderKanban, MessageCircle } from "lucide-react";
+import { useAssistant } from "@/context/AssistantContext";
 import { useTranslation } from "@/hooks/useTranslation";
 import { HeroBackground } from "@/components/global/HeroBackground";
 import { DeveloperAvatar } from "@/components/global/DeveloperAvatar";
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
+  const { openAssistant } = useAssistant();
 
   return (
     <section
@@ -20,14 +22,25 @@ export const Hero: React.FC = () => {
             className="anim-scale-in relative"
             style={{ animationDelay: "0.05s" }}
           >
-            <div className="absolute -inset-3 rounded-[2rem] bg-cyan-400/15 blur-2xl dark:bg-cyan-400/20" />
-            <DeveloperAvatar className="relative w-36 h-36 sm:w-40 sm:h-40 shadow-xl ring-4 ring-white/70 dark:ring-slate-900/60" />
+            <div className="avatar-glow absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-violet-500/30 to-cyan-400/20 blur-2xl" />
+            <DeveloperAvatar className="relative w-36 h-36 sm:w-40 sm:h-40 shadow-xl ring-4 ring-white/80 dark:ring-[#070b18]/80" />
           </div>
 
-          <span className="anim-fade-up inline-flex items-center gap-2 rounded-full border border-cyan-300/40 bg-white/60 px-3.5 py-1.5 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur-md dark:border-cyan-500/25 dark:bg-slate-900/50 dark:text-cyan-200">
-            <Sparkles size={14} className="text-cyan-500" aria-hidden="true" />
-            {t("developer.role")}
-          </span>
+          <div className="anim-fade-up flex flex-wrap items-center justify-center gap-2">
+            <span className="inline-flex items-center gap-2 rounded-full border border-violet-300/50 bg-white/70 px-3.5 py-1.5 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur-md dark:border-violet-400/25 dark:bg-[#0c1428]/70 dark:text-violet-100">
+              <Sparkles size={14} className="text-cyan-500" aria-hidden="true" />
+              {t("developer.role")}
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-300/50 bg-white/70 px-3 py-1.5 text-sm font-semibold text-emerald-700 shadow-sm backdrop-blur-md dark:border-emerald-400/25 dark:bg-[#0c1428]/70 dark:text-emerald-300">
+              <span className="live-ping h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
+              {t("developer.availability")}
+            </span>
+          </div>
+
+          <p className="anim-fade-up font-display text-sm font-semibold tracking-[0.18em] uppercase" style={{ animationDelay: "0.06s" }}>
+            <span className="text-slate-900 dark:text-white">atguiri</span>
+            <span className="bg-gradient-to-r from-fuchsia-500 to-cyan-400 bg-clip-text text-transparent">.dev</span>
+          </p>
 
           <h1
             className="anim-fade-up font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] hero-gradient-text"
@@ -49,24 +62,25 @@ export const Hero: React.FC = () => {
           >
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-2xl bg-slate-900 text-white px-6 py-3 text-sm font-semibold shadow-lg shadow-slate-900/20 transition-all hover:-translate-y-0.5 hover:bg-slate-800 dark:bg-cyan-500 dark:text-slate-950 dark:hover:bg-cyan-400"
+              className="brand-cta inline-flex items-center gap-2 rounded-2xl px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
             >
               <FolderKanban size={16} aria-hidden="true" />
               {t("projects.title")}
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-2xl border border-slate-200/80 bg-white/70 text-slate-700 px-6 py-3 text-sm font-semibold shadow-sm backdrop-blur-sm transition-all hover:border-cyan-400 hover:text-cyan-700 dark:border-slate-700/80 dark:bg-slate-900/60 dark:text-slate-200 dark:hover:border-cyan-500 dark:hover:text-cyan-300"
+              className="inline-flex items-center gap-2 rounded-2xl border border-violet-200/80 bg-white/70 text-slate-700 px-6 py-3 text-sm font-semibold shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-cyan-400 hover:text-violet-700 dark:border-cyan-400/20 dark:bg-[#0c1428]/70 dark:text-slate-100 dark:hover:border-cyan-300 dark:hover:text-cyan-200"
             >
               {t("contact.get_in_touch")}
             </a>
-            <a
-              href="#store"
+            <button
+              type="button"
+              onClick={openAssistant}
               className="inline-flex items-center gap-2 rounded-2xl border border-transparent text-slate-500 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-300 px-3 py-3 text-sm font-medium transition-colors"
             >
-              <Boxes size={16} aria-hidden="true" />
-              {t("store.cta")}
-            </a>
+              <MessageCircle size={16} aria-hidden="true" />
+              {t("assistant.open")}
+            </button>
           </div>
         </div>
       </div>

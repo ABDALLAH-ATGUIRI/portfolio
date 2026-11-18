@@ -6,11 +6,9 @@ const SECTIONS = [
   { id: "about_me", key: "about" },
   { id: "experience", key: "experience" },
   { id: "projects", key: "projects" },
-  { id: "store", key: "store" },
   { id: "technical_skills", key: "skills" },
   { id: "ai", key: "ai" },
   { id: "education", key: "education" },
-  { id: "hobbies", key: "hobbies" },
   { id: "contact", key: "contact" },
 ] as const;
 
@@ -102,10 +100,10 @@ export const SiteNav = () => {
 
   const linkClass = (id: string) =>
     [
-      "rounded-lg px-3 py-1.5 text-sm font-medium transition-colors",
+      "rounded-lg px-2 py-1.5 text-[13px] font-medium transition-colors",
       activeId === id
-        ? "bg-cyan-100 text-cyan-800 dark:bg-cyan-900/40 dark:text-cyan-300"
-        : "text-gray-600 hover:text-cyan-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-cyan-400 dark:hover:bg-gray-800",
+        ? "bg-violet-100 text-violet-800 dark:bg-violet-500/15 dark:text-cyan-200"
+        : "text-gray-600 hover:text-violet-700 hover:bg-violet-50 dark:text-gray-300 dark:hover:text-cyan-300 dark:hover:bg-white/5",
     ].join(" ");
 
   return (

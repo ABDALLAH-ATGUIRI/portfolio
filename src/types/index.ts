@@ -48,9 +48,13 @@ export interface Skill {
   skills: string[];
 }
 
+/** `hidden` keeps the record in data but omits it from the site and CV. */
+export type ProjectStatus = "published" | "hidden";
+
 export interface Project {
   images?: string[];
   key: string;
+  status?: ProjectStatus;
   technologies: string[];
   github?: string;
   demo?: string;
